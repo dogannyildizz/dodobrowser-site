@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DodoBrowser – Gizlilik Politikası</title>
-<meta name="description" content="DodoBrowser gizlilik politikası: sunucumuz yok, verilerin bilgisayarında ve isteğe bağlı olarak kendi Google Drive'ında kalır.">
+<meta name="description" content="DodoBrowser Gizlilik Politikası: sunucumuz yok, verilerin bilgisayarında ve isteğe bağlı olarak kendi Google Drive'ında kalır.">
 <meta name="theme-color" content="#0B6E79">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%232EC4B6'/%3E%3Cstop offset='1' stop-color='%230B6E79'/%3E%3C/linearGradient%3E%3CclipPath id='c'%3E%3Ccircle cx='128' cy='128' r='120'/%3E%3C/clipPath%3E%3C/defs%3E%3Ccircle cx='128' cy='128' r='120' fill='url(%23g)'/%3E%3Cg clip-path='url(%23c)'%3E%3Cellipse cx='105' cy='235' rx='100' ry='80' fill='%236F6A7B'/%3E%3Ccircle cx='110' cy='120' r='58' fill='%238E899A'/%3E%3Cpath d='M138 96C170 84 205 86 218 104C226 116 222 134 210 140C208 132 204 127 196 126C180 132 160 140 140 140Z' fill='%23EFC94C'/%3E%3Ccircle cx='130' cy='104' r='11' fill='%23fff'/%3E%3Ccircle cx='133' cy='104' r='6' fill='%231E1B24'/%3E%3C/g%3E%3C/svg%3E">
 <style>
@@ -74,6 +74,12 @@
   ul { margin: 0 0 12px; padding-left: 20px; }
   li { margin-bottom: 8px; }
   li::marker { color: var(--accent); }
+  kbd, code {
+    font: 600 13px/1 "Cascadia Mono", Consolas, monospace;
+    padding: 3px 6px; border-radius: 6px; white-space: nowrap;
+    background: var(--icon-bg); color: var(--ink); border: 1px solid var(--card-border);
+  }
+  kbd { border-bottom-width: 2px; }
 
   footer.bottom { border-top: 1px solid var(--card-border); padding: 28px 0 40px; color: var(--muted); font-size: 14.5px; }
   footer.bottom .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; }
@@ -118,7 +124,7 @@
 <main>
   <p class="kicker">DodoBrowser</p>
   <h1>Gizlilik Politikası</h1>
-  <p class="tag">Son güncelleme: 30 Eylül 2026</p>
+  <p class="tag">Son güncelleme: 1 Ekim 2026</p>
 
   <section class="lead">
     <h2>Kısaca</h2>
@@ -143,7 +149,14 @@
 
   <section>
     <h2>Verilerini silmek</h2>
-    <p>DodoBrowser'da hesap menüsünden çıkış yapabilir, bu bilgisayardaki verileri silebilirsin. DodoBrowser'ın Drive erişimini tamamen kaldırmak için: Google Hesabı → Güvenlik → Üçüncü taraf uygulama bağlantıları → DodoBrowser → erişimi kaldır.</p>
+    <p>DodoBrowser'daki verilerin iki yerde durur: DodoBrowser'ı kullandığın her bilgisayarda ayrı ayrı ve, Google ile giriş yaptıysan, kendi Google Drive'ında. Hangisini silmek istediğine göre:</p>
+    <ul>
+      <li><strong>Geçmiş, çerezler ve önbellek:</strong> DodoBrowser'da <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>Delete</kbd> tuşlarına bas (ya da ⋮ menüsü → "Tarama verilerini temizle"), zaman aralığını ve neyin silineceğini seç. Bu yalnızca o an DodoBrowser'ı kullandığın bilgisayardan siler; yer imlerin, kısayolların ve kayıtlı şifrelerin kalır.</li>
+      <li><strong>Eşitlenen verileri bir bilgisayardan kaldırmak:</strong> o bilgisayardaki DodoBrowser'da hesap düğmesi → "Çıkış yap" → "Bu bilgisayardan sil". Yer imleri, başlangıç sayfası kısayolları, kalkan ayarları ve sık girilen siteler sadece o bilgisayardan silinir; Google Drive'daki kopyaya ve diğer bilgisayarlarına dokunulmaz.</li>
+      <li><strong>Bir bilgisayardaki her şeyi silmek:</strong> o bilgisayarda DodoBrowser'ı kapat, <kbd>Win</kbd> <kbd>R</kbd> tuşlarına basıp <code>%LOCALAPPDATA%</code> yaz ve açılan klasördeki <code>DodoBrowser</code> klasörünü sil.</li>
+      <li><strong>Google Drive'daki kopyayı silmek:</strong> drive.google.com → Ayarlar → Uygulamaları yönet → DodoBrowser → Seçenekler → "Gizli uygulama verilerini sil". Eşitlenen veriler Google'dan silinir; bilgisayarlarındaki kopyalar kalır.</li>
+      <li><strong>DodoBrowser'ın Google erişimini tamamen kaldırmak:</strong> Google Hesabı → Güvenlik → Üçüncü taraf uygulama bağlantıları → DodoBrowser → erişimi kaldır. Bundan sonra DodoBrowser hiçbir bilgisayarda Google Drive'ına ulaşamaz.</li>
+    </ul>
   </section>
 
   <section>

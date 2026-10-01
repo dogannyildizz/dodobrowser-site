@@ -357,13 +357,13 @@
 
 <header class="top">
   <div class="wrap">
-    <a class="logo-link" href="#"><svg aria-hidden="true"><use href="#dodo"/></svg><span><b>Dodo</b>Browser</span></a>
+    <a class="logo-link" href="/"><svg aria-hidden="true"><use href="#dodo"/></svg><span><b>Dodo</b>Browser</span></a>
     <nav class="links" aria-label="Sayfa içi">
       <a href="#ozellikler">Özellikler</a>
       <a href="#gizlilik">Gizlilik</a>
       <a href="#kisayollar">Kısayollar</a>
       <a href="#iletisim">İletişim</a>
-      <a class="keep" href="gizlilik.html">Gizlilik Politikası</a>
+      <a class="keep" href="/gizlilik">Gizlilik Politikası</a>
     </nav>
   </div>
 </header>
@@ -494,7 +494,7 @@
           <h2>Verilerin bizde değil, sende.</h2>
           <p>DodoBrowser'ın bir sunucusu yoktur. Senin hakkında hiçbir veri bize gönderilmez, toplanmaz, satılmaz ya da paylaşılmaz.</p>
           <p>İstersen Google hesabınla giriş yapabilirsin. Böylece yer imlerin, başlangıç sayfası kısayolların, tema ve reklam engeli ayarların ile sık girdiğin siteler kendi bilgisayarların arasında aynı kalır.</p>
-          <p>Ayrıntılar için <a href="gizlilik.html">Gizlilik Politikası</a>'na bak.</p>
+          <p>Ayrıntılar için <a href="/gizlilik">Gizlilik Politikası</a>'na bak.</p>
         </div>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Senin kendi Google Drive'ında.</b> Eşitlenen veriler DodoBrowser'ın kendine ait, gizli uygulama klasöründe saklanır.</span></li>
@@ -555,14 +555,47 @@
 
 <footer class="bottom">
   <div class="wrap">
-    <a class="logo-link" href="#" style="font-size:16px"><svg aria-hidden="true" style="width:26px;height:26px"><use href="#dodo"/></svg><span><b>Dodo</b>Browser</span></a>
-    <a href="gizlilik.html">Gizlilik Politikası</a>
+    <a class="logo-link" href="/" style="font-size:16px"><svg aria-hidden="true" style="width:26px;height:26px"><use href="#dodo"/></svg><span><b>Dodo</b>Browser</span></a>
+    <a href="/gizlilik">Gizlilik Politikası</a>
     <a href="#iletisim">İletişim</a>
     <span>© 2026</span>
   </div>
 </footer>
 
 <script>
+  // The address bar stays plain "dodobrowser.com": links inside the page scroll
+  // without adding #…, and /index.html or a #… arriving from another page is tidied away.
+  (function () {
+    var calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function scrollTo(id, smooth) {
+      var target = id ? document.getElementById(id) : null;
+      var behavior = smooth && !calm ? "smooth" : "auto";
+      if (target) target.scrollIntoView({ behavior: behavior });
+      else if (!id) window.scrollTo({ top: 0, behavior: behavior });
+    }
+    function tidy() {
+      var path = location.pathname.replace(/index\.html$/, "");
+      if (path !== location.pathname || location.hash) history.replaceState(null, "", path + location.search);
+    }
+
+    document.addEventListener("click", function (e) {
+      if (e.defaultPrevented || e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+      var link = e.target.closest("a[href]");
+      if (!link) return;
+      var href = link.getAttribute("href");
+      if (href.charAt(0) === "#") { e.preventDefault(); scrollTo(href.slice(1), true); }
+      else if (href === "/") { e.preventDefault(); scrollTo("", true); }
+    });
+
+    if (location.hash) {
+      var id = decodeURIComponent(location.hash.slice(1));
+      document.documentElement.style.scrollBehavior = "auto";
+      scrollTo(id, false);
+      document.documentElement.style.scrollBehavior = "";
+    }
+    tidy();
+  })();
+
   (function () {
     var form = document.getElementById("contact");
     var status = form.querySelector(".status");

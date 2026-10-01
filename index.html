@@ -3,43 +3,597 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DodoBrowser</title>
+<title>DodoBrowser – Hafif. Hızlı. Senin.</title>
+<meta name="description" content="DodoBrowser, Windows için kişisel ve hafif bir web tarayıcısı. Reklamları ve izleyicileri engeller, çerez uyarılarını göstermeden yanıtlar; sunucusu yoktur, verilerin sende kalır.">
+<meta name="theme-color" content="#0B6E79">
+<meta property="og:title" content="DodoBrowser">
+<meta property="og:description" content="Windows için kişisel ve hafif bir web tarayıcısı. Reklamsız, sade, Türkçe.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%232EC4B6'/%3E%3Cstop offset='1' stop-color='%230B6E79'/%3E%3C/linearGradient%3E%3CclipPath id='c'%3E%3Ccircle cx='128' cy='128' r='120'/%3E%3C/clipPath%3E%3C/defs%3E%3Ccircle cx='128' cy='128' r='120' fill='url(%23g)'/%3E%3Cg clip-path='url(%23c)'%3E%3Cellipse cx='105' cy='235' rx='100' ry='80' fill='%236F6A7B'/%3E%3Ccircle cx='110' cy='120' r='58' fill='%238E899A'/%3E%3Cpath d='M138 96C170 84 205 86 218 104C226 116 222 134 210 140C208 132 204 127 196 126C180 132 160 140 140 140Z' fill='%23EFC94C'/%3E%3Ccircle cx='130' cy='104' r='11' fill='%23fff'/%3E%3Ccircle cx='133' cy='104' r='6' fill='%231E1B24'/%3E%3C/g%3E%3C/svg%3E">
 <style>
-  :root { --ink: #1f2d2b; --muted: #5b6b68; --accent: #14a89c; --page: #f4fbfa; --card: #ffffff; }
-  @media (prefers-color-scheme: dark) { :root { --ink: #e6f2f0; --muted: #a3b5b2; --accent: #3ccfc0; --page: #0f1b1a; --card: #172725; } }
-  body { margin: 0; font-family: "Segoe UI", system-ui, sans-serif; color: var(--ink); background: var(--page); line-height: 1.6; }
-  main { max-width: 720px; margin: 0 auto; padding: 48px 16px; }
-  h1 { font-size: 2.4rem; margin: 0 0 4px; }
-  h1 span { color: var(--accent); }
-  .tag { color: var(--muted); margin: 0 0 32px; }
-  section { background: var(--card); border-radius: 16px; padding: 20px 24px; margin-bottom: 16px; }
-  h2 { font-size: 1.15rem; margin: 0 0 8px; }
-  a { color: var(--accent); }
-  footer { color: var(--muted); font-size: .9rem; margin-top: 32px; }
+  :root {
+    --bg: #F6FAFA;
+    --bg-tint: #E3F6F3;
+    --glow: rgba(46, 196, 182, .28);
+    --ink: #15323A;
+    --muted: #587077;
+    --accent: #14A89C;
+    --accent-strong: #0B6E79;
+    --on-accent: #FFFFFF;
+    --card: #FFFFFF;
+    --card-border: rgba(11, 110, 121, .12);
+    --icon-bg: #E6F6F4;
+    --shadow: 0 1px 2px rgba(16, 50, 58, .06), 0 10px 28px rgba(16, 50, 58, .08);
+    --shadow-lg: 0 2px 6px rgba(16, 50, 58, .08), 0 30px 70px rgba(16, 50, 58, .18);
+    --win-bar: #DDEFEC;
+    --win-tab: #FFFFFF;
+    --win-field: #EEF6F5;
+    --violet: #6A4BD8;
+    --violet-bg: #EFEAFF;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0E1517;
+      --bg-tint: #0F2B2F;
+      --glow: rgba(46, 196, 182, .20);
+      --ink: #E4F2F0;
+      --muted: #8FAAAE;
+      --accent: #3CCFC0;
+      --accent-strong: #5ED8CB;
+      --on-accent: #062B2E;
+      --card: #16272A;
+      --card-border: rgba(94, 216, 203, .14);
+      --icon-bg: #1D3337;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .35), 0 10px 28px rgba(0, 0, 0, .35);
+      --shadow-lg: 0 2px 6px rgba(0, 0, 0, .4), 0 30px 70px rgba(0, 0, 0, .55);
+      --win-bar: #10201F;
+      --win-tab: #16272A;
+      --win-field: #1D3337;
+      --violet: #B49CFF;
+      --violet-bg: #251E3F;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent-strong); }
+  .wrap { width: min(1120px, 100% - 32px); margin: 0 auto; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+  /* ---------- Top bar ---------- */
+  header.top {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg-tint) 82%, transparent);
+    backdrop-filter: saturate(1.4) blur(12px);
+    -webkit-backdrop-filter: saturate(1.4) blur(12px);
+    border-bottom: 1px solid var(--card-border);
+  }
+  header.top .wrap { display: flex; align-items: center; gap: 24px; height: 64px; }
+  .logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-size: 20px; letter-spacing: -.3px; }
+  .logo-link svg { width: 34px; height: 34px; }
+  .logo-link b, .wordmark b { color: var(--accent-strong); font-weight: 700; }
+  .logo-link span { font-weight: 300; }
+  nav.links { margin-left: auto; display: flex; gap: 6px; }
+  nav.links a { color: var(--muted); text-decoration: none; font-size: 15px; padding: 8px 12px; border-radius: 10px; }
+  nav.links a:hover { color: var(--ink); background: var(--card); }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    background:
+      radial-gradient(900px 480px at 75% -10%, var(--glow), transparent 70%),
+      radial-gradient(700px 420px at 0% 10%, var(--glow), transparent 70%),
+      linear-gradient(var(--bg-tint), var(--bg) 85%);
+    padding: 72px 0 96px;
+    overflow: hidden;
+  }
+  .hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 56px; align-items: center; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 13.5px; color: var(--accent-strong); font-weight: 600;
+    background: var(--card); border: 1px solid var(--card-border);
+    padding: 5px 12px 5px 8px; border-radius: 999px; box-shadow: var(--shadow);
+  }
+  .eyebrow svg { width: 18px; height: 18px; }
+  .hero h1 {
+    font-size: clamp(40px, 6vw, 68px); line-height: 1.04; letter-spacing: -2px;
+    margin: 22px 0 18px; font-weight: 750;
+  }
+  .hero h1 em { font-style: normal; color: var(--accent-strong); }
+  .lead { font-size: 19px; color: var(--muted); margin: 0 0 30px; max-width: 34ch; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    font: inherit; font-size: 16px; font-weight: 600; text-decoration: none;
+    padding: 12px 22px; border-radius: 12px; cursor: pointer;
+  }
+  .btn.primary { color: #fff; background: linear-gradient(#1CB7AA, #0B6E79); box-shadow: 0 8px 22px rgba(11, 110, 121, .32); }
+  .btn.primary:hover { filter: brightness(1.06); }
+  .btn.ghost { color: var(--ink); background: var(--card); border: 1px solid var(--card-border); }
+  .btn.ghost:hover { border-color: var(--accent); }
+
+  /* ---------- Browser mock-up ---------- */
+  .mock {
+    position: relative;
+    border-radius: 14px; overflow: hidden;
+    background: var(--win-tab);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--card-border);
+    transform: perspective(1600px) rotateY(-6deg) rotateX(2deg);
+    transform-origin: left center;
+    font-size: 13px;
+    user-select: none;
+  }
+  .m-tabs { display: flex; align-items: flex-end; gap: 4px; padding: 8px 8px 0; background: var(--win-bar); }
+  .m-tab {
+    display: flex; align-items: center; gap: 8px;
+    padding: 8px 12px; border-radius: 10px 10px 0 0;
+    color: var(--muted); max-width: 190px; min-width: 0;
+  }
+  .m-tab.on { background: var(--win-tab); color: var(--ink); }
+  .m-tab svg { width: 16px; height: 16px; flex: none; }
+  .m-tab .t { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .m-tab .x { margin-left: 6px; opacity: .55; }
+  .m-fav { width: 16px; height: 16px; border-radius: 4px; flex: none; }
+  .m-plus { padding: 6px 10px 8px; color: var(--muted); font-size: 18px; line-height: 1; }
+  .m-win { margin-left: auto; display: flex; gap: 18px; padding: 0 10px 10px; color: var(--muted); align-self: center; }
+  .m-win i { display: block; width: 10px; height: 10px; border: 1.5px solid currentColor; border-radius: 2px; }
+  .m-win i:first-child { height: 0; border-width: 1.5px 0 0; margin-top: 5px; }
+  .m-bar { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-bottom: 1px solid var(--card-border); color: var(--muted); }
+  .m-bar svg { width: 18px; height: 18px; flex: none; }
+  .m-url {
+    flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px;
+    background: var(--win-field); border-radius: 999px; padding: 6px 14px; color: var(--ink);
+  }
+  .m-url span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .m-url svg { width: 15px; height: 15px; color: var(--muted); }
+  .m-shield { position: relative; color: var(--accent-strong); }
+  .m-shield b {
+    position: absolute; right: -9px; top: -6px;
+    background: var(--accent); color: var(--on-accent);
+    font-size: 10px; line-height: 1; padding: 2px 4px; border-radius: 6px;
+  }
+  .m-avatar { width: 22px; height: 22px; border-radius: 50%; background: linear-gradient(135deg, #F2B34B, #D9792B); flex: none; }
+  .m-page {
+    position: relative; padding: 40px 24px 44px; text-align: center;
+    background:
+      radial-gradient(520px 240px at 50% -20%, var(--glow), transparent 70%),
+      linear-gradient(var(--bg-tint), var(--win-tab) 75%);
+  }
+  .m-greet { color: var(--muted); margin: 0 0 14px; font-size: 13px; }
+  .m-brand { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 22px; }
+  .m-brand svg { width: 52px; height: 52px; filter: drop-shadow(0 6px 12px rgba(11, 110, 121, .28)); }
+  .m-brand .wordmark { font-size: 32px; font-weight: 300; letter-spacing: -1px; }
+  .m-search {
+    display: flex; align-items: center; gap: 10px; margin: 0 auto 22px; max-width: 400px;
+    background: var(--card); border: 1px solid var(--card-border); box-shadow: var(--shadow);
+    border-radius: 999px; padding: 10px 10px 10px 18px; color: var(--muted); text-align: left;
+  }
+  .m-search span { flex: 1; }
+  .m-search i { width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(#1CB7AA, #0B6E79); display: grid; place-items: center; }
+  .m-search i svg { width: 15px; height: 15px; color: #fff; }
+  .m-tiles { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .m-tile { width: 64px; display: grid; justify-items: center; gap: 6px; color: var(--muted); font-size: 11.5px; }
+  .m-tile div {
+    width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center;
+    background: var(--card); border: 1px solid var(--card-border); box-shadow: var(--shadow);
+    font-weight: 700; font-size: 16px;
+  }
+  .mock-wrap { position: relative; }
+  .m-toast {
+    position: absolute; left: -22px; bottom: -26px; width: 230px; text-align: left;
+    background: var(--card); border: 1px solid var(--card-border); border-radius: 12px;
+    box-shadow: var(--shadow-lg); padding: 12px 14px; font-size: 12.5px;
+  }
+  .m-toast strong { display: flex; align-items: center; gap: 6px; color: var(--accent-strong); font-size: 13px; }
+  .m-toast strong svg { width: 16px; height: 16px; }
+  .m-toast p { margin: 4px 0 0; color: var(--muted); line-height: 1.45; }
+
+  /* ---------- Strip ---------- */
+  .strip { border-top: 1px solid var(--card-border); border-bottom: 1px solid var(--card-border); background: var(--card); }
+  .strip ul { list-style: none; margin: 0; padding: 22px 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .strip li { display: flex; align-items: center; gap: 12px; font-size: 15px; }
+  .strip li b { display: block; }
+  .strip li small { color: var(--muted); font-size: 13.5px; }
+  .strip svg { width: 22px; height: 22px; color: var(--accent-strong); flex: none; }
+
+  /* ---------- Sections ---------- */
+  section.block { padding: 96px 0 0; }
+  .kicker { color: var(--accent-strong); font-weight: 650; font-size: 14px; letter-spacing: .6px; text-transform: uppercase; margin: 0 0 8px; }
+  h2 { font-size: clamp(30px, 4vw, 42px); line-height: 1.12; letter-spacing: -1px; margin: 0 0 14px; }
+  .sub { color: var(--muted); font-size: 18px; max-width: 60ch; margin: 0 0 40px; }
+
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .card {
+    background: var(--card); border: 1px solid var(--card-border); border-radius: 18px;
+    padding: 24px; box-shadow: var(--shadow);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .card:hover { transform: translateY(-3px); }
+  .card h3 { font-size: 18px; margin: 16px 0 6px; letter-spacing: -.2px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+  .ico { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: var(--icon-bg); color: var(--accent-strong); }
+  .ico svg { width: 22px; height: 22px; }
+  .ico.violet { background: var(--violet-bg); color: var(--violet); }
+  kbd {
+    font: 600 12.5px/1 "Cascadia Mono", Consolas, monospace;
+    padding: 3px 6px; border-radius: 6px;
+    background: var(--icon-bg); color: var(--ink); border: 1px solid var(--card-border); border-bottom-width: 2px;
+    white-space: nowrap;
+  }
+
+  /* Privacy */
+  .privacy {
+    display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center;
+    background: linear-gradient(135deg, #0B6E79, #0E4F5A 60%, #12363F);
+    color: #E4F2F0; border-radius: 28px; padding: 56px;
+    position: relative; overflow: hidden;
+  }
+  .privacy::after {
+    content: ""; position: absolute; right: -120px; top: -120px; width: 380px; height: 380px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(60, 207, 192, .35), transparent 70%);
+  }
+  .privacy .kicker { color: #7FE3D8; }
+  .privacy h2 { color: #fff; }
+  .privacy p { color: #BFD9D6; font-size: 16.5px; margin: 0 0 14px; }
+  .privacy a { color: #7FE3D8; }
+  .privacy ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; position: relative; z-index: 1; }
+  .privacy li {
+    display: flex; gap: 12px; align-items: flex-start;
+    background: rgba(255, 255, 255, .07); border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 14px; padding: 14px 16px; font-size: 15.5px;
+  }
+  .privacy li svg { width: 20px; height: 20px; color: #7FE3D8; flex: none; margin-top: 2px; }
+  .privacy li b { color: #fff; }
+
+  /* Shortcuts */
+  .keys { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .key {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    background: var(--card); border: 1px solid var(--card-border); border-radius: 14px; padding: 14px 18px;
+  }
+  .key span { color: var(--muted); line-height: 1.35; }
+  .key div { flex: none; white-space: nowrap; }
+
+  /* Closing */
+  .closing { text-align: center; padding: 110px 0 90px; }
+  .closing svg.big { width: 88px; height: 88px; filter: drop-shadow(0 10px 20px rgba(11, 110, 121, .3)); }
+  .closing h2 { margin-top: 18px; }
+  .closing .sub { margin: 0 auto 28px; }
+  .contact {
+    max-width: 640px; margin: 0 auto; text-align: left;
+    background: var(--card); border: 1px solid var(--card-border); border-radius: 20px;
+    padding: 28px; box-shadow: var(--shadow); display: grid; gap: 16px;
+  }
+  .contact .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .contact label { display: grid; gap: 6px; font-size: 14.5px; font-weight: 600; }
+  .contact input, .contact textarea {
+    font: inherit; font-size: 15.5px; font-weight: 400; color: var(--ink);
+    background: var(--bg); border: 1px solid var(--card-border); border-radius: 12px;
+    padding: 11px 14px; width: 100%; resize: vertical;
+  }
+  .contact input::placeholder, .contact textarea::placeholder { color: var(--muted); opacity: .75; }
+  .contact input:focus, .contact textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px var(--glow); }
+  .contact .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .contact .send { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .contact .fine { margin: 0; font-size: 13.5px; color: var(--muted); }
+  .contact button { border: 0; }
+  .contact button:disabled { opacity: .6; cursor: progress; }
+  .contact .status { margin: 0; font-size: 15px; min-height: 1.4em; }
+  .contact .status:empty { display: none; }
+  .contact .status.ok { color: var(--accent-strong); font-weight: 600; }
+  .contact .status.bad { color: #C2410C; }
+  @media (prefers-color-scheme: dark) { .contact .status.bad { color: #FB923C; } }
+
+  footer.bottom { border-top: 1px solid var(--card-border); padding: 28px 0 40px; color: var(--muted); font-size: 14.5px; }
+  footer.bottom .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; }
+  footer.bottom .wrap > :first-child { margin-right: auto; }
+  footer.bottom a { color: var(--muted); }
+  footer.bottom a:hover { color: var(--ink); }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 960px) {
+    .hero .wrap { grid-template-columns: 1fr; gap: 48px; }
+    .mock { transform: none; }
+    .m-toast { left: 12px; }
+    .grid, .keys { grid-template-columns: repeat(2, 1fr); }
+    .strip ul { grid-template-columns: repeat(2, 1fr); }
+    .privacy { grid-template-columns: 1fr; padding: 40px 28px; }
+  }
+  @media (max-width: 620px) {
+    nav.links a:not(.keep) { display: none; }
+    .hero { padding: 48px 0 64px; }
+    .lead { font-size: 17px; }
+    .grid, .keys, .strip ul { grid-template-columns: 1fr; }
+    .m-tab:nth-child(2), .m-toast, .m-hide { display: none; }
+    .m-page { padding: 28px 14px 32px; }
+    .contact { padding: 20px; }
+    .contact .row { grid-template-columns: 1fr; }
+    .m-tiles { gap: 6px; }
+    .m-tile { width: 54px; }
+    section.block { padding-top: 72px; }
+    .privacy { border-radius: 20px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .card { transition: none; }
+    .card:hover { transform: none; }
+  }
 </style>
 </head>
 <body>
+
+<!-- The dodo logo, drawn once (same shapes as logo\make-logo.ps1) and reused below. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="dodo-bg" x1="0" y1="8" x2="0" y2="248" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2EC4B6"/><stop offset="1" stop-color="#0B6E79"/>
+    </linearGradient>
+    <clipPath id="dodo-clip"><circle cx="128" cy="128" r="120"/></clipPath>
+    <symbol id="dodo" viewBox="0 0 256 256">
+      <circle cx="128" cy="128" r="120" fill="url(#dodo-bg)"/>
+      <g clip-path="url(#dodo-clip)">
+        <ellipse cx="105" cy="235" rx="100" ry="80" fill="#6F6A7B"/>
+        <circle cx="110" cy="120" r="58" fill="#8E899A"/>
+        <ellipse cx="132" cy="108" rx="22" ry="18" fill="#D6CDBF"/>
+        <path d="M138 96C170 84 205 86 218 104C226 116 222 134 210 140C208 132 204 127 196 126C180 132 160 140 140 140Z" fill="#EFC94C"/>
+        <path d="M204 94C214 98 224 112 222 126C220 134 214 139 210 140C208 132 204 127 196 126C202 116 205 106 204 94Z" fill="#B8862B"/>
+        <path d="M142 124C160 126 180 126 196 125" stroke="#8A6A1E" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <ellipse cx="178" cy="100" rx="6" ry="3" fill="#8A6A1E"/>
+        <circle cx="130" cy="104" r="11" fill="#fff"/>
+        <circle cx="133" cy="104" r="6" fill="#1E1B24"/>
+        <circle cx="134" cy="101" r="2" fill="#fff"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo-link" href="#"><svg aria-hidden="true"><use href="#dodo"/></svg><span><b>Dodo</b>Browser</span></a>
+    <nav class="links" aria-label="Sayfa içi">
+      <a href="#ozellikler">Özellikler</a>
+      <a href="#gizlilik">Gizlilik</a>
+      <a href="#kisayollar">Kısayollar</a>
+      <a href="#iletisim">İletişim</a>
+      <a class="keep" href="gizlilik.html">Gizlilik politikası</a>
+    </nav>
+  </div>
+</header>
+
 <main>
-  <h1><span>Dodo</span>Browser</h1>
-  <p class="tag">Hafif. Hızlı. Senin.</p>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow"><svg aria-hidden="true"><use href="#dodo"/></svg>Windows için kişisel tarayıcı</span>
+        <h1>Hafif. Hızlı.<br><em>Senin.</em></h1>
+        <p class="lead">Reklamları ve izleyicileri engeller, çerez uyarılarını göstermeden yanıtlar. Sunucumuz yok, verilerin bizde değil, sende.</p>
+        <div class="cta">
+          <a class="btn primary" href="#ozellikler">Neler yapıyor?
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></a>
+          <a class="btn ghost" href="#gizlilik">Verilerin nerede?</a>
+        </div>
+      </div>
 
-  <section>
-    <h2>Nedir?</h2>
-    <p>DodoBrowser, Windows için kişisel ve hafif bir web tarayıcısıdır. Sayfaları Windows'la gelen Microsoft WebView2 motoru çizer; reklamları ve izleyicileri engeller, çerez uyarılarını ekranda göstermeden yanıtlar.</p>
+      <!-- Illustration of the browser (decorative). -->
+      <div class="mock-wrap" aria-hidden="true">
+      <div class="mock">
+        <div class="m-tabs">
+          <div class="m-tab on"><svg><use href="#dodo"/></svg><span class="t">Yeni sekme</span><span class="x">✕</span></div>
+          <div class="m-tab"><span class="m-fav" style="background:#E8453C"></span><span class="t">Video izle</span><span class="x">✕</span></div>
+          <div class="m-plus">+</div>
+          <div class="m-win"><i></i><i></i></div>
+        </div>
+        <div class="m-bar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <svg class="m-hide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>
+          <div class="m-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Ara ya da adres yaz</span></div>
+          <span class="m-shield"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.7 9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/></svg><b>27</b></span>
+          <span class="m-avatar m-hide"></span>
+          <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/></svg>
+        </div>
+        <div class="m-page">
+          <p class="m-greet">İyi akşamlar</p>
+          <div class="m-brand"><svg><use href="#dodo"/></svg><span class="wordmark"><b>Dodo</b>Browser</span></div>
+          <div class="m-search"><span>Hadi, aklından geçeni yaz!</span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></i></div>
+          <div class="m-tiles">
+            <div class="m-tile"><div style="color:#E8453C">▶</div>YouTube</div>
+            <div class="m-tile"><div style="color:#C15F3C">✳</div>Claude</div>
+            <div class="m-tile"><div style="color:#1A73E8">M</div>Gmail</div>
+            <div class="m-tile"><div style="color:#4D6BFE">D</div>DeepSeek</div>
+            <div class="m-tile"><div style="color:var(--muted)">+</div>Ekle</div>
+          </div>
+        </div>
+      </div>
+          <div class="m-toast">
+            <strong><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.7 9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Kalkan açık</strong>
+            <p>Bu sayfada 27 reklam ve izleyici engellendi.</p>
+          </div>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>Google ile giriş</h2>
-    <p>İsteğe bağlı olarak Google hesabınla giriş yapabilirsin. Böylece yer imlerin, başlangıç sayfası kısayolların, tema ve reklam engeli ayarların ile sık girdiğin siteler kendi bilgisayarların arasında aynı kalır.</p>
-    <p>Bu veriler yalnızca <strong>senin kendi Google Drive'ında</strong>, DodoBrowser'ın kendine ait gizli uygulama klasöründe saklanır. DodoBrowser Drive'ındaki diğer dosyalarını göremez; bizim bir sunucumuz yoktur ve verilerin bize gelmez.</p>
+  <div class="strip">
+    <ul class="wrap">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.7 9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/></svg><div><b>Yerleşik reklam engeli</b><small>Eklenti gerekmez</small></div></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="6" rx="2"/><path d="m4 2 16 20"/></svg><div><b>Sunucumuz yok</b><small>Hiçbir veri bize gelmez</small></div></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.1-6C9.5 14.5 12 13 13 12"/></svg><div><b>Hafif</b><small>Kullanmadığın sekmeleri uyutur</small></div></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14M5 8a7 7 0 0 1 14 0M5 8v3a7 7 0 0 0 14 0V8"/><path d="M12 15v6M8 21h8"/></svg><div><b>Baştan sona Türkçe</b><small>Sade, anlaşılır dil</small></div></li>
+    </ul>
+  </div>
+
+  <section class="block" id="ozellikler">
+    <div class="wrap">
+      <p class="kicker">Özellikler</p>
+      <h2>İhtiyacın olan her şey, fazlası yok.</h2>
+      <p class="sub">DodoBrowser her gün kullanılmak için yapıldı: hızlı açılır, gürültü yapmaz, kaldığın yeri unutmaz.</p>
+
+      <div class="grid">
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.7 9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Reklam ve izleyici kalkanı</h3>
+          <p>Reklamları ve izleyicileri sayfa açılmadan durdurur, kalkan kaç tanesini engellediğini sayar. Bir site bozulursa o sitede tek tıkla kapatırsın.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5"/><path d="M8.5 8.5h.01M16 15.5h.01M12 12h.01M11 17h.01M7 14h.01"/></svg></div>
+          <h3>Çerez uyarısı yok</h3>
+          <p>Çerez ve "bildirimlere izin ver" pencerelerini sen görmeden yanıtlar. Reklamdan geriye kalan boş kutuları da sayfadan toplar.</p>
+        </article>
+        <article class="card">
+          <div class="ico violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.9 9.9a3 3 0 1 0 4.2 4.2"/><path d="M10.7 5.1A10.4 10.4 0 0 1 12 5c7 0 10 7 10 7a13 13 0 0 1-1.7 2.7"/><path d="M6.6 6.6A13.5 13.5 0 0 0 2 12s3 7 10 7a9.7 9.7 0 0 0 5.4-1.6"/><path d="m2 2 20 20"/></svg></div>
+          <h3>Gizli pencere</h3>
+          <p>Kapatınca her izini siler, profiline hiçbir şey yazmaz. Ekran görüntüsünde bile siyah görünür. <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>N</kbd></p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.8 9.8 0 0 0-6.7 2.7L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.8 9.8 0 0 0 6.7-2.7L21 16"/><path d="M16 16h5v5"/></svg></div>
+          <h3>Bilgisayarların arasında eşitleme</h3>
+          <p>İstersen Google hesabınla gir: yer imlerin, kısayolların, temanın ve kalkan ayarların bütün bilgisayarlarında aynı kalır.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.8 9.8 0 0 0-6.7 2.7L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg></div>
+          <h3>Kaldığın yerden devam</h3>
+          <p>Pencerenin yerini hatırlar, açılışta son sekmelerini geri getirmeyi önerir. Yanlışlıkla kapattığın sekme <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>T</kbd> ile geri gelir.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.1-6C9.5 14.5 12 13 13 12"/></svg></div>
+          <h3>Belleği yormaz</h3>
+          <p>Uzun süre bakmadığın sekmeleri uyutur, döndüğünde sayfa yerinde durur. Müzik çalan ya da mesajlaşma sekmelerine dokunmaz.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><path d="M17.5 14v7M14 17.5h7"/></svg></div>
+          <h3>Senin başlangıç sayfan</h3>
+          <p>Saate göre selamlar, Google'da arar. Favori sitelerini ekler, sürükleyerek istediğin sıraya dizersin.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+          <h3>Güvenli bağlantı, sade dille</h3>
+          <p>Adres çubuğundaki kilit bağlantının güvenli olup olmadığını söyler. Tıklayınca sertifikayı kimin verdiğini ve ne zamana kadar geçerli olduğunu gösterir.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+          <h3>Geçmiş ve temizlik</h3>
+          <p>Gün gün geçmiş, içinde arama <kbd>Ctrl</kbd> <kbd>H</kbd>. Geçmişi, çerezleri ve önbelleği tek seferde temizle <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>Del</kbd></p>
+        </article>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>Gizlilik</h2>
-    <p>Ayrıntılar için <a href="gizlilik.html">gizlilik politikasına</a> bak.</p>
+  <section class="block" id="gizlilik">
+    <div class="wrap">
+      <div class="privacy">
+        <div>
+          <p class="kicker">Gizlilik ve Google ile giriş</p>
+          <h2>Verilerin bizde değil, sende.</h2>
+          <p>DodoBrowser'ın bir sunucusu yoktur. Senin hakkında hiçbir veri bize gönderilmez, toplanmaz, satılmaz ya da paylaşılmaz.</p>
+          <p>İstersen Google hesabınla giriş yapabilirsin. Böylece yer imlerin, başlangıç sayfası kısayolların, tema ve reklam engeli ayarların ile sık girdiğin siteler kendi bilgisayarların arasında aynı kalır.</p>
+          <p>Ayrıntılar için <a href="gizlilik.html">gizlilik politikasına</a> bak.</p>
+        </div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Senin kendi Google Drive'ında.</b> Eşitlenen veriler DodoBrowser'ın kendine ait, gizli uygulama klasöründe saklanır.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Diğer dosyaların görünmez.</b> DodoBrowser Drive'ındaki başka hiçbir dosyayı göremez, okuyamaz, değiştiremez.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Giriş isteğe bağlı.</b> Girmezsen her şey yalnızca bilgisayarında kalır.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Bu sitede de izleyici yok.</b> Bu sayfa çerez ya da istatistik aracı kullanmaz, dışarıdan hiçbir şey yüklemez.</span></li>
+        </ul>
+      </div>
+    </div>
   </section>
 
-  <footer>İletişim: <a href="mailto:dogannyildizzz@gmail.com">dogannyildizzz@gmail.com</a></footer>
+  <section class="block" id="kisayollar">
+    <div class="wrap">
+      <p class="kicker">Kısayollar</p>
+      <h2>Klavyeyi sevenler için.</h2>
+      <p class="sub">Alıştığın kısayollar burada da çalışır, adres çubuğundayken bile.</p>
+      <div class="keys">
+        <div class="key"><span>Yeni sekme</span><div><kbd>Ctrl</kbd> <kbd>T</kbd></div></div>
+        <div class="key"><span>Kapattığın sekmeyi geri aç</span><div><kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>T</kbd></div></div>
+        <div class="key"><span>Gizli pencere</span><div><kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>N</kbd></div></div>
+        <div class="key"><span>Yer imi ekle</span><div><kbd>Ctrl</kbd> <kbd>D</kbd></div></div>
+        <div class="key"><span>Geçmiş</span><div><kbd>Ctrl</kbd> <kbd>H</kbd></div></div>
+        <div class="key"><span>İndirilenler</span><div><kbd>Ctrl</kbd> <kbd>J</kbd></div></div>
+        <div class="key"><span>Sayfada bul</span><div><kbd>Ctrl</kbd> <kbd>F</kbd></div></div>
+        <div class="key"><span>Yakınlaştır / uzaklaştır</span><div><kbd>Ctrl</kbd> <kbd>+</kbd> <kbd>−</kbd></div></div>
+        <div class="key"><span>Verileri temizle</span><div><kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>Del</kbd></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing" id="iletisim">
+    <div class="wrap">
+      <svg class="big" aria-hidden="true"><use href="#dodo"/></svg>
+      <h2>Dodo soyu tükenmiş bir kuştu.<br>Bu dodo ise her gün yanında.</h2>
+      <p class="sub">DodoBrowser şu an geliştirme aşamasında. Bir fikrin ya da sorun bildirimin varsa yaz.</p>
+
+      <!-- Contact form: sent through Web3Forms to the developer's mailbox; the address itself is never on the page. -->
+      <form class="contact" id="contact" novalidate>
+        <input type="hidden" name="access_key" value="d6ba7440-30c6-4aaa-80d1-db9882be23e5">
+        <input type="hidden" name="subject" value="DodoBrowser sitesinden yeni mesaj">
+        <input type="hidden" name="from_name" value="dodobrowser.com">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="row">
+          <label>Adın<input type="text" name="name" required maxlength="80" autocomplete="name"></label>
+          <label>E-postan<input type="email" name="email" required maxlength="120" autocomplete="email" placeholder="Sana dönebilmemiz için"></label>
+        </div>
+        <label>Mesajın<textarea name="message" required rows="5" maxlength="4000" placeholder="Fikrin, sorunun ya da merak ettiğin…"></textarea></label>
+        <div class="send">
+          <p class="fine">Mesajın sadece sana cevap verebilmek için iletilir.</p>
+          <button class="btn primary" type="submit">Gönder
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></button>
+        </div>
+        <p class="status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
 </main>
+
+<footer class="bottom">
+  <div class="wrap">
+    <a class="logo-link" href="#" style="font-size:16px"><svg aria-hidden="true" style="width:26px;height:26px"><use href="#dodo"/></svg><span><b>Dodo</b>Browser</span></a>
+    <a href="gizlilik.html">Gizlilik politikası</a>
+    <a href="#iletisim">İletişim</a>
+    <span>© 2026</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var form = document.getElementById("contact");
+    var status = form.querySelector(".status");
+    var button = form.querySelector("button");
+    function show(text, kind) { status.textContent = text; status.className = "status " + (kind || ""); }
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var data = new FormData(form);
+      if (!String(data.get("name")).trim() || !String(data.get("message")).trim()) { show("Lütfen adını ve mesajını yaz.", "bad"); return; }
+      if (!form.email.checkValidity() || !String(data.get("email")).trim()) { show("E-posta adresin doğru görünmüyor.", "bad"); return; }
+      if (data.get("botcheck")) return;
+      data.delete("botcheck");
+
+      button.disabled = true;
+      show("Gönderiliyor…");
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(Object.fromEntries(data))
+      })
+        .then(function (r) { return r.json().catch(function () { return {}; }); })
+        .then(function (res) {
+          if (res.success) { form.reset(); show("Teşekkürler! Mesajın ulaştı, en kısa zamanda dönüş yapacağız.", "ok"); }
+          else show("Mesaj gönderilemedi. Biraz sonra yeniden dener misin?", "bad");
+        })
+        .catch(function () { show("Bağlantı kurulamadı. İnternetini kontrol edip yeniden dene.", "bad"); })
+        .then(function () { button.disabled = false; });
+    });
+  })();
+</script>
+
 </body>
 </html>

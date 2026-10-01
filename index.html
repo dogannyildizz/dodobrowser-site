@@ -86,16 +86,38 @@
     backdrop-filter: saturate(1.4) blur(14px);
     -webkit-backdrop-filter: saturate(1.4) blur(14px);
     border-bottom: 1px solid var(--card-border);
+    transition: box-shadow .3s;
   }
+  header.top.scrolled { box-shadow: 0 8px 28px rgba(16, 50, 58, .10); }
   header.top .wrap { display: flex; align-items: center; gap: 24px; height: 64px; }
   .logo-link { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-size: 20px; letter-spacing: -.3px; }
   .logo-link svg { width: 34px; height: 34px; transition: transform .4s cubic-bezier(.3, 1.6, .5, 1); }
   .logo-link:hover svg { transform: rotate(-12deg) scale(1.08); }
   .logo-link b, .wordmark b { color: var(--accent-strong); font-weight: 700; }
   .logo-link span { font-weight: 300; }
-  nav.links { margin-left: auto; display: flex; gap: 6px; }
-  nav.links a { position: relative; color: var(--muted); text-decoration: none; font-size: 15px; padding: 8px 12px; border-radius: 10px; transition: color .2s, background .2s; }
-  nav.links a:hover { color: var(--ink); background: var(--card); }
+  /* Menu: links drop in one by one; a soft pill slides to the link under the mouse,
+     and while scrolling it rests on the section being read. */
+  nav.links { position: relative; margin-left: auto; display: flex; gap: 6px; }
+  nav.links a {
+    position: relative; z-index: 1; color: var(--muted); text-decoration: none; font-size: 15px;
+    padding: 8px 12px; border-radius: 10px; transition: color .25s;
+    animation: drop .7s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(var(--i, 0) * 70ms + 150ms);
+  }
+  nav.links a:hover, nav.links a:focus-visible { color: var(--ink); }
+  nav.links a.on { color: var(--accent-strong); }
+  @keyframes drop { from { opacity: 0; transform: translateY(-14px); } }
+  .nav-pill {
+    position: absolute; left: 0; top: 0; height: 100%; width: 0; border-radius: 10px; pointer-events: none;
+    background: var(--card); box-shadow: var(--shadow); opacity: 0;
+    transition: transform .5s cubic-bezier(.3, 1.35, .5, 1), width .5s cubic-bezier(.3, 1.35, .5, 1), opacity .25s;
+  }
+  .nav-pill::after {
+    content: ""; position: absolute; left: 50%; bottom: 3px; width: 18px; height: 3px; margin-left: -9px;
+    border-radius: 3px; background: linear-gradient(90deg, #1CB7AA, #0B6E79);
+    transform: scaleX(0); transition: transform .35s .1s;
+  }
+  .nav-pill.show { opacity: 1; }
+  .nav-pill.show::after { transform: scaleX(1); }
 
   /* ---------- Hero ---------- */
   .hero { position: relative; padding: 76px 0 110px; overflow: hidden; background: linear-gradient(var(--bg-tint), var(--bg) 90%); }
@@ -136,8 +158,11 @@
   }
   .btn.primary { color: #fff; background: linear-gradient(#1CB7AA, #0B6E79); box-shadow: 0 8px 22px rgba(11, 110, 121, .32); }
   .btn.primary:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(11, 110, 121, .38); }
-  .btn.primary svg { transition: transform .3s; }
-  .btn.primary:hover svg { transform: translateY(3px); }
+  /* Button icons move with the button and add their own small motion. */
+  .btn svg { transition: transform .3s cubic-bezier(.3, 1.4, .5, 1); }
+  .btn:hover svg.arrow { animation: nudge .9s ease-in-out infinite; }
+  .btn:hover svg.plane { transform: translate(3px, -3px) rotate(-8deg); }
+  @keyframes nudge { 50% { transform: translateY(4px); } }
   .btn.ghost { color: var(--ink); background: var(--card); border: 1px solid var(--card-border); }
   .btn.ghost:hover { border-color: var(--accent); transform: translateY(-2px); }
 
@@ -490,11 +515,11 @@
   <div class="wrap">
     <a class="logo-link" href="/"><svg aria-hidden="true"><use href="#dodo"/></svg><span><b>Dodo</b>Browser</span></a>
     <nav class="links" aria-label="Sayfa içi">
-      <a href="#ozellikler">Özellikler</a>
-      <a href="#gizlilik">Gizlilik</a>
-      <a href="#kisayollar">Kısayollar</a>
-      <a href="#iletisim">İletişim</a>
-      <a class="keep" href="/gizlilik">Gizlilik Politikası</a>
+      <a href="#ozellikler" style="--i:0">Özellikler</a>
+      <a href="#gizlilik" style="--i:1">Gizlilik</a>
+      <a href="#kisayollar" style="--i:2">Kısayollar</a>
+      <a href="#iletisim" style="--i:3">İletişim</a>
+      <a class="keep" href="/gizlilik" style="--i:4">Gizlilik Politikası</a>
     </nav>
   </div>
 </header>
@@ -509,7 +534,7 @@
         <p class="lead rise" style="--d:4">Reklamları ve izleyicileri engeller, çerez uyarılarını göstermeden yanıtlar. Sunucumuz yok, verilerin bizde değil, sende.</p>
         <div class="cta rise" style="--d:5">
           <a class="btn primary" href="#ozellikler">Neler yapıyor?
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></a>
+            <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></a>
           <a class="btn ghost" href="#gizlilik">Verilerin nerede?</a>
         </div>
       </div>
@@ -754,7 +779,7 @@
         <div class="send">
           <p class="fine">Mesajın sadece sana cevap verebilmek için iletilir.</p>
           <button class="btn primary" type="submit">Gönder
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></button>
+            <svg class="plane" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></button>
         </div>
         <p class="status" role="status" aria-live="polite"></p>
       </form>
@@ -806,6 +831,52 @@
     }
     var path = location.pathname.replace(/index\.html$/, "");
     if (path !== location.pathname || location.hash) history.replaceState(null, "", path + location.search);
+  })();
+
+  // Menu: the pill follows the mouse, otherwise it rests on the section being read;
+  // the top bar gets a shadow once the page has scrolled.
+  (function () {
+    var nav = document.querySelector("nav.links");
+    var header = document.querySelector("header.top");
+    var links = Array.prototype.slice.call(nav.querySelectorAll("a"));
+    var pill = document.createElement("span");
+    pill.className = "nav-pill";
+    nav.insertBefore(pill, nav.firstChild);
+    var current = null, pointed = null;
+
+    function place(a) {
+      if (!a || !a.offsetWidth) { pill.classList.remove("show"); return; }
+      pill.style.width = a.offsetWidth + "px";
+      pill.style.transform = "translateX(" + a.offsetLeft + "px)";
+      pill.classList.add("show");
+    }
+    function update() { place(pointed || current); }
+    links.forEach(function (a) {
+      a.addEventListener("mouseenter", function () { pointed = a; update(); });
+      a.addEventListener("focus", function () { pointed = a; update(); });
+      a.addEventListener("blur", function () { pointed = null; update(); });
+    });
+    nav.addEventListener("mouseleave", function () { pointed = null; update(); });
+
+    var bySection = {};
+    links.forEach(function (a) { var h = a.getAttribute("href"); if (h.charAt(0) === "#") bySection[h.slice(1)] = a; });
+    if ("IntersectionObserver" in window) {
+      var spy = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          var a = bySection[e.target.id];
+          if (e.isIntersecting) current = a; else if (current === a) current = null;
+        });
+        links.forEach(function (l) { l.classList.toggle("on", l === current); });
+        update();
+      }, { rootMargin: "-45% 0px -50% 0px" });
+      Object.keys(bySection).forEach(function (id) { var s = document.getElementById(id); if (s) spy.observe(s); });
+    }
+    window.addEventListener("resize", update);
+    window.addEventListener("load", update);
+
+    function shade() { header.classList.toggle("scrolled", window.scrollY > 8); }
+    window.addEventListener("scroll", shade, { passive: true });
+    shade();
   })();
 
   // Pieces fade up as they scroll into view.

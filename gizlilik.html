@@ -74,12 +74,6 @@
   ul { margin: 0 0 12px; padding-left: 20px; }
   li { margin-bottom: 8px; }
   li::marker { color: var(--accent); }
-  kbd, code {
-    font: 600 13px/1 "Cascadia Mono", Consolas, monospace;
-    padding: 3px 6px; border-radius: 6px; white-space: nowrap;
-    background: var(--icon-bg); color: var(--ink); border: 1px solid var(--card-border);
-  }
-  kbd { border-bottom-width: 2px; }
 
   footer.bottom { border-top: 1px solid var(--card-border); padding: 28px 0 40px; color: var(--muted); font-size: 14.5px; }
   footer.bottom .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; }
@@ -149,14 +143,12 @@
 
   <section>
     <h2>Verilerini silmek</h2>
-    <p>DodoBrowser'daki verilerin iki yerde durur: DodoBrowser'ı kullandığın her bilgisayarda ayrı ayrı ve, Google ile giriş yaptıysan, kendi Google Drive'ında. Hangisini silmek istediğine göre:</p>
+    <p>Verilerin her zaman senin kontrolünde. Silmek için kimseden izin istemen ya da bize bir talep göndermen gerekmez:</p>
     <ul>
-      <li><strong>Geçmiş, çerezler ve önbellek:</strong> DodoBrowser'da <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>Delete</kbd> tuşlarına bas (ya da ⋮ menüsü → "Tarama verilerini temizle"), zaman aralığını ve neyin silineceğini seç. Bu yalnızca o an DodoBrowser'ı kullandığın bilgisayardan siler; yer imlerin, kısayolların ve kayıtlı şifrelerin kalır.</li>
-      <li><strong>Eşitlenen verileri bir bilgisayardan kaldırmak:</strong> o bilgisayardaki DodoBrowser'da hesap düğmesi → "Çıkış yap" → "Bu bilgisayardan sil". Yer imleri, başlangıç sayfası kısayolları, kalkan ayarları ve sık girilen siteler sadece o bilgisayardan silinir; Google Drive'daki kopyaya ve diğer bilgisayarlarına dokunulmaz.</li>
-      <li><strong>Bir bilgisayardaki her şeyi silmek:</strong> o bilgisayarda DodoBrowser'ı kapat, <kbd>Win</kbd> <kbd>R</kbd> tuşlarına basıp <code>%LOCALAPPDATA%</code> yaz ve açılan klasördeki <code>DodoBrowser</code> klasörünü sil.</li>
-      <li><strong>Google Drive'daki kopyayı silmek:</strong> drive.google.com → Ayarlar → Uygulamaları yönet → DodoBrowser → Seçenekler → "Gizli uygulama verilerini sil". Eşitlenen veriler Google'dan silinir; bilgisayarlarındaki kopyalar kalır.</li>
-      <li><strong>DodoBrowser'ın Google erişimini tamamen kaldırmak:</strong> Google Hesabı → Güvenlik → Üçüncü taraf uygulama bağlantıları → DodoBrowser → erişimi kaldır. Bundan sonra DodoBrowser hiçbir bilgisayarda Google Drive'ına ulaşamaz.</li>
+      <li><strong>Bilgisayarında:</strong> geçmişini, çerezlerini ve önbelleğini DodoBrowser'daki "Tarama verilerini temizle" ile istediğin an silebilirsin. Google hesabından çıkarken eşitlenen verilerin o bilgisayardan da kaldırılmasını seçebilirsin.</li>
+      <li><strong>Google tarafında:</strong> DodoBrowser'a verdiğin izni Google Hesabının güvenlik ayarlarından dilediğin zaman geri alabilir, Drive'ında sakladığı verileri Drive ayarlarından silebilirsin.</li>
     </ul>
+    <p>Bizim tarafımızda silinecek bir kopya yoktur, çünkü verilerin hiçbir zaman bize gelmez. Yardıma ihtiyacın olursa <a href="/#iletisim">bize yaz</a>, birlikte hallederiz.</p>
   </section>
 
   <section>

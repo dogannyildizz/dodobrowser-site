@@ -1022,12 +1022,25 @@
       if (data.get("botcheck")) return;
       data.delete("botcheck");
 
+      // The keys below are the headings in the notification e-mail, so they are Turkish;
+      // replyto keeps Gmail's "Reply" going to the sender.
+      var name = String(data.get("name")).trim(), email = String(data.get("email")).trim();
+      var payload = {
+        access_key: data.get("access_key"),
+        subject: data.get("subject") + ": " + name,
+        from_name: data.get("from_name"),
+        replyto: email,
+        "Ad": name,
+        "E-posta": email,
+        "Mesaj": String(data.get("message")).trim()
+      };
+
       button.disabled = true;
       show("Gönderiliyor…");
       fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
-        body: JSON.stringify(Object.fromEntries(data))
+        body: JSON.stringify(payload)
       })
         .then(function (r) { return r.json().catch(function () { return {}; }); })
         .then(function (res) {

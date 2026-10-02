@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DodoBrowser – Gizlilik Politikası</title>
-<meta name="description" content="DodoBrowser Gizlilik Politikası: sunucumuz yok, verilerin bilgisayarında ve isteğe bağlı olarak kendi Google Drive'ında kalır.">
+<meta name="description" content="DodoBrowser Gizlilik Politikası: hesap, reklam ve izleme yok; verilerin bilgisayarında ve isteğe bağlı olarak kendi Google Drive'ında kalır, sorun bildirimleri isimsizdir.">
 <meta name="theme-color" content="#0B6E79">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%232EC4B6'/%3E%3Cstop offset='1' stop-color='%230B6E79'/%3E%3C/linearGradient%3E%3CclipPath id='c'%3E%3Ccircle cx='128' cy='128' r='120'/%3E%3C/clipPath%3E%3C/defs%3E%3Ccircle cx='128' cy='128' r='120' fill='url(%23g)'/%3E%3Cg clip-path='url(%23c)'%3E%3Cellipse cx='105' cy='235' rx='100' ry='80' fill='%236F6A7B'/%3E%3Ccircle cx='110' cy='120' r='58' fill='%238E899A'/%3E%3Cpath d='M138 96C170 84 205 86 218 104C226 116 222 134 210 140C208 132 204 127 196 126C180 132 160 140 140 140Z' fill='%23EFC94C'/%3E%3Ccircle cx='130' cy='104' r='11' fill='%23fff'/%3E%3Ccircle cx='133' cy='104' r='6' fill='%231E1B24'/%3E%3C/g%3E%3C/svg%3E">
 <style>
@@ -122,7 +122,7 @@
 
   <section class="lead">
     <h2>Kısaca</h2>
-    <p>DodoBrowser'ın bir sunucusu yoktur. Senin hakkında hiçbir veri bize gönderilmez, toplanmaz, satılmaz ya da paylaşılmaz.</p>
+    <p>DodoBrowser'da hesap, reklam ya da izleme yoktur. Bize sadece senin isteyerek gönderdiğin sorun bildirimleri gelir ve onlar da isimsizdir. Hiçbir veri satılmaz ya da paylaşılmaz.</p>
   </section>
 
   <section>
@@ -141,6 +141,30 @@
     <p>DodoBrowser'ın Google API'lerinden aldığı bilgilerin kullanımı, Sınırlı Kullanım (Limited Use) şartları dahil <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>'ye uyar.</p>
   </section>
 
+  <section id="sorun-bildir">
+    <h2>Sorun bildirirsen</h2>
+    <p>DodoBrowser'daki "Sorun bildir" ile bir sorunu bize iletebilirsin. "Gönder"e bastığında şunlar gider:</p>
+    <ul>
+      <li>seçtiğin cevap ve yazdıkların,</li>
+      <li>işaretliyse ekran görüntüsü ve sorun yaşadığın sayfanın adresi,</li>
+      <li>DodoBrowser'ın, sayfa motorunun ve Windows'un sürümü, ekran ölçeği, pencere boyutu ve tema,</li>
+      <li>son yaptığın işlemler (açılan sitelerin sadece adları, sayfaları değil) ve o sayfada engellenen reklam alan adları.</li>
+    </ul>
+    <p>Adın, e-posta adresin, Google hesabın, bilgisayarının adı ve öbür sekmelerin gönderilmez.</p>
+    <p>DodoBrowser bir çökme yaşarsa (örneğin bir sekme çökerse) bu tür sorunları kendiliğinden gönderip göndermeyeceğini ilk seferde sorar ve cevabını hatırlar. İzin verirsen ne olduğu, sürümler ve son açılan sitelerin adları gider; ekran görüntüsü gitmez. İzin vermezsen hiçbir şey gönderilmez.</p>
+    <p>Bildirimler, Google'ın sunucularında çalışan küçük bir aracı programla (Google Apps Script) DodoBrowser geliştiricisinin gizli GitHub deposuna kaydedilir. Bu sırada Google ve GitHub bağlantının teknik bilgilerini (örneğin internet adresini) kendi gizlilik kurallarına göre işleyebilir; biz internet adresini saklamayız. Bildirimler sadece sorunları bulup düzeltmek için okunur ve kimseyle paylaşılmaz.</p>
+  </section>
+
+  <section id="servisler">
+    <h2>DodoBrowser'ın bağlandığı servisler</h2>
+    <ul>
+      <li><strong>Arama ve öneriler:</strong> arama motoru Google'dır. Adres çubuğuna ya da başlangıç sayfasının kısayol ekleme kartına yazdıkların, öneri gösterilebilmesi için yazarken Google'a gider. Gizli pencerede gitmez.</li>
+      <li><strong>Site simgeleri:</strong> önerilerdeki ve başlangıç sayfası kutularındaki site simgeleri Google'ın simge servisinden alınır; bunun için sitenin adı Google'a gider. Gizli pencerede gitmez.</li>
+      <li><strong>Zararlı site ve dosya koruması:</strong> DodoBrowser'ın sayfa motoru Microsoft Defender SmartScreen içerir. SmartScreen seni zararlı ve sahte sitelerden ve dosyalardan korumak için bilgilerini (örneğin açtığın sitelerin adresleri ve indirdiğin dosyalar hakkında bilgiler) toplar ve Microsoft'a gönderir. Bunlar <a href="https://privacy.microsoft.com/tr-tr/privacystatement">Microsoft Gizlilik Bildirimi</a>'nde ve Microsoft Edge gizlilik belgesinin <a href="https://learn.microsoft.com/tr-tr/legal/microsoft-edge/privacy#smartscreen">SmartScreen bölümünde</a> anlatıldığı şekilde işlenir.</li>
+      <li><strong>Sayfa motoru:</strong> sayfaları Windows'ta kurulu Microsoft Edge WebView2 gösterir. Microsoft, onu güvenli ve güncel tutmak için tanılama verisi toplar; ne kadarının gideceğini Windows Ayarları'ndaki "Tanılama ve geri bildirim" bölümünden seçebilirsin.</li>
+    </ul>
+  </section>
+
   <section>
     <h2>Verilerini silmek</h2>
     <p>Verilerin her zaman senin kontrolünde. Silmek için kimseden izin istemen ya da bize bir talep göndermen gerekmez:</p>
@@ -148,7 +172,7 @@
       <li><strong>Bilgisayarında:</strong> geçmişini, çerezlerini ve önbelleğini DodoBrowser'daki "Tarama verilerini temizle" ile istediğin an silebilirsin. Google hesabından çıkarken eşitlenen verilerin o bilgisayardan da kaldırılmasını seçebilirsin.</li>
       <li><strong>Google tarafında:</strong> DodoBrowser'a verdiğin izni Google Hesabının güvenlik ayarlarından dilediğin zaman geri alabilir, Drive'ında sakladığı verileri Drive ayarlarından silebilirsin.</li>
     </ul>
-    <p>Bizim tarafımızda silinecek bir kopya yoktur, çünkü verilerin hiçbir zaman bize gelmez. Yardıma ihtiyacın olursa <a href="/#iletisim">bize yaz</a>, birlikte hallederiz.</p>
+    <p>Gönderdiğin sorun bildirimleri dışında bizim tarafımızda silinecek bir kopya yoktur, çünkü verilerin bize gelmez. Bildirimler isimsiz olduğu için sana bağlanamaz; birinin silinmesini istersen gönderdiğin günü ve yazdığın notu <a href="/#iletisim">iletişim formundan</a> yazman yeterli. Yardıma ihtiyacın olursa <a href="/#iletisim">bize yaz</a>, birlikte hallederiz.</p>
   </section>
 
   <section>

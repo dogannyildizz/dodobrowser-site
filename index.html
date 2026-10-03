@@ -6,9 +6,41 @@
 <title>DodoBrowser – Hafif. Hızlı. Senin.</title>
 <meta name="description" content="DodoBrowser, Windows için kişisel ve hafif bir web tarayıcısı. Reklamları ve izleyicileri engeller, çerez uyarılarını göstermeden yanıtlar; sunucusu yoktur, verilerin sende kalır.">
 <meta name="theme-color" content="#0B6E79">
-<meta property="og:title" content="DodoBrowser">
+<link rel="canonical" href="https://dodobrowser.com/">
+<meta property="og:title" content="DodoBrowser – Hafif. Hızlı. Senin.">
 <meta property="og:description" content="Windows için kişisel ve hafif bir web tarayıcısı. Reklamsız, sade, Türkçe.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://dodobrowser.com/">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="DodoBrowser">
+<meta property="og:image" content="https://dodobrowser.com/paylasim.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DodoBrowser logosu ve sloganı: Hafif. Hızlı. Senin.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DodoBrowser – Hafif. Hızlı. Senin.">
+<meta name="twitter:description" content="Windows için kişisel ve hafif bir web tarayıcısı. Reklamsız, sade, Türkçe.">
+<meta name="twitter:image" content="https://dodobrowser.com/paylasim.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "DodoBrowser",
+  "alternateName": "Dodo",
+  "description": "Windows için kişisel ve hafif bir web tarayıcısı. Reklamları ve izleyicileri engeller, çerez uyarılarını yanıtlar; verilerin bilgisayarında kalır.",
+  "applicationCategory": "BrowserApplication",
+  "operatingSystem": "Windows 10, Windows 11",
+  "inLanguage": "tr",
+  "url": "https://dodobrowser.com/",
+  "image": "https://dodobrowser.com/paylasim.png",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
+  "sameAs": [
+    "https://x.com/dodobrowserapp",
+    "https://www.instagram.com/dodobrowser/",
+    "https://www.youtube.com/@dodobrowser"
+  ]
+}
+</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%232EC4B6'/%3E%3Cstop offset='1' stop-color='%230B6E79'/%3E%3C/linearGradient%3E%3CclipPath id='c'%3E%3Ccircle cx='128' cy='128' r='120'/%3E%3C/clipPath%3E%3C/defs%3E%3Ccircle cx='128' cy='128' r='120' fill='url(%23g)'/%3E%3Cg clip-path='url(%23c)'%3E%3Cellipse cx='105' cy='235' rx='100' ry='80' fill='%236F6A7B'/%3E%3Ccircle cx='110' cy='120' r='58' fill='%238E899A'/%3E%3Cpath d='M138 96C170 84 205 86 218 104C226 116 222 134 210 140C208 132 204 127 196 126C180 132 160 140 140 140Z' fill='%23EFC94C'/%3E%3Ccircle cx='130' cy='104' r='11' fill='%23fff'/%3E%3Ccircle cx='133' cy='104' r='6' fill='%231E1B24'/%3E%3C/g%3E%3C/svg%3E">
 <script>document.documentElement.classList.add("js");</script>
 <style>
@@ -420,11 +452,53 @@
   @keyframes hop { 0%, 60%, 100% { transform: none; } 70% { transform: translateY(-14px) rotate(-6deg); } 80% { transform: translateY(0) scale(1.06, .94); } 88% { transform: translateY(-4px); } }
   .closing h2 { margin-top: 18px; }
   .closing .sub { margin: 0 auto 28px; }
-  .contact {
-    max-width: 640px; margin: 0 auto; text-align: left;
+  /* Two cards side by side: direct address + socials, and the (optionally nameless) form */
+  .reach { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr); gap: 20px; align-items: start; text-align: left; }
+  .direct, .contact {
     background: var(--card); border: 1px solid var(--card-border); border-radius: 20px;
-    padding: 28px; box-shadow: var(--shadow); display: grid; gap: 16px;
+    padding: 28px; box-shadow: var(--shadow);
   }
+  .direct h3, .contact h3 { margin: 0; font-size: 19px; letter-spacing: -.01em; }
+  .direct p, .formhead p { margin: 6px 0 0; color: var(--muted); font-size: 14.5px; line-height: 1.5; }
+  .direct .badge {
+    display: grid; place-items: center; width: 46px; height: 46px; margin-bottom: 14px;
+    border-radius: 14px; background: var(--icon-bg); color: var(--accent-strong);
+  }
+  .direct .badge svg { width: 24px; height: 24px; }
+  .mailrow {
+    display: flex; align-items: center; gap: 10px; margin-top: 16px; padding: 6px 6px 6px 14px;
+    background: var(--bg); border: 1px solid var(--card-border); border-radius: 12px;
+  }
+  .mailrow .mail { flex: 1; min-width: 0; font-weight: 700; font-size: 16px; color: var(--accent-strong); text-decoration: none; overflow-wrap: anywhere; }
+  .mailrow .mail:hover { text-decoration: underline; }
+  .copy {
+    flex: none; font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer;
+    color: var(--ink); background: var(--card); border: 1px solid var(--card-border); border-radius: 9px;
+    padding: 7px 12px; transition: background .2s, color .2s, border-color .2s;
+  }
+  .copy:hover { border-color: var(--accent); }
+  .copy.done { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  .direct h4 { margin: 26px 0 10px; font-size: 13px; font-weight: 600; color: var(--muted); }
+  .socials { display: grid; gap: 8px; }
+  .soc {
+    --cut: var(--icon-bg);
+    display: flex; align-items: center; gap: 12px; padding: 8px 12px 8px 8px;
+    border: 1px solid var(--card-border); border-radius: 14px; color: var(--ink); text-decoration: none;
+    transition: border-color .2s, transform .2s, box-shadow .2s;
+  }
+  .soc:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow); }
+  .soc .si { display: grid; place-items: center; flex: none; width: 38px; height: 38px; border-radius: 11px; background: var(--icon-bg); transition: background .2s, color .2s; }
+  .soc .si svg { width: 20px; height: 20px; }
+  .soc .sn { display: grid; font-weight: 600; font-size: 15px; line-height: 1.25; }
+  .soc .sn small { font-weight: 400; font-size: 13px; color: var(--muted); }
+  /* On hover each icon takes its own brand colour */
+  .soc.x:hover .si { background: #000; color: #fff; }
+  .soc.ig:hover .si { background: linear-gradient(45deg, #F58529, #DD2A7B 45%, #8134AF 75%, #515BD4); color: #fff; }
+  .soc.yt:hover { --cut: #FF0000; }
+  .soc.yt:hover .si { background: #FF0000; color: #fff; }
+  .contact { display: grid; gap: 16px; }
+  .formhead { margin-bottom: 2px; }
+  .contact .opt { font-weight: 400; font-size: 12.5px; color: var(--muted); margin-left: 4px; }
   .contact .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
   .contact label { display: grid; gap: 6px; font-size: 14.5px; font-weight: 600; }
   .contact input, .contact textarea {
@@ -449,6 +523,10 @@
   footer.bottom .wrap > :first-child { margin-right: auto; }
   footer.bottom a { color: var(--muted); }
   footer.bottom a:hover { color: var(--ink); }
+  footer.bottom .fsoc { display: inline-flex; gap: 6px; --cut: var(--bg); }
+  footer.bottom .fsoc a { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; transition: background .2s, color .2s; }
+  footer.bottom .fsoc a:hover { background: var(--icon-bg); color: var(--ink); --cut: var(--icon-bg); }
+  footer.bottom .fsoc svg { width: 18px; height: 18px; }
 
   /* ---------- Responsive ---------- */
   @media (max-width: 960px) {
@@ -456,6 +534,7 @@
     .grid, .keys, .stats { grid-template-columns: repeat(2, 1fr); }
     .strip ul { grid-template-columns: repeat(2, 1fr); }
     .privacy { grid-template-columns: 1fr; padding: 40px 28px; }
+    .reach { grid-template-columns: 1fr; max-width: 640px; }
     .chip.c1 { left: 8px; }
     .chip.c2 { right: 8px; }
   }
@@ -470,7 +549,7 @@
     .bar { grid-template-columns: 82px 1fr auto; }
     section.block { padding-top: 76px; }
     .privacy { border-radius: 20px; }
-    .contact { padding: 20px; }
+    .contact, .direct { padding: 20px; }
     .contact .row { grid-template-columns: 1fr; }
     .tiles { gap: 6px; }
     .tile { width: 58px; }
@@ -510,6 +589,11 @@
         </ellipse>
       </g>
     </symbol>
+    <!-- Contact and social icons (single colour: currentColor; --cut is the colour of the cut-outs). -->
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="currentColor" d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.21-6.82-5.97 6.82H1.68l7.73-8.84L1.25 2.25h6.83l4.71 6.23zm-1.16 17.52h1.83L7.08 4.13H5.12z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/></g><circle cx="17.3" cy="6.7" r="1.25" fill="currentColor"/></symbol>
+    <symbol id="i-yt" viewBox="0 0 24 24"><path fill="currentColor" d="M22.5 7.4a3 3 0 0 0-2.1-2.1C18.5 4.8 12 4.8 12 4.8s-6.5 0-8.4.5A3 3 0 0 0 1.5 7.4 31 31 0 0 0 1 12a31 31 0 0 0 .5 4.6 3 3 0 0 0 2.1 2.1c1.9.5 8.4.5 8.4.5s6.5 0 8.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23 12a31 31 0 0 0-.5-4.6Z"/><path fill="var(--cut, #fff)" d="m9.8 15.3 5.7-3.3-5.7-3.3Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="3"/><path d="m3.5 7 8.5 6 8.5-6"/></g></symbol>
   </defs>
 </svg>
 
@@ -767,24 +851,47 @@
       <h2 class="reveal" style="--d:1">Dodo soyu tükenmiş bir kuştu.<br>Bu dodo ise her gün yanında.</h2>
       <p class="sub reveal" style="--d:2">DodoBrowser şu an geliştirme aşamasında. Bir fikrin ya da sorun bildirimin varsa yaz.</p>
 
-      <!-- Contact form: sent through Web3Forms to the developer's mailbox; the address itself is never on the page. -->
-      <form class="contact reveal" style="--d:3" id="contact" novalidate>
+      <div class="reach reveal" style="--d:3">
+        <!-- Direct: the public brand address (info@, a forward to the developer) and the social accounts. -->
+        <aside class="direct">
+          <span class="badge"><svg aria-hidden="true"><use href="#i-mail"/></svg></span>
+          <h3>Doğrudan yaz</h3>
+          <p>İş birliği, basın ya da uzun bir konu için.</p>
+          <div class="mailrow">
+            <a class="mail" href="mailto:info@dodobrowser.com">info@dodobrowser.com</a>
+            <button class="copy" type="button" data-copy="info@dodobrowser.com">Kopyala</button>
+          </div>
+          <h4>Takip et</h4>
+          <div class="socials">
+            <a class="soc x" href="https://x.com/dodobrowserapp" rel="noopener" target="_blank"><span class="si"><svg aria-hidden="true"><use href="#i-x"/></svg></span><span class="sn">X<small>@dodobrowserapp</small></span></a>
+            <a class="soc ig" href="https://www.instagram.com/dodobrowser/" rel="noopener" target="_blank"><span class="si"><svg aria-hidden="true"><use href="#i-ig"/></svg></span><span class="sn">Instagram<small>@dodobrowser</small></span></a>
+            <a class="soc yt" href="https://www.youtube.com/@dodobrowser" rel="noopener" target="_blank"><span class="si"><svg aria-hidden="true"><use href="#i-yt"/></svg></span><span class="sn">YouTube<small>@dodobrowser</small></span></a>
+          </div>
+        </aside>
+
+      <!-- Contact form: sent through Web3Forms to the developer's mailbox. Name and e-mail are optional, so people can write without saying who they are. -->
+      <form class="contact" id="contact" novalidate>
         <input type="hidden" name="access_key" value="d6ba7440-30c6-4aaa-80d1-db9882be23e5">
         <input type="hidden" name="subject" value="DodoBrowser sitesinden yeni mesaj">
         <input type="hidden" name="from_name" value="dodobrowser.com">
         <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="formhead">
+          <h3>Buradan da yazabilirsin</h3>
+          <p>Adını ve e-postanı yazmak zorunda değilsin; boş bırakırsan mesajın isimsiz gelir, ama o zaman sana cevap veremeyiz.</p>
+        </div>
         <div class="row">
-          <label>Adın<input type="text" name="name" required maxlength="80" autocomplete="name"></label>
-          <label>E-postan<input type="email" name="email" required maxlength="120" autocomplete="email" placeholder="Sana dönebilmemiz için"></label>
+          <label><span>Adın <span class="opt">isteğe bağlı</span></span><input type="text" name="name" maxlength="80" autocomplete="name"></label>
+          <label><span>E-postan <span class="opt">isteğe bağlı</span></span><input type="email" name="email" maxlength="120" autocomplete="email" placeholder="Cevap istersen"></label>
         </div>
         <label>Mesajın<textarea name="message" required rows="5" maxlength="4000" placeholder="Fikrin, sorunun ya da merak ettiğin…"></textarea></label>
         <div class="send">
-          <p class="fine">Mesajın sadece sana cevap verebilmek için iletilir.</p>
+          <p class="fine">Mesajın sadece okunmak ve cevaplanmak için iletilir.</p>
           <button class="btn primary" type="submit">Gönder
             <svg class="plane" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></button>
         </div>
         <p class="status" role="status" aria-live="polite"></p>
       </form>
+      </div>
     </div>
   </section>
 </main>
@@ -794,6 +901,11 @@
     <a class="logo-link" href="/" style="font-size:16px"><svg aria-hidden="true" style="width:26px;height:26px"><use href="#dodo"/></svg><span><b>Dodo</b>Browser</span></a>
     <a href="/gizlilik">Gizlilik Politikası</a>
     <a href="#iletisim">İletişim</a>
+    <span class="fsoc">
+      <a href="https://x.com/dodobrowserapp" rel="noopener" target="_blank" aria-label="X" title="X"><svg aria-hidden="true"><use href="#i-x"/></svg></a>
+      <a href="https://www.instagram.com/dodobrowser/" rel="noopener" target="_blank" aria-label="Instagram" title="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+      <a href="https://www.youtube.com/@dodobrowser" rel="noopener" target="_blank" aria-label="YouTube" title="YouTube"><svg aria-hidden="true"><use href="#i-yt"/></svg></a>
+    </span>
     <span>© 2026</span>
   </div>
 </footer>
@@ -1017,23 +1129,24 @@
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var data = new FormData(form);
-      if (!String(data.get("name")).trim() || !String(data.get("message")).trim()) { show("Lütfen adını ve mesajını yaz.", "bad"); return; }
-      if (!form.email.checkValidity() || !String(data.get("email")).trim()) { show("E-posta adresin doğru görünmüyor.", "bad"); return; }
+      // Only the message is required; name and e-mail are optional (nameless messages are welcome).
+      if (!String(data.get("message")).trim()) { show("Lütfen mesajını yaz.", "bad"); return; }
+      var name = String(data.get("name")).trim(), email = String(data.get("email")).trim();
+      if (email && !form.email.checkValidity()) { show("E-posta adresin doğru görünmüyor. İstersen boş bırakabilirsin.", "bad"); return; }
       if (data.get("botcheck")) return;
       data.delete("botcheck");
 
       // The keys below are the headings in the notification e-mail, so they are Turkish;
-      // replyto keeps Gmail's "Reply" going to the sender.
-      var name = String(data.get("name")).trim(), email = String(data.get("email")).trim();
+      // replyto (only when given) keeps Gmail's "Reply" going to the sender.
       var payload = {
         access_key: data.get("access_key"),
-        subject: data.get("subject") + ": " + name,
+        subject: data.get("subject") + ": " + (name || "isimsiz"),
         from_name: data.get("from_name"),
-        replyto: email,
-        "Ad": name,
-        "E-posta": email,
+        "Ad": name || "(yazılmadı)",
+        "E-posta": email || "(yazılmadı, cevap istenmiyor)",
         "Mesaj": String(data.get("message")).trim()
       };
+      if (email) payload.replyto = email;
 
       button.disabled = true;
       show("Gönderiliyor…");
@@ -1044,13 +1157,28 @@
       })
         .then(function (r) { return r.json().catch(function () { return {}; }); })
         .then(function (res) {
-          if (res.success) { form.reset(); show("Teşekkürler! Mesajın ulaştı, en kısa zamanda dönüş yapacağız.", "ok"); }
+          if (res.success) {
+            form.reset();
+            show(email ? "Teşekkürler! Mesajın ulaştı, en kısa zamanda dönüş yapacağız." : "Teşekkürler! Mesajın isimsiz olarak ulaştı.", "ok");
+          }
           else show("Mesaj gönderilemedi. Biraz sonra yeniden dener misin?", "bad");
         })
         .catch(function () { show("Bağlantı kurulamadı. İnternetini kontrol edip yeniden dene.", "bad"); })
         .then(function () { button.disabled = false; });
     });
   })();
+
+  // "Copy" next to the e-mail address.
+  document.querySelectorAll(".copy").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var text = b.getAttribute("data-copy");
+      function done() { b.textContent = "Kopyalandı"; b.classList.add("done"); setTimeout(function () { b.textContent = "Kopyala"; b.classList.remove("done"); }, 1800); }
+      // If the clipboard is not allowed, select the address so it can be copied by hand.
+      function select() { var r = document.createRange(); r.selectNodeContents(b.parentNode.querySelector(".mail")); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, select);
+      else select();
+    });
+  });
 
   // Reduced motion: the logos stop blinking too.
   if (calm) document.querySelectorAll("svg").forEach(function (s) { if (s.pauseAnimations) s.pauseAnimations(); });

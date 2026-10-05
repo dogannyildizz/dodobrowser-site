@@ -1,0 +1,9 @@
+# DodoBrowser: HaGeZi listesinden ÇIKARILAN alan adları (engellenmez).
+# Bir site bozulursa buraya eklenir; her gün çalışan iş (liste-isi.yml) listeyi yeniden üretir,
+# programlar ertesi gün yeni listeyi alır. Satır başına bir alan adı; o ad ve alt adları listeden çıkar.
+# Bir üst alan adı listedeyse (ör. listede "ornek.com" varken "cdn.ornek.com" istisnası) çıkarılamaz:
+# o zaman listedeki üst ad buraya yazılır.
+#
+# Çerez onay araçları engellenmez (adblock\CLAUDE.md: çerez uyarılarını Dodo kendisi yanıtlar;
+# aracı engellemek, onay bekleyen sitelerde içeriği durdurabilir).
+cdn.efilli.com

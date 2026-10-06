@@ -1,6 +1,7 @@
 # Copied to the public site repository as .github/workflows/liste.yml.
 # Every day: the block list is built again (liste/olustur.sh) and published on
-# https://dodobrowser.com/liste/engelli-alanlar.txt when it changed.
+# https://dodobrowser.com/liste/engelli-alanlar.txt when it changed; so are the
+# filter lists (liste/filtreler.sh -> https://dodobrowser.com/liste/filtreler.txt).
 name: Reklam listesi
 on:
   schedule:
@@ -15,11 +16,17 @@ jobs:
       - uses: actions/checkout@v4
       - name: Listeyi olustur
         run: bash liste/olustur.sh
+      # The filter lists (7 Oct 2026): a failure here leaves yesterday's file and
+      # doesn't stop the domain list.
+      - name: Filtre listesini olustur
+        run: bash liste/filtreler.sh || git checkout -- liste/filtreler.txt 2>/dev/null || true
       - name: Degistiyse gonder
         run: |
-          if git diff --quiet -- liste/engelli-alanlar.txt; then echo "Degisiklik yok"; exit 0; fi
+          git add -N liste/filtreler.txt 2>/dev/null || true
+          if git diff --quiet -- liste/engelli-alanlar.txt liste/filtreler.txt; then echo "Degisiklik yok"; exit 0; fi
           git config user.name "dodobrowser-liste"
           git config user.email "dodobrowser-liste@users.noreply.github.com"
           git add liste/engelli-alanlar.txt
-          git commit -m "Reklam listesi guncellendi"
+          if [ -f liste/filtreler.txt ]; then git add liste/filtreler.txt; fi
+          git commit -m "Reklam listeleri guncellendi"
           git push

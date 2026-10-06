@@ -7,3 +7,9 @@ istekte kişisel bilgi gitmez.
 Kaynak: HaGeZi's Multi LIGHT (https://github.com/hagezi/dns-blocklists), GPL-3.0 lisanslı;
 lisans metni HAGEZI-LISANS.txt. Dosya her gün olustur.sh ile yeniden üretilir; istisnalar.txt'deki
 alan adları listeden çıkarılır (sitelerin çalışması engellemekten önce gelir).
+
+filtreler.txt: Kalkan'ın gelişmiş reklam listeleri (Ayarlar > Kalkan'dan kapatılabilir). EasyList ve
+EasyPrivacy (https://easylist.to, The EasyList authors; GPL-3.0 ya da CC BY-SA 3.0) ile AdGuard Turkish
+filter (https://github.com/AdguardTeam/AdGuardFilters, GPL-3.0) tek dosyada. Her gün filtreler.sh ile
+yeniden üretilir: açıklamalar ve betik çalıştıran ya da sitenin gönderdiğini değiştiren kurallar
+çıkarılır, geri kalan satırlar değiştirilmez. Program bu dosyayı da günde en çok bir kez alır.

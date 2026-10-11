@@ -22,7 +22,7 @@ for name in easylist easyprivacy adguard-turkce; do
   tr -d '\r' < "$name.tmp" \
     | grep -v -E '^[[:space:]]*(!|\[|$)' \
     | grep -v -E '##\+js|#@#\+js|#%#|#@%#|#\$#|#@\$#|#\?#|#@\?#|\$\$|\$\@\$' \
-    | grep -v -E '[$,](redirect|redirect-rule|rewrite|replace|removeparam|queryprune|csp|header|permissions|urltransform|uritransform|empty|mp4|cookie|jsonprune|xmlprune)(=|,|$)' \
+    | grep -v -E '[$,](redirect|redirect-rule|rewrite|replace|removeparam|queryprune|csp|header|removeheader|hls|permissions|urltransform|uritransform|empty|mp4|cookie|jsonprune|xmlprune)(=|,|$)' \
     >> filtre.tmp
   rm "$name.tmp"
 done

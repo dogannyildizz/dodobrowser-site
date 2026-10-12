@@ -546,9 +546,11 @@
   .follow svg { width: 20px; height: 20px; }
   .reach-sec { text-align: center; padding-bottom: 90px; }
   .reach-sec .sub { margin: 0 auto 32px; }
-  .closing svg.big { width: 96px; height: 96px; filter: drop-shadow(0 10px 20px rgba(11, 110, 121, .3)); animation: hop 3.2s ease-in-out infinite; transform-origin: 50% 100%; }
+  .closing svg.big { width: 120px; height: 120px; filter: drop-shadow(0 10px 20px rgba(11, 110, 121, .3)); animation: hop 3.2s ease-in-out infinite; transform-origin: 50% 100%; }
   @keyframes hop { 0%, 60%, 100% { transform: none; } 70% { transform: translateY(-14px) rotate(-6deg); } 80% { transform: translateY(0) scale(1.06, .94); } 88% { transform: translateY(-4px); } }
-  .closing h2 { margin-top: 18px; }
+  .closing .wordmark { margin: 18px 0 0; font-size: clamp(44px, 7vw, 68px); line-height: 1.05; font-weight: 300; letter-spacing: -2px; }
+  .closing .wordmark b { color: var(--accent-strong); font-weight: 700; }
+  .closing .tagline { margin: 10px 0 32px; font-size: clamp(18px, 2.4vw, 22px); color: var(--muted); letter-spacing: .6px; }
   .closing .sub { margin: 0 auto 28px; }
   /* Two cards side by side: direct address + socials, and the (optionally nameless) form */
   .reach { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr); gap: 20px; align-items: start; text-align: left; }
@@ -800,7 +802,7 @@
     <div class="wrap">
       <p class="kicker reveal">Ölçtük</p>
       <h2 class="reveal" style="--d:1">Daha az yük, daha çabuk sayfa.</h2>
-      <p class="sub reveal" style="--d:2">DodoBrowser sayfaları Edge'in motoruyla açar. Kendi ölçümlerimizde fark, reklamlar ve izleyiciler hiç yüklenmeyince ortaya çıkıyor.</p>
+      <p class="sub reveal" style="--d:2">DodoBrowser sayfaları Edge'in motoruyla açar. Fark, reklamlar ve izleyiciler hiç yüklenmeyince ortaya çıkıyor.</p>
       <div class="stats">
         <div class="stat reveal" style="--d:0">
           <h3>6 sekme açıkken bellek</h3>
@@ -818,7 +820,7 @@
           <div class="bar dodo"><span>DodoBrowser</span><div><i style="--w:17%"></i></div><b>~130</b></div>
         </div>
       </div>
-      <p class="note reveal">Kendi ölçümlerimiz, Windows 11 yüklü bir dizüstü bilgisayarda Microsoft Edge ile karşılaştırılarak yapıldı. Sonuçlar bilgisayara ve siteye göre değişir.</p>
+      <p class="note reveal">Windows 11 yüklü bir dizüstü bilgisayarda Microsoft Edge ile karşılaştırıldı.</p>
     </div>
   </section>
 
@@ -832,7 +834,7 @@
         <div>
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.7 9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
           <h3>Kalkan: sayfa sana kalır</h3>
-          <p>Reklamları ve izleyicileri sayfa açılmadan durdurur, geride kalan boş kutuları toplar. Çerez ve "bildirimlere izin ver" pencerelerini senin seçtiğin kurala göre yanıtlar; ilk tercihi hep reddetmek. Bir site bozulursa kalkanı o sitede tek tıkla kapatırsın.</p>
+          <p>Reklamları ve izleyicileri sayfa açılmadan durdurur, geride kalan boş kutuları toplar. Çerez ve "bildirimlere izin ver" pencerelerini senin seçtiğin kurala göre yanıtlar; ilk tercihi hep reddetmek. İstediğin sitede kalkanı tek tıkla kapatırsın.</p>
         </div>
         <!-- A small copy of the shield menu in DodoBrowser: the count, and the switch for this one site. -->
         <div class="smenu" aria-hidden="true">
@@ -929,11 +931,11 @@
       <div class="faq">
         <details class="reveal"><summary>Ücretsiz mi?</summary><p>Evet. Hesap açman ya da bir şey ödemen gerekmez. DodoBrowser sana reklam da göstermez.</p></details>
         <details class="reveal"><summary>Hangi Windows'ta çalışır?</summary><p>Windows 10 ve Windows 11'de. Sayfaları Windows'ta hazır bulunan Edge motoruyla açar; bilgisayarında eksikse DodoBrowser kurulmasına yardım eder.</p></details>
-        <details class="reveal"><summary>Siteler düzgün açılır mı?</summary><p>Evet. DodoBrowser, Edge'in motorunu kullanır; siteler Edge ve Chrome'da nasıl açılıyorsa öyle açılır. Kalkan bir siteyi bozarsa o sitede tek tıkla kapatırsın.</p></details>
-        <details class="reveal"><summary>Chrome'daki yer imlerimi taşıyabilir miyim?</summary><p>Evet. Chrome, Edge, Brave, Vivaldi ya da Opera'dan tek tıkla, klasörleriyle getirirsin. Kayıtlı şifreler şimdilik taşınmıyor.</p></details>
-        <details class="reveal"><summary>Neler henüz yok?</summary><p>Eklenti (uzantı) yüklenemez, sayfa çevirisi yok. Arayüz şimdilik sadece Türkçe.</p></details>
+        <details class="reveal"><summary>Siteler düzgün açılır mı?</summary><p>Evet. DodoBrowser, Edge'in motorunu kullanır; siteler Edge ve Chrome'da nasıl açılıyorsa öyle açılır. İstediğin sitede kalkanı tek tıkla kapatırsın.</p></details>
+        <details class="reveal"><summary>Chrome'daki yer imlerimi taşıyabilir miyim?</summary><p>Evet. Chrome, Edge, Brave, Vivaldi ya da Opera'dan tek tıkla, klasörleriyle getirirsin.</p></details>
+        <details class="reveal"><summary>Eklenti yükleyebilir miyim?</summary><p>Şimdilik yüklenmez. Reklam ve izleyici engelleme, çerez uyarılarını yanıtlama gibi işler kalkanla zaten hazır gelir. Arayüz Türkçedir.</p></details>
         <details class="reveal"><summary>Güncellemeler nasıl gelir?</summary><p>Microsoft Store, DodoBrowser'ı kendiliğinden günceller. Güncellemede yer imlerin ve ayarların kaybolmaz.</p></details>
-        <details class="reveal"><summary>Bunu kim yapıyor?</summary><p>DodoBrowser'ı tek bir kişi, kendi bilgisayarında her gün kullanmak için yaptı. Sonra herkese açtı.</p></details>
+        <details class="reveal"><summary>Neden DodoBrowser?</summary><p>Günlük kullanım için tasarlandı: hızlı açılır, sayfaları reklamlardan ve izleyicilerden arındırır, verilerini bilgisayarında tutar.</p></details>
       </div>
     </div>
   </section>
@@ -941,9 +943,10 @@
   <section class="closing">
     <div class="wrap">
       <svg class="big reveal" aria-hidden="true"><use href="#dodo"/></svg>
-      <h2 class="reveal" style="--d:1">Dodo soyu tükenmiş bir kuştu.<br>Bu dodo ise her gün yanında.</h2>
-      <a class="store live reveal" style="--d:2" href="https://apps.microsoft.com/detail/9P17GF8DSSL1" rel="noopener"><svg aria-hidden="true"><use href="#i-store"/></svg><span><small>Ücretsiz</small>Microsoft Store'dan al</span></a>
-      <div class="follow reveal" style="--d:3">
+      <h2 class="wordmark reveal" style="--d:1"><b>Dodo</b>Browser</h2>
+      <p class="tagline reveal" style="--d:2">Hafif. Hızlı. Senin.</p>
+      <a class="store live reveal" style="--d:3"href="https://apps.microsoft.com/detail/9P17GF8DSSL1" rel="noopener"><svg aria-hidden="true"><use href="#i-store"/></svg><span><small>Ücretsiz</small>Microsoft Store'dan al</span></a>
+      <div class="follow reveal" style="--d:4">
         <span>Takip et:</span>
         <a href="https://x.com/dodobrowserapp" rel="noopener" target="_blank" aria-label="X" title="X"><svg aria-hidden="true"><use href="#i-x"/></svg></a>
         <a href="https://www.instagram.com/dodobrowser/" rel="noopener" target="_blank" aria-label="Instagram" title="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
@@ -983,7 +986,7 @@
         <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="formhead">
           <h3>Buradan da yazabilirsin</h3>
-          <p>Adını ve e-postanı yazmak zorunda değilsin; boş bırakırsan mesajın isimsiz gelir, ama o zaman sana cevap veremeyiz.</p>
+          <p>Adını ve e-postanı yazmak zorunda değilsin; cevap istersen e-postanı ekle, boş bırakırsan mesajın isimsiz ulaşır.</p>
         </div>
         <div class="row">
           <label><span>Adın <span class="opt">isteğe bağlı</span></span><input type="text" name="name" maxlength="80" autocomplete="name"></label>

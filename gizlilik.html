@@ -80,7 +80,19 @@
   footer.bottom .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; }
   footer.bottom .wrap > :first-child { margin-right: auto; }
   footer.bottom a { color: var(--muted); }
-  @media (max-width: 620px) { section { padding: 18px 18px; } main { padding-top: 40px; } }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .servis-tablo { margin: 4px 0 14px; border: 1px solid var(--card-border); border-radius: 12px; overflow: hidden; }
+  .servis-tablo table { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.45; }
+  .servis-tablo th, .servis-tablo td { text-align: left; vertical-align: top; padding: 10px 12px; border-top: 1px solid var(--card-border); }
+  .servis-tablo thead th { border-top: 0; background: var(--icon-bg); color: var(--muted); font-size: 13px; font-weight: 600; }
+  .servis-tablo tbody th { font-weight: 600; }
+  @media (max-width: 620px) { section { padding: 18px 18px; } main { padding-top: 40px; }
+    .servis-tablo thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    .servis-tablo tr { display: block; padding: 8px 0; border-top: 1px solid var(--card-border); }
+    .servis-tablo tbody tr:first-child { border-top: 0; }
+    .servis-tablo th, .servis-tablo td { display: block; border: 0; padding: 2px 12px; }
+    .servis-tablo td::before { content: attr(data-l) ": "; color: var(--muted); }
+  }
 </style>
 </head>
 <body>
@@ -171,6 +183,28 @@
 
   <section id="servisler">
     <h2>DodoBrowser'ın bağlandığı servisler</h2>
+    <p>Açtığın sitelerin kendisi dışında, DodoBrowser'ın bilgisayarından dışarıya bağlandığı her yer aşağıda. Önce kısa tablo, ardından her birinin ayrıntısı.</p>
+    <div class="servis-tablo">
+      <table>
+        <caption class="sr">DodoBrowser'ın bağlandığı servislerin özeti</caption>
+        <thead><tr><th scope="col">Ne gider</th><th scope="col">Nereye</th><th scope="col">Ne zaman</th><th scope="col">Kapatmak için</th></tr></thead>
+        <tbody>
+          <tr><th scope="row" data-l="Ne gider">Arama ve öneriler: yazdıkların</th><td data-l="Nereye">Seçtiğin arama motoru (varsayılan Google)</td><td data-l="Ne zaman">Arama yaparken; öneriler adres çubuğuna yazarken</td><td data-l="Kapatmak için">Öneriler: Ayarlar. Motoru Ayarlar'dan seçersin.</td></tr>
+          <tr><th scope="row" data-l="Ne gider">Kısayol için site arama: yazdığın kelime</th><td data-l="Nereye">Google</td><td data-l="Ne zaman">Sadece kısayol kartında "… sitesini bul"u seçtiğinde</td><td data-l="Kapatmak için">Seçmezsen gitmez; sitenin adresini yazarsan arama yapılmaz.</td></tr>
+          <tr><th scope="row" data-l="Ne gider">Site simgeleri: sitenin adı</th><td data-l="Nereye">Google'ın simge servisi</td><td data-l="Ne zaman">Henüz açmadığın bir sitenin simgesi gösterilirken</td><td data-l="Kapatmak için">Ayarlar (sürüm 1.1.1 ve sonrası)</td></tr>
+          <tr><th scope="row" data-l="Ne gider">Kısayolun adı ve simgesi</th><td data-l="Nereye">Kısayolun sitesinin kendisi</td><td data-l="Ne zaman">Başlangıç sayfasına bir kutu eklediğinde</td><td data-l="Kapatmak için">Kutu eklemezsen gitmez.</td></tr>
+          <tr><th scope="row" data-l="Ne gider">Hava durumu: şehrin yaklaşık konumu (~1 km)</th><td data-l="Nereye">MET Norway</td><td data-l="Ne zaman">Şehir seçtiysen en çok saatte bir</td><td data-l="Kapatmak için">Ayarlar</td></tr>
+          <tr><th scope="row" data-l="Ne gider">Reklam listeleri: sadece "liste yeni mi?" sorusu</th><td data-l="Nereye">dodobrowser.com (GitHub Pages)</td><td data-l="Ne zaman">Günde en çok bir kez</td><td data-l="Kapatmak için">Ayarlar → Kalkan</td></tr>
+          <tr><th scope="row" data-l="Ne gider">Sayfa çevirisi: sadece istenen dil dosyası</th><td data-l="Nereye">DodoBrowser'ın GitHub sayfası</td><td data-l="Ne zaman">İngilizce dışı bir dili ilk kez çevirirken, sana sorulduktan sonra</td><td data-l="Kapatmak için">Sorulunca vazgeç. Çevirdiğin sayfa hiçbir yere gitmez.</td></tr>
+          <tr><th scope="row" data-l="Ne gider">Gizli pencerede site adları (şifreli)</th><td data-l="Nereye">Cloudflare, ulaşılamazsa Quad9</td><td data-l="Ne zaman">Sadece gizli pencerede</td><td data-l="Kapatmak için">Kapatılmaz: internet sağlayıcın açtığın siteleri görmesin diye.</td></tr>
+          <tr><th scope="row" data-l="Ne gider">Zararlı site ve dosya kontrolü: adresler ve dosya bilgileri</th><td data-l="Nereye">Microsoft (SmartScreen)</td><td data-l="Ne zaman">Gezerken ve indirirken</td><td data-l="Kapatmak için">Kapatılmaz: seni zararlı ve sahte sitelerden korur.</td></tr>
+          <tr><th scope="row" data-l="Ne gider">Sayfa motorunun tanılama verisi</th><td data-l="Nereye">Microsoft</td><td data-l="Ne zaman">Windows'un ayarına göre</td><td data-l="Kapatmak için">Windows Ayarları → Tanılama ve geri bildirim</td></tr>
+          <tr><th scope="row" data-l="Ne gider">Eşitleme: yer imleri, ayarlar, açık sekmelerin listesi</th><td data-l="Nereye">Kendi Google Drive'ın</td><td data-l="Ne zaman">Sadece Google ile giriş yaptıysan</td><td data-l="Kapatmak için">Giriş yapma ya da çıkış yap.</td></tr>
+          <tr><th scope="row" data-l="Ne gider">Sorun bildirimi</th><td data-l="Nereye">Bize (Google Apps Script üzerinden, kısıtlı bir GitHub deposuna)</td><td data-l="Ne zaman">Sadece "Gönder"e bastığında; çökme bildirimi sadece izin verdiysen</td><td data-l="Kapatmak için">Göndermezsen gitmez; çökme iznini Ayarlar'dan geri alırsın.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Gizli pencerede arama önerileri, site simgeleri, kısayol araması, hava durumu ve liste güncellemeleri çalışmaz.</p>
     <ul>
       <li><strong>Arama ve öneriler:</strong> arama motoru Google'dır; Ayarlar'dan Bing, DuckDuckGo ya da Yandex'i seçebilirsin. Adres çubuğuna ya da başlangıç sayfasının kısayol ekleme kartına yazdıkların, öneri gösterilebilmesi için yazarken seçtiğin arama motoruna gider; bunu Ayarlar'dan kapatabilirsin. Gizli pencerede gitmez. Kısayol eklerken bir siteyi adıyla bulman için (örneğin "deepseek") yazdığın kelimeler Google'da aranır.</li>
       <li><strong>Site simgeleri:</strong> önerilerdeki, başlangıç sayfası kutularındaki ve henüz açmadığın sitelerin yer imlerindeki (ör. başka bir tarayıcıdan aktardıkların) site simgeleri Google'ın simge servisinden alınır; bunun için sitenin adı Google'a gider. Bilgisayarının ve ev ya da iş ağının kendi adresleri gönderilmez. Gizli pencerede gitmez. Bunu Ayarlar'dan kapatabilirsin; o zaman Google'dan simge alınmaz ve simgesi olmayan siteler harfle gösterilir (sürüm 1.1.1 ve sonrası).</li>

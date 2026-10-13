@@ -7,3 +7,11 @@
 # Çerez onay araçları engellenmez (adblock\CLAUDE.md: çerez uyarılarını Dodo kendisi yanıtlar;
 # aracı engellemek, onay bekleyen sitelerde içeriği durdurabilir).
 cdn.efilli.com
+#
+# Sitelerin kendi videolarını barındıran video platformları: reklam kısımlarını filtre listesi
+# (filtreler.txt, EasyList) adresiyle engeller, alan adının tamamı engellenince sitenin kendi
+# video resimleri ve videoları gelmez.
+# viralize.tv (ShowHeroes): monetize-stream.viralize.tv sitelerin içerik videoları ve küçük resimleri
+# (13 Ekim, sorun bildirimi: transfermarkt.com.tr "En son videolar"); ads.viralize.tv,
+# content.viralize.tv/display, /t-bid-opportunity/, /track/ filtre listesinde engelli kalır.
+viralize.tv

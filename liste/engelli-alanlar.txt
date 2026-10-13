@@ -2,7 +2,7 @@
 # Kaynak: HaGeZi's Multi LIGHT, https://github.com/hagezi/dns-blocklists (GPL-3.0, liste/HAGEZI-LISANS.txt)
 # HaGeZi surumu: 2026.1013.0828.13
 # Cikarilanlar: liste/istisnalar.txt
-# Satir: 56907
+# Satir: 56906
 0-02.net
 0.org
 000.pe
@@ -53158,7 +53158,6 @@ viptop.ru
 vipwm.cc
 vira.ru
 viraladnetwork.net
-viralize.tv
 viralka.pl
 viralmails.de
 viralnugget.com

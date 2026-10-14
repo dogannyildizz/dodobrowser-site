@@ -156,7 +156,7 @@
 <main>
   <p class="kicker">DodoBrowser</p>
   <h1>Gizlilik politikası</h1>
-  <p class="tag">Son güncelleme: 13 Ekim 2026</p>
+  <p class="tag">Son güncelleme: 14 Ekim 2026</p>
 
   <section class="lead">
     <h2>Özet</h2>
@@ -214,7 +214,8 @@
         <caption class="sr">DodoBrowser'ın bağlandığı servislerin özeti</caption>
         <thead><tr><th scope="col">Ne gider</th><th scope="col">Nereye</th><th scope="col">Ne zaman</th><th scope="col">Kapatmak için</th></tr></thead>
         <tbody>
-          <tr><th scope="row" data-l="Ne gider">Arama ve öneriler: yazdıkların</th><td data-l="Nereye">Seçtiğin arama motoru (varsayılan Google)</td><td data-l="Ne zaman">Arama yaparken; öneriler adres çubuğuna yazarken</td><td data-l="Kapatmak için">Öneriler: Ayarlar. Motoru Ayarlar'dan seçersin.</td></tr>
+          <tr><th scope="row" data-l="Ne gider">Arama ve öneriler: yazdıkların</th><td data-l="Nereye">Seçtiğin arama motoru (varsayılan Google)</td><td data-l="Ne zaman">Arama yaparken; öneriler adres çubuğuna ya da başlangıç sayfasının arama kutusuna yazarken</td><td data-l="Kapatmak için">Öneriler: Ayarlar. Motoru Ayarlar'dan seçersin.</td></tr>
+          <tr><th scope="row" data-l="Ne gider">Resimle arama: resmin adresi</th><td data-l="Nereye">Seçtiğin arama motoru (Google Lens ya da Yandex)</td><td data-l="Ne zaman">Sadece bir resme sağ tıklayıp "Resmi … ara"yı seçtiğinde</td><td data-l="Kapatmak için">Seçmezsen gitmez.</td></tr>
           <tr><th scope="row" data-l="Ne gider">Kısayol için site arama: yazdığın kelime</th><td data-l="Nereye">Google</td><td data-l="Ne zaman">Sadece kısayol kartında "… sitesini bul"u seçtiğinde</td><td data-l="Kapatmak için">Seçmezsen gitmez; sitenin adresini yazarsan arama yapılmaz.</td></tr>
           <tr><th scope="row" data-l="Ne gider">Site simgeleri: sitenin adı</th><td data-l="Nereye">Google'ın simge servisi</td><td data-l="Ne zaman">Henüz açmadığın bir sitenin simgesi gösterilirken</td><td data-l="Kapatmak için">Ayarlar (sürüm 1.2.0 ve sonrası)</td></tr>
           <tr><th scope="row" data-l="Ne gider">Kısayolun adı ve simgesi</th><td data-l="Nereye">Kısayolun sitesinin kendisi</td><td data-l="Ne zaman">Başlangıç sayfasına bir kutu eklediğinde</td><td data-l="Kapatmak için">Kutu eklemezsen gitmez.</td></tr>
@@ -231,7 +232,8 @@
     </div>
     <p>Gizli pencerede arama önerileri, site simgeleri, kısayol araması, hava durumu ve liste güncellemeleri çalışmaz.</p>
     <ul>
-      <li><strong>Arama ve öneriler:</strong> arama motoru Google'dır; Ayarlar'dan Bing, DuckDuckGo ya da Yandex'i seçebilirsin. Adres çubuğuna ya da başlangıç sayfasının kısayol ekleme kartına yazdıkların, öneri gösterilebilmesi için yazarken seçtiğin arama motoruna gider; bunu Ayarlar'dan kapatabilirsin. Gizli pencerede gitmez. Kısayol eklerken bir siteyi adıyla bulman için (örneğin "deepseek") yazdığın kelimeler Google'da aranır.</li>
+      <li><strong>Arama ve öneriler:</strong> arama motoru Google'dır; Ayarlar'dan Bing, DuckDuckGo ya da Yandex'i seçebilirsin. Adres çubuğuna, başlangıç sayfasının arama kutusuna ya da kısayol ekleme kartına yazdıkların, öneri gösterilebilmesi için yazarken seçtiğin arama motoruna gider; bunu Ayarlar'dan kapatabilirsin. Gizli pencerede gitmez. Birkaç harfte önerilen popüler siteler DodoBrowser'la gelen bir listeden, bilgisayarında bulunur; bunun için yazdıkların hiçbir yere gitmez. Kısayol eklerken bir siteyi adıyla bulman için (örneğin "deepseek") yazdığın kelimeler Google'da aranır. Başlangıç sayfasının "AI Modu" ve görselle arama düğmeleri, sadece bastığında arama motorunun kendi sayfasını açar.</li>
+      <li><strong>Resimle arama:</strong> bir sayfadaki resme sağ tıklayıp "Resmi Google Lens'te ara"yı (Yandex seçiliyse "Resmi Yandex'te ara") seçtiğinde, resmin internet adresi arama motoruna gönderilir ve sonuç yeni sekmede açılır. Resmin kendisini DodoBrowser yüklemez; arama motoru resmi o adresten kendisi alır. Bilgisayarının ve ev ya da iş ağının adresindeki resimler ve sayfanın kendi içinde taşıdığı resimler için bu seçenek görünmez. Seçmezsen hiçbir şey gönderilmez.</li>
       <li><strong>Site simgeleri:</strong> önerilerdeki, başlangıç sayfası kutularındaki ve henüz açmadığın sitelerin yer imlerindeki (ör. başka bir tarayıcıdan aktardıkların) site simgeleri Google'ın simge servisinden alınır; bunun için sitenin adı Google'a gider. Bilgisayarının ve ev ya da iş ağının kendi adresleri gönderilmez. Gizli pencerede gitmez. Bunu Ayarlar'dan kapatabilirsin; o zaman Google'dan simge alınmaz ve simgesi olmayan siteler harfle gösterilir (sürüm 1.2.0 ve sonrası).</li>
       <li><strong>Başlangıç sayfası kısayolları:</strong> bir kutu eklediğinde DodoBrowser, kutunun adını ve simgesini öğrenmek için o siteyi arka planda, görünmeden açar. Gizli pencerede yapılmaz. Simgesi alınamayan kutular için günde en çok bir kez yeniden denenir (sürüm 1.2.0 ve sonrası).</li>
       <li><strong>Gizli pencerede şifreli adres sorgusu:</strong> gizli pencere açtığın sitelerin adlarını, internet sağlayıcın görmesin diye şifreli olarak Cloudflare'in adres servisine (1.1.1.1) sorar; ona ulaşılamazsa Quad9'a. Bu servisler sorulan site adlarını görür ve kendi gizlilik kurallarına göre işler (<a href="https://developers.cloudflare.com/1.1.1.1/privacy/public-dns-resolver/">Cloudflare</a>, <a href="https://quad9.net/privacy/policy/">Quad9</a>). Normal pencerede bilgisayarının kendi ayarı kullanılır.</li>

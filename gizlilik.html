@@ -9,6 +9,7 @@
 <link rel="icon" href="/favicon.ico" sizes="16x16 24x24 32x32 48x48 64x64 128x128 256x256">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%232EC4B6'/%3E%3Cstop offset='1' stop-color='%230B6E79'/%3E%3C/linearGradient%3E%3CclipPath id='c'%3E%3Ccircle cx='128' cy='128' r='120'/%3E%3C/clipPath%3E%3C/defs%3E%3Ccircle cx='128' cy='128' r='120' fill='url(%23g)'/%3E%3Cg clip-path='url(%23c)'%3E%3Cellipse cx='105' cy='235' rx='100' ry='80' fill='%236F6A7B'/%3E%3Ccircle cx='110' cy='120' r='58' fill='%238E899A'/%3E%3Cpath d='M138 96C170 84 205 86 218 104C226 116 222 134 210 140C208 132 204 127 196 126C180 132 160 140 140 140Z' fill='%23EFC94C'/%3E%3Ccircle cx='130' cy='104' r='11' fill='%23fff'/%3E%3Ccircle cx='133' cy='104' r='6' fill='%231E1B24'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preload" href="yazi/PlusJakartaSans.woff2" as="font" type="font/woff2" crossorigin>
 <style>
   :root {
     --bg: #F6FAFA;
@@ -40,6 +41,14 @@
       --shadow: 0 1px 2px rgba(0, 0, 0, .35), 0 10px 28px rgba(0, 0, 0, .35);
     }
   }
+  /* The brand font (Plus Jakarta Sans, marka\LOGO-STANDARDI.md; logo\logo-yap.py copies it to yazi\):
+     headings, the menu, buttons and the questions; running text stays Segoe UI. */
+  @font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url("yazi/PlusJakartaSans.woff2") format("woff2");
+    font-weight: 200 800;
+    font-display: swap;
+  }
   * { box-sizing: border-box; }
   body {
     margin: 0;
@@ -70,14 +79,14 @@
 
   main { width: min(760px, 100% - 32px); margin: 0 auto; padding: 56px 0 40px; }
   .kicker { color: var(--accent-strong); font-weight: 650; font-size: 14px; letter-spacing: .6px; text-transform: uppercase; margin: 0 0 8px; }
-  h1 { font-size: clamp(32px, 5vw, 46px); line-height: 1.1; letter-spacing: -1px; margin: 0 0 10px; }
+  h1 { font-size: clamp(32px, 5vw, 46px); line-height: 1.1; letter-spacing: -.022em; margin: 0 0 10px; }
   .tag { color: var(--muted); margin: 0 0 36px; }
   section {
     background: var(--card); border: 1px solid var(--card-border); border-radius: 18px;
     padding: 22px 26px; margin-bottom: 14px; box-shadow: var(--shadow);
   }
   section.lead { border-left: 4px solid var(--accent); }
-  h2 { font-size: 18px; margin: 0 0 8px; letter-spacing: -.2px; }
+  h2 { font-size: 18px; margin: 0 0 8px; }
   p { margin: 0 0 10px; }
   p:last-child { margin-bottom: 0; }
   ul { margin: 0 0 12px; padding-left: 20px; }
@@ -100,6 +109,10 @@
     .servis-tablo tbody tr:first-child { border-top: 0; }
     .servis-tablo th, .servis-tablo td { display: block; border: 0; padding: 2px 12px; }
     .servis-tablo td::before { content: attr(data-l) ": "; color: var(--muted); }
+  }
+  /* Last, so it wins over each part's own "font: inherit". */
+  h1, h2, h3, h4, .kicker, .eyebrow, nav.links a, .back, .btn, .store span, .faq summary, .mini b, .points b, .strip li b, .copy, .smenu .big, .sp .greet {
+    font-family: "Plus Jakarta Sans", "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, sans-serif;
   }
 </style>
 </head>

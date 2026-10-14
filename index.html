@@ -454,6 +454,9 @@
   .mini .ico svg { width: 20px; height: 20px; }
   .mini b { display: block; font-size: 16px; font-weight: 600; margin-bottom: 4px; }
   .mini span { color: var(--muted); font-size: 14.5px; line-height: 1.5; }
+  /* Tek başına bir satırı kaplayan madde (Sayfa çevirisi): simge solda, yazı sağda. */
+  .mini li.wide { grid-column: 1 / -1; display: grid; grid-template-columns: auto 1fr; column-gap: 16px; align-items: center; }
+  .mini li.wide .ico { grid-row: span 2; margin: 0; }
   kbd {
     display: inline-block;
     font: 600 12.5px/1 "Cascadia Mono", Consolas, monospace;
@@ -878,6 +881,7 @@
         <li class="reveal" style="--d:1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><b>Kalkan istatistikleri</b><span>Kaç reklamın ve izleyicinin durduğunu gün gün görürsün.</span></li>
         <li class="reveal" style="--d:2"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span><b>Güvenli bağlantı</b><span>Şifresiz bir sayfada şifre yazarken kilit kırmızıya döner ve seni uyarır.</span></li>
         <li class="reveal" style="--d:3"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span><b>Geçmiş ve temizlik</b><span>Geçmişinde gün gün arar, tarama verilerini tek seferde temizlersin.</span></li>
+        <li class="reveal wide" style="--d:0"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg></span><b>Sayfa çevirisi</b><span>İngilizce sayfaları tek tıkla Türkçeye çevirir. Çeviri bilgisayarında yapılır, sayfanın yazısı hiçbir yere gitmez. Almanca, Fransızca, Rusça dahil 20 dil de istediğinde indirilir.</span></li>
       </ul>
     </div>
   </section>

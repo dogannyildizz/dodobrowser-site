@@ -169,6 +169,13 @@
   }
   .nav-pill.show { opacity: 1; }
   .nav-pill.show::after { transform: scaleX(1); }
+  /* Narrow but not a phone: the links wrap to a second line instead of running over
+     the right edge (18 Oct text review, 17: at 620-750 px the last link, "Gizlilik
+     politikası", was cut off). Below 620 px the phone view keeps only the kept link. */
+  @media (max-width: 900px) and (min-width: 621px) {
+    header.top .wrap { height: auto; min-height: 64px; padding: 8px 0; }
+    nav.links { flex: 1 1 auto; min-width: 0; flex-wrap: wrap; justify-content: flex-end; row-gap: 2px; }
+  }
 
   /* ---------- Hero ---------- */
   .hero { position: relative; padding: 76px 0 110px; overflow: hidden; background: linear-gradient(var(--bg-tint), var(--bg) 90%); }
@@ -849,7 +856,7 @@
           <div class="bar dodo"><span>DodoBrowser</span><div><i style="--w:17%"></i></div><b>~130</b></div>
         </div>
       </div>
-      <p class="note reveal">Windows 11 yüklü bir dizüstü bilgisayarda Microsoft Edge ile karşılaştırıldı.</p>
+      <p class="note reveal">Windows 11 yüklü bir dizüstü bilgisayarda Microsoft Edge ile karşılaştırıldı. Sonuçlar bilgisayara, siteye ve bağlantıya göre değişir.</p>
     </div>
   </section>
 
@@ -1101,6 +1108,10 @@
     function place(a) {
       if (!a || !a.offsetWidth) { pill.classList.remove("show"); return; }
       pill.style.width = a.offsetWidth + "px";
+      // The nav wraps to a second line on narrow screens (18 Oct, review 17): the pill
+      // follows the link's own row instead of stretching over both.
+      pill.style.top = a.offsetTop + "px";
+      pill.style.height = a.offsetHeight + "px";
       pill.style.transform = "translateX(" + a.offsetLeft + "px)";
       pill.classList.add("show");
     }

@@ -1,0 +1,10 @@
+# DodoBrowser: filtre listesinden (filtreler.txt) ÇIKARILAN satırlar ve EKLENEN istisnalar.
+# Bir site bozulursa (sitelerin çalışması engellemekten önce gelir):
+#  - Sorunu yapan satır listedeki haliyle, olduğu gibi buraya yazılır; o satır yayınlanmaz.
+#  - Ya da "+ " ile başlayan kendi kuralımız eklenir, ör.:
+#      + @@||ornek.com^$generichide      (o sitede genel gizleme kuralları çalışmaz)
+#      + ornek.com#@#.reklam-kutusu      (o sitede bu gizleme kuralı çalışmaz)
+#      + ornek.com#@#+js()               (o sitede hiçbir site düzeltmesi çalışmaz)
+#    Eklenen kural da sadece veridir: betik çalıştıran kural (##+js, #%#, #$#) eklenmez, istisnası (#@#+js) olur.
+# Her gün filtreler.sh uygular (liste-isi.yml); programlar en geç ertesi gün yeni listeyi alır.
+# Satırın sonuna açıklama yazılmaz; açıklama ayrı satırda, # ile.

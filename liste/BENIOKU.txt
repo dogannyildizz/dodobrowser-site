@@ -11,5 +11,13 @@ alan adları listeden çıkarılır (sitelerin çalışması engellemekten önce
 filtreler.txt: Kalkan'ın gelişmiş reklam listeleri (Ayarlar > Kalkan'dan kapatılabilir). EasyList ve
 EasyPrivacy (https://easylist.to, The EasyList authors; GPL-3.0 ya da CC BY-SA 3.0) ile AdGuard Turkish
 filter (https://github.com/AdguardTeam/AdGuardFilters, GPL-3.0) tek dosyada. Her gün filtreler.sh ile
-yeniden üretilir: açıklamalar ve betik çalıştıran ya da sitenin gönderdiğini değiştiren kurallar
+yeniden üretilir: açıklamalar ve desteklenmeyen betik kuralları ya da sitenin gönderdiğini değiştiren kurallar
 çıkarılır, geri kalan satırlar değiştirilmez. Program bu dosyayı da günde en çok bir kez alır.
+Site düzeltmeleri ("site##+js(ad, değerler)") sadece adı geçen siteler ve programın içinde olan
+düzeltmeler için kalır: satır sadece hangi düzeltmenin, nerede, hangi değerlerle çalışacağını söyler,
+kod indirilmez. Bir siteyi bozan satır filtre-istisnalari.txt'ye yazılır ve yayınlanmaz;
+bu dosyada "+ " ile başlayan güvenli veri kuralları listeye eklenir. Aynı betik çalıştırma
+ve yanıt değiştirme süzgeçleri eklenen kurallara da uygulanır. Tekrarlar çıkarılır.
+
+Her üretilen listenin başında kaynak sürümleri, DodoBrowser'ın UTC değişiklik tarihi
+ve uygulanan dönüşümler bulunur. Alan adı listesindeki istisnalar alt alan adlarını da kapsar.

@@ -156,7 +156,7 @@
 <main>
   <p class="kicker">DodoBrowser</p>
   <h1>Gizlilik politikası</h1>
-  <p class="tag">Son güncelleme: 14 Ekim 2026</p>
+  <p class="tag">Son güncelleme: 18 Ekim 2026</p>
 
   <section class="lead">
     <h2>Özet</h2>
@@ -203,7 +203,7 @@
     <p>Adın, e-posta adresin, Google hesabın, bilgisayarının adı, Windows kullanıcı adın ve diğer sekmelerin gönderilmez; bildirimdeki dosya yollarından kullanıcı klasörün çıkarılır.</p>
     <p>Ekran görüntüsü, sayfanın adresi ve yazdığın not, ekranında ve yazdığında ne varsa onu taşır: içinde adın, e-postan, bir hesap ya da başka kişisel bir bilgi görünüyorsa o da gider. Göndermeden önce ekran görüntüsünü pencerede görebilir, ekran görüntüsünü ve adresi kutucuklarını kaldırarak çıkarabilirsin.</p>
     <p>DodoBrowser bir çökme yaşarsa (örneğin bir sekme çökerse) bu tür sorunları kendiliğinden gönderip göndermeyeceğini ilk seferde sorar ve cevabını hatırlar. İzin verirsen ne olduğu, sürümler ve son açılan sitelerin adları gider; ekran görüntüsü gitmez. İzin vermezsen hiçbir şey gönderilmez.</p>
-    <p>Bildirimler Google Apps Script aracılığıyla iletilir ve erişimi kısıtlı bir GitHub deposunda saklanır. Bu sırada Google ve GitHub bağlantının teknik bilgilerini (örneğin internet adresini) kendi gizlilik kurallarına göre işleyebilir; internet adresin tarafımızca saklanmaz. Bildirimler yalnızca sorunları tespit edip gidermek için kullanılır ve üçüncü kişilerle paylaşılmaz.</p>
+    <p>Bildirimler önce Cloudflare'deki kapıdan geçer; oradan Google Apps Script aracılığıyla erişimi kısıtlı bir GitHub deposuna iletilir ve orada saklanır. Cloudflare kapısına ulaşılamazsa bildirim doğrudan Google Apps Script'e gönderilir. Cloudflare'de, bir kişinin bir günde çok fazla bildirim göndermesini önlemek için internet adresin o güne özel, geri çevrilemeyen bir karışıma dönüştürülür ve yalnızca sayaç olarak kullanılır; adresin kendisi saklanmaz, sayaç ertesi gün silinir. Bu sırada Cloudflare, Google ve GitHub bağlantının teknik bilgilerini (örneğin internet adresini) kendi gizlilik kurallarına göre işleyebilir; internet adresin tarafımızca saklanmaz. Bildirimler yalnızca sorunları tespit edip gidermek için kullanılır ve üçüncü kişilerle paylaşılmaz.</p>
   </section>
 
   <section id="servisler">
@@ -226,7 +226,7 @@
           <tr><th scope="row" data-l="Ne gider">Zararlı site ve dosya kontrolü: adresler ve dosya bilgileri</th><td data-l="Nereye">Microsoft (SmartScreen)</td><td data-l="Ne zaman">Gezerken ve indirirken</td><td data-l="Kapatmak için">Kapatılmaz: seni zararlı ve sahte sitelerden korur.</td></tr>
           <tr><th scope="row" data-l="Ne gider">Sayfa motorunun tanılama verisi</th><td data-l="Nereye">Microsoft</td><td data-l="Ne zaman">Windows'un ayarına göre</td><td data-l="Kapatmak için">Windows Ayarları → Tanılama ve geri bildirim</td></tr>
           <tr><th scope="row" data-l="Ne gider">Eşitleme: yer imleri, ayarlar, açık sekmelerin listesi</th><td data-l="Nereye">Kendi Google Drive'ın</td><td data-l="Ne zaman">Sadece Google ile giriş yaptıysan</td><td data-l="Kapatmak için">Giriş yapma ya da çıkış yap.</td></tr>
-          <tr><th scope="row" data-l="Ne gider">Sorun bildirimi</th><td data-l="Nereye">Bize (Google Apps Script üzerinden, kısıtlı bir GitHub deposuna)</td><td data-l="Ne zaman">Sadece "Gönder"e bastığında; çökme bildirimi sadece izin verdiysen</td><td data-l="Kapatmak için">Göndermezsen gitmez; çökme iznini Ayarlar'dan geri alırsın.</td></tr>
+          <tr><th scope="row" data-l="Ne gider">Sorun bildirimi</th><td data-l="Nereye">Bize (Cloudflare ve Google Apps Script üzerinden, kısıtlı bir GitHub deposuna)</td><td data-l="Ne zaman">Sadece "Gönder"e bastığında; çökme bildirimi sadece izin verdiysen</td><td data-l="Kapatmak için">Göndermezsen gitmez; çökme iznini Ayarlar'dan geri alırsın.</td></tr>
         </tbody>
       </table>
     </div>

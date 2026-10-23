@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DodoBrowser – Hafif. Hızlı. Senin.</title>
-<meta name="description" content="Windows için hafif, Türkçe tarayıcı. Reklamları ve izleyicileri engeller, çerez uyarılarını senin yerine reddeder. Ücretsiz; geçmişin ve şifrelerin bilgisayarında kalır.">
+<title>DodoBrowser – Windows için hafif, Türkçe tarayıcı</title>
+<meta name="description" content="Windows için hafif, Türkçe tarayıcı. Reklamları ve izleyicileri engeller, çerez uyarılarını reddeder. Ücretsiz; geçmişin ve şifrelerin bilgisayarında kalır.">
 <meta name="theme-color" content="#0B6E79">
 <link rel="canonical" href="https://dodobrowser.com/">
 <meta property="og:title" content="DodoBrowser – Hafif. Hızlı. Senin.">
@@ -281,7 +281,10 @@
     padding: 5px 12px 5px 8px; border-radius: 999px; box-shadow: var(--shadow);
   }
   .eyebrow svg { width: 18px; height: 18px; }
-  .hero h1 { font-size: clamp(44px, 6.4vw, 76px); line-height: 1.02; letter-spacing: -.03em; margin: 22px 0 20px; font-weight: 800; }
+  .hero h1 { font-size: clamp(44px, 6.4vw, 76px); line-height: 1.02; letter-spacing: -.03em; margin: 0 0 20px; font-weight: 800; }
+  /* The category label sits inside the h1 (search engines read "Windows için Türkçe tarayıcı" as part of
+     the heading) but keeps its own look; its bottom margin is the h1's old top margin. */
+  .hero h1 .eyebrow { display: flex; width: max-content; max-width: 100%; margin-bottom: 22px; line-height: 1.6; letter-spacing: normal; }
   .hero h1 .w { display: inline-block; }
   .hero h1 em {
     font-style: normal;
@@ -493,9 +496,13 @@
   /* Measurements */
   .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
   .stat { background: var(--card); border: 1px solid var(--card-border); border-radius: 18px; padding: 24px; box-shadow: var(--shadow); }
-  .stat h3 { margin: 0 0 18px; font-size: 16px; letter-spacing: -.1px; }
-  .bar { display: grid; grid-template-columns: 96px 1fr auto; gap: 10px; align-items: center; font-size: 13.5px; margin-bottom: 10px; }
-  .bar span { color: var(--muted); }
+  /* Each card is a real table (search engines and AI answers can quote it); the grid keeps the bar look.
+     The explicit roles keep the table readable to screen readers that drop it when display changes. */
+  .stat table, .stat caption, .stat tbody { display: block; }
+  .stat caption { margin: 0 0 18px; font-size: 16px; letter-spacing: -.1px; font-weight: 700; text-align: left; }
+  .bar { display: grid; grid-template-columns: 96px 1fr; gap: 10px; align-items: center; font-size: 13.5px; margin-bottom: 10px; }
+  .bar th { color: var(--muted); font-weight: 400; text-align: left; padding: 0; }
+  .bar td { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; padding: 0; }
   .bar div { height: 12px; background: var(--track); border-radius: 999px; overflow: hidden; }
   .bar i { display: block; height: 100%; width: 0; border-radius: 999px; background: var(--other); transition: width 1.4s cubic-bezier(.2, .7, .2, 1) .2s; }
   .bar.dodo i { background: linear-gradient(90deg, #1CB7AA, #0B6E79); transition-delay: .5s; }
@@ -763,7 +770,7 @@
     .kalkan { padding: 24px; }
     .store { width: 100%; justify-content: center; }
     .n-grid { grid-template-columns: minmax(0, 1fr) 84px; }
-    .bar { grid-template-columns: 82px 1fr auto; }
+    .bar { grid-template-columns: 82px 1fr; }
     section.block { padding-top: 76px; }
     .privacy { border-radius: 20px; }
     .contact, .direct { padding: 20px; }
@@ -778,7 +785,7 @@
     .bar i { width: var(--w); }
   }
   /* Last, so it wins over each part's own "font: inherit". */
-  h1, h2, h3, h4, .kicker, .eyebrow, nav.links a, .back, .btn, .store span, .faq summary, .mini b, .points b, .strip li b, .copy, .smenu .big, .sp .greet {
+  h1, h2, h3, h4, .stat caption, .kicker, .eyebrow, nav.links a, .back, .btn, .store span, .faq summary, .mini b, .points b, .strip li b, .copy, .smenu .big, .sp .greet {
     font-family: "Plus Jakarta Sans", "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, sans-serif;
   }
 </style>
@@ -842,8 +849,8 @@
     <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="wrap">
       <div>
-        <span class="eyebrow rise" style="--d:0"><svg aria-hidden="true"><use href="#dodo"/></svg>Windows için Türkçe tarayıcı</span>
-        <h1><span class="w rise" style="--d:1">Hafif.</span> <span class="w rise" style="--d:2">Hızlı.</span><br><span class="w rise" style="--d:3"><em>Senin.</em></span></h1>
+        <h1><span class="eyebrow rise" style="--d:0"><svg aria-hidden="true"><use href="#dodo"/></svg>Windows için Türkçe tarayıcı</span>
+          <span class="w rise" style="--d:1">Hafif.</span> <span class="w rise" style="--d:2">Hızlı.</span><br><span class="w rise" style="--d:3"><em>Senin.</em></span></h1>
         <p class="lead rise" style="--d:4">Reklamları ve izleyicileri engeller, çerez uyarılarını senin yerine reddeder. Ücretsiz, hesap istemez, geçmişin ve şifrelerin bilgisayarında kalır.</p>
         <div class="cta rise" style="--d:5">
           <a class="store live" href="https://apps.microsoft.com/detail/9P17GF8DSSL1" rel="noopener"><svg aria-hidden="true"><use href="#i-store"/></svg><span><small>Ücretsiz</small>Microsoft Store'dan al</span></a>
@@ -925,21 +932,21 @@
       <h2 class="reveal" style="--d:1">Daha az yük, daha çabuk sayfa.</h2>
       <p class="sub reveal" style="--d:2">DodoBrowser sayfaları Edge'in motoruyla açar. Fark, reklamlar ve izleyiciler hiç yüklenmeyince ortaya çıkıyor.</p>
       <div class="stats">
-        <div class="stat reveal" style="--d:0">
-          <h3>6 sekme açıkken bellek</h3>
-          <div class="bar"><span>Edge</span><div><i style="--w:100%"></i></div><b>~1800 MB</b></div>
-          <div class="bar dodo"><span>DodoBrowser</span><div><i style="--w:39%"></i></div><b>~700 MB</b></div>
-        </div>
-        <div class="stat reveal" style="--d:1">
-          <h3>Reklamlı haber sitelerinin açılışı</h3>
-          <div class="bar"><span>Edge</span><div><i style="--w:100%"></i></div><b>~6 sn</b></div>
-          <div class="bar dodo"><span>DodoBrowser</span><div><i style="--w:15%"></i></div><b>~0,9 sn</b></div>
-        </div>
-        <div class="stat reveal" style="--d:2">
-          <h3>Aynı sayfa için yapılan istek</h3>
-          <div class="bar"><span>Edge</span><div><i style="--w:100%"></i></div><b>~750</b></div>
-          <div class="bar dodo"><span>DodoBrowser</span><div><i style="--w:17%"></i></div><b>~130</b></div>
-        </div>
+        <div class="stat reveal" style="--d:0"><table role="table">
+          <caption>6 sekme açıkken bellek</caption>
+          <tr role="row" class="bar"><th role="rowheader" scope="row">Edge</th><td role="cell"><div aria-hidden="true"><i style="--w:100%"></i></div><b>~1800 MB</b></td></tr>
+          <tr role="row" class="bar dodo"><th role="rowheader" scope="row">DodoBrowser</th><td role="cell"><div aria-hidden="true"><i style="--w:39%"></i></div><b>~700 MB</b></td></tr>
+        </table></div>
+        <div class="stat reveal" style="--d:1"><table role="table">
+          <caption>Reklamlı haber sitelerinin açılışı</caption>
+          <tr role="row" class="bar"><th role="rowheader" scope="row">Edge</th><td role="cell"><div aria-hidden="true"><i style="--w:100%"></i></div><b>~6 sn</b></td></tr>
+          <tr role="row" class="bar dodo"><th role="rowheader" scope="row">DodoBrowser</th><td role="cell"><div aria-hidden="true"><i style="--w:15%"></i></div><b>~0,9 sn</b></td></tr>
+        </table></div>
+        <div class="stat reveal" style="--d:2"><table role="table">
+          <caption>Aynı sayfa için yapılan istek</caption>
+          <tr role="row" class="bar"><th role="rowheader" scope="row">Edge</th><td role="cell"><div aria-hidden="true"><i style="--w:100%"></i></div><b>~750</b></td></tr>
+          <tr role="row" class="bar dodo"><th role="rowheader" scope="row">DodoBrowser</th><td role="cell"><div aria-hidden="true"><i style="--w:17%"></i></div><b>~130</b></td></tr>
+        </table></div>
       </div>
       <p class="note reveal">Windows 11 yüklü bir dizüstü bilgisayarda Microsoft Edge ile karşılaştırıldı. Sonuçlar bilgisayara, siteye ve bağlantıya göre değişir.</p>
     </div>

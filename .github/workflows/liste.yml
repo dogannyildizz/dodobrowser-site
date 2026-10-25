@@ -13,7 +13,10 @@ jobs:
   liste:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      # Commit SHA ile sabit (güvenlik denetimi D4, 24 Ekim): hareketli v4 etiketi ele
+      # geçirilirse iş akışı değişmesin. SHA, v4'ün 24 Ekim 2026'daki hali; site deposuna
+      # gönderilmeden önce (ayrı onay) güncel v4 ile karşılaştır.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - name: Listeyi olustur
         run: bash liste/olustur.sh
       # The filter lists (7 Oct 2026): a failure here leaves yesterday's file and

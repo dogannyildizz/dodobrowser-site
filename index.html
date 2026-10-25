@@ -29,7 +29,7 @@
   "alternateName": "Dodo",
   "description": "Windows için hafif, Türkçe tarayıcı. Reklamları ve izleyicileri engeller, çerez uyarılarını senin yerine reddeder. Ücretsiz; geçmişin ve şifrelerin bilgisayarında kalır.",
   "applicationCategory": "BrowserApplication",
-  "operatingSystem": "Windows 10, Windows 11",
+  "operatingSystem": "Windows 10 (1809 ve üzeri, 64 bit), Windows 11 (64 bit)",
   "inLanguage": "tr",
   "url": "https://dodobrowser.com/",
   "image": "https://dodobrowser.com/paylasim.png",
@@ -79,7 +79,7 @@
       "name": "Hangi Windows'ta çalışır?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Windows 10 ve Windows 11'de. Sayfaları Windows'ta hazır bulunan Edge motoruyla açar; bilgisayarında eksikse DodoBrowser kurulmasına yardım eder."
+        "text": "64 bit Windows 10 (1809 ve sonrası) ve Windows 11'de. Sayfaları Windows'ta hazır bulunan Edge motoruyla açar; bilgisayarında eksikse DodoBrowser kurulmasına yardım eder."
       }
     },
     {
@@ -157,6 +157,7 @@
     --violet-bg: #EFEAFF;
     --track: #E3ECEB;
     --other: #9AA9AD;
+    --field: #6F8A90;   /* form field edge, 3:1 on every surface */
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -184,6 +185,7 @@
       --violet-bg: #251E3F;
       --track: #1D3337;
       --other: #5F7276;
+      --field: #7B969B;
     }
   }
 
@@ -196,7 +198,7 @@
     font-display: swap;
   }
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; }  /* the sticky bar never covers a focused or jumped-to item */
   body {
     margin: 0;
     font-family: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -302,7 +304,7 @@
     padding: 13px 22px; border-radius: 12px; cursor: pointer;
     transition: transform .2s, box-shadow .2s, filter .2s, border-color .2s;
   }
-  .btn.primary { color: #fff; background: linear-gradient(#1CB7AA, #0B6E79); box-shadow: 0 8px 22px rgba(11, 110, 121, .32); }
+  .btn.primary { color: #fff; background: linear-gradient(#0A7F77, #0B6E79); box-shadow: 0 8px 22px rgba(11, 110, 121, .32); }
   .btn.primary:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(11, 110, 121, .38); }
   /* Button icons move with the button and add their own small motion. */
   .btn svg { transition: transform .3s cubic-bezier(.3, 1.4, .5, 1); }
@@ -320,7 +322,7 @@
   .store svg { width: 26px; height: 26px; color: var(--accent-strong); flex: none; }
   .store span { display: grid; font-size: 16px; font-weight: 600; }
   .store small { font-size: 12px; font-weight: 400; color: var(--muted); }
-  .store.live { color: #fff; background: linear-gradient(#1CB7AA, #0B6E79); border-color: transparent; box-shadow: 0 8px 22px rgba(11, 110, 121, .32); transition: transform .2s, box-shadow .2s; }
+  .store.live { color: #fff; background: linear-gradient(#0A7F77, #0B6E79); border-color: transparent; box-shadow: 0 8px 22px rgba(11, 110, 121, .32); transition: transform .2s, box-shadow .2s; }
   .store.live:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(11, 110, 121, .38); }
   .store.live svg, .store.live small { color: #fff; }
 
@@ -584,7 +586,7 @@
   .sp .search .q.ph { color: var(--muted); }
   .caret { display: inline-block; width: 2px; height: 1.1em; margin-left: 1px; vertical-align: -3px; background: var(--accent-strong); animation: blink 1s steps(1) infinite; }
   @keyframes blink { 50% { opacity: 0; } }
-  .sp .search i { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(#1CB7AA, #0B6E79); display: grid; place-items: center; flex: none; }
+  .sp .search i { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(#0A7F77, #0B6E79); display: grid; place-items: center; flex: none; }
   .sp .search i svg { width: 16px; height: 16px; color: #fff; }
   .tiles { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
   .tile { width: 70px; display: grid; justify-items: center; gap: 6px; color: var(--muted); font-size: 12px; }
@@ -693,11 +695,11 @@
   .mailrow .mail:hover { text-decoration: underline; }
   .copy {
     flex: none; font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer;
-    color: var(--ink); background: var(--card); border: 1px solid var(--card-border); border-radius: 9px;
+    color: var(--ink); background: var(--card); border: 1px solid var(--field); border-radius: 9px;
     padding: 7px 12px; transition: background .2s, color .2s, border-color .2s;
   }
   .copy:hover { border-color: var(--accent); }
-  .copy.done { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  .copy.done { background: var(--accent-strong); border-color: var(--accent-strong); color: var(--on-accent); }
   .direct h4 { margin: 26px 0 10px; font-size: 13px; font-weight: 600; color: var(--muted); }
   .socials { display: grid; gap: 8px; }
   .soc {
@@ -723,17 +725,17 @@
   .contact label { display: grid; gap: 6px; font-size: 14.5px; font-weight: 600; }
   .contact input, .contact textarea {
     font: inherit; font-size: 15.5px; font-weight: 400; color: var(--ink);
-    background: var(--bg); border: 1px solid var(--card-border); border-radius: 12px;
+    background: var(--bg); border: 1px solid var(--field); border-radius: 12px;
     padding: 11px 14px; width: 100%; resize: vertical; transition: border-color .2s, box-shadow .2s;
   }
-  .contact input::placeholder, .contact textarea::placeholder { color: var(--muted); opacity: .75; }
-  .contact input:focus, .contact textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 4px var(--glow); }
+  .contact input::placeholder, .contact textarea::placeholder { color: var(--muted); opacity: 1; }
+  .contact input:focus-visible, .contact textarea:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 2px; border-color: var(--accent-strong); box-shadow: 0 0 0 4px var(--glow); }
   .contact .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
   .contact .send { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
   .contact .fine { margin: 0; font-size: 13.5px; color: var(--muted); }
   .contact button:disabled { opacity: .6; cursor: progress; }
   .contact .status { margin: 0; font-size: 15px; min-height: 1.4em; }
-  .contact .status:empty { display: none; }
+  .contact .status:empty { margin: 0; min-height: 0; }
   .contact .status.ok { color: var(--accent-strong); font-weight: 600; }
   .contact .status.bad { color: #C2410C; }
   @media (prefers-color-scheme: dark) { .contact .status.bad { color: #FB923C; } }
@@ -777,6 +779,29 @@
     .contact .row { grid-template-columns: 1fr; }
     .tiles { gap: 6px; }
     .tile { width: 58px; }
+  }
+  .motion {
+    margin-top: 18px; font: inherit; font-size: 14.5px; color: var(--muted); background: none;
+    border: 0; padding: 6px 2px; cursor: pointer; text-decoration: underline; text-underline-offset: 3px;
+  }
+  .motion[hidden] { display: none; }
+  .motion:hover { color: var(--ink); }
+  .motion:focus-visible, .btn:focus-visible, .store:focus-visible, .copy:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 3px; }
+  html.still { scroll-behavior: auto; }
+  html.still *, html.still *::before, html.still *::after { animation: none !important; transition: none !important; }
+  html.still.js .reveal { opacity: 1; transform: none; }
+  html.still .bar i { width: var(--w); }
+  /* High contrast: system colours, visible edges for things drawn only with fills. */
+  @media (forced-colors: active) {
+    .btn, .store, .copy, .motion, .contact input, .contact textarea, .card, .mini, .faq details { border: 1px solid CanvasText; }
+    .btn.primary, .store.live { background: ButtonFace; color: ButtonText; forced-color-adjust: none; border-color: ButtonText; }
+    .store.live svg, .store.live small { color: ButtonText; }
+    .switch .track { border-color: ButtonText; }
+    .switch .track i { background: ButtonText; }
+    .switch[aria-checked="true"] .track { background: Highlight; }
+    .switch[aria-checked="true"] .track i { background: HighlightText; }
+    .switch:focus-visible, .faq summary:focus-visible, .contact input:focus-visible, .contact textarea:focus-visible { outline: 2px solid Highlight; }
+    nav.links a, footer.bottom a { color: LinkText; }
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
@@ -857,6 +882,7 @@
           <a class="btn ghost" href="#ozellikler">Neler yapıyor?
             <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></a>
         </div>
+        <button type="button" class="motion" id="motion" aria-pressed="false" hidden>Hareketi durdur</button>
       </div>
 
       <!-- The shield demo: an ad-filled news page; the visitor turns the shield on (the switch under it,
@@ -1063,7 +1089,7 @@
       <p class="sub reveal" style="--d:2">İndirmeden önce en çok merak edilenler.</p>
       <div class="faq">
         <details class="reveal"><summary>Ücretsiz mi?</summary><p>Evet. Hesap açman ya da bir şey ödemen gerekmez. DodoBrowser sana reklam da göstermez.</p></details>
-        <details class="reveal"><summary>Hangi Windows'ta çalışır?</summary><p>Windows 10 ve Windows 11'de. Sayfaları Windows'ta hazır bulunan Edge motoruyla açar; bilgisayarında eksikse DodoBrowser kurulmasına yardım eder.</p></details>
+        <details class="reveal"><summary>Hangi Windows'ta çalışır?</summary><p>64 bit Windows 10 (1809 ve sonrası) ve Windows 11'de. Sayfaları Windows'ta hazır bulunan Edge motoruyla açar; bilgisayarında eksikse DodoBrowser kurulmasına yardım eder.</p></details>
         <details class="reveal"><summary>Siteler düzgün açılır mı?</summary><p>Evet. DodoBrowser, Edge'in motorunu kullanır; siteler Edge ve Chrome'da nasıl açılıyorsa öyle açılır. İstediğin sitede kalkanı tek tıkla kapatırsın.</p></details>
         <details class="reveal"><summary>Chrome'daki yer imlerimi taşıyabilir miyim?</summary><p>Evet. Chrome, Edge, Brave, Vivaldi ya da Opera'dan tek tıkla, klasörleriyle getirirsin.</p></details>
         <details class="reveal"><summary>Eklenti yükleyebilir miyim?</summary><p>Şimdilik yüklenmez. Reklam ve izleyici engelleme, çerez uyarılarını yanıtlama gibi işler kalkanla zaten hazır gelir. Arayüz Türkçedir.</p></details>
@@ -1170,7 +1196,12 @@
     function scrollTo(id, smooth) {
       var target = id ? document.getElementById(id) : null;
       var behavior = smooth && !calm ? "smooth" : "auto";
-      if (target) target.scrollIntoView({ behavior: behavior });
+      if (target) {
+        target.scrollIntoView({ behavior: behavior });
+        // Keyboard and screen reader focus follows the jump.
+        if (!target.hasAttribute("tabindex")) target.setAttribute("tabindex", "-1");
+        target.focus({ preventScroll: true });
+      }
       else if (!id) window.scrollTo({ top: 0, behavior: behavior });
     }
     document.addEventListener("click", function (e) {
@@ -1418,7 +1449,7 @@
     }
     async function loop() {
       if (loopOn) return; loopOn = true;
-      while (active) {
+      while (active && !calm) {
         var word = words[w++ % words.length];
         for (var i = 1; i <= word.length && active; i++) { show(word.slice(0, i), true); await sleep(70 + Math.random() * 60); }
         await sleep(1500);
@@ -1439,6 +1470,7 @@
     whileVisible(document.getElementById("keys"), function () {
       if (timer) return;
       timer = setInterval(function () {
+        if (calm) return;
         var row = rows[i++ % rows.length];
         row.classList.add("press");
         setTimeout(function () { row.classList.remove("press"); }, 650);
@@ -1509,6 +1541,31 @@
 
   // Reduced motion: the logos stop blinking too.
   if (calm) document.querySelectorAll("svg").forEach(function (s) { if (s.pauseAnimations) s.pauseAnimations(); });
+
+  // "Hareketi durdur": anyone can stop everything that moves by itself (WCAG 2.2.2).
+  // With the system's "reduce motion" on there is nothing to stop, so the button stays hidden.
+  (function () {
+    var btn = document.getElementById("motion");
+    if (!btn || calm) return;
+    btn.hidden = false;
+    function still(on, remember) {
+      calm = on;
+      document.documentElement.classList.toggle("still", on);
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+      btn.textContent = on ? "Hareketi başlat" : "Hareketi durdur";
+      document.querySelectorAll("svg").forEach(function (s) {
+        if (on && s.pauseAnimations) s.pauseAnimations();
+        if (!on && s.unpauseAnimations) s.unpauseAnimations();
+      });
+      if (on) {
+        document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
+        if (document.getAnimations) document.getAnimations().forEach(function (a) { try { a.finish(); } catch (e) {} });
+      }
+      if (remember) { try { localStorage.setItem("dodo-hareket", on ? "durdu" : "acik"); } catch (e) {} }
+    }
+    btn.addEventListener("click", function () { still(!calm, true); });
+    try { if (localStorage.getItem("dodo-hareket") === "durdu") still(true, false); } catch (e) {}
+  })();
 </script>
 </body>
 </html>

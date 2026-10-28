@@ -389,7 +389,7 @@
     background: var(--win-tab); border: 1px solid var(--card-border);
     box-shadow: var(--shadow-lg); font-size: 13px; user-select: none;
     /* Floats twice, then rests: nothing on the page moves for more than a few seconds by itself. */
-    animation: rise 1s cubic-bezier(.2, .7, .2, 1) .35s both, float 7s ease-in-out 1.4s 2;
+    animation: rise 1s cubic-bezier(.2, .7, .2, 1) .35s both, float 2.4s ease-in-out 1.4s 2;
   }
   @keyframes float { 50% { transform: translateY(-8px); } }
   .d-tabs { display: flex; align-items: flex-end; gap: 4px; padding: 8px 8px 0; background: var(--win-bar); }
@@ -458,7 +458,7 @@
   .popup {
     position: absolute; left: 50%; top: 47%; transform: translate(-50%, -50%);
     width: 196px; background: #fff; border-radius: 14px; padding: 16px 14px 14px; text-align: center;
-    box-shadow: 0 24px 60px rgba(0, 0, 0, .4); animation: nag 2.6s ease-in-out 3;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, .4); animation: nag 1.6s ease-in-out 2;
   }
   @keyframes nag { 0%, 80%, 100% { transform: translate(-50%, -50%); } 85% { transform: translate(-52%, -50%) rotate(-2deg); } 90% { transform: translate(-48%, -50%) rotate(2deg); } 95% { transform: translate(-51%, -50%); } }
   .popup .x { position: absolute; right: 8px; top: 4px; color: #B7C0C4; font-size: 12px; }
@@ -820,6 +820,8 @@
     .d-tab:nth-child(2), .m-hide, .stage.on .chip { display: none; }
     .d-view { height: 320px; }
     .d-ctrl { flex-wrap: wrap; gap: 12px; }
+    /* A finger needs 44 px: the toolbar shield gets an invisible larger target without moving anything. */
+    .d-shield { padding: 13px; margin: -13px; }
     .mini { grid-template-columns: 1fr; }
     .kalkan { padding: 24px; }
     .store { width: 100%; }
@@ -834,9 +836,11 @@
     .tile { width: 58px; }
   }
   .motion {
-    margin-top: 18px; font: inherit; font-size: 14.5px; color: var(--muted); background: none;
-    border: 0; padding: 6px 2px; cursor: pointer; text-decoration: underline; text-underline-offset: 3px;
+    margin-top: 10px; font: inherit; font-size: 14.5px; color: var(--muted); background: none;
+    border: 0; padding: 0 8px; min-height: 44px; cursor: pointer; text-decoration: underline; text-underline-offset: 3px;
+    touch-action: manipulation;
   }
+  .switch, .d-shield { touch-action: manipulation; }
   .motion[hidden] { display: none; }
   .motion:hover { color: var(--ink); }
   .motion:focus-visible, .btn:focus-visible, .store:focus-visible, .copy:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 3px; }
@@ -938,7 +942,7 @@
           <a class="btn ghost" href="#ozellikler">Özellikleri keşfet
             <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></a>
         </div>
-        <button type="button" class="motion" id="motion" aria-pressed="false" hidden>Hareketi durdur</button>
+        <button type="button" class="motion" id="motion" hidden>Hareketi durdur</button>
       </div>
 
       <!-- The shield demo: an ad-filled news page; the visitor turns the shield on (the switch under it,
@@ -1380,6 +1384,7 @@
       shield.classList.toggle("off", !on);
       shield.classList.remove("pull");
       sw.setAttribute("aria-checked", on ? "true" : "false");
+      sw.removeAttribute("aria-busy");
       tag.textContent = on ? "Kalkan açık" : "Kalkan kapalı";
       tag.classList.toggle("on", on);
       say.textContent = on ? "Dodo " + TOTAL + " reklamı ve izleyiciyi durdurdu." : "Kalkanı aç, farkı gör.";
@@ -1390,6 +1395,8 @@
       if (calm || !demo.animate) { settle(true); return; }
       busy = true;
       sw.setAttribute("aria-checked", "true");
+      sw.setAttribute("aria-busy", "true");
+      say.textContent = "Dodo reklamları topluyor…";
       tag.textContent = "Kalkan açık";
       tag.classList.add("on");
       shield.classList.remove("off");
@@ -1466,8 +1473,8 @@
     // Once the demo is on screen: the switch calls softly a few times; if nobody has touched it
     // after a few seconds, the shield turns itself on once (and then stays as it is).
     whileVisible(demo, function () {
-      if (touched || on || busy || autoTimer) return;
-      if (!invited && !calm) { invited = true; sw.classList.add("invite"); }
+      if (touched || on || busy || autoTimer || calm) return;
+      if (!invited) { invited = true; sw.classList.add("invite"); }
       autoTimer = setTimeout(function () { autoTimer = null; if (!touched && !on && !busy) turnOn(); }, 3500);
     }, function () { clearTimeout(autoTimer); autoTimer = null; });
   })();
@@ -1612,7 +1619,6 @@
     function still(on, remember) {
       calm = on;
       document.documentElement.classList.toggle("still", on);
-      btn.setAttribute("aria-pressed", on ? "true" : "false");
       btn.textContent = on ? "Hareketi başlat" : "Hareketi durdur";
       document.querySelectorAll("svg").forEach(function (s) {
         if (on && s.pauseAnimations) s.pauseAnimations();

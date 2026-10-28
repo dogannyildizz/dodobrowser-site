@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DodoBrowser – Windows için hafif, Türkçe tarayıcı</title>
-<meta name="description" content="Windows için hafif, Türkçe tarayıcı. Reklamları ve izleyicileri engeller, çerez uyarılarını reddeder. Ücretsiz; geçmişin ve şifrelerin bilgisayarında kalır.">
+<title>DodoBrowser – Windows ve Android için hafif, Türkçe tarayıcı</title>
+<meta name="description" content="Windows ve Android için hafif, Türkçe tarayıcı. Reklamları ve izleyicileri engeller, çerez uyarılarını reddeder. Ücretsiz; verilerin cihazında kalır.">
 <meta name="theme-color" content="#0B6E79">
 <link rel="canonical" href="https://dodobrowser.com/">
 <meta property="og:title" content="DodoBrowser – Hafif. Hızlı. Senin.">
-<meta property="og:description" content="Windows için hafif, Türkçe tarayıcı. Reklamları ve izleyicileri engeller. Ücretsiz.">
+<meta property="og:description" content="Windows ve Android için hafif, Türkçe tarayıcı. Reklamları ve izleyicileri engeller. Ücretsiz.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dodobrowser.com/">
 <meta property="og:locale" content="tr_TR">
@@ -19,7 +19,7 @@
 <meta property="og:image:alt" content="DodoBrowser logosu ve sloganı: Hafif. Hızlı. Senin.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="DodoBrowser – Hafif. Hızlı. Senin.">
-<meta name="twitter:description" content="Windows için hafif, Türkçe tarayıcı. Reklamları ve izleyicileri engeller. Ücretsiz.">
+<meta name="twitter:description" content="Windows ve Android için hafif, Türkçe tarayıcı. Reklamları ve izleyicileri engeller. Ücretsiz.">
 <meta name="twitter:image" content="https://dodobrowser.com/paylasim.png">
 <script type="application/ld+json">
 {
@@ -43,6 +43,24 @@
     "https://www.instagram.com/dodobrowser/",
     "https://www.youtube.com/@dodobrowser"
   ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "DodoBrowser Android",
+  "alternateName": "Dodo",
+  "description": "Android için hafif, Türkçe tarayıcı. Reklamları ve izleyicileri engeller, yabancı sayfaları telefonunda Türkçeye çevirir. Ücretsiz; geçmişin ve ayarların telefonunda kalır.",
+  "applicationCategory": "BrowserApplication",
+  "operatingSystem": "Android 10 ve üzeri",
+  "inLanguage": "tr",
+  "url": "https://dodobrowser.com/android",
+  "image": "https://dodobrowser.com/paylasim.png",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
+  "downloadUrl": "https://github.com/dogannyildizz/dodobrowser-site/releases/latest/download/DodoBrowser-Android.apk",
+  "installUrl": "https://dodobrowser.com/android",
+  "publisher": { "@id": "https://dodobrowser.com/#kurulus" }
 }
 </script>
 <script type="application/ld+json">
@@ -292,7 +310,7 @@
   }
   .eyebrow svg { width: 18px; height: 18px; }
   .hero h1 { font-size: clamp(44px, 6.4vw, 76px); line-height: 1.02; letter-spacing: -.03em; margin: 0 0 20px; font-weight: 800; }
-  /* The category label sits inside the h1 (search engines read "Windows için Türkçe tarayıcı" as part of
+  /* The category label sits inside the h1 (search engines read "Windows ve Android için Türkçe tarayıcı" as part of
      the heading) but keeps its own look; its bottom margin is the h1's old top margin. */
   .hero h1 .eyebrow { display: flex; width: max-content; max-width: 100%; margin-bottom: 22px; line-height: 1.6; letter-spacing: normal; }
   .hero h1 .w { display: inline-block; }
@@ -682,7 +700,7 @@
 
   /* Closing + contact */
   .closing { text-align: center; padding: 120px 0 0; }
-  .closing .store { margin-top: 8px; }
+  .closing .cta { margin-top: 8px; }
   .follow { display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 20px; color: var(--muted); font-size: 14.5px; --cut: var(--bg); }
   .follow a { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 11px; color: var(--muted); transition: background .2s, color .2s; }
   .follow a:hover { background: var(--icon-bg); color: var(--ink); --cut: var(--icon-bg); }
@@ -899,9 +917,9 @@
     <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="wrap">
       <div>
-        <h1><span class="eyebrow rise" style="--d:0"><svg aria-hidden="true"><use href="#dodo"/></svg>Windows için Türkçe tarayıcı</span>
+        <h1><span class="eyebrow rise" style="--d:0"><svg aria-hidden="true"><use href="#dodo"/></svg>Windows ve Android için Türkçe tarayıcı</span>
           <span class="w rise" style="--d:1">Hafif.</span> <span class="w rise" style="--d:2">Hızlı.</span><br><span class="w rise" style="--d:3"><em>Senin.</em></span></h1>
-        <p class="lead rise" style="--d:4">Reklamları ve izleyicileri engeller, çerez uyarılarını senin yerine reddeder. Ücretsiz, hesap istemez, geçmişin ve şifrelerin bilgisayarında kalır.</p>
+        <p class="lead rise" style="--d:4">Reklamları ve izleyicileri engeller, çerez uyarılarını senin yerine reddeder. Ücretsiz, hesap istemez, geçmişin ve verilerin cihazında kalır.</p>
         <div class="cta rise" style="--d:5">
           <a class="store live" href="https://apps.microsoft.com/detail/9P17GF8DSSL1" rel="noopener"><span class="l"><svg aria-hidden="true"><use href="#i-store"/></svg><span class="tx"><small>Ücretsiz</small>Microsoft Store'dan al</span></span><span class="r" aria-hidden="true"><svg><use href="#i-tray"/></svg><em>İndir</em></span></a>
           <a class="store live" href="/android"><span class="l"><svg aria-hidden="true"><use href="#i-android"/></svg><span class="tx"><small>Ücretsiz · APK</small>Android için indir</span></span><span class="r" aria-hidden="true"><svg><use href="#i-tray"/></svg><em>İndir</em></span></a>
@@ -972,7 +990,7 @@
   <div class="strip">
     <ul class="wrap">
       <li class="reveal" style="--d:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.7 9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/></svg><div><b>Kalkan hazır</b><small>Eklenti gerekmez</small></div></li>
-      <li class="reveal" style="--d:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg><div><b>Verilerin sende</b><small>Bilgisayarında kalır</small></div></li>
+      <li class="reveal" style="--d:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg><div><b>Verilerin sende</b><small>Cihazında kalır</small></div></li>
       <li class="reveal" style="--d:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg><div><b>Ücretsiz</b><small>Hesap açman gerekmez</small></div></li>
       <li class="reveal" style="--d:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14M5 8a7 7 0 0 1 14 0M5 8v3a7 7 0 0 0 14 0V8"/><path d="M12 15v6M8 21h8"/></svg><div><b>Baştan sona Türkçe</b><small>Sade, anlaşılır dil</small></div></li>
     </ul>
@@ -1131,7 +1149,10 @@
       <svg class="big reveal" aria-hidden="true"><use href="#dodo"/></svg>
       <h2 class="wordmark reveal" style="--d:1" aria-label="DodoBrowser"><svg class="wm" aria-hidden="true"><use href="#dodo-yazi"/></svg></h2>
       <p class="tagline reveal" style="--d:2" role="img" aria-label="Hafif. Hızlı. Senin."><svg class="wm-slogan" aria-hidden="true"><use href="#dodo-slogan"/></svg></p>
-      <a class="store live reveal" style="--d:3"href="https://apps.microsoft.com/detail/9P17GF8DSSL1" rel="noopener"><span class="l"><svg aria-hidden="true"><use href="#i-store"/></svg><span class="tx"><small>Ücretsiz</small>Microsoft Store'dan al</span></span><span class="r" aria-hidden="true"><svg><use href="#i-tray"/></svg><em>İndir</em></span></a>
+      <div class="cta reveal" style="--d:3;justify-content:center">
+      <a class="store live" href="https://apps.microsoft.com/detail/9P17GF8DSSL1" rel="noopener"><span class="l"><svg aria-hidden="true"><use href="#i-store"/></svg><span class="tx"><small>Ücretsiz</small>Microsoft Store'dan al</span></span><span class="r" aria-hidden="true"><svg><use href="#i-tray"/></svg><em>İndir</em></span></a>
+      <a class="store live" href="/android"><span class="l"><svg aria-hidden="true"><use href="#i-android"/></svg><span class="tx"><small>Ücretsiz · APK</small>Android için indir</span></span><span class="r" aria-hidden="true"><svg><use href="#i-tray"/></svg><em>İndir</em></span></a>
+      </div>
       <div class="follow reveal" style="--d:4">
         <span>Takip et:</span>
         <a href="https://x.com/dodobrowserapp" rel="noopener" target="_blank" aria-label="X" title="X"><svg aria-hidden="true"><use href="#i-x"/></svg></a>

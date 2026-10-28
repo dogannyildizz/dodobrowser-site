@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DodoBrowser – Güvenlik</title>
-<meta name="description" content="DodoBrowser sayfaları Windows'ta Edge, Android'de sistemin WebView motoruyla açar; motorun korumalarını kapatmaz. Dağıtım ve güncelleme yolları da burada.">
+<meta name="description" content="DodoBrowser&#x27;ın Windows ve Android&#x27;deki güvenlik korumaları, şifre saklama yöntemleri, resmî indirme ve güncelleme yolları.">
 <link rel="canonical" href="https://dodobrowser.com/guvenlik">
 <meta property="og:title" content="DodoBrowser – Güvenlik">
-<meta property="og:description" content="DodoBrowser sayfaları Windows'ta Edge, Android'de sistemin WebView motoruyla açar; motorun korumalarını kapatmaz. Dağıtım ve güncelleme yolları da burada.">
+<meta property="og:description" content="DodoBrowser&#x27;ın Windows ve Android&#x27;deki güvenlik korumaları, şifre saklama yöntemleri, resmî indirme ve güncelleme yolları.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dodobrowser.com/guvenlik">
 <meta property="og:locale" content="tr_TR">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="DodoBrowser logosu ve sloganı: Hafif. Hızlı. Senin.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="DodoBrowser – Güvenlik">
-<meta name="twitter:description" content="DodoBrowser sayfaları Windows'ta Edge, Android'de sistemin WebView motoruyla açar; motorun korumalarını kapatmaz. Dağıtım ve güncelleme yolları da burada.">
+<meta name="twitter:description" content="DodoBrowser&#x27;ın Windows ve Android&#x27;deki güvenlik korumaları, şifre saklama yöntemleri, resmî indirme ve güncelleme yolları.">
 <meta name="twitter:image" content="https://dodobrowser.com/paylasim.png">
 <meta name="theme-color" content="#0B6E79">
 <link rel="icon" href="/favicon.ico" sizes="16x16 24x24 32x32 48x48 64x64 128x128 256x256">
@@ -161,57 +161,49 @@
 <main>
   <p class="kicker">DodoBrowser</p>
   <h1>Güvenlik</h1>
-  <p class="tag">Son güncelleme: 28 Ekim 2026</p>
+  <p class="tag">Son güncelleme: 29 Ekim 2026</p>
 
   <section class="lead">
     <h2>Özet</h2>
-    <p>DodoBrowser sayfaları Windows'ta kurulu Microsoft Edge motoruyla, Android'de telefonun kendi WebView motoruyla açar ve bu motorların korumalarının hiçbirini kapatmaz. Windows'ta motor, Edge'le aynı takvimle Microsoft tarafından kendiliğinden güncellenir; DodoBrowser Windows'ta sadece Microsoft Store'dan dağıtılır ve oradan güncellenir. Android sürümü sadece bu sitedeki Android sayfasından indirilir ve kendiliğinden güncellenmez: yeni sürümü sen kurarsın. Güvenlikle ilgili bir şey fark edersen <a href="#bildir">bize yaz</a>.</p>
+    <p>DodoBrowser, Windows'ta Edge'in, Android'de telefonun sayfa motorunu kullanır ve bu motorların korumalarını kapatmaz. Windows sürümü Microsoft Store'dan, Android sürümü bu sitedeki <a href="/android">Android sayfasından</a> dağıtılır. Güvenlikle ilgili bildirimlerin için <a href="/guvenlik#bildir">bize ulaşabilirsin</a>.</p>
   </section>
 
   <section>
-    <h2>Sayfaları açan motor ve güncellemeleri</h2>
-    <p><strong>Windows:</strong> sayfaları DodoBrowser'ın kendi kodu değil, Windows'ta kurulu Microsoft Edge WebView2 açar; bu, Microsoft Edge'in kullandığı motorun aynısıdır. DodoBrowser bu motorun ayrı bir kopyasını taşımaz, Windows'taki ortak motoru kullanır.</p>
-    <p>Microsoft bu motoru Edge'e gelen güvenlik düzeltmeleriyle aynı takvimle, kendiliğinden günceller; bunun için DodoBrowser'ın yeni bir sürümünü beklemen gerekmez. Kurulan güncellemenin kullanılabilmesi için DodoBrowser'ı yeniden başlatman gerekebilir; DodoBrowser güncelleme hazır olduğunda bunu bir kartla söyler ve güncelleme için sen basmadan DodoBrowser kendiliğinden yeniden başlamaz.</p>
-    <p><strong>Android:</strong> sayfaları telefonun kendi WebView motoru (Chromium tabanlı) açar. DodoBrowser bu motorun ayrı bir kopyasını taşımaz. Motoru telefonun sistemi (Google Play) günceller; bunun için DodoBrowser'ın yeni bir sürümünü beklemen gerekmez.</p>
+    <h2>Sayfa motoru ve güncellemeler</h2>
+    <p><strong>Windows:</strong> DodoBrowser, sistemdeki ortak Edge motorunu kullanır; ayrı bir motor kopyası taşımaz. Microsoft, motoru Edge ile aynı güvenlik takviminde kendiliğinden günceller. DodoBrowser'ın yeni bir sürümünü beklemen gerekmez.</p>
+    <p>Motor güncellemesi yeniden başlatma gerektirirse DodoBrowser haber verir. Ne zaman yeniden başlatılacağına sen karar verirsin.</p>
+    <p><strong>Android:</strong> Telefonun Chromium tabanlı sayfa motoru kullanılır; DodoBrowser ayrı bir kopya taşımaz. Motor, telefonun sistemi üzerinden Google Play tarafından güncellenir. Bu güncellemeler de DodoBrowser sürümünden bağımsızdır.</p>
   </section>
 
   <section>
-    <h2>Her zaman çalışan korumalar</h2>
-    <ul>
-      <li><strong>Zararlı site ve dosya koruması:</strong> Windows'ta Microsoft Defender SmartScreen, Android'de WebView'un Google Güvenli Gezinme koruması zararlı ve sahte sitelerde seni uyarır. DodoBrowser bunları kapatmaz. Windows'ta tehlikeli diye durdurulan bir dosya yeniden indirilmez.</li>
-      <li><strong>Sitelerin birbirinden ayrılması (Windows):</strong> her site, motorun yetkisi kısıtlı ayrı bir bölmesinde çalışır; bir sitenin diğer sitelere ya da bilgisayarına uzanması engellenir.</li>
-      <li><strong>Sertifika denetimi:</strong> sertifikası geçersiz bir sitede DodoBrowser seni uyarır ve sayfayı açmaz. Yine de açmayı seçersen bu izin sadece o sitenin o sertifikası ve o hatası için geçerlidir; başka bir sertifika ya da başka bir hata çıkarsa yeniden sorulur. İzin DodoBrowser'ın açık olan bütün sekmelerinde geçer, hiçbir yere kaydedilmez ve DodoBrowser kapanınca kendiliğinden silinir.</li>
-      <li><strong>Şifreli bağlantı:</strong> adres çubuğuna yazdığın adres önce şifreli (https) açılır. Şifresiz bir sayfada şifre yazarken kilit kırmızıya döner ve seni uyarır.</li>
-      <li><strong>Site izinleri:</strong> kamera, mikrofon, konum ve benzeri izinleri bir site ancak sana sorarak alabilir; sen evet demedikçe cevap "hayır"dır. Arka plandaki bir sekme izin isteyemez. Bildirimler varsayılan olarak kapalıdır.</li>
-      <li><strong>Sahte site adları:</strong> gerçek bir siteyi benzer görünen harflerle (örneğin Kiril harfleriyle) taklit eden adlar adres çubuğunda gerçek site gibi görünmez, kodlu haliyle gösterilir.</li>
-      <li><strong>DodoBrowser'ın kendi sayfaları:</strong> başlangıç sayfası, ayarlar, geçmiş ve diğer DodoBrowser sayfaları sitelerden ayrıdır; bir site DodoBrowser'ın ayarlarını değiştiremez, kendi sayfalarına komut gönderemez.</li>
-    </ul>
+    <h2>Güvenlik korumaları</h2>
+    <ul><li><strong>Zararlı site ve dosyalar:</strong> Windows'ta Microsoft Defender SmartScreen, Android'de Google Güvenli Gezinme koruması kullanılır. Bu korumalar kapatılmaz. Windows'ta tehlikeli olduğu için durdurulan dosya yeniden indirilmez.</li><li><strong>Site yalıtımı — Windows:</strong> Siteler, motorun kısıtlı yetkilerle çalışan ayrı bölmelerinde birbirinden ve bilgisayarından ayrılır.</li><li><strong>Sertifika denetimi:</strong> Geçersiz sertifikalı sayfalar uyarı verilerek durdurulur. Devam etmeyi seçersen izin sadece o site, sertifika ve hata için geçerlidir; başka sertifika veya hatada yeniden sorulur. İzin tüm açık sekmelerde geçerlidir, diske kaydedilmez ve DodoBrowser kapandığında silinir.</li><li><strong>Şifreli bağlantı:</strong> Yazdığın adres önce HTTPS ile açılır. Şifresiz bir sayfada şifre yazdığında adres çubuğundaki kilit kırmızıya dönerek uyarır.</li><li><strong>Site izinleri:</strong> Kamera, mikrofon ve konum erişimi onayını gerektirir. Arka plandaki sekmeler izin isteyemez; bildirimler varsayılan olarak kapalıdır.</li><li><strong>Yanıltıcı site adları:</strong> Benzer görünen farklı harflerle oluşturulan adresler, kodlu biçimleriyle gösterilir.</li><li><strong>Tarayıcının kendi sayfaları:</strong> Siteler, DodoBrowser'ın ayarlarına ve kendi sayfalarına komut gönderemez.</li></ul>
   </section>
 
   <section>
-    <h2>Şifrelerin ve hesap bilgilerin</h2>
-    <p>Windows'ta kayıtlı şifrelerin ve Google ile giriş yaptıysan giriş anahtarın sadece bilgisayarında, Windows hesabına bağlı şifrelemeyle (Windows Veri Koruma) saklanır. Bilgisayardaki başka bir Windows kullanıcısı bunları okuyamaz. Şifrelerin hiçbir yere eşitlenmez ve bize gelmez. Şifrelerini bir dosyaya aktarırsan o dosya şifresiz, düz yazıdır: DodoBrowser bunu önceden söyler ve her seferinde Windows hesabınla doğrulama ister; dosyayı işin bitince silmek sende. Android'de DodoBrowser şifre saklamaz; şifreleri telefonun otomatik doldurma servisi (senin şifre yöneticin) yönetir. Google ile giriş yaparsan Android'de giriş anahtarı telefonda tutulmaz. Neyin cihazında kalıp neyin dışarı gittiği <a href="/gizlilik#servisler">Gizlilik politikası</a>'nda tek tek yazılı.</p>
+    <h2>Şifreler ve hesap bilgileri</h2>
+    <p>Windows'ta şifrelerin ve Google giriş anahtarın, Windows hesabına bağlı şifrelemeyle saklanır. Başka bir Windows kullanıcısı bunları okuyamaz. Kayıtlı şifrelerin eşitlenmez ve bize gönderilmez.</p>
+    <p>Dışa aktarılan şifre dosyası şifrelenmez. DodoBrowser işlem öncesinde uyarır ve her seferinde Windows hesabınla doğrulama ister. Dosyayı işin bittiğinde silmelisin.</p>
+    <p>Android'de şifrelerini telefonunun şifre yöneticisi yönetir; DodoBrowser şifre saklamaz. Google giriş anahtarı telefonda kalıcı olarak tutulmaz.</p>
+    <p>Veri işleme ayrıntıları <a href="/gizlilik">Gizlilik politikasında</a> yer alır.</p>
   </section>
 
   <section>
-    <h2>Dağıtım ve güncelleme</h2>
-    <p><strong>Windows:</strong> DodoBrowser sadece <a href="https://apps.microsoft.com/detail/9P17GF8DSSL1">Microsoft Store</a>'dan dağıtılır. Microsoft her sürümü yayımlamadan önce inceler, zararlı yazılım taramasından geçirir ve imzalar; güncellemeler Store'dan kendiliğinden gelir.</p>
-    <p><strong>Android:</strong> DodoBrowser sadece bu sitedeki <a href="/android">Android sayfasından</a> APK dosyası olarak indirilir; Google Play'de değildir. Bir mağaza incelemesi yoktur: dosya bizim anahtarımızla imzalıdır ve sayfada SHA-256 değeri yazılıdır, indirdiğin dosyayla karşılaştırabilirsin. APK kendiliğinden güncellenmez; yeni sürümü aynı sayfadan indirip üstüne kurarsın. Başka bir sitede "DodoBrowser indir" bağlantısı görürsen o bizim değildir.</p>
-    <ul>
-      <li>Güvenlik düzeltmeleri her işin önüne geçer.</li>
-      <li>Yeni sürümler hazır oldukça çıkar; güvenlik düzeltmeleri beklemeden yayımlanır. Windows'ta Store'dan kendiliğinden gelir, Android'de yeni dosyayı sen kurarsın.</li>
-      <li>Güncelleme verilerini ve ayarlarını silmez.</li>
-    </ul>
+    <h2>Resmî dağıtım ve güncellemeler</h2>
+    <p><strong>Windows:</strong> Resmî dağıtım kanalı <a href="https://apps.microsoft.com/detail/9P17GF8DSSL1">Microsoft Store</a>'dur. Microsoft, yayımlanan sürümleri inceler, zararlı yazılım taramasından geçirir ve imzalar. Uygulama güncellemeleri Store'dan kendiliğinden gelir.</p>
+    <p><strong>Android:</strong> Resmî APK dosyası <a href="/android">Android sayfasında</a> sunulur; Google Play'de bulunmaz. Dosya kendi anahtarımızla imzalanır ve mağaza incelemesinden geçmez. Sayfadaki SHA-256 değeriyle indirdiğin dosyayı karşılaştırabilirsin. Yeni sürümü indirip mevcut uygulamanın üzerine sen kurarsın.</p>
+    <p>Başka sitelerde sunulan indirme bağlantıları resmî dağıtımımız değildir. Güvenlik düzeltmeleri önceliklidir ve hazır olduğunda bekletilmeden yayımlanır. Güncellemeler verilerini ve ayarlarını silmez.</p>
   </section>
 
   <section id="bildir">
-    <h2>Güvenlikle ilgili bize ulaşmak</h2>
-    <p>Güvenlikle ilgili bir şey fark edersen <a href="mailto:info@dodobrowser.com?subject=G%C3%BCvenlik">info@dodobrowser.com</a> adresine konu satırına "Güvenlik" yazarak gönder. DodoBrowser'ın sürümünü (Ayarlar → Hakkında) ve ne gördüğünü yazman yeterli. Her bildirim en geç 7 gün içinde yanıtlanır ve güvenlik düzeltmeleri her işin önüne geçer.</p>
+    <h2>Güvenlikle ilgili iletişim</h2>
+    <p><a href="mailto:info@dodobrowser.com">info@dodobrowser.com</a> adresine konu satırında “Güvenlik” yazarak ulaşabilirsin. Ayarlar → Hakkında bölümündeki sürüm numarasıyla birlikte karşılaştığın durumu belirtmen yeterlidir.</p>
+    <p>Her bildirim en geç 7 gün içinde yanıtlanır.</p>
   </section>
 
   <section>
-    <h2>DodoBrowser'ın kendi kodu ne yapar?</h2>
-    <p>Güvenliğin en ağır işini, yani sayfaları açmayı, internete bağlanmayı ve siteleri birbirinden ayırmayı, Microsoft'un her gün milyonlarca kişinin kullandığı ve sürekli güncellediği Edge motoru (Android'de telefonun WebView motoru) yapar. DodoBrowser'ın kendi kodu bunun üstündeki pencere, sekmeler, adres çubuğu, kalkan, başlangıç sayfası ve ayarlardır; bu yüzden küçük ve sade tutulur.</p>
+    <h2>DodoBrowser'ın kendi kodu</h2>
+    <p>Sayfaları açma, ağ bağlantıları ve motorun güvenlik korumaları, Windows'ta Edge, Android'de telefonun sayfa motoru tarafından sağlanır. DodoBrowser'ın kendi kodu pencere, sekmeler, adres çubuğu, Kalkan, başlangıç sayfası ve ayarları yönetir; küçük ve sade tutulur.</p>
   </section>
 </main>
 

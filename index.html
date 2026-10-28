@@ -322,17 +322,31 @@
   .btn.ghost { color: var(--ink); background: var(--card); border: 1px solid var(--card-border); }
   .btn.ghost:hover { border-color: var(--accent); transform: translateY(-2px); }
   /* Microsoft Store badge: a link (class "store live") since DodoBrowser went live in the Store (11 Oct 2026). */
+  /* Split button (12 Eki → 28 Eki 2026, "Çift parça"): left part says where from, right part is the action.
+     Used for the Store and Android download links; hover widens the right part and "İndir" slides in. */
   .store {
-    display: inline-flex; align-items: center; gap: 12px; padding: 9px 22px 9px 14px;
-    border-radius: 999px; background: var(--card); border: 1px solid var(--card-border); box-shadow: var(--shadow);
-    color: var(--ink); text-decoration: none; line-height: 1.2; text-align: left;
+    display: inline-flex; align-items: stretch; border-radius: 999px; overflow: hidden;
+    color: #fff; text-decoration: none; line-height: 1.2; text-align: left;
+    box-shadow: 0 8px 22px rgba(11, 110, 121, .32), inset 0 0 0 1px rgba(255, 255, 255, .16);
+    transition: transform .25s, box-shadow .25s;
   }
-  .store svg { width: 26px; height: 26px; color: var(--accent-strong); flex: none; }
-  .store span { display: grid; font-size: 16px; font-weight: 600; }
-  .store small { font-size: 12px; font-weight: 400; color: var(--muted); }
-  .store.live { color: #fff; background: linear-gradient(#0A7F77, #0B6E79); border-color: transparent; box-shadow: 0 8px 22px rgba(11, 110, 121, .32); transition: transform .2s, box-shadow .2s; }
-  .store.live:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(11, 110, 121, .38); }
-  .store.live svg, .store.live small { color: #fff; }
+  .store .l { display: flex; flex: 1; align-items: center; gap: 12px; padding: 12px 20px 12px 22px; background: linear-gradient(#0A7F77, #0B6E79); }
+  .store .l svg { width: 24px; height: 24px; flex: none; color: #fff; }
+  .store .tx { display: grid; font-size: 16px; font-weight: 600; }
+  .store small { font-size: 12px; font-weight: 400; color: #fff; opacity: .88; }
+  .store .r {
+    position: relative; display: grid; place-items: center; flex: none; width: 64px; overflow: hidden;
+    background: #07494F; border-left: 1px solid rgba(255, 255, 255, .22);
+    transition: width .3s cubic-bezier(.3, 1.2, .5, 1), background .25s;
+  }
+  .store .r svg { width: 22px; height: 22px; transition: transform .3s, opacity .3s; }
+  .store .r em { position: absolute; font-style: normal; font-size: 13px; font-weight: 600; white-space: nowrap; opacity: 0; transform: translateY(14px); transition: opacity .3s, transform .3s; }
+  .store:hover, .store:focus-visible { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(11, 110, 121, .38), inset 0 0 0 1px rgba(255, 255, 255, .22); }
+  .store:hover .r, .store:focus-visible .r { width: 108px; background: #06393E; }
+  .store:hover .r svg, .store:focus-visible .r svg { transform: translateY(-34px); opacity: 0; }
+  .store:hover .r em, .store:focus-visible .r em { opacity: 1; transform: none; }
+  .store:active { transform: translateY(0) scale(.985); }
+  .cta .store { min-width: min(340px, 100%); }
 
   /* Entrance: hero pieces rise in one after another. */
   .rise { animation: rise .9s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(var(--d, 0) * 110ms + 100ms); }
@@ -778,7 +792,8 @@
     .d-ctrl { flex-wrap: wrap; gap: 12px; }
     .mini { grid-template-columns: 1fr; }
     .kalkan { padding: 24px; }
-    .store { width: 100%; justify-content: center; }
+    .store { width: 100%; }
+    .store .l { justify-content: center; }
     .n-grid { grid-template-columns: minmax(0, 1fr) 84px; }
     .bar { grid-template-columns: 82px 1fr; }
     section.block { padding-top: 76px; }
@@ -802,8 +817,8 @@
   /* High contrast: system colours, visible edges for things drawn only with fills. */
   @media (forced-colors: active) {
     .btn, .store, .copy, .motion, .contact input, .contact textarea, .card, .mini, .faq details { border: 1px solid CanvasText; }
-    .btn.primary, .store.live { background: ButtonFace; color: ButtonText; forced-color-adjust: none; border-color: ButtonText; }
-    .store.live svg, .store.live small { color: ButtonText; }
+    .btn.primary, .store .l, .store .r { background: ButtonFace; color: ButtonText; forced-color-adjust: none; border-color: ButtonText; }
+    .store .l svg, .store small, .store .r { color: ButtonText; }
     .switch .track { border-color: ButtonText; }
     .switch .track i { background: ButtonText; }
     .switch[aria-checked="true"] .track { background: Highlight; }
@@ -818,7 +833,7 @@
     .bar i { width: var(--w); }
   }
   /* Last, so it wins over each part's own "font: inherit". */
-  h1, h2, h3, h4, .stat caption, .kicker, .eyebrow, nav.links a, .back, .btn, .store span, .faq summary, .mini b, .points b, .strip li b, .copy, .smenu .big, .sp .greet {
+  h1, h2, h3, h4, .stat caption, .kicker, .eyebrow, nav.links a, .back, .btn, .store .tx, .store em, .faq summary, .mini b, .points b, .strip li b, .copy, .smenu .big, .sp .greet {
     font-family: "Plus Jakarta Sans", "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, sans-serif;
   }
 </style>
@@ -859,6 +874,7 @@
     <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/></g><circle cx="17.3" cy="6.7" r="1.25" fill="currentColor"/></symbol>
     <symbol id="i-yt" viewBox="0 0 24 24"><path fill="currentColor" d="M22.5 7.4a3 3 0 0 0-2.1-2.1C18.5 4.8 12 4.8 12 4.8s-6.5 0-8.4.5A3 3 0 0 0 1.5 7.4 31 31 0 0 0 1 12a31 31 0 0 0 .5 4.6 3 3 0 0 0 2.1 2.1c1.9.5 8.4.5 8.4.5s6.5 0 8.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 23 12a31 31 0 0 0-.5-4.6Z"/><path fill="var(--cut, #fff)" d="m9.8 15.3 5.7-3.3-5.7-3.3Z"/></symbol>
     <symbol id="i-store" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16l-1.2 12.2a2 2 0 0 1-2 1.8H7.2a2 2 0 0 1-2-1.8Z"/><path d="M8.5 10V6a3.5 3.5 0 0 1 7 0v4"/></g></symbol>
+    <symbol id="i-tray" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v10"/><path d="m7.5 10 4.5 4.5 4.5-4.5"/><path d="M5 19h14"/></g></symbol>
     <symbol id="i-android" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48A10.78 10.78 0 0 0 1 18h22a10.78 10.78 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="3"/><path d="m3.5 7 8.5 6 8.5-6"/></g></symbol>
   </defs>
@@ -887,8 +903,8 @@
           <span class="w rise" style="--d:1">Hafif.</span> <span class="w rise" style="--d:2">Hızlı.</span><br><span class="w rise" style="--d:3"><em>Senin.</em></span></h1>
         <p class="lead rise" style="--d:4">Reklamları ve izleyicileri engeller, çerez uyarılarını senin yerine reddeder. Ücretsiz, hesap istemez, geçmişin ve şifrelerin bilgisayarında kalır.</p>
         <div class="cta rise" style="--d:5">
-          <a class="store live" href="https://apps.microsoft.com/detail/9P17GF8DSSL1" rel="noopener"><svg aria-hidden="true"><use href="#i-store"/></svg><span><small>Ücretsiz</small>Microsoft Store'dan al</span></a>
-          <a class="store live" href="/android"><svg aria-hidden="true"><use href="#i-android"/></svg><span><small>Ücretsiz · APK</small>Android için indir</span></a>
+          <a class="store live" href="https://apps.microsoft.com/detail/9P17GF8DSSL1" rel="noopener"><span class="l"><svg aria-hidden="true"><use href="#i-store"/></svg><span class="tx"><small>Ücretsiz</small>Microsoft Store'dan al</span></span><span class="r" aria-hidden="true"><svg><use href="#i-tray"/></svg><em>İndir</em></span></a>
+          <a class="store live" href="/android"><span class="l"><svg aria-hidden="true"><use href="#i-android"/></svg><span class="tx"><small>Ücretsiz · APK</small>Android için indir</span></span><span class="r" aria-hidden="true"><svg><use href="#i-tray"/></svg><em>İndir</em></span></a>
           <a class="btn ghost" href="#ozellikler">Neler yapıyor?
             <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></a>
         </div>
@@ -1115,7 +1131,7 @@
       <svg class="big reveal" aria-hidden="true"><use href="#dodo"/></svg>
       <h2 class="wordmark reveal" style="--d:1" aria-label="DodoBrowser"><svg class="wm" aria-hidden="true"><use href="#dodo-yazi"/></svg></h2>
       <p class="tagline reveal" style="--d:2" role="img" aria-label="Hafif. Hızlı. Senin."><svg class="wm-slogan" aria-hidden="true"><use href="#dodo-slogan"/></svg></p>
-      <a class="store live reveal" style="--d:3"href="https://apps.microsoft.com/detail/9P17GF8DSSL1" rel="noopener"><svg aria-hidden="true"><use href="#i-store"/></svg><span><small>Ücretsiz</small>Microsoft Store'dan al</span></a>
+      <a class="store live reveal" style="--d:3"href="https://apps.microsoft.com/detail/9P17GF8DSSL1" rel="noopener"><span class="l"><svg aria-hidden="true"><use href="#i-store"/></svg><span class="tx"><small>Ücretsiz</small>Microsoft Store'dan al</span></span><span class="r" aria-hidden="true"><svg><use href="#i-tray"/></svg><em>İndir</em></span></a>
       <div class="follow reveal" style="--d:4">
         <span>Takip et:</span>
         <a href="https://x.com/dodobrowserapp" rel="noopener" target="_blank" aria-label="X" title="X"><svg aria-hidden="true"><use href="#i-x"/></svg></a>

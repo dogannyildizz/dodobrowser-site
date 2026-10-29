@@ -23,6 +23,14 @@ jobs:
       # doesn't stop the domain list.
       - name: Filtre listesini olustur
         run: bash liste/filtreler.sh || git checkout -- liste/filtreler.txt 2>/dev/null || true
+      # Signed lists (review B-04, 29 Oct 2026): the program takes a list only with a valid signature.
+      # The private key is the GitHub secret LISTE_IMZA_ANAHTARI, read only by this step.
+      - name: Listeleri imzala
+        env:
+          LISTE_IMZA_ANAHTARI: ${{ secrets.LISTE_IMZA_ANAHTARI }}
+        run: |
+          bash liste/imzala.sh liste/engelli-alanlar.txt engelli-alanlar 1
+          if [ -f liste/filtreler.txt ]; then bash liste/imzala.sh liste/filtreler.txt filtreler 1; fi
       - name: Degistiyse gonder
         run: |
           git add -N liste/filtreler.txt 2>/dev/null || true

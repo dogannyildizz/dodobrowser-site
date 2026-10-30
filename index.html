@@ -1201,8 +1201,9 @@
           </div>
         </div>
 
-      <!-- Contact form: sent through Web3Forms to the developer's mailbox. Name and e-mail are optional, so people can write without saying who they are. -->
-      <form class="contact" id="contact" novalidate>
+      <!-- Contact form: sent through Web3Forms to the developer's mailbox. Name and e-mail are optional, so people can write without saying who they are.
+           action/method: if the script does not run, the browser still posts the message to Web3Forms instead of putting it into the address (GET). -->
+      <form class="contact" id="contact" action="https://api.web3forms.com/submit" method="POST" novalidate>
         <input type="hidden" name="access_key" value="d6ba7440-30c6-4aaa-80d1-db9882be23e5">
         <input type="hidden" name="subject" value="DodoBrowser sitesinden yeni mesaj">
         <input type="hidden" name="from_name" value="dodobrowser.com">
@@ -1279,7 +1280,10 @@
     });
     if (location.hash) {
       document.documentElement.style.scrollBehavior = "auto";
-      scrollTo(decodeURIComponent(location.hash.slice(1)), false);
+      // A broken #… (e.g. "#%") must not stop the rest of the page's script, the form included.
+      var id = location.hash.slice(1);
+      try { id = decodeURIComponent(id); } catch (broken) { }
+      scrollTo(id, false);
       document.documentElement.style.scrollBehavior = "";
     }
     var path = location.pathname.replace(/index\.html$/, "");

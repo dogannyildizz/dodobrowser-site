@@ -7,16 +7,21 @@ on:
   schedule:
     - cron: "17 4 * * *"
   workflow_dispatch:
-permissions:
-  contents: write
+# Write access only for this job, and only its last step holds the key (security audit W-1,
+# 31 Oct 2026): the steps that read downloaded lists find no key in .git/config.
+permissions: {}
 jobs:
   liste:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       # Commit SHA ile sabit (güvenlik denetimi D4, 24 Ekim): hareketli v4 etiketi ele
       # geçirilirse iş akışı değişmesin. SHA, v4'ün 24 Ekim 2026'daki hali; site deposuna
       # gönderilmeden önce (ayrı onay) güncel v4 ile karşılaştır.
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
       - name: Listeyi olustur
         run: bash liste/olustur.sh
       # The filter lists (7 Oct 2026): a failure here leaves yesterday's file and
@@ -32,6 +37,8 @@ jobs:
           bash liste/imzala.sh liste/engelli-alanlar.txt engelli-alanlar 1
           if [ -f liste/filtreler.txt ]; then bash liste/imzala.sh liste/filtreler.txt filtreler 1; fi
       - name: Degistiyse gonder
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git add -N liste/filtreler.txt 2>/dev/null || true
           if git diff --quiet -- liste/engelli-alanlar.txt liste/filtreler.txt; then echo "Degisiklik yok"; exit 0; fi
@@ -40,4 +47,6 @@ jobs:
           git add liste/engelli-alanlar.txt
           if [ -f liste/filtreler.txt ]; then git add liste/filtreler.txt; fi
           git commit -m "Reklam listeleri guncellendi"
-          git push
+          # The key as checkout itself sends it (a header, for this one command): never in the remote's address.
+          git -c http.https://github.com/.extraheader="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)" \
+            push origin "HEAD:${GITHUB_REF_NAME}"

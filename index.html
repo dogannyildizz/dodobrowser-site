@@ -181,7 +181,8 @@
     --blob-c: rgba(255, 140, 160, .50);
     --ink: #15121A;
     --muted: #64605C;
-    --accent: #FF7A3D;          /* kehribar fill (buttons, switches, bars); text on it is --on-accent */
+    --accent: #FF7A3D;          /* kehribar fill (buttons, bars); text on it is --on-accent */
+    --switch-on: #E8621C;       /* an "on" switch, as in DodoBrowser (start\dodo.css --accent) */
     --accent-hover: #FF9C73;
     --accent-strong: #8F4410;   /* kehribar as text, links and icons */
     --brand: #15121A;   /* "DodoBrowser" in the logo (marka\LOGO-STANDARDI.md) */
@@ -217,6 +218,7 @@
       --ink: #F3F1F5;
       --muted: #B7B5BC;
       --accent: #FF8A3D;
+      --switch-on: #FF8A3D;
       --accent-hover: #FEC29E;
       --accent-strong: #FFB06E;
       --brand: #F3F1F5;
@@ -260,7 +262,11 @@
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
-  a { color: var(--accent-strong); }
+  /* Links as in DodoBrowser (start\dodo.css): no line; a name inside a sentence is semibold too. */
+  a { color: var(--accent-strong); text-decoration: none; }
+  a:hover { color: color-mix(in srgb, var(--accent-strong), var(--ink) 30%); }
+  p a:not(.btn), li a:not(.btn):not(.soc), td a { font-weight: 600; }
+  a:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 2px; border-radius: 4px; }
   .wrap { width: min(1120px, 100% - 32px); margin: 0 auto; }
 
   /* ---------- Top bar ---------- */
@@ -353,7 +359,7 @@
   .btn {
     display: inline-flex; align-items: center; gap: 8px; border: 0;
     font: inherit; font-size: 16px; font-weight: 600; text-decoration: none;
-    padding: 13px 22px; border-radius: 12px; cursor: pointer;
+    padding: 13px 22px; border-radius: 999px; cursor: pointer;
     transition: transform .2s, box-shadow .2s, filter .2s, border-color .2s;
   }
   .btn.primary { color: var(--on-accent); background: var(--accent); box-shadow: 0 8px 22px var(--btn-glow); }
@@ -363,7 +369,7 @@
   .btn:hover svg.arrow { animation: nudge .9s ease-in-out infinite; }
   .btn:hover svg.plane { transform: translate(3px, -3px) rotate(-8deg); }
   @keyframes nudge { 50% { transform: translateY(4px); } }
-  .btn.ghost { color: var(--ink); background: var(--card); border: 1px solid var(--card-border); }
+  .btn.ghost { color: var(--ink); background: var(--card); border: 1px solid var(--field); }
   .btn.ghost:hover { border-color: var(--accent); transform: translateY(-2px); }
   /* Microsoft Store badge: a link (class "store live") since DodoBrowser went live in the Store (11 Oct 2026). */
   /* Split button (12 Eki → 28 Eki 2026, "Çift parça"): left part says where from, right part is the action.
@@ -557,16 +563,22 @@
   .switch:hover { border-color: var(--accent); }
   .switch:focus { outline: none; }
   .switch:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 3px; }
+  /* The switch itself is DodoBrowser's (start\dodo.css .switch, src\Theme.cs DrawSwitch): an outline
+     with a muted 12 px knob when off; the switch colour's solid fill with a 14 px knob in the surface
+     colour when on (white in the light theme, dark in the dark one). Change one, change both. */
   .switch .track {
-    position: relative; width: 40px; height: 20px; border-radius: 999px; flex: none;
-    border: 1px solid var(--muted); background: transparent; transition: background .25s, border-color .25s;
+    position: relative; width: 40px; height: 20px; border-radius: 10px; flex: none; box-sizing: border-box;
+    border: 1px solid var(--muted); background: transparent; transition: background-color .15s ease, border-color .15s ease;
   }
   .switch .track i {
-    position: absolute; left: 4px; top: 50%; width: 12px; height: 12px; margin-top: -6px; border-radius: 50%;
-    background: var(--muted); transition: transform .25s cubic-bezier(.3, 1.4, .5, 1), background .25s;
+    position: absolute; top: 3px; left: 3px; width: 12px; height: 12px; border-radius: 50%; background: var(--muted);
+    transition: transform .15s ease, background-color .15s ease, width .15s ease, height .15s ease, top .15s ease, left .15s ease;
   }
-  .switch[aria-checked="true"] .track { background: var(--accent); border-color: var(--accent); }
-  .switch[aria-checked="true"] .track i { transform: translateX(19px); background: var(--on-accent); }
+  .switch[aria-checked="true"] .track { background: var(--switch-on); border-color: var(--switch-on); }
+  .switch[aria-checked="true"] .track i {
+    top: 2px; left: 2px; width: 14px; height: 14px; transform: translateX(20px);
+    background: var(--card); box-shadow: 0 1px 2px rgba(0, 0, 0, .18);
+  }
   /* A few soft calls to try it, then it waits quietly. */
   .switch.invite .track { animation: invite 1.2s ease-out 3; }
   @keyframes invite { from { box-shadow: 0 0 0 0 rgba(255, 94, 42, .55); } to { box-shadow: 0 0 0 12px rgba(255, 94, 42, 0); } }
@@ -586,7 +598,7 @@
 
   /* ---------- Sections ---------- */
   section.block { padding: 104px 0 0; }
-  .kicker { color: var(--accent-strong); font-weight: 650; font-size: 14px; letter-spacing: .6px; text-transform: uppercase; margin: 0 0 8px; }
+  .kicker { color: var(--accent-strong); font-weight: 600; font-size: 14px; margin: 0 0 8px; }   /* sentence case, as every heading in DodoBrowser */
   h2 { font-size: clamp(30px, 4vw, 44px); line-height: 1.1; letter-spacing: -.025em; margin: 0 0 14px; }
   .sub { color: var(--muted); font-size: 18px; max-width: 60ch; margin: 0 0 40px; }
 
@@ -596,11 +608,11 @@
 
   /* Measurements */
   .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-  .stat { background: var(--card); border: 1px solid var(--card-border); border-radius: 18px; padding: 24px; box-shadow: var(--shadow); }
+  .stat { background: var(--card); border: 1px solid var(--card-border); border-radius: 16px; padding: 24px; box-shadow: var(--shadow); }
   /* Each card is a real table (search engines and AI answers can quote it); the grid keeps the bar look.
      The explicit roles keep the table readable to screen readers that drop it when display changes. */
   .stat table, .stat caption, .stat tbody { display: block; }
-  .stat caption { margin: 0 0 18px; font-size: 16px; letter-spacing: -.1px; font-weight: 700; text-align: left; }
+  .stat caption { margin: 0 0 18px; font-size: 16px; letter-spacing: -.1px; font-weight: 600; text-align: left; }
   .bar { display: grid; grid-template-columns: 96px 1fr; gap: 10px; align-items: center; font-size: 13.5px; margin-bottom: 10px; }
   .bar th { color: var(--muted); font-weight: 400; text-align: left; padding: 0; }
   .bar td { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; padding: 0; }
@@ -614,7 +626,7 @@
   .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
   .card {
     position: relative; overflow: hidden;
-    background: var(--card); border: 1px solid var(--card-border); border-radius: 18px;
+    background: var(--card); border: 1px solid var(--card-border); border-radius: 16px;
     padding: 24px; box-shadow: var(--shadow);
   }
   .js .card.reveal { transition: opacity .8s ease, transform .8s cubic-bezier(.2, .7, .2, 1), box-shadow .3s, border-color .3s; }
@@ -644,8 +656,8 @@
   .smenu .big { font-size: 28px; font-weight: 600; color: var(--accent-strong); line-height: 1; }
   .smenu .site { flex: 1; min-width: 0; }
   .smenu .site small { display: block; color: var(--muted); font-size: 12px; }
-  .smenu .tg { position: relative; width: 40px; height: 20px; border-radius: 999px; background: var(--accent); flex: none; }
-  .smenu .tg::after { content: ""; position: absolute; right: 4px; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--on-accent); }
+  .smenu .tg { position: relative; width: 40px; height: 20px; border-radius: 10px; background: var(--switch-on); flex: none; }
+  .smenu .tg::after { content: ""; position: absolute; right: 3px; top: 3px; width: 14px; height: 14px; border-radius: 50%; background: var(--card); box-shadow: 0 1px 2px rgba(0, 0, 0, .18); }
   .smenu .row > svg { width: 22px; height: 22px; color: var(--accent-strong); flex: none; }
   /* The rest: one line each. */
   .mini { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
@@ -692,7 +704,7 @@
   .tile div {
     width: 52px; height: 52px; border-radius: 15px; display: grid; place-items: center;
     background: var(--card); border: 1px solid var(--card-border); box-shadow: var(--shadow);
-    font-weight: 700; font-size: 18px; transition: box-shadow .3s, transform .3s;
+    font-weight: 600; font-size: 18px; transition: box-shadow .3s, transform .3s;
   }
   .tile.lift div { transform: scale(1.12) rotate(-4deg); box-shadow: var(--shadow-lg); }
   .points { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
@@ -779,7 +791,7 @@
   /* Two cards side by side: direct address + socials, and the (optionally nameless) form */
   .reach { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr); gap: 20px; align-items: start; text-align: left; }
   .direct, .contact {
-    background: var(--card); border: 1px solid var(--card-border); border-radius: 20px;
+    background: var(--card); border: 1px solid var(--card-border); border-radius: 16px;
     padding: 28px; box-shadow: var(--shadow);
   }
   .direct h3, .contact h3 { margin: 0; font-size: 19px; letter-spacing: -.01em; }
@@ -791,13 +803,12 @@
   .direct .badge svg { width: 24px; height: 24px; }
   .mailrow {
     display: flex; align-items: center; gap: 10px; margin-top: 16px; padding: 6px 6px 6px 14px;
-    background: var(--bg); border: 1px solid var(--card-border); border-radius: 12px;
+    background: var(--bg); border: 1px solid var(--card-border); border-radius: 999px;
   }
-  .mailrow .mail { flex: 1; min-width: 0; font-weight: 700; font-size: 16px; color: var(--accent-strong); text-decoration: none; overflow-wrap: anywhere; }
-  .mailrow .mail:hover { text-decoration: underline; }
+  .mailrow .mail { flex: 1; min-width: 0; font-weight: 600; font-size: 16px; color: var(--accent-strong); text-decoration: none; overflow-wrap: anywhere; }
   .copy {
     flex: none; font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer;
-    color: var(--ink); background: var(--card); border: 1px solid var(--field); border-radius: 9px;
+    color: var(--ink); background: var(--card); border: 1px solid var(--field); border-radius: 999px;
     padding: 7px 12px; transition: background .2s, color .2s, border-color .2s;
   }
   .copy:hover { border-color: var(--accent); }
@@ -827,7 +838,7 @@
   .contact label { display: grid; gap: 6px; font-size: 14.5px; font-weight: 600; }
   .contact input, .contact textarea {
     font: inherit; font-size: 15.5px; font-weight: 400; color: var(--ink);
-    background: var(--bg); border: 1px solid var(--field); border-radius: 12px;
+    background: var(--bg); border: 1px solid var(--field); border-radius: 8px;
     padding: 11px 14px; width: 100%; resize: vertical; transition: border-color .2s, box-shadow .2s;
   }
   .contact input::placeholder, .contact textarea::placeholder { color: var(--muted); opacity: 1; }
@@ -835,7 +846,7 @@
   .contact .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
   .contact .send { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
   .contact .fine { margin: 0; font-size: 13.5px; color: var(--muted); }
-  .contact button:disabled { opacity: .6; cursor: progress; }
+  .contact button:disabled { opacity: .45; cursor: progress; }
   .contact .status { margin: 0; font-size: 15px; min-height: 1.4em; }
   .contact .status:empty { margin: 0; min-height: 0; }
   .contact .status.ok { color: var(--accent-strong); font-weight: 600; }

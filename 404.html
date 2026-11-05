@@ -28,6 +28,7 @@
     --btn-glow: rgba(255, 94, 42, .30);
     --card: #FFFFFF;
     --card-border: rgba(143, 68, 16, .12);
+    --field: #78716C;   /* a button's edge, 3:1 on every surface (as index.html) */
     --icon-bg: #F6F1ED;
     --shadow: 0 1px 2px rgba(60, 30, 10, .06), 0 10px 28px rgba(60, 30, 10, .08);
   }
@@ -47,6 +48,7 @@
       --btn-glow: rgba(255, 94, 42, .24);
       --card: #27252A;
       --card-border: rgba(255, 176, 110, .14);
+      --field: #8F8A93;
       --icon-bg: #333036;
       --shadow: 0 1px 2px rgba(0, 0, 0, .35), 0 10px 28px rgba(0, 0, 0, .35);
     }
@@ -71,7 +73,11 @@
     background-color: var(--bg);
     min-height: 100vh;
   }
-  a { color: var(--accent-strong); }
+  /* Links as in DodoBrowser (start\dodo.css): no line; a name inside a sentence is semibold too. */
+  a { color: var(--accent-strong); text-decoration: none; }
+  a:hover { color: color-mix(in srgb, var(--accent-strong), var(--ink) 30%); }
+  p a:not(.btn), li a:not(.btn), td a { font-weight: 600; }
+  a:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 2px; border-radius: 4px; }
   .wrap { width: min(1120px, 100% - 32px); margin: 0 auto; }
 
   header.top { border-bottom: 1px solid var(--card-border); }
@@ -85,15 +91,15 @@
   .wm-slogan { aspect-ratio: 10.71; }
   /* logo-yap: site-css end */
   .logo-link svg:not(.wm) { width: 34px; height: 34px; }
-  .back { margin-left: auto; color: var(--muted); text-decoration: none; font-size: 15px; padding: 8px 12px; border-radius: 10px; }
+  .back { margin-left: auto; color: var(--muted); text-decoration: none; font-size: 15px; padding: 8px 12px; border-radius: 999px; }
   .back:hover { color: var(--ink); background: var(--card); }
 
   main { width: min(760px, 100% - 32px); margin: 0 auto; padding: 56px 0 40px; }
-  .kicker { color: var(--accent-strong); font-weight: 650; font-size: 14px; letter-spacing: .6px; text-transform: uppercase; margin: 0 0 8px; }
+  .kicker { color: var(--accent-strong); font-weight: 600; font-size: 14px; margin: 0 0 8px; }   /* sentence case, as every heading in DodoBrowser */
   h1 { font-size: clamp(32px, 5vw, 46px); line-height: 1.1; letter-spacing: -.022em; margin: 0 0 10px; }
   .tag { color: var(--muted); margin: 0 0 36px; }
   section {
-    background: var(--card); border: 1px solid var(--card-border); border-radius: 18px;
+    background: var(--card); border: 1px solid var(--card-border); border-radius: 16px;
     padding: 22px 26px; margin-bottom: 14px; box-shadow: var(--shadow);
   }
   section.lead { border-left: 4px solid var(--accent); }
@@ -118,12 +124,12 @@
   .btn {
     display: inline-flex; align-items: center; gap: 8px; border: 0;
     font: inherit; font-size: 16px; font-weight: 600; text-decoration: none;
-    padding: 13px 22px; border-radius: 12px; cursor: pointer;
+    padding: 13px 22px; border-radius: 999px; cursor: pointer;
     transition: transform .2s, box-shadow .2s, border-color .2s;
   }
   .btn.primary { color: var(--on-accent); background: var(--accent); box-shadow: 0 8px 22px var(--btn-glow); }
   .btn.primary:hover { transform: translateY(-2px); background: var(--accent-hover); box-shadow: 0 14px 30px var(--btn-glow); }
-  .btn.ghost { color: var(--ink); background: var(--card); border: 1px solid var(--card-border); }
+  .btn.ghost { color: var(--ink); background: var(--card); border: 1px solid var(--field); }
   .btn.ghost:hover { border-color: var(--accent); transform: translateY(-2px); }
   .btn:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 3px; }
   @media (max-width: 620px) { main.nf { padding: 56px 0 48px; } .nf .btn { width: 100%; justify-content: center; } }

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://dodobrowser.com/en/privacy">
+<link rel="alternate" hreflang="tr" href="https://dodobrowser.com/gizlilik">
+<link rel="alternate" hreflang="en" href="https://dodobrowser.com/en/privacy">
+<link rel="alternate" hreflang="x-default" href="https://dodobrowser.com/gizlilik">
+<title>DodoBrowser – Privacy policy</title>
+<meta name="description" content="What DodoBrowser stores on Windows and Android, optional sync, outside services, problem reports and how to delete your data.">
+<meta property="og:title" content="DodoBrowser – Privacy policy">
+<meta property="og:description" content="What DodoBrowser stores on Windows and Android, optional sync, outside services, problem reports and how to delete your data.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dodobrowser.com/en/privacy">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:site_name" content="DodoBrowser">
+<meta property="og:image" content="https://dodobrowser.com/paylasim-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DodoBrowser logo and tagline: Light. Fast. Yours.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DodoBrowser – Privacy policy">
+<meta name="twitter:description" content="What DodoBrowser stores on Windows and Android, optional sync, outside services, problem reports and how to delete your data.">
+<meta name="twitter:image" content="https://dodobrowser.com/paylasim-en.png">
+<meta name="theme-color" content="#FBF6F2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1B191E" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="16x16 20x20 24x24 32x32 40x40 48x48 64x64 128x128 256x256">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="preload" href="/yazi/InterTight.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  :root {
+    --bg: #FBF6F2;
+    --bg-tint: #F6EFE9;
+    --glow: rgba(255, 150, 90, .30);
+    --glow-2: rgba(150, 180, 255, .26);
+    --ink: #15121A;
+    --muted: #64605C;
+    --accent: #FF7A3D;          /* kehribar fill (buttons, bars); text on it is --on-accent */
+    --accent-hover: #FF9C73;
+    --accent-strong: #8F4410;   /* kehribar as text, links and icons */
+    --brand: #15121A;   /* "DodoBrowser" in the logo (marka\LOGO-STANDARDI.md) */
+    --on-accent: #15121A;
+    --btn-glow: rgba(255, 94, 42, .30);
+    --card: #FFFFFF;
+    --card-border: rgba(143, 68, 16, .12);
+    --icon-bg: #F6F1ED;
+    --shadow: 0 1px 2px rgba(60, 30, 10, .06), 0 10px 28px rgba(60, 30, 10, .08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1B191E;
+      --bg-tint: #221D21;
+      --glow: rgba(255, 120, 44, .22);
+      --glow-2: rgba(70, 72, 210, .22);
+      --ink: #F3F1F5;
+      --muted: #B7B5BC;
+      --accent: #FF8A3D;
+      --accent-hover: #FEC29E;
+      --accent-strong: #FFB06E;
+      --brand: #F3F1F5;
+      --on-accent: #15121A;
+      --btn-glow: rgba(255, 94, 42, .24);
+      --card: #27252A;
+      --card-border: rgba(255, 176, 110, .14);
+      --icon-bg: #333036;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .35), 0 10px 28px rgba(0, 0, 0, .35);
+    }
+  }
+  /* The brand font (Inter Tight, marka\LOGO-STANDARDI.md; logo\logo-yap.py copies it to yazi\):
+     headings, the menu, buttons and the questions; running text stays Segoe UI. */
+  @font-face {
+    font-family: "Inter Tight";
+    src: url("/yazi/InterTight.woff2") format("woff2");
+    font-weight: 400 800;
+    font-display: swap;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: var(--ink); line-height: 1.65; -webkit-font-smoothing: antialiased;
+    background:
+      radial-gradient(700px 420px at 10% -12%, var(--glow), transparent 70%),
+      radial-gradient(640px 400px at 92% -14%, var(--glow-2), transparent 70%),
+      linear-gradient(var(--bg-tint), var(--bg) 420px);
+    background-color: var(--bg);
+    min-height: 100vh;
+  }
+  /* Links as in DodoBrowser (start\dodo.css): no line; a name inside a sentence is semibold too. */
+  a { color: var(--accent-strong); text-decoration: none; }
+  a:hover { color: color-mix(in srgb, var(--accent-strong), var(--ink) 30%); }
+  p a:not(.btn), li a:not(.btn), td a { font-weight: 600; }
+  a:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 2px; border-radius: 4px; }
+  .wrap { width: min(1120px, 100% - 32px); margin: 0 auto; }
+
+  header.top { border-bottom: 1px solid var(--card-border); }
+  header.top .wrap { display: flex; align-items: center; gap: 16px; height: 64px; }
+  .logo-link { display: flex; align-items: center; gap: 6.9px; text-decoration: none; color: var(--ink); --logo-dodo: var(--brand); font-size: 13.9px; }
+  /* logo-yap: site-css begin (logo\logo-yap.py writes this part) */
+  /* The logo standard (marka\LOGO-STANDARDI.md): font-size is the capitals' height;
+     the symbol D is that x 2.29, the gap D x .3. */
+  .wm, .wm-slogan { display: block; height: 1em; width: auto; overflow: visible; fill: currentColor; }
+  .wm { aspect-ratio: 7.98; }
+  .wm-slogan { aspect-ratio: 11.04; }
+  /* logo-yap: site-css end */
+  .logo-link svg:not(.wm) { width: 34px; height: 34px; }
+  .back { margin-left: auto; color: var(--muted); text-decoration: none; font-size: 15px; padding: 8px 12px; border-radius: 999px; }
+  .back:hover { color: var(--ink); background: var(--card); }
+
+  main { width: min(760px, 100% - 32px); margin: 0 auto; padding: 56px 0 40px; }
+  .kicker { color: var(--accent-strong); font-weight: 600; font-size: 14px; margin: 0 0 8px; }   /* sentence case, as every heading in DodoBrowser */
+  h1 { font-size: clamp(32px, 5vw, 46px); line-height: 1.1; letter-spacing: -.022em; margin: 0 0 10px; }
+  .tag { color: var(--muted); margin: 0 0 36px; }
+  section {
+    background: var(--card); border: 1px solid var(--card-border); border-radius: 16px;
+    padding: 22px 26px; margin-bottom: 14px; box-shadow: var(--shadow);
+  }
+  section.lead { border-left: 4px solid var(--accent); }
+  h2 { font-size: 18px; margin: 0 0 8px; }
+  p { margin: 0 0 10px; }
+  p:last-child { margin-bottom: 0; }
+  ul { margin: 0 0 12px; padding-left: 20px; }
+  li { margin-bottom: 8px; }
+  li::marker { color: var(--accent-strong); }
+
+  footer.bottom { border-top: 1px solid var(--card-border); padding: 28px 0 40px; color: var(--muted); font-size: 14.5px; }
+  footer.bottom .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; }
+  footer.bottom .wrap > :first-child { margin-right: auto; }
+  footer.bottom a { color: var(--muted); }
+  footer.bottom .lang { display: inline-flex; align-items: center; gap: 8px; }
+  footer.bottom .lang [aria-current] { color: var(--ink); font-weight: 600; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .servis-tablo { margin: 4px 0 14px; border: 1px solid var(--card-border); border-radius: 8px; overflow: hidden; }
+  .servis-tablo table { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.45; }
+  .servis-tablo th, .servis-tablo td { text-align: left; vertical-align: top; padding: 10px 12px; border-top: 1px solid var(--card-border); }
+  .servis-tablo thead th { border-top: 0; background: var(--icon-bg); color: var(--muted); font-size: 13px; font-weight: 600; }
+  .servis-tablo tbody th { font-weight: 600; }
+  @media (max-width: 620px) { section { padding: 18px 18px; } main { padding-top: 40px; }
+    .servis-tablo thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    .servis-tablo tr { display: block; padding: 8px 0; border-top: 1px solid var(--card-border); }
+    .servis-tablo tbody tr:first-child { border-top: 0; }
+    .servis-tablo th, .servis-tablo td { display: block; border: 0; padding: 2px 12px; }
+    .servis-tablo td::before { content: attr(data-l) ": "; color: var(--muted); }
+  }
+  /* Last, so it wins over each part's own "font: inherit". */
+  h1, h2, h3, h4, .kicker, .eyebrow, nav.links a, .back, .btn, .store span, .faq summary, .mini b, .points b, .strip li b, .copy, .smenu .big, .sp .greet {
+    font-family: "Inter Tight", "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, sans-serif;
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- logo-yap: site begin (logo\logo-yap.py writes this part) -->
+    <linearGradient id="sdg" gradientUnits="userSpaceOnUse" x1="8" y1="8" x2="248" y2="248"><stop offset="0" stop-color="#FFB84D"/><stop offset=".55" stop-color="#FF5E2A"/><stop offset="1" stop-color="#C81F55"/></linearGradient><radialGradient id="sdl" gradientUnits="userSpaceOnUse" cx="128" cy="8" r="192"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".34"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient><filter id="sdf" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#5A0F1E" flood-opacity=".45"/></filter><linearGradient id="sdw" gradientUnits="userSpaceOnUse" x1="8" y1="58.4" x2="8" y2="197.6"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#FFE4D6"/></linearGradient><linearGradient id="sdr" gradientUnits="userSpaceOnUse" x1="8" y1="8" x2="8" y2="248"><stop offset="0" stop-color="rgba(255,255,255,.55)"/><stop offset=".35" stop-color="rgba(255,255,255,.06)"/><stop offset="1" stop-color="rgba(255,255,255,.22)"/></linearGradient>
+    <symbol id="dodo" viewBox="0 0 256 256"><path fill="url(#sdg)" d="M128 8C219.2 8 248 36.8 248 128C248 219.2 219.2 248 128 248C36.8 248 8 219.2 8 128C8 36.8 36.8 8 128 8Z"/><path fill="url(#sdl)" d="M128 8C219.2 8 248 36.8 248 128C248 219.2 219.2 248 128 248C36.8 248 8 219.2 8 128C8 36.8 36.8 8 128 8Z"/><path fill="url(#sdw)" fill-rule="evenodd" d="M94.4 58.4L135.2 58.4C178.4 58.4 204.8 89.6 204.8 128C204.8 166.4 178.4 197.6 135.2 197.6L94.4 197.6C86.48 197.6 80 191.12 80 183.2L80 72.8C80 64.88 86.48 58.4 94.4 58.4ZM113.6 87.2L113.6 168.8L134 168.8C156.8 168.8 171.2 151.52 171.2 128C171.2 104.48 156.8 87.2 134 87.2Z" filter="url(#sdf)"/><path fill="none" stroke="url(#sdr)" stroke-width="2.88" d="M128 9.44C218.24 9.44 246.56 37.76 246.56 128C246.56 218.24 218.24 246.56 128 246.56C37.76 246.56 9.44 218.24 9.44 128C9.44 37.76 37.76 9.44 128 9.44Z"/></symbol>
+    <symbol id="dodo-yazi" viewBox="0 0 835.89 104.77" overflow="visible"><path style="fill: var(--logo-dodo, currentColor)" d="M35.55 104.77H8.97V88.34H34.59Q45.52 88.34 52.85 84.36Q60.19 80.38 63.87 72.35Q67.56 64.32 67.56 52.28Q67.56 40.3 63.9 32.34Q60.24 24.37 53.01 20.4Q45.77 16.43 35.1 16.43H8.47V0H36.23Q51.85 0 63.06 6.27Q74.28 12.54 80.3 24.26Q86.32 35.99 86.32 52.28Q86.32 68.64 80.27 80.4Q74.22 92.17 62.87 98.47Q51.51 104.77 35.55 104.77ZM18.96 0V104.77H0V0ZM130.86 106.34Q119.37 106.34 110.92 101.26Q102.47 96.19 97.86 87.06Q93.26 77.93 93.26 65.84Q93.26 53.62 97.86 44.47Q102.47 35.33 110.92 30.25Q119.37 25.17 130.86 25.17Q142.39 25.17 150.84 30.25Q159.29 35.33 163.92 44.47Q168.55 53.62 168.55 65.84Q168.55 77.93 163.92 87.06Q159.29 96.19 150.84 101.26Q142.39 106.34 130.86 106.34ZM130.92 91.41Q137.27 91.41 141.44 87.99Q145.6 84.57 147.68 78.74Q149.76 72.91 149.76 65.78Q149.76 58.54 147.68 52.73Q145.6 46.93 141.44 43.52Q137.27 40.11 130.92 40.11Q124.62 40.11 120.41 43.52Q116.21 46.93 114.13 52.73Q112.04 58.54 112.04 65.78Q112.04 72.91 114.13 78.74Q116.21 84.57 120.41 87.99Q124.62 91.41 130.92 91.41ZM206.31 106.17Q197.06 106.17 189.72 101.42Q182.38 96.67 178.16 87.59Q173.94 78.51 173.94 65.62Q173.94 52.48 178.27 43.46Q182.59 34.44 189.92 29.81Q197.24 25.17 206.29 25.17Q213.26 25.17 217.7 27.49Q222.13 29.81 224.76 33.08Q227.39 36.35 228.79 39.18H229.54V0H248.02V104.77H229.91V92.33H228.79Q227.34 95.2 224.65 98.42Q221.97 101.63 217.53 103.9Q213.09 106.17 206.31 106.17ZM211.4 91.01Q217.34 91.01 221.46 87.8Q225.58 84.59 227.75 78.86Q229.91 73.12 229.91 65.53Q229.91 57.88 227.79 52.22Q225.66 46.56 221.52 43.45Q217.38 40.33 211.4 40.33Q205.3 40.33 201.17 43.59Q197.03 46.86 194.94 52.54Q192.84 58.22 192.84 65.53Q192.84 72.86 194.96 78.62Q197.08 84.39 201.21 87.7Q205.34 91.01 211.4 91.01ZM294.48 106.34Q282.99 106.34 274.54 101.26Q266.09 96.19 261.48 87.06Q256.88 77.93 256.88 65.84Q256.88 53.62 261.48 44.47Q266.09 35.33 274.54 30.25Q282.99 25.17 294.48 25.17Q306.01 25.17 314.46 30.25Q322.91 35.33 327.54 44.47Q332.17 53.62 332.17 65.84Q332.17 77.93 327.54 87.06Q322.91 96.19 314.46 101.26Q306.01 106.34 294.48 106.34ZM294.54 91.41Q300.89 91.41 305.06 87.99Q309.22 84.57 311.3 78.74Q313.38 72.91 313.38 65.78Q313.38 58.54 311.3 52.73Q309.22 46.93 305.06 43.52Q300.89 40.11 294.54 40.11Q288.24 40.11 284.03 43.52Q279.83 46.93 277.75 52.73Q275.66 58.54 275.66 65.78Q275.66 72.91 277.75 78.74Q279.83 84.57 284.03 87.99Q288.24 91.41 294.54 91.41ZM343.41 104.77V0H380.12Q391.01 0 398.12 3.76Q405.22 7.52 408.7 13.85Q412.18 20.18 412.18 27.84Q412.18 34.59 409.79 38.99Q407.4 43.38 403.53 45.95Q399.66 48.52 395.16 49.78V50.77Q400.01 51.05 404.87 54.14Q409.72 57.23 412.99 62.93Q416.26 68.62 416.26 76.92Q416.26 84.8 412.67 91.09Q409.08 97.38 401.38 101.07Q393.69 104.77 381.24 104.77ZM356.07 93.52H381.24Q393.69 93.52 398.92 88.66Q404.16 83.81 404.16 76.92Q404.16 71.58 401.45 67.08Q398.75 62.58 393.76 59.84Q388.76 57.09 381.94 57.09H356.07ZM356.07 46.12H379.69Q385.39 46.12 390.03 43.84Q394.67 41.55 397.38 37.44Q400.08 33.33 400.08 27.84Q400.08 20.95 395.3 16.1Q390.52 11.25 380.12 11.25H356.07ZM427.33 104.77V26.16H438.86V38.11H439.71Q441.89 32.27 447.55 28.65Q453.21 25.03 460.24 25.03Q461.57 25.03 463.54 25.07Q465.51 25.1 466.57 25.17V37.41Q465.93 37.27 463.75 36.98Q461.57 36.7 459.11 36.7Q453.42 36.7 448.92 39.09Q444.42 41.48 441.85 45.63Q439.28 49.78 439.28 55.12V104.77ZM502.11 106.45Q491.49 106.45 483.48 101.39Q475.46 96.33 471 87.19Q466.53 78.05 466.53 65.95Q466.53 53.65 471 44.47Q475.46 35.3 483.48 30.23Q491.49 25.17 502.11 25.17Q512.8 25.17 520.81 30.23Q528.83 35.3 533.33 44.47Q537.83 53.65 537.83 65.95Q537.83 78.05 533.33 87.19Q528.83 96.33 520.81 101.39Q512.8 106.45 502.11 106.45ZM502.11 95.62Q510.27 95.62 515.47 91.48Q520.67 87.33 523.2 80.54Q525.74 73.76 525.74 65.95Q525.74 58.01 523.2 51.19Q520.67 44.37 515.47 40.18Q510.27 36 502.11 36Q494.09 36 488.89 40.18Q483.69 44.37 481.16 51.19Q478.63 58.01 478.63 65.95Q478.63 73.76 481.16 80.54Q483.69 87.33 488.89 91.48Q494.09 95.62 502.11 95.62ZM563.18 104.77 539.27 26.16H551.93L568.94 86.34H569.79L586.52 26.16H599.46L615.91 86.2H616.76L633.77 26.16H646.43L622.52 104.77H610.71L593.41 44.44H592.29L574.99 104.77ZM709.82 43.88 698.99 46.83Q697.44 42.82 693.68 39.2Q689.92 35.58 681.97 35.58Q674.8 35.58 670.02 38.92Q665.24 42.26 665.24 47.25Q665.24 51.75 668.51 54.42Q671.78 57.09 678.74 58.78L690.41 61.59Q700.89 64.12 706.05 69.4Q711.22 74.67 711.22 82.83Q711.22 89.58 707.36 94.92Q703.49 100.27 696.6 103.36Q689.71 106.45 680.57 106.45Q668.54 106.45 660.7 101.18Q652.86 95.91 650.75 85.92L662.14 83.11Q663.76 89.44 668.37 92.6Q672.97 95.77 680.43 95.77Q688.79 95.77 693.82 92.14Q698.85 88.52 698.85 83.53Q698.85 75.23 687.18 72.42L674.1 69.33Q663.27 66.73 658.21 61.38Q653.14 56.04 653.14 47.95Q653.14 41.27 656.91 36.14Q660.67 31.01 667.21 28.09Q673.75 25.17 681.97 25.17Q693.71 25.17 700.36 30.34Q707 35.51 709.82 43.88ZM754.22 106.45Q742.9 106.45 734.64 101.39Q726.38 96.33 721.95 87.22Q717.52 78.12 717.52 66.09Q717.52 54 721.88 44.79Q726.24 35.58 734.15 30.38Q742.06 25.17 752.67 25.17Q758.79 25.17 764.84 27.21Q770.88 29.25 775.84 33.82Q780.8 38.39 783.75 45.91Q786.7 53.44 786.7 64.41V69.61H726.09V59.2H780.17L774.61 63.14Q774.61 55.27 772.15 49.15Q769.69 43.03 764.8 39.52Q759.92 36 752.67 36Q745.43 36 740.26 39.55Q735.09 43.1 732.35 48.8Q729.61 54.49 729.61 61.03V67.92Q729.61 76.85 732.7 83.04Q735.8 89.23 741.35 92.43Q746.91 95.62 754.22 95.62Q758.93 95.62 762.8 94.25Q766.67 92.88 769.48 90.11Q772.29 87.33 773.77 83.25L785.44 86.62Q783.61 92.53 779.29 97Q774.96 101.46 768.56 103.96Q762.17 106.45 754.22 106.45ZM796.65 104.77V26.16H808.19V38.11H809.03Q811.21 32.27 816.87 28.65Q822.53 25.03 829.56 25.03Q830.9 25.03 832.87 25.07Q834.83 25.1 835.89 25.17V37.41Q835.26 37.27 833.08 36.98Q830.9 36.7 828.44 36.7Q822.74 36.7 818.24 39.09Q813.74 41.48 811.17 45.63Q808.61 49.78 808.61 55.12V104.77Z"/></symbol>
+    <symbol id="dodo-slogan" viewBox="0 0 323.94 29.33" overflow="visible"><path fill="currentColor" d="M0 29.33V0H4.43V25.53H17.73V29.33ZM21.53 29.33V7.32H25.79V29.33ZM23.67 3.95Q22.56 3.95 21.77 3.2Q20.97 2.45 20.97 1.39Q20.97 .33 21.77 -.41Q22.56 -1.16 23.67 -1.16Q24.78 -1.16 25.58 -.41Q26.37 .33 26.37 1.39Q26.37 2.45 25.58 3.2Q24.78 3.95 23.67 3.95ZM39.87 38.04Q35.94 38.04 33.67 36.56Q31.4 35.08 30.54 33.05L34.2 31.54Q34.59 32.17 35.25 32.88Q35.9 33.59 37.03 34.08Q38.15 34.58 39.92 34.58Q42.35 34.58 43.95 33.41Q45.54 32.23 45.54 29.64V25.33H45.24Q44.88 26.03 44.16 26.89Q43.43 27.74 42.17 28.37Q40.91 29 38.87 29Q36.28 29 34.2 27.77Q32.12 26.54 30.9 24.15Q29.68 21.75 29.68 18.25Q29.68 14.75 30.88 12.24Q32.08 9.73 34.18 8.39Q36.27 7.05 38.93 7.05Q40.97 7.05 42.24 7.73Q43.5 8.41 44.21 9.31Q44.93 10.22 45.32 10.9H45.63V7.32H49.78V29.83Q49.78 32.65 48.48 34.47Q47.17 36.29 44.93 37.16Q42.68 38.04 39.87 38.04ZM39.83 25.44Q42.6 25.44 44.09 23.52Q45.57 21.6 45.57 18.19Q45.57 15.96 44.92 14.28Q44.27 12.59 42.99 11.64Q41.71 10.69 39.83 10.69Q37.9 10.69 36.61 11.69Q35.31 12.69 34.66 14.39Q34.01 16.08 34.01 18.19Q34.01 20.34 34.67 21.98Q35.33 23.62 36.63 24.53Q37.93 25.44 39.83 25.44ZM58.92 16.28V29.33H54.66V0H58.86V10.94H59.16Q59.92 9.15 61.51 8.1Q63.09 7.05 65.66 7.05Q67.92 7.05 69.61 7.98Q71.31 8.91 72.26 10.75Q73.21 12.6 73.21 15.35V29.33H68.92V15.87Q68.92 13.43 67.67 12.09Q66.42 10.76 64.19 10.76Q62.66 10.76 61.48 11.41Q60.29 12.06 59.61 13.29Q58.92 14.51 58.92 16.28ZM88.33 7.32V10.77H76.33V7.32ZM79.54 2.09H83.8V22.88Q83.8 24.38 84.44 25.09Q85.07 25.8 86.46 25.8Q86.8 25.8 87.19 25.75Q87.57 25.7 87.96 25.63L88.76 29.17Q88.11 29.39 87.35 29.5Q86.58 29.62 85.82 29.62Q82.95 29.62 81.25 28.02Q79.54 26.42 79.54 23.75ZM95.38 29.62Q94.19 29.62 93.35 28.78Q92.51 27.95 92.51 26.76Q92.51 25.56 93.35 24.73Q94.19 23.89 95.38 23.89Q96.58 23.89 97.42 24.73Q98.26 25.56 98.26 26.76Q98.26 27.95 97.42 28.78Q96.58 29.62 95.38 29.62ZM113.12 29.33V0H131.33V3.8H117.54V13.32H130V17.09H117.54V29.33ZM141.83 29.81Q139.74 29.81 138.04 29.04Q136.35 28.26 135.36 26.76Q134.38 25.27 134.38 23.11Q134.38 21.24 135.1 20.05Q135.82 18.85 137.04 18.15Q138.26 17.44 139.76 17.08Q141.26 16.73 142.83 16.55Q144.81 16.31 146.03 16.16Q147.25 16.01 147.82 15.67Q148.38 15.32 148.38 14.55V14.44Q148.38 12.59 147.33 11.56Q146.28 10.53 144.2 10.53Q142.05 10.53 140.81 11.47Q139.56 12.41 139.09 13.58L135.06 12.66Q135.78 10.65 137.16 9.42Q138.55 8.18 140.35 7.62Q142.15 7.05 144.13 7.05Q145.45 7.05 146.93 7.36Q148.4 7.66 149.71 8.48Q151.02 9.3 151.85 10.81Q152.67 12.33 152.67 14.73V29.33H148.48V26.32H148.33Q147.93 27.13 147.09 27.94Q146.26 28.74 144.96 29.28Q143.66 29.81 141.83 29.81ZM142.75 26.39Q144.54 26.39 145.8 25.68Q147.06 24.98 147.73 23.84Q148.4 22.7 148.4 21.41V18.56Q148.16 18.79 147.52 18.98Q146.87 19.17 146.04 19.31Q145.21 19.46 144.42 19.56Q143.63 19.66 143.11 19.73Q141.87 19.9 140.84 20.27Q139.81 20.64 139.19 21.33Q138.58 22.02 138.58 23.18Q138.58 24.76 139.75 25.58Q140.93 26.39 142.75 26.39ZM174.02 12.73 170.15 13.39Q169.79 12.29 168.77 11.36Q167.75 10.43 165.74 10.43Q163.93 10.43 162.71 11.26Q161.5 12.08 161.5 13.33Q161.5 14.44 162.32 15.12Q163.14 15.81 164.94 16.23L168.45 17.02Q171.48 17.7 172.97 19.18Q174.46 20.65 174.46 22.96Q174.46 24.95 173.31 26.49Q172.17 28.03 170.15 28.91Q168.13 29.79 165.47 29.79Q161.77 29.79 159.44 28.2Q157.12 26.61 156.58 23.7L160.7 23.07Q161.1 24.69 162.3 25.51Q163.51 26.33 165.45 26.33Q167.54 26.33 168.81 25.45Q170.08 24.56 170.08 23.31Q170.08 21.22 166.96 20.5L163.25 19.66Q160.15 18.96 158.69 17.44Q157.22 15.92 157.22 13.58Q157.22 11.63 158.31 10.16Q159.39 8.69 161.31 7.87Q163.23 7.05 165.71 7.05Q169.29 7.05 171.33 8.6Q173.37 10.15 174.02 12.73ZM188.5 7.32V10.77H176.5V7.32ZM179.7 2.09H183.96V22.88Q183.96 24.38 184.6 25.09Q185.24 25.8 186.63 25.8Q186.96 25.8 187.35 25.75Q187.74 25.7 188.13 25.63L188.93 29.17Q188.28 29.39 187.51 29.5Q186.75 29.62 185.98 29.62Q183.12 29.62 181.41 28.02Q179.7 26.42 179.7 23.75ZM195.55 29.62Q194.35 29.62 193.51 28.78Q192.67 27.95 192.67 26.76Q192.67 25.56 193.51 24.73Q194.35 23.89 195.55 23.89Q196.74 23.89 197.58 24.73Q198.42 25.56 198.42 26.76Q198.42 27.95 197.58 28.78Q196.74 29.62 195.55 29.62ZM211.02 0H216.05L223.71 13.35H224.04L231.68 0H236.73L226.07 17.82V29.33H221.66V17.82ZM245.33 29.79Q242.24 29.79 239.93 28.37Q237.62 26.95 236.36 24.39Q235.09 21.84 235.09 18.45Q235.09 15.02 236.36 12.45Q237.62 9.89 239.93 8.47Q242.24 7.05 245.33 7.05Q248.44 7.05 250.75 8.47Q253.05 9.89 254.33 12.45Q255.61 15.02 255.61 18.45Q255.61 21.84 254.33 24.39Q253.05 26.95 250.75 28.37Q248.44 29.79 245.33 29.79ZM245.34 26.18Q247.37 26.18 248.68 25.13Q249.99 24.07 250.64 22.3Q251.28 20.53 251.28 18.44Q251.28 16.32 250.64 14.55Q249.99 12.78 248.68 11.72Q247.37 10.65 245.34 10.65Q243.33 10.65 242.02 11.72Q240.7 12.78 240.05 14.55Q239.41 16.32 239.41 18.44Q239.41 20.53 240.05 22.3Q240.7 24.07 242.02 25.13Q243.33 26.18 245.34 26.18ZM273.42 20.23V7.32H277.68V29.33H273.5V25.51H273.26Q272.49 27.26 270.84 28.45Q269.18 29.63 266.69 29.61Q264.57 29.61 262.95 28.68Q261.33 27.76 260.4 25.9Q259.48 24.05 259.48 21.32V7.32H263.74V20.83Q263.74 23.06 265 24.39Q266.26 25.73 268.25 25.71Q269.45 25.71 270.64 25.12Q271.83 24.52 272.62 23.3Q273.42 22.09 273.42 20.23ZM282.57 29.33V7.32H286.69V10.84H286.93Q287.54 9.07 289.06 8.04Q290.59 7.02 292.52 7.02Q292.92 7.02 293.47 7.04Q294.01 7.06 294.34 7.11V11.2Q294.08 11.12 293.42 11.04Q292.76 10.96 292.09 10.96Q290.58 10.96 289.39 11.6Q288.19 12.24 287.51 13.36Q286.83 14.47 286.83 15.92V29.33ZM313.64 12.73 309.77 13.39Q309.4 12.29 308.39 11.36Q307.37 10.43 305.36 10.43Q303.54 10.43 302.33 11.26Q301.12 12.08 301.12 13.33Q301.12 14.44 301.94 15.12Q302.75 15.81 304.56 16.23L308.07 17.02Q311.09 17.7 312.58 19.18Q314.07 20.65 314.07 22.96Q314.07 24.95 312.93 26.49Q311.79 28.03 309.77 28.91Q307.75 29.79 305.09 29.79Q301.39 29.79 299.06 28.2Q296.74 26.61 296.2 23.7L300.32 23.07Q300.71 24.69 301.92 25.51Q303.13 26.33 305.06 26.33Q307.16 26.33 308.43 25.45Q309.69 24.56 309.69 23.31Q309.69 21.22 306.58 20.5L302.87 19.66Q299.77 18.96 298.3 17.44Q296.83 15.92 296.83 13.58Q296.83 11.63 297.92 10.16Q299.01 8.69 300.93 7.87Q302.85 7.05 305.32 7.05Q308.91 7.05 310.94 8.6Q312.98 10.15 313.64 12.73ZM321.07 29.62Q319.87 29.62 319.03 28.78Q318.19 27.95 318.19 26.76Q318.19 25.56 319.03 24.73Q319.87 23.89 321.07 23.89Q322.27 23.89 323.11 24.73Q323.94 25.56 323.94 26.76Q323.94 27.95 323.11 28.78Q322.27 29.62 321.07 29.62Z"/></symbol>
+    <!-- logo-yap: site end -->
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo-link" href="/en/"><svg aria-hidden="true"><use href="#dodo"/></svg><svg class="wm" role="img" aria-label="DodoBrowser"><use href="#dodo-yazi"/></svg></a>
+    <a class="back" href="/en/">← Home</a>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">DodoBrowser</p>
+  <h1>Privacy policy</h1>
+  <p class="tag" style="margin-bottom: 8px">Last updated: October 29, 2026</p>
+  <p class="tag">This is a translation for your convenience. The <a href="/gizlilik" lang="tr" hreflang="tr">Turkish version</a> is the binding text.</p>
+
+  <section class="lead">
+    <h2>Summary</h2>
+    <p>DodoBrowser doesn't require an account. Your browsing data is stored on your device; what is shared through optional sync and outside services is explained below. Your data is not sold or used for advertising.</p>
+    <p>We receive only the problem reports and contact messages that you send, or allow to be sent. Your identity details are not added to problem reports separately; an image, address or note you share may contain such details.</p>
+  </section>
+
+  <section>
+    <h2>Data stored on your device</h2>
+    <p>Data is stored in your user folder on Windows, and in the app's private space on Android, which other apps can't access:</p>
+    <ul><li>History and the record of downloads: 90 days. Downloaded files stay in their own folder.</li><li>Bookmarks, Start page shortcuts and frequently visited sites.</li><li>Theme, other settings, per-site zoom and site permissions.</li><li>Shield settings, site exceptions, block counts and records.</li><li>The city you pick for the weather and your most recently open tabs.</li><li>Cookies and site data.</li><li>On Windows, passwords and form data. Passwords are stored with encryption tied to your Windows account. On Android, DodoBrowser doesn't store passwords; your phone's autofill service manages them.</li><li>On Android, the language files you download and your translation preferences.</li></ul>
+    <p>When you close a private window or tab, the browsing data that belongs to it is deleted. On Android, translation preferences aren't saved in a private tab. A language file you chose to download stays on the phone; the page it was downloaded on isn't recorded.</p>
+    <p>The permission you give to continue to a site with an invalid certificate is kept in memory only. It isn't written to a file, isn't sent anywhere, and is deleted when DodoBrowser closes.</p>
+    <p>If you sign in with Google, your bookmarks, Start page shortcuts, the counts of frequently visited sites, Shield's on/off state and site exceptions, theme, color theme and open tab list are synced with your other computers. Your history, downloads, passwords and cookies aren't synced. Shield site exceptions cover the sites you chose to keep on or turn off.</p>
+  </section>
+
+  <section>
+    <h2>If you sign in with Google</h2>
+    <p>Signing in is optional. When you sign in, DodoBrowser asks Google for these permissions:</p>
+    <ul>
+      <li><strong>Your name, email address and account picture</strong> (openid, email, profile): to show which account you signed in with; stored only on your computer.</li>
+      <li><strong>The app's own folder in Google Drive</strong> (drive.appdata): to sync your bookmarks, settings and open tab list (so you can see it on your other computers) across your computers. This folder is hidden and can be opened only by DodoBrowser; DodoBrowser can't see, read or change the other files in your Drive.</li>
+    </ul>
+    <p>Synced data sits on Google's servers, in your own Drive space, and is subject to Google's own privacy rules. The sign-in token is stored on your computer, encrypted for your Windows account.</p>
+    <p>DodoBrowser's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+  </section>
+
+  <section id="sorun-bildir">
+    <h2>Problem reports</h2>
+    <p>When you select “Send” under “Tell Dodo”, this information is sent:</p>
+    <ul><li>The answer you chose and the note you wrote.</li><li>A screenshot and the address of the page you had trouble on, if the matching boxes are checked.</li><li>DodoBrowser, page engine and Windows versions; display scale, window size and theme; the state of the Google connection and sync. Your Google account itself is not included.</li><li>On Android, the phone model and the reason, time and state at the moment of the app's last five exits. The system's free-form notes and memory figures aren't sent.</li><li>Recent actions, the names of sites opened, blocked ad domains and the related public list rules. The recent actions record doesn't contain the full page addresses of sites.</li></ul>
+    <p>Your name, email address, Google account, computer name, Windows user name and your other tabs aren't added separately. Your user folder is removed from file paths. However, if the screenshot, page address or note you send contains personal information, that is sent too. Before sending, you can review the screenshot and clear the screenshot and address boxes.</p>
+    <p>On Windows, automatic sending of crash reports is asked about the first time, and your choice is remembered. If you allow it, the event, versions and the names of recently opened sites are sent; no screenshot is sent. If you don't allow it, no report is sent. You can withdraw your permission in Settings. On Android, crash reports aren't sent automatically.</p>
+    <p>Reports are forwarded through Cloudflare to Google Apps Script, and from there to a GitHub repository with restricted access, where they're stored. If Cloudflare can't be reached, Google Apps Script is used directly.</p>
+    <p>To prevent abuse, your IP address is turned into a one-way value specific to that day at Cloudflare and used in a counter. We don't store the IP address itself; the counter is deleted the next day. Cloudflare, Google and GitHub may process the connection's technical information under their own privacy rules. Reports are used only to identify and fix problems; they aren't shared with third parties.</p>
+  </section>
+
+  <section id="servisler">
+    <h2>Outside services</h2>
+    <p>These are the services used other than the sites you visit. The table is a short summary; the explanations after it show the scope and exceptions.</p>
+    <div class="servis-tablo"><table><caption class="sr">Summary of the services DodoBrowser connects to</caption><thead><tr><th scope="col">Action and information sent</th><th scope="col">Recipient</th><th scope="col">When?</th><th scope="col">Control</th></tr></thead><tbody><tr><th scope="row">Search and suggestions: what you type</th><td data-l="Recipient">The search engine you chose; Google by default</td><td data-l="When?">When you search, and while typing if suggestions are on</td><td data-l="Control">Manage suggestions and the search engine in Settings.</td></tr><tr><th scope="row">Image search: the image's address</th><td data-l="Recipient">Google Lens or Yandex</td><td data-l="When?">When you select the command</td><td data-l="Control">Not sent if you don't use the command.</td></tr><tr><th scope="row">Finding a site for a shortcut: the word you search for</th><td data-l="Recipient">Google</td><td data-l="When?">When you use the find-a-site command on the shortcut card</td><td data-l="Control">If you type the address directly, no search is made.</td></tr><tr><th scope="row">Site icons: the site's name</th><td data-l="Recipient">Google's icon service</td><td data-l="When?">When icons are fetched for sites you haven't opened yet</td><td data-l="Control">Turned off in Settings; version 1.2.0 and later.</td></tr><tr><th scope="row">Icon on a large screen: the icon's address</th><td data-l="Recipient">The site concerned</td><td data-l="When?">When display scale is above 100% and the icon is small</td><td data-l="Control">Not fetched in a private window or for addresses Shield blocks.</td></tr><tr><th scope="row">Account picture: the picture's address</th><td data-l="Recipient">Google</td><td data-l="When?">After signing in with Google; downloaded once and stored</td><td data-l="Control">Don't sign in, or sign out.</td></tr><tr><th scope="row">A shortcut's name and icon</th><td data-l="Recipient">The site concerned</td><td data-l="When?">When a shortcut is added to the Start page</td><td data-l="Control">If you don't add shortcuts, this request isn't made.</td></tr><tr><th scope="row">Weather: the approximate location of the city</th><td data-l="Recipient">MET Norway</td><td data-l="When?">At most once an hour if a city is selected</td><td data-l="Control">Turned off in Settings.</td></tr><tr><th scope="row">Ad list check</th><td data-l="Recipient">dodobrowser.com / GitHub Pages</td><td data-l="When?">At most once a day</td><td data-l="Control">Settings → Shield.</td></tr><tr><th scope="row">Android update check</th><td data-l="Recipient">dodobrowser.com / GitHub Pages</td><td data-l="When?">At most once a day</td><td data-l="Control">Android Settings → Privacy; not checked in a private tab or when installed from Google Play.</td></tr><tr><th scope="row">Language file request for translation</th><td data-l="Recipient">DodoBrowser's GitHub page</td><td data-l="When?">The first time you use a language other than English, after your approval</td><td data-l="Control">You can decline the download; the translated page isn't sent.</td></tr><tr><th scope="row">Encrypted site-name lookup in a Windows private window</th><td data-l="Recipient">Cloudflare; Quad9 if it can't be reached</td><td data-l="When?">In a private window</td><td data-l="Control">Can't be turned off.</td></tr><tr><th scope="row">Connection check: a site name or a random check name</th><td data-l="Recipient">Your device's DNS service</td><td data-l="When?">When a page can't be opened; every 10 seconds on the connection error screen</td><td data-l="Control">Can't be turned off; used to work out the connection problem.</td></tr><tr><th scope="row">Malicious site and file check</th><td data-l="Recipient">Microsoft on Windows; Google on Android</td><td data-l="When?">While browsing and downloading</td><td data-l="Control">Can't be turned off.</td></tr><tr><th scope="row">Diagnostic data from the Windows page engine</th><td data-l="Recipient">Microsoft</td><td data-l="When?">According to your Windows setting</td><td data-l="Control">Windows Settings → Diagnostics &amp; feedback.</td></tr><tr><th scope="row">Sync: bookmarks, shortcuts, theme, Shield settings, frequent-site counts and open tab list</th><td data-l="Recipient">Your own Google Drive space</td><td data-l="When?">If you signed in with Google</td><td data-l="Control">Don't sign in, or sign out.</td></tr><tr><th scope="row">Problem report</th><td data-l="Recipient">A restricted GitHub repository, through Cloudflare and Google Apps Script</td><td data-l="When?">When you send it; when you separately allow a Windows crash report</td><td data-l="Control">Withdraw the sending or crash permission in Settings.</td></tr></tbody></table></div>
+    <p>In a private window, search suggestions, site icons, shortcut search, weather and list updates don't run. On Android, the new-version check isn't made in a private tab either.</p>
+    <p><strong>Search and suggestions.</strong> The default is Google; you can choose Bing, DuckDuckGo or Yandex. What you type in the address bar, the Start page search or a shortcut card is sent to the selected engine as you type, to get suggestions. You can turn suggestions off in Settings; nothing is sent in a private window. No data is sent for the popular site suggestions in the local list. Finding a site by name on a shortcut card uses Google. A site search you added is sent to that site when you search with its keyword (version 1.5.0 and later). The “AI Mode” and image search buttons only open the search engine's page when you press them.</p>
+    <p><strong>Image search.</strong> When you choose “Search the image with Google Lens” or “Search the image with Yandex”, the image's address is sent; the result opens in a new tab. DodoBrowser doesn't upload the image file; the search engine fetches it from the address. This option isn't offered for images on your computer, on your local network or embedded in the page.</p>
+    <p><strong>Site icons.</strong> To fetch icons for suggestions, Start shortcuts, bookmarks to sites you haven't visited yet, and sites you add to the left menu by typing an address, the site's name is sent to Google. Computer and local network addresses aren't sent. No request is made in a private window. When you turn it off in Settings, missing icons are shown as a letter (version 1.2.0 and later).</p>
+    <p><strong>Icons on large screens.</strong> When display scale is above 100%, small icons are fetched separately from the address the site reports. The site receives the usual connection information, such as the icon address and your IP address. No request is made in a private window, for addresses Shield blocks, or for local addresses.</p>
+    <p><strong>Account picture.</strong> If you signed in with Google, your picture is downloaded from the address provided and stored on your device. It isn't fetched again unless the address changes; if you don't sign in, no request is made.</p>
+    <p><strong>Start shortcuts.</strong> When you add a shortcut, the site is opened in the background to get its name and icon. This isn't done in a private window. If the icon can't be fetched, it is retried at most once a day (version 1.2.0 and later).</p>
+    <p><strong>Encrypted site-name lookups.</strong> On Windows, a private window asks Cloudflare's 1.1.1.1 service for site names, and Quad9 if that can't be reached, using encryption. This doesn't hide all your browsing from your internet provider or workplace; the addresses you connect to can still be seen. The services see the names that are looked up and process them under their own rules: <a href="https://developers.cloudflare.com/1.1.1.1/privacy/public-dns-resolver/">Cloudflare</a>, <a href="https://quad9.net/privacy/policy/">Quad9</a>. In a normal window, your computer's DNS setting is used. On Android, DodoBrowser has no such encrypted lookup; the phone's “Private DNS” setting is used.</p>
+    <p><strong>Connection check.</strong> When a page can't be opened, your device's DNS service is asked for the site name or a random check name. The site name repeats the lookup that was just made; the random name contains no user information. On the “Can't reach the internet” screen, the check repeats every 10 seconds to tell when the connection is back. In a private window the site name isn't looked up unencrypted; only the random check name is used.</p>
+    <p><strong>Weather.</strong> The location of the city you chose, rounded to about 1 km, is sent to MET Norway (api.met.no) at most once an hour. City search uses a local list; the city name you type isn't sent. No request is made if you don't pick a city, turn the feature off, or are in a private window. MET Norway processes connection information such as your IP address under <a href="https://www.met.no/en/About-us/privacy">its own privacy rules</a>.</p>
+    <p><strong>Ad lists.</strong> The HaGeZi domain list and the EasyList, EasyPrivacy and AdGuard Turkish filters are checked through dodobrowser.com at most once a day. EasyList, EasyPrivacy and AdGuard Turkish are merged into a single file; their owners receive no direct request from your device. No user information, history or settings are added to the requests; only the files' freshness is checked. The lists are used on your device; your visits and block records aren't sent. When Shield is turned off in Settings → Shield, the list that ships with the app is used. Lists aren't fetched in a private window. GitHub Pages processes connection information under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy rules</a>.</p>
+    <p><strong>Android update check.</strong> An app installed as an APK asks for the file on dodobrowser.com at most once a day to check for a new version. No phone, version or user information is added to the request. A new version is announced in the menu; you do the installation. You can turn it off in Settings → Privacy. This check isn't made in a private tab or if the app was installed from Google Play. The server's processing of the usual connection information is subject to <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy rules</a>.</p>
+    <p><strong>Page translation.</strong> Pages are translated on your computer on Windows and on your phone on Android, using Mozilla's translation engine. The page's text isn't sent for translation. On Windows, the English interface translates pages into English and the Turkish interface into Turkish; English → Turkish translation ships with the app. The first time you use a language other than English, with your approval, a 22–37 MB language file is downloaded from GitHub. The request reveals which language file is wanted; no user information, history or translated page is sent. GitHub processes connection information under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">its own rules</a>. Downloaded files stay on your device and can be deleted in Settings → Page translation; a private window doesn't download language files and uses ones already downloaded. On Android, the size of language files is shown before the first download.</p>
+    <p><strong>Malicious site and file check.</strong> On Windows, Microsoft Defender SmartScreen sends information about the addresses you visit and the files you download to Microsoft. The scope of processing is in the <a href="https://privacy.microsoft.com/en-us/privacystatement">Microsoft Privacy Statement</a> and <a href="https://learn.microsoft.com/en-us/legal/microsoft-edge/privacy#smartscreen">Edge&#x27;s SmartScreen explanation</a>. On Android, for Google Safe Browsing, a partial digest of the address, rather than its full form, is checked with Google; <a href="https://policies.google.com/privacy">Google's privacy policy</a> applies.</p>
+    <p><strong>Page engine.</strong> Windows uses Microsoft Edge WebView2. You can choose the scope of the diagnostic data Microsoft collects in the “Diagnostics &amp; feedback” setting in Windows. DodoBrowser notices an engine update on your device; it sends no data for the restart notice. On Android, the phone's WebView engine is used, updated through the system by Google Play, and DodoBrowser turns off the engine's usage measurement.</p>
+  </section>
+
+  <section>
+    <h2>Deleting your data</h2>
+    <p><strong>On your device:</strong> You can delete history, the download record, cookies and cache with “Clear browsing data”, and your passwords, form data and downloaded translation languages in Settings. You can choose to have cookies deleted every time you close (version 1.5.0 and later).</p>
+    <p><strong>When signing out of your Google account:</strong> You can choose to remove the synced data from that computer. “Delete from this computer” also deletes that computer's open tab list and frequently visited sites from the DodoBrowser folder in Drive (version 1.2.0 and later).</p>
+    <p><strong>When uninstalling the app:</strong> When you uninstall the Windows app installed from Microsoft Store, or the Android app, the local browser data is deleted. The files you downloaded stay.</p>
+    <p><strong>On Google's side:</strong> You can withdraw the permission you gave DodoBrowser in your Google Account's security settings, and delete the synced data in Drive settings.</p>
+    <p>We don't hold a copy of your browsing data. The problem reports and contact messages you send us are the exception. Because no identity details are added to problem reports, you can send the date you sent it and the note you wrote to <a href="mailto:info@dodobrowser.com">info@dodobrowser.com</a> so that your report can be found.</p>
+  </section>
+
+  <section id="haklar">
+    <h2>Your rights regarding personal data</h2>
+    <p>Under Article 11 of the Personal Data Protection Law No. 6698 (KVKK), you can find out whether your personal data is processed, request information if it has been processed, ask for it to be corrected or deleted, and exercise your other rights under the law. You can send your requests to <a href="mailto:info@dodobrowser.com">info@dodobrowser.com</a>; they are answered within 30 days at the latest.</p>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>If there is a significant change to this policy, it will be announced on this page and the “Last updated” date above will be updated.</p>
+  </section>
+
+  <section id="iletisim">
+    <h2>Controller and contact</h2>
+    <p>DodoBrowser · <a href="mailto:info@dodobrowser.com">info@dodobrowser.com</a></p>
+    <p>You can also write through the <a href="/en/#iletisim">contact form on the home page</a>. Your message and, if you add them, your name and email address are forwarded by email through Web3Forms. This information is used only to reply to you.</p>
+  </section>
+</main>
+
+<footer class="bottom">
+  <div class="wrap">
+    <a class="logo-link" href="/en/" style="font-size:10.6px;gap:5.3px"><svg aria-hidden="true" style="width:26px;height:26px"><use href="#dodo"/></svg><svg class="wm" role="img" aria-label="DodoBrowser"><use href="#dodo-yazi"/></svg></a>
+    <a href="/en/">Home</a>
+    <a href="/en/security">Security</a>
+    <span class="lang"><a href="/gizlilik" lang="tr" hreflang="tr">Türkçe</a><span aria-hidden="true">/</span><a href="/en/privacy" lang="en" hreflang="en" aria-current="page">English</a></span>
+    <span>© 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>

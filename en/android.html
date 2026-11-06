@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DodoBrowser – A free browser for Android</title>
+<meta name="description" content="A free browser for Android 10 and later. It blocks ads and trackers and translates pages on your phone. Download the official APK file.">
+<link rel="canonical" href="https://dodobrowser.com/en/android">
+<link rel="alternate" hreflang="tr" href="https://dodobrowser.com/android">
+<link rel="alternate" hreflang="en" href="https://dodobrowser.com/en/android">
+<link rel="alternate" hreflang="x-default" href="https://dodobrowser.com/android">
+<meta property="og:title" content="DodoBrowser – A free browser for Android">
+<meta property="og:description" content="A free browser for Android 10 and later. It blocks ads and trackers and translates pages on your phone. Download the official APK file.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dodobrowser.com/en/android">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:site_name" content="DodoBrowser">
+<meta property="og:image" content="https://dodobrowser.com/paylasim-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DodoBrowser logo and tagline: Light. Fast. Yours.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DodoBrowser – A free browser for Android">
+<meta name="twitter:description" content="A free browser for Android 10 and later. It blocks ads and trackers and translates pages on your phone. Download the official APK file.">
+<meta name="twitter:image" content="https://dodobrowser.com/paylasim-en.png">
+<meta name="theme-color" content="#FBF6F2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1B191E" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.ico" sizes="16x16 20x20 24x24 32x32 40x40 48x48 64x64 128x128 256x256">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="preload" href="/yazi/InterTight.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  :root {
+    --bg: #FBF6F2;
+    --bg-tint: #F6EFE9;
+    --glow: rgba(255, 150, 90, .30);
+    --glow-2: rgba(150, 180, 255, .26);
+    --ink: #15121A;
+    --muted: #64605C;
+    --accent: #FF7A3D;          /* kehribar fill (buttons, bars); text on it is --on-accent */
+    --accent-hover: #FF9C73;
+    --accent-strong: #8F4410;   /* kehribar as text, links and icons */
+    --brand: #15121A;   /* "DodoBrowser" in the logo (marka\LOGO-STANDARDI.md) */
+    --on-accent: #15121A;
+    --btn-glow: rgba(255, 94, 42, .30);
+    --card: #FFFFFF;
+    --card-border: rgba(143, 68, 16, .12);
+    --icon-bg: #F6F1ED;
+    --shadow: 0 1px 2px rgba(60, 30, 10, .06), 0 10px 28px rgba(60, 30, 10, .08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1B191E;
+      --bg-tint: #221D21;
+      --glow: rgba(255, 120, 44, .22);
+      --glow-2: rgba(70, 72, 210, .22);
+      --ink: #F3F1F5;
+      --muted: #B7B5BC;
+      --accent: #FF8A3D;
+      --accent-hover: #FEC29E;
+      --accent-strong: #FFB06E;
+      --brand: #F3F1F5;
+      --on-accent: #15121A;
+      --btn-glow: rgba(255, 94, 42, .24);
+      --card: #27252A;
+      --card-border: rgba(255, 176, 110, .14);
+      --icon-bg: #333036;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .35), 0 10px 28px rgba(0, 0, 0, .35);
+    }
+  }
+  /* The brand font (Inter Tight, marka\LOGO-STANDARDI.md; logo\logo-yap.py copies it to yazi\):
+     headings, the menu, buttons and the questions; running text stays Segoe UI. */
+  @font-face {
+    font-family: "Inter Tight";
+    src: url("/yazi/InterTight.woff2") format("woff2");
+    font-weight: 400 800;
+    font-display: swap;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: var(--ink); line-height: 1.65; -webkit-font-smoothing: antialiased;
+    background:
+      radial-gradient(700px 420px at 10% -12%, var(--glow), transparent 70%),
+      radial-gradient(640px 400px at 92% -14%, var(--glow-2), transparent 70%),
+      linear-gradient(var(--bg-tint), var(--bg) 420px);
+    background-color: var(--bg);
+    min-height: 100vh;
+  }
+  /* Links as in DodoBrowser (start\dodo.css): no line; a name inside a sentence is semibold too. */
+  a { color: var(--accent-strong); text-decoration: none; }
+  a:hover { color: color-mix(in srgb, var(--accent-strong), var(--ink) 30%); }
+  p a:not(.btn), li a:not(.btn), td a { font-weight: 600; }
+  a:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 2px; border-radius: 4px; }
+  .wrap { width: min(1120px, 100% - 32px); margin: 0 auto; }
+
+  header.top { border-bottom: 1px solid var(--card-border); }
+  header.top .wrap { display: flex; align-items: center; gap: 16px; height: 64px; }
+  .logo-link { display: flex; align-items: center; gap: 6.9px; text-decoration: none; color: var(--ink); --logo-dodo: var(--brand); font-size: 13.9px; }
+  /* logo-yap: site-css begin (logo\logo-yap.py writes this part) */
+  /* The logo standard (marka\LOGO-STANDARDI.md): font-size is the capitals' height;
+     the symbol D is that x 2.29, the gap D x .3. */
+  .wm, .wm-slogan { display: block; height: 1em; width: auto; overflow: visible; fill: currentColor; }
+  .wm { aspect-ratio: 7.98; }
+  .wm-slogan { aspect-ratio: 11.04; }
+  /* logo-yap: site-css end */
+  .logo-link svg:not(.wm) { width: 34px; height: 34px; }
+  .back { margin-left: auto; color: var(--muted); text-decoration: none; font-size: 15px; padding: 8px 12px; border-radius: 999px; }
+  .back:hover { color: var(--ink); background: var(--card); }
+
+  main { width: min(760px, 100% - 32px); margin: 0 auto; padding: 56px 0 40px; }
+  .kicker { color: var(--accent-strong); font-weight: 600; font-size: 14px; margin: 0 0 8px; }   /* sentence case, as every heading in DodoBrowser */
+  h1 { font-size: clamp(32px, 5vw, 46px); line-height: 1.1; letter-spacing: -.022em; margin: 0 0 10px; }
+  .tag { color: var(--muted); margin: 0 0 36px; }
+  section {
+    background: var(--card); border: 1px solid var(--card-border); border-radius: 16px;
+    padding: 22px 26px; margin-bottom: 14px; box-shadow: var(--shadow);
+  }
+  section.lead { border-left: 4px solid var(--accent); }
+  h2 { font-size: 18px; margin: 0 0 8px; }
+  p { margin: 0 0 10px; }
+  p:last-child { margin-bottom: 0; }
+  ul { margin: 0 0 12px; padding-left: 20px; }
+  li { margin-bottom: 8px; }
+  li::marker { color: var(--accent-strong); }
+
+  footer.bottom { border-top: 1px solid var(--card-border); padding: 28px 0 40px; color: var(--muted); font-size: 14.5px; }
+  footer.bottom .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; }
+  footer.bottom .wrap > :first-child { margin-right: auto; }
+  footer.bottom a { color: var(--muted); }
+  footer.bottom .lang { display: inline-flex; align-items: center; gap: 8px; }
+  footer.bottom .lang [aria-current] { color: var(--ink); font-weight: 600; }
+  /* Split button ("Çift parça", 28 Eki 2026): same as the home page's .store. */
+  .dl { display: inline-flex; align-items: stretch; border-radius: 999px; overflow: hidden; text-decoration: none; color: var(--on-accent); line-height: 1.2; text-align: left; box-shadow: 0 8px 22px var(--btn-glow), inset 0 0 0 1px rgba(21, 18, 26, .08); transition: transform .25s, box-shadow .25s; font-family: "Inter Tight", "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif; min-width: min(300px, 100%); }
+  .dl .l { display: flex; flex: 1; align-items: center; gap: 12px; padding: 12px 20px 12px 22px; background: var(--accent); }
+  .dl .l svg { width: 24px; height: 24px; flex: none; }
+  .dl .tx { display: grid; font-size: 16px; font-weight: 600; }
+  .dl small { font-size: 12px; font-weight: 400; opacity: .88; }
+  .dl .r { position: relative; display: grid; place-items: center; flex: none; width: 64px; overflow: hidden; background: var(--accent); border-left: 1px solid rgba(21, 18, 26, .14); transition: width .3s cubic-bezier(.3, 1.2, .5, 1), background .25s; }
+  .dl .r svg { width: 22px; height: 22px; transition: transform .3s, opacity .3s; }
+  .dl .r em { position: absolute; font-style: normal; font-size: 13px; font-weight: 600; white-space: nowrap; opacity: 0; transform: translateY(14px); transition: opacity .3s, transform .3s; }
+  .dl:hover, .dl:focus-visible { transform: translateY(-2px); box-shadow: 0 14px 30px var(--btn-glow), inset 0 0 0 1px rgba(21, 18, 26, .12); }
+  .dl:hover .r, .dl:focus-visible .r { width: 108px; background: var(--accent-hover); }
+  .dl:hover .r svg, .dl:focus-visible .r svg { transform: translateY(-34px); opacity: 0; }
+  .dl:hover .r em, .dl:focus-visible .r em { opacity: 1; transform: none; }
+  .dl:active { transform: translateY(0) scale(.985); }
+  code.hash { display: block; margin: 8px 0 12px; padding: 10px 12px; border-radius: 8px; background: var(--icon-bg); font: 13px/1.5 Consolas, "Cascadia Mono", monospace; overflow-wrap: anywhere; user-select: all; }
+  ol { margin: 0 0 12px; padding-left: 22px; }
+  ol li::marker { color: var(--accent-strong); font-weight: 600; }
+  @media (forced-colors: active) { .dl, .dl .l, .dl .r { background: ButtonFace; color: ButtonText; border: 1px solid ButtonText; forced-color-adjust: none; } }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  @media (max-width: 620px) { section { padding: 18px 18px; } main { padding-top: 40px; } }
+  /* Last, so it wins over each part's own "font: inherit". */
+  h1, h2, h3, h4, .kicker, .eyebrow, nav.links a, .back, .btn, .store span, .faq summary, .mini b, .points b, .strip li b, .copy, .smenu .big, .sp .greet {
+    font-family: "Inter Tight", "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, sans-serif;
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- logo-yap: site begin (logo\logo-yap.py writes this part) -->
+    <linearGradient id="sdg" gradientUnits="userSpaceOnUse" x1="8" y1="8" x2="248" y2="248"><stop offset="0" stop-color="#FFB84D"/><stop offset=".55" stop-color="#FF5E2A"/><stop offset="1" stop-color="#C81F55"/></linearGradient><radialGradient id="sdl" gradientUnits="userSpaceOnUse" cx="128" cy="8" r="192"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".34"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient><filter id="sdf" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#5A0F1E" flood-opacity=".45"/></filter><linearGradient id="sdw" gradientUnits="userSpaceOnUse" x1="8" y1="58.4" x2="8" y2="197.6"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#FFE4D6"/></linearGradient><linearGradient id="sdr" gradientUnits="userSpaceOnUse" x1="8" y1="8" x2="8" y2="248"><stop offset="0" stop-color="rgba(255,255,255,.55)"/><stop offset=".35" stop-color="rgba(255,255,255,.06)"/><stop offset="1" stop-color="rgba(255,255,255,.22)"/></linearGradient>
+    <symbol id="dodo" viewBox="0 0 256 256"><path fill="url(#sdg)" d="M128 8C219.2 8 248 36.8 248 128C248 219.2 219.2 248 128 248C36.8 248 8 219.2 8 128C8 36.8 36.8 8 128 8Z"/><path fill="url(#sdl)" d="M128 8C219.2 8 248 36.8 248 128C248 219.2 219.2 248 128 248C36.8 248 8 219.2 8 128C8 36.8 36.8 8 128 8Z"/><path fill="url(#sdw)" fill-rule="evenodd" d="M94.4 58.4L135.2 58.4C178.4 58.4 204.8 89.6 204.8 128C204.8 166.4 178.4 197.6 135.2 197.6L94.4 197.6C86.48 197.6 80 191.12 80 183.2L80 72.8C80 64.88 86.48 58.4 94.4 58.4ZM113.6 87.2L113.6 168.8L134 168.8C156.8 168.8 171.2 151.52 171.2 128C171.2 104.48 156.8 87.2 134 87.2Z" filter="url(#sdf)"/><path fill="none" stroke="url(#sdr)" stroke-width="2.88" d="M128 9.44C218.24 9.44 246.56 37.76 246.56 128C246.56 218.24 218.24 246.56 128 246.56C37.76 246.56 9.44 218.24 9.44 128C9.44 37.76 37.76 9.44 128 9.44Z"/></symbol>
+    <symbol id="dodo-yazi" viewBox="0 0 835.89 104.77" overflow="visible"><path style="fill: var(--logo-dodo, currentColor)" d="M35.55 104.77H8.97V88.34H34.59Q45.52 88.34 52.85 84.36Q60.19 80.38 63.87 72.35Q67.56 64.32 67.56 52.28Q67.56 40.3 63.9 32.34Q60.24 24.37 53.01 20.4Q45.77 16.43 35.1 16.43H8.47V0H36.23Q51.85 0 63.06 6.27Q74.28 12.54 80.3 24.26Q86.32 35.99 86.32 52.28Q86.32 68.64 80.27 80.4Q74.22 92.17 62.87 98.47Q51.51 104.77 35.55 104.77ZM18.96 0V104.77H0V0ZM130.86 106.34Q119.37 106.34 110.92 101.26Q102.47 96.19 97.86 87.06Q93.26 77.93 93.26 65.84Q93.26 53.62 97.86 44.47Q102.47 35.33 110.92 30.25Q119.37 25.17 130.86 25.17Q142.39 25.17 150.84 30.25Q159.29 35.33 163.92 44.47Q168.55 53.62 168.55 65.84Q168.55 77.93 163.92 87.06Q159.29 96.19 150.84 101.26Q142.39 106.34 130.86 106.34ZM130.92 91.41Q137.27 91.41 141.44 87.99Q145.6 84.57 147.68 78.74Q149.76 72.91 149.76 65.78Q149.76 58.54 147.68 52.73Q145.6 46.93 141.44 43.52Q137.27 40.11 130.92 40.11Q124.62 40.11 120.41 43.52Q116.21 46.93 114.13 52.73Q112.04 58.54 112.04 65.78Q112.04 72.91 114.13 78.74Q116.21 84.57 120.41 87.99Q124.62 91.41 130.92 91.41ZM206.31 106.17Q197.06 106.17 189.72 101.42Q182.38 96.67 178.16 87.59Q173.94 78.51 173.94 65.62Q173.94 52.48 178.27 43.46Q182.59 34.44 189.92 29.81Q197.24 25.17 206.29 25.17Q213.26 25.17 217.7 27.49Q222.13 29.81 224.76 33.08Q227.39 36.35 228.79 39.18H229.54V0H248.02V104.77H229.91V92.33H228.79Q227.34 95.2 224.65 98.42Q221.97 101.63 217.53 103.9Q213.09 106.17 206.31 106.17ZM211.4 91.01Q217.34 91.01 221.46 87.8Q225.58 84.59 227.75 78.86Q229.91 73.12 229.91 65.53Q229.91 57.88 227.79 52.22Q225.66 46.56 221.52 43.45Q217.38 40.33 211.4 40.33Q205.3 40.33 201.17 43.59Q197.03 46.86 194.94 52.54Q192.84 58.22 192.84 65.53Q192.84 72.86 194.96 78.62Q197.08 84.39 201.21 87.7Q205.34 91.01 211.4 91.01ZM294.48 106.34Q282.99 106.34 274.54 101.26Q266.09 96.19 261.48 87.06Q256.88 77.93 256.88 65.84Q256.88 53.62 261.48 44.47Q266.09 35.33 274.54 30.25Q282.99 25.17 294.48 25.17Q306.01 25.17 314.46 30.25Q322.91 35.33 327.54 44.47Q332.17 53.62 332.17 65.84Q332.17 77.93 327.54 87.06Q322.91 96.19 314.46 101.26Q306.01 106.34 294.48 106.34ZM294.54 91.41Q300.89 91.41 305.06 87.99Q309.22 84.57 311.3 78.74Q313.38 72.91 313.38 65.78Q313.38 58.54 311.3 52.73Q309.22 46.93 305.06 43.52Q300.89 40.11 294.54 40.11Q288.24 40.11 284.03 43.52Q279.83 46.93 277.75 52.73Q275.66 58.54 275.66 65.78Q275.66 72.91 277.75 78.74Q279.83 84.57 284.03 87.99Q288.24 91.41 294.54 91.41ZM343.41 104.77V0H380.12Q391.01 0 398.12 3.76Q405.22 7.52 408.7 13.85Q412.18 20.18 412.18 27.84Q412.18 34.59 409.79 38.99Q407.4 43.38 403.53 45.95Q399.66 48.52 395.16 49.78V50.77Q400.01 51.05 404.87 54.14Q409.72 57.23 412.99 62.93Q416.26 68.62 416.26 76.92Q416.26 84.8 412.67 91.09Q409.08 97.38 401.38 101.07Q393.69 104.77 381.24 104.77ZM356.07 93.52H381.24Q393.69 93.52 398.92 88.66Q404.16 83.81 404.16 76.92Q404.16 71.58 401.45 67.08Q398.75 62.58 393.76 59.84Q388.76 57.09 381.94 57.09H356.07ZM356.07 46.12H379.69Q385.39 46.12 390.03 43.84Q394.67 41.55 397.38 37.44Q400.08 33.33 400.08 27.84Q400.08 20.95 395.3 16.1Q390.52 11.25 380.12 11.25H356.07ZM427.33 104.77V26.16H438.86V38.11H439.71Q441.89 32.27 447.55 28.65Q453.21 25.03 460.24 25.03Q461.57 25.03 463.54 25.07Q465.51 25.1 466.57 25.17V37.41Q465.93 37.27 463.75 36.98Q461.57 36.7 459.11 36.7Q453.42 36.7 448.92 39.09Q444.42 41.48 441.85 45.63Q439.28 49.78 439.28 55.12V104.77ZM502.11 106.45Q491.49 106.45 483.48 101.39Q475.46 96.33 471 87.19Q466.53 78.05 466.53 65.95Q466.53 53.65 471 44.47Q475.46 35.3 483.48 30.23Q491.49 25.17 502.11 25.17Q512.8 25.17 520.81 30.23Q528.83 35.3 533.33 44.47Q537.83 53.65 537.83 65.95Q537.83 78.05 533.33 87.19Q528.83 96.33 520.81 101.39Q512.8 106.45 502.11 106.45ZM502.11 95.62Q510.27 95.62 515.47 91.48Q520.67 87.33 523.2 80.54Q525.74 73.76 525.74 65.95Q525.74 58.01 523.2 51.19Q520.67 44.37 515.47 40.18Q510.27 36 502.11 36Q494.09 36 488.89 40.18Q483.69 44.37 481.16 51.19Q478.63 58.01 478.63 65.95Q478.63 73.76 481.16 80.54Q483.69 87.33 488.89 91.48Q494.09 95.62 502.11 95.62ZM563.18 104.77 539.27 26.16H551.93L568.94 86.34H569.79L586.52 26.16H599.46L615.91 86.2H616.76L633.77 26.16H646.43L622.52 104.77H610.71L593.41 44.44H592.29L574.99 104.77ZM709.82 43.88 698.99 46.83Q697.44 42.82 693.68 39.2Q689.92 35.58 681.97 35.58Q674.8 35.58 670.02 38.92Q665.24 42.26 665.24 47.25Q665.24 51.75 668.51 54.42Q671.78 57.09 678.74 58.78L690.41 61.59Q700.89 64.12 706.05 69.4Q711.22 74.67 711.22 82.83Q711.22 89.58 707.36 94.92Q703.49 100.27 696.6 103.36Q689.71 106.45 680.57 106.45Q668.54 106.45 660.7 101.18Q652.86 95.91 650.75 85.92L662.14 83.11Q663.76 89.44 668.37 92.6Q672.97 95.77 680.43 95.77Q688.79 95.77 693.82 92.14Q698.85 88.52 698.85 83.53Q698.85 75.23 687.18 72.42L674.1 69.33Q663.27 66.73 658.21 61.38Q653.14 56.04 653.14 47.95Q653.14 41.27 656.91 36.14Q660.67 31.01 667.21 28.09Q673.75 25.17 681.97 25.17Q693.71 25.17 700.36 30.34Q707 35.51 709.82 43.88ZM754.22 106.45Q742.9 106.45 734.64 101.39Q726.38 96.33 721.95 87.22Q717.52 78.12 717.52 66.09Q717.52 54 721.88 44.79Q726.24 35.58 734.15 30.38Q742.06 25.17 752.67 25.17Q758.79 25.17 764.84 27.21Q770.88 29.25 775.84 33.82Q780.8 38.39 783.75 45.91Q786.7 53.44 786.7 64.41V69.61H726.09V59.2H780.17L774.61 63.14Q774.61 55.27 772.15 49.15Q769.69 43.03 764.8 39.52Q759.92 36 752.67 36Q745.43 36 740.26 39.55Q735.09 43.1 732.35 48.8Q729.61 54.49 729.61 61.03V67.92Q729.61 76.85 732.7 83.04Q735.8 89.23 741.35 92.43Q746.91 95.62 754.22 95.62Q758.93 95.62 762.8 94.25Q766.67 92.88 769.48 90.11Q772.29 87.33 773.77 83.25L785.44 86.62Q783.61 92.53 779.29 97Q774.96 101.46 768.56 103.96Q762.17 106.45 754.22 106.45ZM796.65 104.77V26.16H808.19V38.11H809.03Q811.21 32.27 816.87 28.65Q822.53 25.03 829.56 25.03Q830.9 25.03 832.87 25.07Q834.83 25.1 835.89 25.17V37.41Q835.26 37.27 833.08 36.98Q830.9 36.7 828.44 36.7Q822.74 36.7 818.24 39.09Q813.74 41.48 811.17 45.63Q808.61 49.78 808.61 55.12V104.77Z"/></symbol>
+    <symbol id="dodo-slogan" viewBox="0 0 323.94 29.33" overflow="visible"><path fill="currentColor" d="M0 29.33V0H4.43V25.53H17.73V29.33ZM21.53 29.33V7.32H25.79V29.33ZM23.67 3.95Q22.56 3.95 21.77 3.2Q20.97 2.45 20.97 1.39Q20.97 .33 21.77 -.41Q22.56 -1.16 23.67 -1.16Q24.78 -1.16 25.58 -.41Q26.37 .33 26.37 1.39Q26.37 2.45 25.58 3.2Q24.78 3.95 23.67 3.95ZM39.87 38.04Q35.94 38.04 33.67 36.56Q31.4 35.08 30.54 33.05L34.2 31.54Q34.59 32.17 35.25 32.88Q35.9 33.59 37.03 34.08Q38.15 34.58 39.92 34.58Q42.35 34.58 43.95 33.41Q45.54 32.23 45.54 29.64V25.33H45.24Q44.88 26.03 44.16 26.89Q43.43 27.74 42.17 28.37Q40.91 29 38.87 29Q36.28 29 34.2 27.77Q32.12 26.54 30.9 24.15Q29.68 21.75 29.68 18.25Q29.68 14.75 30.88 12.24Q32.08 9.73 34.18 8.39Q36.27 7.05 38.93 7.05Q40.97 7.05 42.24 7.73Q43.5 8.41 44.21 9.31Q44.93 10.22 45.32 10.9H45.63V7.32H49.78V29.83Q49.78 32.65 48.48 34.47Q47.17 36.29 44.93 37.16Q42.68 38.04 39.87 38.04ZM39.83 25.44Q42.6 25.44 44.09 23.52Q45.57 21.6 45.57 18.19Q45.57 15.96 44.92 14.28Q44.27 12.59 42.99 11.64Q41.71 10.69 39.83 10.69Q37.9 10.69 36.61 11.69Q35.31 12.69 34.66 14.39Q34.01 16.08 34.01 18.19Q34.01 20.34 34.67 21.98Q35.33 23.62 36.63 24.53Q37.93 25.44 39.83 25.44ZM58.92 16.28V29.33H54.66V0H58.86V10.94H59.16Q59.92 9.15 61.51 8.1Q63.09 7.05 65.66 7.05Q67.92 7.05 69.61 7.98Q71.31 8.91 72.26 10.75Q73.21 12.6 73.21 15.35V29.33H68.92V15.87Q68.92 13.43 67.67 12.09Q66.42 10.76 64.19 10.76Q62.66 10.76 61.48 11.41Q60.29 12.06 59.61 13.29Q58.92 14.51 58.92 16.28ZM88.33 7.32V10.77H76.33V7.32ZM79.54 2.09H83.8V22.88Q83.8 24.38 84.44 25.09Q85.07 25.8 86.46 25.8Q86.8 25.8 87.19 25.75Q87.57 25.7 87.96 25.63L88.76 29.17Q88.11 29.39 87.35 29.5Q86.58 29.62 85.82 29.62Q82.95 29.62 81.25 28.02Q79.54 26.42 79.54 23.75ZM95.38 29.62Q94.19 29.62 93.35 28.78Q92.51 27.95 92.51 26.76Q92.51 25.56 93.35 24.73Q94.19 23.89 95.38 23.89Q96.58 23.89 97.42 24.73Q98.26 25.56 98.26 26.76Q98.26 27.95 97.42 28.78Q96.58 29.62 95.38 29.62ZM113.12 29.33V0H131.33V3.8H117.54V13.32H130V17.09H117.54V29.33ZM141.83 29.81Q139.74 29.81 138.04 29.04Q136.35 28.26 135.36 26.76Q134.38 25.27 134.38 23.11Q134.38 21.24 135.1 20.05Q135.82 18.85 137.04 18.15Q138.26 17.44 139.76 17.08Q141.26 16.73 142.83 16.55Q144.81 16.31 146.03 16.16Q147.25 16.01 147.82 15.67Q148.38 15.32 148.38 14.55V14.44Q148.38 12.59 147.33 11.56Q146.28 10.53 144.2 10.53Q142.05 10.53 140.81 11.47Q139.56 12.41 139.09 13.58L135.06 12.66Q135.78 10.65 137.16 9.42Q138.55 8.18 140.35 7.62Q142.15 7.05 144.13 7.05Q145.45 7.05 146.93 7.36Q148.4 7.66 149.71 8.48Q151.02 9.3 151.85 10.81Q152.67 12.33 152.67 14.73V29.33H148.48V26.32H148.33Q147.93 27.13 147.09 27.94Q146.26 28.74 144.96 29.28Q143.66 29.81 141.83 29.81ZM142.75 26.39Q144.54 26.39 145.8 25.68Q147.06 24.98 147.73 23.84Q148.4 22.7 148.4 21.41V18.56Q148.16 18.79 147.52 18.98Q146.87 19.17 146.04 19.31Q145.21 19.46 144.42 19.56Q143.63 19.66 143.11 19.73Q141.87 19.9 140.84 20.27Q139.81 20.64 139.19 21.33Q138.58 22.02 138.58 23.18Q138.58 24.76 139.75 25.58Q140.93 26.39 142.75 26.39ZM174.02 12.73 170.15 13.39Q169.79 12.29 168.77 11.36Q167.75 10.43 165.74 10.43Q163.93 10.43 162.71 11.26Q161.5 12.08 161.5 13.33Q161.5 14.44 162.32 15.12Q163.14 15.81 164.94 16.23L168.45 17.02Q171.48 17.7 172.97 19.18Q174.46 20.65 174.46 22.96Q174.46 24.95 173.31 26.49Q172.17 28.03 170.15 28.91Q168.13 29.79 165.47 29.79Q161.77 29.79 159.44 28.2Q157.12 26.61 156.58 23.7L160.7 23.07Q161.1 24.69 162.3 25.51Q163.51 26.33 165.45 26.33Q167.54 26.33 168.81 25.45Q170.08 24.56 170.08 23.31Q170.08 21.22 166.96 20.5L163.25 19.66Q160.15 18.96 158.69 17.44Q157.22 15.92 157.22 13.58Q157.22 11.63 158.31 10.16Q159.39 8.69 161.31 7.87Q163.23 7.05 165.71 7.05Q169.29 7.05 171.33 8.6Q173.37 10.15 174.02 12.73ZM188.5 7.32V10.77H176.5V7.32ZM179.7 2.09H183.96V22.88Q183.96 24.38 184.6 25.09Q185.24 25.8 186.63 25.8Q186.96 25.8 187.35 25.75Q187.74 25.7 188.13 25.63L188.93 29.17Q188.28 29.39 187.51 29.5Q186.75 29.62 185.98 29.62Q183.12 29.62 181.41 28.02Q179.7 26.42 179.7 23.75ZM195.55 29.62Q194.35 29.62 193.51 28.78Q192.67 27.95 192.67 26.76Q192.67 25.56 193.51 24.73Q194.35 23.89 195.55 23.89Q196.74 23.89 197.58 24.73Q198.42 25.56 198.42 26.76Q198.42 27.95 197.58 28.78Q196.74 29.62 195.55 29.62ZM211.02 0H216.05L223.71 13.35H224.04L231.68 0H236.73L226.07 17.82V29.33H221.66V17.82ZM245.33 29.79Q242.24 29.79 239.93 28.37Q237.62 26.95 236.36 24.39Q235.09 21.84 235.09 18.45Q235.09 15.02 236.36 12.45Q237.62 9.89 239.93 8.47Q242.24 7.05 245.33 7.05Q248.44 7.05 250.75 8.47Q253.05 9.89 254.33 12.45Q255.61 15.02 255.61 18.45Q255.61 21.84 254.33 24.39Q253.05 26.95 250.75 28.37Q248.44 29.79 245.33 29.79ZM245.34 26.18Q247.37 26.18 248.68 25.13Q249.99 24.07 250.64 22.3Q251.28 20.53 251.28 18.44Q251.28 16.32 250.64 14.55Q249.99 12.78 248.68 11.72Q247.37 10.65 245.34 10.65Q243.33 10.65 242.02 11.72Q240.7 12.78 240.05 14.55Q239.41 16.32 239.41 18.44Q239.41 20.53 240.05 22.3Q240.7 24.07 242.02 25.13Q243.33 26.18 245.34 26.18ZM273.42 20.23V7.32H277.68V29.33H273.5V25.51H273.26Q272.49 27.26 270.84 28.45Q269.18 29.63 266.69 29.61Q264.57 29.61 262.95 28.68Q261.33 27.76 260.4 25.9Q259.48 24.05 259.48 21.32V7.32H263.74V20.83Q263.74 23.06 265 24.39Q266.26 25.73 268.25 25.71Q269.45 25.71 270.64 25.12Q271.83 24.52 272.62 23.3Q273.42 22.09 273.42 20.23ZM282.57 29.33V7.32H286.69V10.84H286.93Q287.54 9.07 289.06 8.04Q290.59 7.02 292.52 7.02Q292.92 7.02 293.47 7.04Q294.01 7.06 294.34 7.11V11.2Q294.08 11.12 293.42 11.04Q292.76 10.96 292.09 10.96Q290.58 10.96 289.39 11.6Q288.19 12.24 287.51 13.36Q286.83 14.47 286.83 15.92V29.33ZM313.64 12.73 309.77 13.39Q309.4 12.29 308.39 11.36Q307.37 10.43 305.36 10.43Q303.54 10.43 302.33 11.26Q301.12 12.08 301.12 13.33Q301.12 14.44 301.94 15.12Q302.75 15.81 304.56 16.23L308.07 17.02Q311.09 17.7 312.58 19.18Q314.07 20.65 314.07 22.96Q314.07 24.95 312.93 26.49Q311.79 28.03 309.77 28.91Q307.75 29.79 305.09 29.79Q301.39 29.79 299.06 28.2Q296.74 26.61 296.2 23.7L300.32 23.07Q300.71 24.69 301.92 25.51Q303.13 26.33 305.06 26.33Q307.16 26.33 308.43 25.45Q309.69 24.56 309.69 23.31Q309.69 21.22 306.58 20.5L302.87 19.66Q299.77 18.96 298.3 17.44Q296.83 15.92 296.83 13.58Q296.83 11.63 297.92 10.16Q299.01 8.69 300.93 7.87Q302.85 7.05 305.32 7.05Q308.91 7.05 310.94 8.6Q312.98 10.15 313.64 12.73ZM321.07 29.62Q319.87 29.62 319.03 28.78Q318.19 27.95 318.19 26.76Q318.19 25.56 319.03 24.73Q319.87 23.89 321.07 23.89Q322.27 23.89 323.11 24.73Q323.94 25.56 323.94 26.76Q323.94 27.95 323.11 28.78Q322.27 29.62 321.07 29.62Z"/></symbol>
+    <!-- logo-yap: site end -->
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo-link" href="/en/"><svg aria-hidden="true"><use href="#dodo"/></svg><svg class="wm" role="img" aria-label="DodoBrowser"><use href="#dodo-yazi"/></svg></a>
+    <a class="back" href="/en/">← Home</a>
+  </div>
+</header>
+
+<main>
+  <p class="kicker">DodoBrowser</p>
+  <h1>DodoBrowser for Android</h1>
+  <p class="tag">Version 1.0.1 · Android 10 and later</p>
+
+  <section class="lead">
+    <h2>A simpler way to browse on your phone.</h2>
+    <p>Block ads and trackers, and translate pages into Turkish on your phone. DodoBrowser is free and doesn't require an account. Your history and settings are stored on your phone.</p>
+    <p><a class="dl" href="https://github.com/dogannyildizz/dodobrowser-site/releases/latest/download/DodoBrowser-Android.apk" rel="noopener"><span class="l"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48A10.78 10.78 0 0 0 1 18h22a10.78 10.78 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg><span class="tx"><small>Free · APK file</small>Download for Android</span></span><span class="r" aria-hidden="true"><svg viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v10"/><path d="m7.5 10 4.5 4.5 4.5-4.5"/><path d="M5 19h14"/></g></svg><em>Download</em></span></a></p>
+  </section>
+
+  <section>
+    <h2>Features</h2>
+    <ul><li><strong>Shield:</strong> Blocks ads and trackers. If a site gives you trouble, you can turn it off for that site.</li><li><strong>Page translation:</strong> Translation runs on your phone; the page's text isn't sent to a server. Language files are downloaded the first time you use them, with their sizes shown.</li><li><strong>Private tab:</strong> When you close it, the tab's cookies and site data are deleted.</li><li><strong>Search and address:</strong> Search or open a site address from the same field, and see suggestions as you type.</li><li><strong>Appearance:</strong> Light and dark themes. The Android app's interface is in Turkish for now.</li></ul>
+  </section>
+
+  <section id="kurulum">
+    <h2>Installation</h2>
+    <p>DodoBrowser isn't on Google Play. You can download the official APK file from this page.</p>
+    <ol><li>Use the “Download for Android” button to download the file to your phone.</li><li>Open the downloaded DodoBrowser-Android.apk file.</li><li>If Android asks, give the app you opened the file with the “Install unknown apps” permission.</li><li>Tap “Install”. DodoBrowser appears in your app list.</li></ol>
+    <p>After installation, you can turn this permission off again.</p>
+  </section>
+
+  <section id="dogrula">
+    <h2>Verifying the file</h2>
+    <p>The official download link is on this page. APK files on other sites aren't our official distribution.</p>
+    <p>The SHA-256 value of the file you downloaded:</p>
+    <code class="hash">9f2ed73e524428208d84b7dc843962641d81c465f8f370a69b12555e4b0cb450</code>
+    <p>To check it on a computer, open PowerShell in the folder that contains the file and run this command:</p>
+    <p><code>Get-FileHash DodoBrowser-Android.apk</code></p>
+  </section>
+
+  <section>
+    <h2>Updates</h2>
+    <p>When a new version is out, a “Yeni sürüm var” (New version available) option appears in the menu. You can download the new APK file from this page and install it over the existing app. Your bookmarks and settings are kept; installation doesn't happen automatically.</p>
+    <p>The app checks for a new version at most once a day. A version file is requested; no phone or user information is added to the request. You can turn this check off in “Ayarlar → Gizlilik” (Settings → Privacy). Details about the connection are explained in the <a href="/en/privacy#servisler">Privacy policy</a>.</p>
+  </section>
+
+  <section>
+    <h2>Privacy and support</h2>
+    <p>For the information that is stored and what is shared with outside services, read the <a href="/en/privacy">Privacy policy</a>.</p>
+    <p>For support, use the “Dodo'ya bildir” (Tell Dodo) option in the app or write to <a href="mailto:info@dodobrowser.com">info@dodobrowser.com</a>.</p>
+  </section>
+</main>
+
+<footer class="bottom">
+  <div class="wrap">
+    <a class="logo-link" href="/en/" style="font-size:10.6px;gap:5.3px"><svg aria-hidden="true" style="width:26px;height:26px"><use href="#dodo"/></svg><svg class="wm" role="img" aria-label="DodoBrowser"><use href="#dodo-yazi"/></svg></a>
+    <a href="/en/">Home</a>
+    <a href="/en/security">Security</a>
+    <a href="/en/privacy">Privacy policy</a>
+    <span class="lang"><a href="/android" lang="tr" hreflang="tr">Türkçe</a><span aria-hidden="true">/</span><a href="/en/android" lang="en" hreflang="en" aria-current="page">English</a></span>
+    <span>© 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -6,11 +6,15 @@
 <title>DodoBrowser – Android için ücretsiz, Türkçe tarayıcı</title>
 <meta name="description" content="Android 10 ve sonrası için ücretsiz, Türkçe tarayıcı. Reklamları ve izleyicileri engeller, sayfaları telefonunda çevirir. Resmî APK dosyasını indir.">
 <link rel="canonical" href="https://dodobrowser.com/android">
+<link rel="alternate" hreflang="tr" href="https://dodobrowser.com/android">
+<link rel="alternate" hreflang="en" href="https://dodobrowser.com/en/android">
+<link rel="alternate" hreflang="x-default" href="https://dodobrowser.com/android">
 <meta property="og:title" content="DodoBrowser – Android için ücretsiz, Türkçe tarayıcı">
 <meta property="og:description" content="Android 10 ve sonrası için ücretsiz, Türkçe tarayıcı. Reklamları ve izleyicileri engeller, sayfaları telefonunda çevirir. Resmî APK dosyasını indir.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dodobrowser.com/android">
 <meta property="og:locale" content="tr_TR">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:site_name" content="DodoBrowser">
 <meta property="og:image" content="https://dodobrowser.com/paylasim.png">
 <meta property="og:image:width" content="1200">
@@ -127,6 +131,8 @@
   footer.bottom .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; }
   footer.bottom .wrap > :first-child { margin-right: auto; }
   footer.bottom a { color: var(--muted); }
+  footer.bottom .lang { display: inline-flex; align-items: center; gap: 8px; }
+  footer.bottom .lang [aria-current] { color: var(--ink); font-weight: 600; }
   /* Split button ("Çift parça", 28 Eki 2026): same as the home page's .store. */
   .dl { display: inline-flex; align-items: stretch; border-radius: 999px; overflow: hidden; text-decoration: none; color: var(--on-accent); line-height: 1.2; text-align: left; box-shadow: 0 8px 22px var(--btn-glow), inset 0 0 0 1px rgba(21, 18, 26, .08); transition: transform .25s, box-shadow .25s; font-family: "Inter Tight", "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif; min-width: min(300px, 100%); }
   .dl .l { display: flex; flex: 1; align-items: center; gap: 12px; padding: 12px 20px 12px 22px; background: var(--accent); }
@@ -224,6 +230,7 @@
     <a href="/">Ana sayfa</a>
     <a href="/guvenlik">Güvenlik</a>
     <a href="/gizlilik">Gizlilik politikası</a>
+    <span class="lang"><a href="/android" lang="tr" hreflang="tr" aria-current="page">Türkçe</a><span aria-hidden="true">/</span><a href="/en/android" lang="en" hreflang="en">English</a></span>
     <span>© 2026</span>
   </div>
 </footer>

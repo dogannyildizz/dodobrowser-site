@@ -6,11 +6,15 @@
 <title>DodoBrowser – Güvenlik</title>
 <meta name="description" content="DodoBrowser&#x27;ın Windows ve Android&#x27;deki güvenlik korumaları, şifre saklama yöntemleri, resmî indirme ve güncelleme yolları.">
 <link rel="canonical" href="https://dodobrowser.com/guvenlik">
+<link rel="alternate" hreflang="tr" href="https://dodobrowser.com/guvenlik">
+<link rel="alternate" hreflang="en" href="https://dodobrowser.com/en/security">
+<link rel="alternate" hreflang="x-default" href="https://dodobrowser.com/guvenlik">
 <meta property="og:title" content="DodoBrowser – Güvenlik">
 <meta property="og:description" content="DodoBrowser&#x27;ın Windows ve Android&#x27;deki güvenlik korumaları, şifre saklama yöntemleri, resmî indirme ve güncelleme yolları.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dodobrowser.com/guvenlik">
 <meta property="og:locale" content="tr_TR">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:site_name" content="DodoBrowser">
 <meta property="og:image" content="https://dodobrowser.com/paylasim.png">
 <meta property="og:image:width" content="1200">
@@ -127,6 +131,8 @@
   footer.bottom .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; }
   footer.bottom .wrap > :first-child { margin-right: auto; }
   footer.bottom a { color: var(--muted); }
+  footer.bottom .lang { display: inline-flex; align-items: center; gap: 8px; }
+  footer.bottom .lang [aria-current] { color: var(--ink); font-weight: 600; }
   .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   @media (max-width: 620px) { section { padding: 18px 18px; } main { padding-top: 40px; } }
   /* Last, so it wins over each part's own "font: inherit". */
@@ -209,6 +215,7 @@
     <a class="logo-link" href="/" style="font-size:10.6px;gap:5.3px"><svg aria-hidden="true" style="width:26px;height:26px"><use href="#dodo"/></svg><svg class="wm" role="img" aria-label="DodoBrowser"><use href="#dodo-yazi"/></svg></a>
     <a href="/">Ana sayfa</a>
     <a href="/gizlilik">Gizlilik politikası</a>
+    <span class="lang"><a href="/guvenlik" lang="tr" hreflang="tr" aria-current="page">Türkçe</a><span aria-hidden="true">/</span><a href="/en/security" lang="en" hreflang="en">English</a></span>
     <span>© 2026</span>
   </div>
 </footer>

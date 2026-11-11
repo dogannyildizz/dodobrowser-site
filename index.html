@@ -97,6 +97,14 @@
     },
     {
       "@type": "Question",
+      "name": "Microsoft Store uygulamasını açmadan kurabilir miyim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet. Microsoft kurucusu (get.microsoft.com) ya da komut istemindeki winget install 9P17GF8DSSL1 -s msstore komutu, DodoBrowser'ı Store uygulamasını açmadan kurar. İki yol da Microsoft'un imzaladığı aynı paketi kurar; güncellemeler yine kendiliğinden gelir."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Siteler düzgün açılır mı?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -389,6 +397,12 @@
   .store:hover .r em, .store:focus-visible .r em { opacity: 1; transform: none; }
   .store:active { transform: translateY(0) scale(.985); }
   .cta .store { min-width: min(340px, 100%); }
+  /* Store-free install line under the Store button (11 Nov 2026): same package, Microsoft's own installer. */
+  .alt-kur { margin: 16px 0 0; font-size: 14.5px; color: var(--muted); }
+  .alt-kur a { color: var(--accent-strong); font-weight: 600; text-underline-offset: 3px; white-space: nowrap; }
+  .closing .alt-kur { text-align: center; }
+  .faq .cmdrow { margin: 0 20px 14px; border-radius: 14px; }
+  .cmdrow code.mail { font: 600 14px/1.4 "Cascadia Mono", Consolas, monospace; color: var(--ink); }
 
   /* Entrance: hero pieces rise in one after another. */
   .rise { animation: rise .9s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(var(--d, 0) * 110ms + 100ms); }
@@ -966,6 +980,7 @@
           <a class="btn ghost" href="#ozellikler">Özellikleri keşfet
             <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></a>
         </div>
+        <p class="alt-kur rise" style="--d:6">Store uygulamasını açmadan: <a href="https://get.microsoft.com/installer/download/9P17GF8DSSL1?cid=site">Microsoft kurucusunu indir</a></p>
       </div>
 
       <!-- The shield demo: an ad-filled news page; the visitor turns the shield on (the switch under it,
@@ -1175,6 +1190,7 @@
       <div class="faq">
         <details class="reveal"><summary>Ücretsiz mi?</summary><p>Evet. DodoBrowser ücretsizdir, hesap gerektirmez ve kendi reklamlarını göstermez.</p></details>
         <details class="reveal"><summary>Hangi Windows sürümlerinde çalışır?</summary><p>64 bit Windows 10 (1809 ve sonrası) ve Windows 11'de çalışır. Gerekli sayfa motoru eksikse kurulmasına yardımcı olur.</p></details>
+        <details class="reveal" id="store-suz"><summary>Microsoft Store uygulamasını açmadan kurabilir miyim?</summary><p>Evet. <a href="https://get.microsoft.com/installer/download/9P17GF8DSSL1?cid=site">Microsoft kurucusu</a> küçük bir dosyadır; çalıştırınca DodoBrowser'ı Store uygulamasını açmadan kurar. İstersen komut isteminde şu komutu da çalıştırabilirsin:</p><div class="mailrow cmdrow"><code class="mail">winget install 9P17GF8DSSL1 -s msstore</code><button class="copy" type="button" data-copy="winget install 9P17GF8DSSL1 -s msstore">Kopyala</button></div><p>İki yol da Microsoft'un imzaladığı aynı paketi kurar; güncellemeler yine kendiliğinden gelir. Başka sitelerde dolaşan .exe ya da .msix kopyaları bizim değildir.</p></details>
         <details class="reveal"><summary>Siteler düzgün açılır mı?</summary><p>DodoBrowser, Windows'ta Edge'in, Android'de telefonun sayfa motorunu kullanır. Her ikisi de Chrome ve Edge gibi Chromium tabanlıdır. Bir sitede sorun yaşarsan Kalkan'ı o site için kapatabilirsin.</p></details>
         <details class="reveal"><summary>Chrome'daki yer imlerimi taşıyabilir miyim?</summary><p>Evet. Windows'ta Chrome, Edge, Brave, Vivaldi ve Opera'dan klasörleriyle birlikte aktarabilirsin. Android'de Google ile giriş yaparsan bilgisayarındaki yer imlerin telefonuna da gelir.</p></details>
         <details class="reveal"><summary>Eklenti yükleyebilir miyim?</summary><p>Şimdilik eklenti desteği yoktur. Reklam ve izleyici engelleme ile çerez uyarılarını reddetme özellikleri yerleşik olarak sunulur.</p></details>
@@ -1195,6 +1211,7 @@
       <a class="store live" href="https://apps.microsoft.com/detail/9P17GF8DSSL1?cid=site" rel="noopener"><span class="l"><svg aria-hidden="true"><use href="#i-store"/></svg><span class="tx"><small>Ücretsiz</small>Microsoft Store'dan al</span></span><span class="r" aria-hidden="true"><svg><use href="#i-tray"/></svg><em>İndir</em></span></a>
       <a class="store live" href="/android"><span class="l"><svg aria-hidden="true"><use href="#i-android"/></svg><span class="tx"><small>Ücretsiz · APK</small>Android için indir</span></span><span class="r" aria-hidden="true"><svg><use href="#i-tray"/></svg><em>İndir</em></span></a>
       </div>
+      <p class="alt-kur reveal" style="--d:3">Store uygulamasını açmadan: <a href="https://get.microsoft.com/installer/download/9P17GF8DSSL1?cid=site">Microsoft kurucusunu indir</a></p>
       <div class="follow reveal" style="--d:4">
         <span>Takip et:</span>
         <a href="https://x.com/dodobrowserapp" rel="noopener" target="_blank" aria-label="X (yeni sekmede açılır)" title="X"><svg aria-hidden="true"><use href="#i-x"/></svg></a>
@@ -1632,7 +1649,7 @@
       var text = b.getAttribute("data-copy");
       function done() { b.textContent = "Kopyalandı"; b.classList.add("done"); setTimeout(function () { b.textContent = "Kopyala"; b.classList.remove("done"); }, 1800); }
       // If the clipboard is not allowed, select the address so it can be copied by hand.
-      function select() { var r = document.createRange(); r.selectNodeContents(b.parentNode.querySelector(".mail")); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+      function select() { var r = document.createRange(); r.selectNodeContents(b.parentNode.querySelector(".mail, code")); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
       if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, select);
       else select();
     });

@@ -97,6 +97,14 @@
     },
     {
       "@type": "Question",
+      "name": "Can I install it without opening the Microsoft Store app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Microsoft installer (get.microsoft.com) or the command winget install 9P17GF8DSSL1 -s msstore installs DodoBrowser without opening the Store app. Both install the same package, signed by Microsoft, and updates still arrive on their own."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Will sites open properly?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -389,6 +397,12 @@
   .store:hover .r em, .store:focus-visible .r em { opacity: 1; transform: none; }
   .store:active { transform: translateY(0) scale(.985); }
   .cta .store { min-width: min(340px, 100%); }
+  /* Store-free install line under the Store button (11 Nov 2026): same package, Microsoft's own installer. */
+  .alt-kur { margin: 16px 0 0; font-size: 14.5px; color: var(--muted); }
+  .alt-kur a { color: var(--accent-strong); font-weight: 600; text-underline-offset: 3px; white-space: nowrap; }
+  .closing .alt-kur { text-align: center; }
+  .faq .cmdrow { margin: 0 20px 14px; border-radius: 14px; }
+  .cmdrow code.mail { font: 600 14px/1.4 "Cascadia Mono", Consolas, monospace; color: var(--ink); }
 
   /* Entrance: hero pieces rise in one after another. */
   .rise { animation: rise .9s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(var(--d, 0) * 110ms + 100ms); }
@@ -966,6 +980,7 @@
           <a class="btn ghost" href="#ozellikler">Explore features
             <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg></a>
         </div>
+        <p class="alt-kur rise" style="--d:6">Without opening the Store app: <a href="https://get.microsoft.com/installer/download/9P17GF8DSSL1?cid=site">Download the Microsoft installer</a></p>
       </div>
 
       <!-- The shield demo: an ad-filled news page; the visitor turns the shield on (the switch under it,
@@ -1175,6 +1190,7 @@
       <div class="faq">
         <details class="reveal"><summary>Is it free?</summary><p>Yes. DodoBrowser is free, needs no account and doesn't show ads of its own.</p></details>
         <details class="reveal"><summary>Which versions of Windows does it run on?</summary><p>It runs on 64-bit Windows 10 (version 1809 and later) and Windows 11. If the page engine it needs is missing, it helps you install it.</p></details>
+        <details class="reveal" id="store-suz"><summary>Can I install it without opening the Microsoft Store app?</summary><p>Yes. The <a href="https://get.microsoft.com/installer/download/9P17GF8DSSL1?cid=site">Microsoft installer</a> is a small file; when you run it, it installs DodoBrowser without opening the Store app. You can also run this command in a terminal:</p><div class="mailrow cmdrow"><code class="mail">winget install 9P17GF8DSSL1 -s msstore</code><button class="copy" type="button" data-copy="winget install 9P17GF8DSSL1 -s msstore">Copy</button></div><p>Both install the same package, signed by Microsoft, and updates still arrive on their own. Copies of an .exe or .msix found on other sites are not ours.</p></details>
         <details class="reveal"><summary>Will sites open properly?</summary><p>DodoBrowser uses Edge's page engine on Windows and the phone's own on Android. Both are Chromium-based, like Chrome and Edge. If a site gives you trouble, you can turn the Shield off for that site.</p></details>
         <details class="reveal"><summary>Can I bring my Chrome bookmarks?</summary><p>Yes. On Windows you can import them, folders included, from Chrome, Edge, Brave, Vivaldi and Opera. On Android, if you sign in with Google, your bookmarks from your computer come to your phone too.</p></details>
         <details class="reveal"><summary>Can I install extensions?</summary><p>Not for now. Ad and tracker blocking and cookie banner refusal are built in.</p></details>
@@ -1195,6 +1211,7 @@
       <a class="store live" href="https://apps.microsoft.com/detail/9P17GF8DSSL1?cid=site" rel="noopener"><span class="l"><svg aria-hidden="true"><use href="#i-store"/></svg><span class="tx"><small>Free</small>Get it from Microsoft Store</span></span><span class="r" aria-hidden="true"><svg><use href="#i-tray"/></svg><em>Download</em></span></a>
       <a class="store live" href="/en/android"><span class="l"><svg aria-hidden="true"><use href="#i-android"/></svg><span class="tx"><small>Free · APK</small>Download for Android</span></span><span class="r" aria-hidden="true"><svg><use href="#i-tray"/></svg><em>Download</em></span></a>
       </div>
+      <p class="alt-kur reveal" style="--d:3">Without opening the Store app: <a href="https://get.microsoft.com/installer/download/9P17GF8DSSL1?cid=site">Download the Microsoft installer</a></p>
       <div class="follow reveal" style="--d:4">
         <span>Follow:</span>
         <a href="https://x.com/dodobrowserapp" rel="noopener" target="_blank" aria-label="X (opens in a new tab)" title="X"><svg aria-hidden="true"><use href="#i-x"/></svg></a>
@@ -1632,7 +1649,7 @@
       var text = b.getAttribute("data-copy");
       function done() { b.textContent = "Copied"; b.classList.add("done"); setTimeout(function () { b.textContent = "Copy"; b.classList.remove("done"); }, 1800); }
       // If the clipboard is not allowed, select the address so it can be copied by hand.
-      function select() { var r = document.createRange(); r.selectNodeContents(b.parentNode.querySelector(".mail")); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+      function select() { var r = document.createRange(); r.selectNodeContents(b.parentNode.querySelector(".mail, code")); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
       if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, select);
       else select();
     });

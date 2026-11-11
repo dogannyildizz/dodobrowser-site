@@ -165,7 +165,7 @@
 <main>
   <p class="kicker">DodoBrowser</p>
   <h1>Security</h1>
-  <p class="tag">Last updated: October 29, 2026</p>
+  <p class="tag">Last updated: November 11, 2026</p>
 
   <section class="lead">
     <h2>Summary</h2>
@@ -195,7 +195,7 @@
   <section>
     <h2>Official distribution and updates</h2>
     <p><strong>Windows:</strong> The official distribution channel is <a href="https://apps.microsoft.com/detail/9P17GF8DSSL1?cid=site">Microsoft Store</a>. Microsoft reviews published versions, scans them for malware and signs them. If you would rather not open the Store app, the <a href="https://get.microsoft.com/installer/download/9P17GF8DSSL1?cid=site">Microsoft installer</a> or the command <code>winget install 9P17GF8DSSL1 -s msstore</code> installs the same package, signed by Microsoft. App updates arrive automatically from the Store.</p>
-    <p><strong>Android:</strong> The official APK file is offered on the <a href="/en/android">Android page</a>; it isn't on Google Play. The file is signed with our own key and doesn't go through a store review. You can compare the file you downloaded with the SHA-256 value on that page. You download the new version and install it over the existing app yourself.</p>
+    <p><strong>Android:</strong> The official APK file is offered on the <a href="/en/android">Android page</a>; it isn't on Google Play. The file is signed with our own key and doesn't go through a store review. You can compare the file you downloaded with the SHA-256 value on that page. When you update from inside the app, Dodo downloads the file from a fixed GitHub address and, before installing, checks that its signature matches the installed Dodo's; if it doesn't, Dodo doesn't install it. Android also won't install a file with a different signature over Dodo. The SHA-256 check only catches a damaged or partly downloaded file; the signature is the real safeguard. You approve the install in Android's window.</p>
     <p>Download links offered on other sites aren't our official distribution. Security fixes take priority and are released without delay as soon as they're ready. Updates don't delete your data or settings.</p>
   </section>
 

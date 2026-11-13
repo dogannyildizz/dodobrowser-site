@@ -629,6 +629,75 @@
   .in .bar i, html:not(.js) .bar i { width: var(--w); }
   .note { margin: 18px 0 0; color: var(--muted); font-size: 13.5px; line-height: 1.5; }
 
+  /* Appearance (13 Nov 2026, in place of the memory chart; the felsefe-premium decision): DodoBrowser's
+     look in small. A frosted toolbar and start page over the page's lights; the swatches recolour it as
+     Customize does in DodoBrowser. Values from start\renkler.css (each accent's fill, its text tone and
+     the ink on the fill); the logo and the shield keep their own colours, as in the program. */
+  .look { --lk: var(--accent); --lk-text: var(--accent-strong); --lk-on: var(--on-accent);
+    --lk-glass: rgba(255, 255, 255, .52); --lk-glass-2: rgba(255, 255, 255, .78); }
+  [data-renk="okyanus"] { --lk: #2F9BF5; --lk-text: #1559C0; --lk-on: #15121A; }
+  [data-renk="orkide"] { --lk: #F07ACB; --lk-text: #A3226F; --lk-on: #15121A; }
+  [data-renk="orman"] { --lk: #45C077; --lk-text: #0F7340; --lk-on: #15121A; }
+  [data-renk="grafit"] { --lk: #2A2B36; --lk-text: #3A3B48; --lk-on: #FFFFFF; }
+  .lk-pick [data-renk="dodo"] { --lk: var(--accent); }
+  @media (prefers-color-scheme: dark) {
+    .look { --lk-glass: rgba(39, 37, 42, .50); --lk-glass-2: rgba(51, 48, 54, .80); }
+    [data-renk="okyanus"] { --lk: #4AA8F5; --lk-text: #9AD6FF; }
+    [data-renk="orkide"] { --lk: #F06EC0; --lk-text: #FFC2E6; }
+    [data-renk="orman"] { --lk: #4CC77A; --lk-text: #8EE0A8; }
+    [data-renk="grafit"] { --lk: #E4E4EA; --lk-text: #E4E4EA; --lk-on: #15121A; }
+  }
+  .look-sec .sub { margin-bottom: 32px; }
+  .look { display: grid; gap: 20px; }
+  .lk-win { position: relative; height: 360px; border-radius: 22px; overflow: hidden; isolation: isolate; background: var(--bg); border: 1px solid var(--card-border); box-shadow: var(--shadow-lg); }
+  .lk-bg { position: absolute; inset: 0; z-index: -1; }
+  .lk-bg i { position: absolute; border-radius: 50%; filter: blur(44px); }
+  .lk-bg i:nth-child(1) { width: 62%; height: 70%; left: -14%; top: 30%; background: var(--blob-b); }
+  .lk-bg i:nth-child(2) { width: 58%; height: 70%; right: -16%; top: -18%; background: var(--blob-a); }
+  .lk-bg i:nth-child(3) { width: 50%; height: 60%; left: 34%; bottom: -34%; background: var(--blob-c); }
+  .lk-bg i:nth-child(4) { width: 46%; height: 56%; left: 27%; top: 22%; background-color: var(--lk); opacity: .38; transition: background-color .45s ease; }
+  .lk-bar { padding: 8px 10px 10px; background: var(--lk-glass); border-bottom: 1px solid var(--card-border);
+    -webkit-backdrop-filter: blur(18px) saturate(1.5); backdrop-filter: blur(18px) saturate(1.5); }
+  .lk-tabs { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; }
+  .lk-tab { display: inline-flex; align-items: center; gap: 8px; height: 30px; padding: 0 14px 0 10px; border-radius: 8px; font-size: 12.5px; color: var(--muted); white-space: nowrap; }
+  .lk-tab.on { background: var(--lk-glass-2); color: var(--ink); box-shadow: 0 1px 2px rgba(0, 0, 0, .08); }
+  .lk-tab svg { width: 15px; height: 15px; }
+  .lk-fav { display: grid; place-items: center; width: 15px; height: 15px; border-radius: 4px; background: var(--icon-bg); font-size: 9px; font-weight: 600; color: var(--ink); }
+  .lk-plus { color: var(--muted); padding: 0 6px; font-size: 16px; }
+  .lk-url { display: flex; align-items: center; gap: 10px; height: 34px; padding: 0 9px 0 14px; border-radius: 999px; background: var(--lk-glass-2); font-size: 13px; color: var(--muted); }
+  .lk-url span:first-child { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .lk-url .kalkan-isareti { width: 18px; height: 18px; }
+  .lk-home { position: absolute; left: 0; right: 0; top: 92px; bottom: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 0 28px 20px; text-align: center; }
+  .lk-home .brand { display: inline-flex; align-items: center; gap: 8.7px; --logo-dodo: var(--brand); font-size: 17.5px; }
+  .lk-home .brand svg:not(.wm) { width: 42px; height: 42px; filter: drop-shadow(0 6px 12px rgba(200, 60, 30, .26)); }
+  .lk-search { display: flex; align-items: center; gap: 10px; width: 100%; max-width: 380px; padding: 6px 6px 6px 18px; border-radius: 999px; background: var(--lk-glass-2); border: 1px solid var(--card-border); box-shadow: var(--shadow); font-size: 14px; color: var(--muted); text-align: left;
+    -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
+  .lk-search span { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .lk-search i { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; flex: none; background-color: var(--lk); color: var(--lk-on); transition: background-color .45s ease, color .45s ease; }
+  .lk-search i svg { width: 16px; height: 16px; }
+  .lk-count { display: inline-flex; align-items: center; gap: 8px; margin: 0; padding: 6px 14px 6px 10px; border-radius: 999px; background: var(--lk-glass); font-size: 13.5px; color: var(--ink);
+    -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
+  .lk-count .kalkan-isareti { width: 18px; height: 18px; }
+  .lk-count b { color: var(--lk-text); font-weight: 600; transition: color .45s ease; }
+  /* The swatches: DodoBrowser's own (start\start.html .du-accent): a 40 px ring, the chosen one ringed and ticked. */
+  .lk-pick { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px; }
+  .lk-pick .lk-ad { color: var(--muted); font-size: 14px; margin-right: 4px; }
+  .lk-pick button { width: 40px; height: 40px; padding: 4px; border: 1px solid var(--field); border-radius: 999px; background: transparent; cursor: pointer; transition: transform .2s ease; }
+  .lk-pick button:hover { transform: scale(1.06); }
+  .lk-pick button i { display: grid; place-items: center; height: 100%; border-radius: 999px; background: var(--lk); color: var(--lk-on); font-style: normal; font-size: 15px; font-weight: 600; }
+  .lk-pick button[aria-pressed="true"] { outline: 2px solid var(--lk-text); outline-offset: 3px; }
+  .lk-pick button[aria-pressed="true"] i::after { content: "✓"; }
+  .lk-pick button:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+  /* The measurements, now the shield's proof under its card (no longer a promise of their own). */
+  .kanit { margin: 0 0 18px; }
+  .kanit .stats { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 620px) {
+    .lk-tab:nth-child(2) { display: none; }
+    .lk-win { height: 330px; }
+    .lk-home { padding: 0 18px 18px; }
+    .kanit .stats { grid-template-columns: 1fr; }
+  }
+
   .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
   .card {
     position: relative; overflow: hidden;
@@ -1050,29 +1119,41 @@
     </ul>
   </div>
 
-  <section class="block" id="olcum">
-    <div class="wrap">
-      <p class="kicker reveal">We measured</p>
-      <h2 class="reveal" style="--d:1">Less load, faster pages.</h2>
-      <p class="sub reveal" style="--d:2">On Windows, DodoBrowser runs on Edge's engine and cuts the load from ads and trackers.</p>
-      <div class="stats">
-        <div class="stat reveal" style="--d:0"><table role="table">
-          <caption>Memory with 6 tabs open</caption>
-          <tr role="row" class="bar"><th role="rowheader" scope="row">Edge</th><td role="cell"><div aria-hidden="true"><i style="--w:100%"></i></div><b>~1800 MB</b></td></tr>
-          <tr role="row" class="bar dodo"><th role="rowheader" scope="row">DodoBrowser</th><td role="cell"><div aria-hidden="true"><i style="--w:39%"></i></div><b>~700 MB</b></td></tr>
-        </table></div>
-        <div class="stat reveal" style="--d:1"><table role="table">
-          <caption>Opening ad-heavy news sites</caption>
-          <tr role="row" class="bar"><th role="rowheader" scope="row">Edge</th><td role="cell"><div aria-hidden="true"><i style="--w:100%"></i></div><b>~6 s</b></td></tr>
-          <tr role="row" class="bar dodo"><th role="rowheader" scope="row">DodoBrowser</th><td role="cell"><div aria-hidden="true"><i style="--w:15%"></i></div><b>~0.9 s</b></td></tr>
-        </table></div>
-        <div class="stat reveal" style="--d:2"><table role="table">
-          <caption>Requests made for the same page</caption>
-          <tr role="row" class="bar"><th role="rowheader" scope="row">Edge</th><td role="cell"><div aria-hidden="true"><i style="--w:100%"></i></div><b>~750</b></td></tr>
-          <tr role="row" class="bar dodo"><th role="rowheader" scope="row">DodoBrowser</th><td role="cell"><div aria-hidden="true"><i style="--w:17%"></i></div><b>~130</b></td></tr>
-        </table></div>
+  <section class="block" id="gorunum">
+    <div class="wrap show">
+      <div>
+        <p class="kicker reveal">Look</p>
+        <h2 class="reveal" style="--d:1">Crafted down to the details.</h2>
+        <p class="sub reveal" style="--d:2">DodoBrowser is drawn in Windows 11's design language, in a warm amber. You choose its theme and color.</p>
+        <ul class="points">
+          <li class="reveal" style="--d:2"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor"/></svg></span><div><b>Theme</b><span>Light, dark, or automatic to match Windows. The Picture theme follows how bright your background is.</span></div></li>
+          <li class="reveal" style="--d:3"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="m7.5 13.5 6-6M10.5 16.5l6-6"/></svg></span><div><b>Glass effect</b><span>Tabs, the toolbar and DodoBrowser's own pages sit on frosted glass.</span></div></li>
+          <li class="reveal" style="--d:4"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.9 0 1.6-.7 1.6-1.7 0-.4-.2-.8-.4-1.1-.3-.3-.4-.7-.4-1.1a1.6 1.6 0 0 1 1.6-1.7h2c3.1 0 5.6-2.5 5.6-5.5C22 6 17.5 2 12 2Z"/><circle cx="7.5" cy="11.5" r="1.2" fill="currentColor"/><circle cx="9.5" cy="7" r="1.2" fill="currentColor"/><circle cx="14.5" cy="6.5" r="1.2" fill="currentColor"/><circle cx="17.5" cy="10.5" r="1.2" fill="currentColor"/></svg></span><div><b>Accent color</b><span>Amber, Ocean, Orchid, Forest or Graphite; or let Dodo pick the one closest to your background picture.</span></div></li>
+        </ul>
       </div>
-      <p class="note reveal">Compared with Microsoft Edge on a laptop running Windows 11. Results vary by computer, site and connection.</p>
+      <!-- DodoBrowser's look in small: frosted tabs, address bar and start page; the swatches recolour it. -->
+      <div class="look reveal" style="--d:2" data-renk="dodo">
+        <div class="lk-win" aria-hidden="true">
+          <div class="lk-bg"><i></i><i></i><i></i><i></i></div>
+          <div class="lk-bar">
+            <div class="lk-tabs"><span class="lk-tab on"><svg><use href="#dodo"/></svg>New tab</span><span class="lk-tab"><span class="lk-fav">H</span>News</span><span class="lk-plus">+</span></div>
+            <div class="lk-url"><span>Search or type an address</span><span class="kalkan-isareti"></span></div>
+          </div>
+          <div class="lk-home">
+            <div class="brand"><svg><use href="#dodo"/></svg><svg class="wm"><use href="#dodo-yazi"/></svg></div>
+            <div class="lk-search"><span>Go on, type what’s on your mind!</span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></i></div>
+            <p class="lk-count"><span class="kalkan-isareti"></span><span><b>27</b> ads and trackers stopped today.</span></p>
+          </div>
+        </div>
+        <div class="lk-pick" role="group" aria-labelledby="lk-ad">
+          <span class="lk-ad" id="lk-ad">Accent color</span>
+          <button type="button" data-renk="dodo" aria-pressed="true" aria-label="Amber" title="Amber"><i aria-hidden="true"></i></button>
+          <button type="button" data-renk="okyanus" aria-pressed="false" aria-label="Ocean" title="Ocean"><i aria-hidden="true"></i></button>
+          <button type="button" data-renk="orkide" aria-pressed="false" aria-label="Orchid" title="Orchid"><i aria-hidden="true"></i></button>
+          <button type="button" data-renk="orman" aria-pressed="false" aria-label="Forest" title="Forest"><i aria-hidden="true"></i></button>
+          <button type="button" data-renk="grafit" aria-pressed="false" aria-label="Graphite" title="Graphite"><i aria-hidden="true"></i></button>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1094,6 +1175,21 @@
           <div class="row"><span class="site">daily-news.example</span><span class="tg"></span></div>
         </div>
       </article>
+      <div class="kanit">
+        <div class="stats">
+        <div class="stat reveal" style="--d:0"><table role="table">
+          <caption>Opening ad-heavy news sites</caption>
+          <tr role="row" class="bar"><th role="rowheader" scope="row">Edge</th><td role="cell"><div aria-hidden="true"><i style="--w:100%"></i></div><b>~6 s</b></td></tr>
+          <tr role="row" class="bar dodo"><th role="rowheader" scope="row">DodoBrowser</th><td role="cell"><div aria-hidden="true"><i style="--w:15%"></i></div><b>~0.9 s</b></td></tr>
+        </table></div>
+        <div class="stat reveal" style="--d:1"><table role="table">
+          <caption>Requests made for the same page</caption>
+          <tr role="row" class="bar"><th role="rowheader" scope="row">Edge</th><td role="cell"><div aria-hidden="true"><i style="--w:100%"></i></div><b>~750</b></td></tr>
+          <tr role="row" class="bar dodo"><th role="rowheader" scope="row">DodoBrowser</th><td role="cell"><div aria-hidden="true"><i style="--w:17%"></i></div><b>~130</b></td></tr>
+        </table></div>
+        </div>
+        <p class="note reveal">Measured: compared with Microsoft Edge on a laptop running Windows 11. Results vary by computer, site and connection.</p>
+      </div>
 
       <ul class="mini">
         <li class="reveal" style="--d:0"><span class="ico violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.9 9.9a3 3 0 1 0 4.2 4.2"/><path d="M10.7 5.1A10.4 10.4 0 0 1 12 5c7 0 10 7 10 7a13 13 0 0 1-1.7 2.7"/><path d="M6.6 6.6A13.5 13.5 0 0 0 2 12s3 7 10 7a9.7 9.7 0 0 0 5.4-1.6"/><path d="m2 2 20 20"/></svg></span><b>Private window</b><span>When you close it, the window's history, cookies and sign-ins are deleted.</span></li>
@@ -1657,6 +1753,18 @@
 
   // Reduced motion: the logos stop blinking too.
   if (calm) document.querySelectorAll("svg").forEach(function (s) { if (s.pauseAnimations) s.pauseAnimations(); });
+  // Appearance: the swatches recolour the small DodoBrowser, as Customize does in the program.
+  (function () {
+    var look = document.querySelector(".look");
+    if (!look) return;
+    var buttons = look.querySelectorAll(".lk-pick button");
+    Array.prototype.forEach.call(buttons, function (b) {
+      b.addEventListener("click", function () {
+        look.setAttribute("data-renk", b.getAttribute("data-renk"));
+        Array.prototype.forEach.call(buttons, function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      });
+    });
+  })();
 </script>
 </body>
 </html>

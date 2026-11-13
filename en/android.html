@@ -56,7 +56,6 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
-<link rel="preload" href="/yazi/InterTight.woff2" as="font" type="font/woff2" crossorigin>
 <style>
   :root {
     --bg: #FBF6F2;
@@ -96,8 +95,9 @@
       --shadow: 0 1px 2px rgba(0, 0, 0, .35), 0 10px 28px rgba(0, 0, 0, .35);
     }
   }
-  /* The brand font (Inter Tight, marka\LOGO-STANDARDI.md; logo\logo-yap.py copies it to yazi\):
-     headings, the menu, buttons and the questions; running text stays Segoe UI. */
+  /* The brand font Inter Tight stays declared but is no longer used (13 Nov, the user: it is only for the
+     logo, the slogan and promo pictures, marka\LOGO-STANDARDI.md): headings, the menu, buttons and the
+     questions are Segoe UI Variable Display like the program, running text Segoe UI Variable Text. */
   @font-face {
     font-family: "Inter Tight";
     src: url("/yazi/InterTight.woff2") format("woff2");
@@ -160,7 +160,7 @@
   footer.bottom .lang { display: inline-flex; align-items: center; gap: 8px; }
   footer.bottom .lang [aria-current] { color: var(--ink); font-weight: 600; }
   /* Split button ("Çift parça", 28 Eki 2026): same as the home page's .store. */
-  .dl { display: inline-flex; align-items: stretch; border-radius: 999px; overflow: hidden; text-decoration: none; color: var(--on-accent); line-height: 1.2; text-align: left; box-shadow: 0 8px 22px var(--btn-glow), inset 0 0 0 1px rgba(21, 18, 26, .08); transition: transform .25s, box-shadow .25s; font-family: "Inter Tight", "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif; min-width: min(300px, 100%); }
+  .dl { display: inline-flex; align-items: stretch; border-radius: 999px; overflow: hidden; text-decoration: none; color: var(--on-accent); line-height: 1.2; text-align: left; box-shadow: 0 8px 22px var(--btn-glow), inset 0 0 0 1px rgba(21, 18, 26, .08); transition: transform .25s, box-shadow .25s; font-family: "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif; min-width: min(300px, 100%); }
   .dl .l { display: flex; flex: 1; align-items: center; gap: 12px; padding: 12px 20px 12px 22px; background: var(--accent); }
   .dl .l svg { width: 24px; height: 24px; flex: none; }
   .dl .tx { display: grid; font-size: 16px; font-weight: 600; }
@@ -181,7 +181,7 @@
   @media (max-width: 620px) { section { padding: 18px 18px; } main { padding-top: 40px; } }
   /* Last, so it wins over each part's own "font: inherit". */
   h1, h2, h3, h4, .kicker, .eyebrow, nav.links a, .back, .btn, .store span, .faq summary, .mini b, .points b, .strip li b, .copy, .smenu .big, .sp .greet {
-    font-family: "Inter Tight", "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-family: "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, sans-serif;
   }
 </style>
 </head>

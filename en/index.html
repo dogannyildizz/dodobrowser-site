@@ -243,8 +243,9 @@
     }
   }
 
-  /* The brand font (Inter Tight, marka\LOGO-STANDARDI.md; logo\logo-yap.py copies it to yazi\):
-     headings, the menu, buttons and the questions; running text stays Segoe UI. */
+  /* The brand font Inter Tight (13 Nov, the user: only for the logo, the slogan and promo pictures,
+     marka\LOGO-STANDARDI.md): here only the big slogan in the first screen (h1 .w). Headings, the menu,
+     buttons and the questions are Segoe UI Variable Display like the program, running text Segoe UI Variable Text. */
   @font-face {
     font-family: "Inter Tight";
     src: url("/yazi/InterTight.woff2") format("woff2");
@@ -995,8 +996,9 @@
   }
   /* Last, so it wins over each part's own "font: inherit". */
   h1, h2, h3, h4, .stat caption, .kicker, .eyebrow, nav.links a, .back, .btn, .store .tx, .store em, .faq summary, .mini b, .points b, .strip li b, .copy, .smenu .big, .sp .greet {
-    font-family: "Inter Tight", "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, sans-serif;
+    font-family: "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, sans-serif;
   }
+  h1 .w { font-family: "Inter Tight", "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, sans-serif; }   /* the slogan */
 </style>
 </head>
 <body>

@@ -994,8 +994,36 @@
     .js .reveal { opacity: 1; transform: none; }
     .bar i { width: var(--w); }
   }
+  /* Language switch (14 Nov 2026, the user: flags at the bar's right end, in the site's own
+     language). Two languages, so no menu: one click goes to the same page in the other one.
+     The current one sits on a card pill like the menu's; on wide screens the switch moves to
+     the bar's right edge, on phones it keeps only the flags. Flags are drawn here (#f-tr,
+     #f-gb): Windows draws no flag emoji, only the letters. */
+  nav.dil { display: flex; flex: none; gap: 2px; padding: 3px; border-radius: 999px; border: 1px solid var(--card-border); background: color-mix(in srgb, var(--card) 40%, transparent); }
+  nav.dil a {
+    position: relative; display: flex; align-items: center; gap: 7px; height: 30px; padding: 0 12px 0 6px;
+    border-radius: 999px; color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: .04em;
+    transition: color .2s, background-color .2s, box-shadow .2s;
+  }
+  nav.dil a:hover { color: var(--ink); background: color-mix(in srgb, var(--card) 70%, transparent); }
+  nav.dil a[aria-current] { color: var(--ink); background: var(--card); box-shadow: var(--shadow), inset 0 0 0 1px var(--card-border); }
+  nav.dil a:focus-visible { border-radius: 999px; outline-offset: 1px; }
+  nav.dil svg { width: 18px; height: 18px; flex: none; border-radius: 50%; box-shadow: 0 0 0 1px color-mix(in srgb, var(--ink) 14%, transparent); transition: opacity .2s, filter .2s; }
+  nav.dil a:not([aria-current]) svg { opacity: .8; filter: saturate(.85); }
+  nav.dil a:hover svg { opacity: 1; filter: none; }
+  @media (min-width: 1500px) { nav.dil { position: absolute; right: 24px; top: 50%; transform: translateY(-50%); } }
+  @media (max-width: 620px) {
+    nav.dil a { padding: 0 6px; }
+    nav.dil a span { display: none; }
+    nav.dil a::after { content: ""; position: absolute; inset: -7px 0; }   /* 44 px to touch */
+    /* Room for the switch: the privacy link shows only its first word, the back link only its arrow (the full name stays in aria-label). */
+    header.top .wrap { gap: 12px; }
+    nav.links a.keep { padding: 8px 10px; }
+    .uzun { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { nav.dil a, nav.dil svg { transition: none; } }
   /* Last, so it wins over each part's own "font: inherit". */
-  h1, h2, h3, h4, .stat caption, .kicker, .eyebrow, nav.links a, .back, .btn, .store .tx, .store em, .faq summary, .mini b, .points b, .strip li b, .copy, .smenu .big, .sp .greet {
+  h1, h2, h3, h4, .stat caption, .kicker, .eyebrow, nav.links a, nav.dil a, .back, .btn, .store .tx, .store em, .faq summary, .mini b, .points b, .strip li b, .copy, .smenu .big, .sp .greet {
     font-family: "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, sans-serif;
   }
   h1 .w { font-family: "Inter Tight", "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, sans-serif; }   /* the slogan */
@@ -1020,6 +1048,10 @@
     <symbol id="i-tray" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v10"/><path d="m7.5 10 4.5 4.5 4.5-4.5"/><path d="M5 19h14"/></g></symbol>
     <symbol id="i-android" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.43 11.43 0 0 0-8.94 0L5.65 5.67c-.19-.29-.58-.38-.87-.2-.28.18-.37.54-.22.83L6.4 9.48A10.78 10.78 0 0 0 1 18h22a10.78 10.78 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="3"/><path d="m3.5 7 8.5 6 8.5-6"/></g></symbol>
+    <!-- Language switch flags (nav.dil): round crops of the flags of Turkey and the United Kingdom. -->
+    <symbol id="f-tr" viewBox="0 0 24 24"><rect width="24" height="24" fill="#E30A17"/><circle cx="11.15" cy="12" r="6" fill="#FFFFFF"/><circle cx="12.65" cy="12" r="4.8" fill="#E30A17"/><path fill="#FFFFFF" d="M12.9 12 14.97 11.33 14.97 9.15 16.25 10.91 18.33 10.24 17.05 12 18.33 13.76 16.25 13.09 14.97 14.85 14.97 12.67Z"/></symbol>
+    <clipPath id="f-gb-t"><path d="M30 15h30v15zv15H0zH0V0zV0h30z"/></clipPath>
+    <symbol id="f-gb" viewBox="15 0 30 30"><path fill="#012169" d="M0 0h60v30H0z"/><path stroke="#FFFFFF" stroke-width="6" d="M0 0l60 30m0-30L0 30"/><path stroke="#C8102E" stroke-width="4" clip-path="url(#f-gb-t)" d="M0 0l60 30m0-30L0 30"/><path stroke="#FFFFFF" stroke-width="10" d="M30 0v30M0 15h60"/><path stroke="#C8102E" stroke-width="6" d="M30 0v30M0 15h60"/></symbol>
   </defs>
 </svg>
 
@@ -1032,7 +1064,11 @@
       <a href="#kisayollar" style="--i:2">Shortcuts</a>
       <a href="#sss" style="--i:3">FAQ</a>
       <a href="#iletisim" style="--i:4">Contact</a>
-      <a class="keep" href="/en/privacy" style="--i:5">Privacy policy</a>
+      <a class="keep" href="/en/privacy" style="--i:5" aria-label="Privacy policy">Privacy<span class="uzun"> policy</span></a>
+    </nav>
+    <nav class="dil" aria-label="Language">
+      <a href="/" lang="tr" hreflang="tr" aria-label="Türkçe"><svg aria-hidden="true"><use href="#f-tr"/></svg><span>TR</span></a>
+      <a href="/en/" lang="en" hreflang="en" aria-current="page" aria-label="English"><svg aria-hidden="true"><use href="#f-gb"/></svg><span>EN</span></a>
     </nav>
   </div>
 </header>

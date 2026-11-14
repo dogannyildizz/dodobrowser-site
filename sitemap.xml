@@ -2,48 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://dodobrowser.com/</loc>
+    <lastmod>2026-11-14</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://dodobrowser.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dodobrowser.com/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dodobrowser.com/"/>
   </url>
   <url>
     <loc>https://dodobrowser.com/en/</loc>
+    <lastmod>2026-11-14</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://dodobrowser.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dodobrowser.com/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dodobrowser.com/"/>
   </url>
   <url>
     <loc>https://dodobrowser.com/gizlilik</loc>
+    <lastmod>2026-11-14</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://dodobrowser.com/gizlilik"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dodobrowser.com/en/privacy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dodobrowser.com/gizlilik"/>
   </url>
   <url>
     <loc>https://dodobrowser.com/en/privacy</loc>
+    <lastmod>2026-11-14</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://dodobrowser.com/gizlilik"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dodobrowser.com/en/privacy"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dodobrowser.com/gizlilik"/>
   </url>
   <url>
     <loc>https://dodobrowser.com/guvenlik</loc>
+    <lastmod>2026-11-14</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://dodobrowser.com/guvenlik"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dodobrowser.com/en/security"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dodobrowser.com/guvenlik"/>
   </url>
   <url>
     <loc>https://dodobrowser.com/en/security</loc>
+    <lastmod>2026-11-14</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://dodobrowser.com/guvenlik"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dodobrowser.com/en/security"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dodobrowser.com/guvenlik"/>
   </url>
   <url>
     <loc>https://dodobrowser.com/android</loc>
+    <lastmod>2026-11-14</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://dodobrowser.com/android"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dodobrowser.com/en/android"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dodobrowser.com/android"/>
   </url>
   <url>
     <loc>https://dodobrowser.com/en/android</loc>
+    <lastmod>2026-11-14</lastmod>
     <xhtml:link rel="alternate" hreflang="tr" href="https://dodobrowser.com/android"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://dodobrowser.com/en/android"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dodobrowser.com/android"/>

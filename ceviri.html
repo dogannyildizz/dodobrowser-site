@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sayfaları bilgisayarında çeviren tarayıcı | DodoBrowser</title>
+<meta name="description" content="DodoBrowser yabancı dildeki sayfaları bilgisayarında Türkçeye çevirir; sayfanın metni çeviri için gönderilmez. 21 dil, eklenti gerekmez.">
+<link rel="canonical" href="https://dodobrowser.com/ceviri">
+<link rel="alternate" hreflang="tr" href="https://dodobrowser.com/ceviri">
+<link rel="alternate" hreflang="en" href="https://dodobrowser.com/en/translation">
+<link rel="alternate" hreflang="x-default" href="https://dodobrowser.com/ceviri">
+<meta property="og:title" content="Sayfaları bilgisayarında çeviren tarayıcı | DodoBrowser">
+<meta property="og:description" content="DodoBrowser yabancı dildeki sayfaları bilgisayarında Türkçeye çevirir; sayfanın metni çeviri için gönderilmez. 21 dil, eklenti gerekmez.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dodobrowser.com/ceviri">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:site_name" content="DodoBrowser">
+<meta property="og:image" content="https://dodobrowser.com/paylasim.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="DodoBrowser logosu ve sloganı: Hafif. Hızlı. Senin.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sayfaları bilgisayarında çeviren tarayıcı | DodoBrowser">
+<meta name="twitter:description" content="DodoBrowser yabancı dildeki sayfaları bilgisayarında Türkçeye çevirir; sayfanın metni çeviri için gönderilmez. 21 dil, eklenti gerekmez.">
+<meta name="twitter:image" content="https://dodobrowser.com/paylasim.png">
+<meta name="theme-color" content="#FBF6F2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1B191E" media="(prefers-color-scheme: dark)">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Sayfaları bilgisayarında çeviren tarayıcı | DodoBrowser",
+  "url": "https://dodobrowser.com/ceviri",
+  "description": "DodoBrowser yabancı dildeki sayfaları bilgisayarında Türkçeye çevirir; sayfanın metni çeviri için gönderilmez. 21 dil, eklenti gerekmez.",
+  "inLanguage": "tr",
+  "dateModified": "2026-11-14",
+  "publisher": {
+    "@id": "https://dodobrowser.com/#kurulus"
+  },
+  "about": {
+    "@id": "https://dodobrowser.com/#windows-uygulama"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Ana sayfa",
+        "item": "https://dodobrowser.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Sayfa çevirisi",
+        "item": "https://dodobrowser.com/ceviri"
+      }
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Çeviri internet olmadan çalışır mı?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet. İngilizceden Türkçeye çeviri programla gelir. Başka bir dili ilk çevirdiğinde o dilin dosyası bir kez iner; sonra o dil de internetsiz çevrilir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Çevirdiğim sayfanın metni bir yere gönderilir mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hayır. Çeviri bilgisayarında yapılır. Dil dosyası inerken sadece hangi dilin dosyasının istendiği belli olur."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hangi dillerden çevirir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "21 dilden Türkçeye: İngilizce, Almanca, Fransızca, İspanyolca, İtalyanca, Portekizce, Felemenkçe, Rusça, Ukraynaca, Lehçe, Arapça, Farsça, Yunanca, Bulgarca, Rumence, İsveççe, Çekçe, Macarca, Azerice, Çince (geleneksel) ve Danca."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Sadece seçtiğim bir yazıyı çevirebilir miyim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet. Yazıyı seç, sağ tıkla ve çevir."
+      }
+    }
+  ]
+}
+</script>
+<link rel="icon" href="/favicon.ico" sizes="16x16 20x20 24x24 32x32 40x40 48x48 64x64 128x128 256x256">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<style>
+  :root {
+    --bg: #FBF6F2;
+    --bg-tint: #F6EFE9;
+    --glow: rgba(255, 150, 90, .30);
+    --glow-2: rgba(150, 180, 255, .26);
+    --ink: #15121A;
+    --muted: #64605C;
+    --accent: #FF7A3D;          /* kehribar fill (buttons, bars); text on it is --on-accent */
+    --accent-hover: #FF9C73;
+    --accent-strong: #8F4410;   /* kehribar as text, links and icons */
+    --brand: #15121A;   /* "DodoBrowser" in the logo (marka\LOGO-STANDARDI.md) */
+    --on-accent: #15121A;
+    --btn-glow: rgba(255, 94, 42, .30);
+    --card: #FFFFFF;
+    --card-border: rgba(143, 68, 16, .12);
+    --icon-bg: #F6F1ED;
+    --shadow: 0 1px 2px rgba(60, 30, 10, .06), 0 10px 28px rgba(60, 30, 10, .08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1B191E;
+      --bg-tint: #221D21;
+      --glow: rgba(255, 120, 44, .22);
+      --glow-2: rgba(70, 72, 210, .22);
+      --ink: #F3F1F5;
+      --muted: #B7B5BC;
+      --accent: #FF8A3D;
+      --accent-hover: #FEC29E;
+      --accent-strong: #FFB06E;
+      --brand: #F3F1F5;
+      --on-accent: #15121A;
+      --btn-glow: rgba(255, 94, 42, .24);
+      --card: #27252A;
+      --card-border: rgba(255, 176, 110, .14);
+      --icon-bg: #333036;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .35), 0 10px 28px rgba(0, 0, 0, .35);
+    }
+  }
+  /* The brand font Inter Tight stays declared but is no longer used (13 Nov, the user: it is only for the
+     logo, the slogan and promo pictures, marka\LOGO-STANDARDI.md): headings, the menu, buttons and the
+     questions are Segoe UI Variable Display like the program, running text Segoe UI Variable Text. */
+  @font-face {
+    font-family: "Inter Tight";
+    src: url("yazi/InterTight.woff2") format("woff2");
+    font-weight: 400 800;
+    font-display: swap;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, sans-serif;
+    color: var(--ink); line-height: 1.65; -webkit-font-smoothing: antialiased;
+    background:
+      radial-gradient(700px 420px at 10% -12%, var(--glow), transparent 70%),
+      radial-gradient(640px 400px at 92% -14%, var(--glow-2), transparent 70%),
+      linear-gradient(var(--bg-tint), var(--bg) 420px);
+    background-color: var(--bg);
+    min-height: 100vh;
+  }
+  /* Links as in DodoBrowser (start\dodo.css): no line; a name inside a sentence is semibold too. */
+  a { color: var(--accent-strong); text-decoration: none; }
+  a:hover { color: color-mix(in srgb, var(--accent-strong), var(--ink) 30%); }
+  p a:not(.btn), li a:not(.btn), td a { font-weight: 600; }
+  a:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 2px; border-radius: 4px; }
+  .wrap { width: min(1120px, 100% - 32px); margin: 0 auto; }
+
+  header.top { position: relative; border-bottom: 1px solid var(--card-border); }
+  header.top .wrap { display: flex; align-items: center; gap: 16px; height: 64px; }
+  .logo-link { display: flex; align-items: center; gap: 6.9px; text-decoration: none; color: var(--ink); --logo-dodo: var(--brand); font-size: 13.9px; }
+  /* logo-yap: site-css begin (logo\logo-yap.py writes this part) */
+  /* The logo standard (marka\LOGO-STANDARDI.md): font-size is the capitals' height;
+     the symbol D is that x 2.29, the gap D x .3. */
+  .wm, .wm-slogan { display: block; height: 1em; width: auto; overflow: visible; fill: currentColor; }
+  .wm { aspect-ratio: 7.98; }
+  .wm-slogan { aspect-ratio: 10.71; }
+  /* logo-yap: site-css end */
+  .logo-link svg:not(.wm) { width: 34px; height: 34px; }
+  .back { margin-left: auto; color: var(--muted); text-decoration: none; font-size: 15px; padding: 8px 12px; border-radius: 999px; }
+  .back:hover { color: var(--ink); background: var(--card); }
+
+  main { width: min(760px, 100% - 32px); margin: 0 auto; padding: 56px 0 40px; }
+  .kicker { color: var(--accent-strong); font-weight: 600; font-size: 14px; margin: 0 0 8px; }   /* sentence case, as every heading in DodoBrowser */
+  h1 { font-size: clamp(32px, 5vw, 46px); line-height: 1.1; letter-spacing: -.022em; margin: 0 0 10px; }
+  .tag { color: var(--muted); margin: 0 0 36px; }
+  section {
+    background: var(--card); border: 1px solid var(--card-border); border-radius: 16px;
+    padding: 22px 26px; margin-bottom: 14px; box-shadow: var(--shadow);
+  }
+  section.lead { border-left: 4px solid var(--accent); }
+  h2 { font-size: 18px; margin: 0 0 8px; }
+  p { margin: 0 0 10px; }
+  p:last-child { margin-bottom: 0; }
+  ul { margin: 0 0 12px; padding-left: 20px; }
+  li { margin-bottom: 8px; }
+  li::marker { color: var(--accent-strong); }
+
+  footer.bottom { border-top: 1px solid var(--card-border); padding: 28px 0 40px; color: var(--muted); font-size: 14.5px; }
+  footer.bottom .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; }
+  footer.bottom .wrap > :first-child { margin-right: auto; }
+  footer.bottom a { color: var(--muted); }
+  footer.bottom .lang { display: inline-flex; align-items: center; gap: 8px; }
+  footer.bottom .lang [aria-current] { color: var(--ink); font-weight: 600; }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  @media (max-width: 620px) { section { padding: 18px 18px; } main { padding-top: 40px; } }
+  /* Language switch (14 Nov 2026, the user: flags at the bar's right end, in the site's own
+     language). Two languages, so no menu: one click goes to the same page in the other one.
+     The current one sits on a card pill like the menu's; on wide screens the switch moves to
+     the bar's right edge, on phones it keeps only the flags. Flags are drawn here (#f-tr,
+     #f-gb): Windows draws no flag emoji, only the letters. */
+  nav.dil { display: flex; flex: none; gap: 2px; padding: 3px; border-radius: 999px; border: 1px solid var(--card-border); background: color-mix(in srgb, var(--card) 40%, transparent); }
+  nav.dil a {
+    position: relative; display: flex; align-items: center; gap: 7px; height: 30px; padding: 0 12px 0 6px;
+    border-radius: 999px; color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: .04em;
+    transition: color .2s, background-color .2s, box-shadow .2s;
+  }
+  nav.dil a:hover { color: var(--ink); background: color-mix(in srgb, var(--card) 70%, transparent); }
+  nav.dil a[aria-current] { color: var(--ink); background: var(--card); box-shadow: var(--shadow), inset 0 0 0 1px var(--card-border); }
+  nav.dil a:focus-visible { border-radius: 999px; outline-offset: 1px; }
+  nav.dil svg { width: 18px; height: 18px; flex: none; border-radius: 50%; box-shadow: 0 0 0 1px color-mix(in srgb, var(--ink) 14%, transparent); transition: opacity .2s, filter .2s; }
+  nav.dil a:not([aria-current]) svg { opacity: .8; filter: saturate(.85); }
+  nav.dil a:hover svg { opacity: 1; filter: none; }
+  @media (min-width: 1500px) { nav.dil { position: absolute; right: 24px; top: 50%; transform: translateY(-50%); } }
+  @media (max-width: 620px) {
+    nav.dil a { padding: 0 6px; }
+    nav.dil a span { display: none; }
+    nav.dil a::after { content: ""; position: absolute; inset: -7px 0; }   /* 44 px to touch */
+    /* Room for the switch: the privacy link shows only its first word, the back link only its arrow (the full name stays in aria-label). */
+    header.top .wrap { gap: 12px; }
+    nav.links a.keep { padding: 8px 10px; }
+    .uzun { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { nav.dil a, nav.dil svg { transition: none; } }
+  /* Feature pages (kalkan, cerez, ceviri; 14 Nov 2026): the answer first, a quiet picture of
+     the feature, three steps, the limits, the questions; parts and sizes as on the main page. */
+  :root { --field: #78716C; --pop: #FFFFFF; }
+  @media (prefers-color-scheme: dark) { :root { --field: #8F8A93; --pop: #322F35; } }
+  .hero { display: flex; align-items: center; gap: 18px; margin: 0 0 18px; }
+  .hero h1 { margin: 0; }
+  .hero .kicker { margin: 0 0 6px; }
+  .ico { width: 56px; height: 56px; flex: none; border-radius: 16px; display: grid; place-items: center; background: var(--icon-bg); color: var(--accent-strong); box-shadow: inset 0 0 0 1px var(--card-border); }
+  .ico svg { width: 26px; height: 26px; }
+  .cevap { font-size: 19px; line-height: 1.6; margin: 0 0 24px; max-width: 62ch; }
+  .eylem { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 0 0 36px; }
+  .eylem small { color: var(--muted); font-size: 14px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px; border: 0;
+    font: inherit; font-size: 16px; font-weight: 600; text-decoration: none;
+    padding: 12px 22px; border-radius: 999px; cursor: pointer;
+    transition: transform .2s, box-shadow .2s, background-color .2s, border-color .2s;
+  }
+  .btn svg { width: 18px; height: 18px; flex: none; }
+  .btn.primary { color: var(--on-accent); background: var(--accent); box-shadow: 0 8px 22px var(--btn-glow); }
+  .btn.primary:hover { color: var(--on-accent); transform: translateY(-2px); background: var(--accent-hover); box-shadow: 0 14px 30px var(--btn-glow); }
+  .btn.ghost { color: var(--ink); background: var(--card); border: 1px solid var(--field); }
+  .btn.ghost:hover { color: var(--ink); border-color: var(--accent); transform: translateY(-2px); }
+  .btn.sm { font-size: 14px; padding: 7px 14px; }
+  .btn.ghost[aria-current] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, var(--card)); }
+  section h2 { display: flex; align-items: center; gap: 10px; }
+  .adimlar { list-style: none; counter-reset: adim; margin: 4px 0 0; padding: 0; display: grid; gap: 14px; }
+  .adimlar li { counter-increment: adim; display: grid; grid-template-columns: 32px 1fr; gap: 2px 14px; margin: 0; }
+  .adimlar li::before {
+    content: counter(adim); grid-row: span 2; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;
+    background: var(--icon-bg); color: var(--accent-strong); font-weight: 600; font-size: 14px; box-shadow: inset 0 0 0 1px var(--card-border);
+  }
+  .adimlar b { font-weight: 600; }
+  .adimlar span { color: var(--muted); }
+  .liste { margin: 0; padding-left: 20px; }
+  .liste li span { color: var(--muted); }
+  .not { color: var(--muted); font-size: 14px; margin-top: 12px; }
+  /* The picture of the feature: the card is quiet, the one thing Dodo did is the only colour. */
+  .gorsel { position: relative; overflow: hidden; padding: 26px; }
+  .gorsel::before { content: ""; position: absolute; inset: -40% -10% auto auto; width: 70%; height: 140%; background: radial-gradient(closest-side, var(--glow), transparent); opacity: .7; pointer-events: none; }
+  .gorsel > * { position: relative; }
+  .chip { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px 8px 12px; border-radius: 999px; background: var(--card); border: 1px solid var(--card-border); box-shadow: var(--shadow); font-size: 14px; font-weight: 600; }
+  .chip svg { width: 18px; height: 18px; color: var(--accent-strong); }
+  .liste b { font-weight: 600; }
+  .olcum { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+  .olcum table { width: 100%; border-collapse: collapse; }
+  .olcum caption { text-align: left; font-weight: 600; font-size: 15px; padding: 0 0 10px; }
+  .olcum th { text-align: left; font-weight: 400; color: var(--muted); font-size: 14px; padding: 5px 12px 5px 0; white-space: nowrap; width: 1%; }
+  .olcum td { padding: 5px 0; display: flex; align-items: center; gap: 10px; }
+  .olcum td div { flex: 1; height: 8px; border-radius: 999px; background: color-mix(in srgb, var(--muted) 16%, transparent); overflow: hidden; }
+  .olcum td i { display: block; height: 100%; width: var(--w); border-radius: 999px; background: var(--field); }
+  .olcum tr.dodo td i { background: var(--accent); }
+  .olcum td b { font-weight: 600; font-size: 14px; min-width: 52px; text-align: right; font-variant-numeric: tabular-nums; }
+  .uyari { max-width: 440px; border-radius: 16px; background: var(--pop); border: 1px solid var(--card-border); padding: 18px 20px; box-shadow: var(--shadow); }
+  .uyari p { margin: 0 0 4px; }
+  .uyari .t { font-weight: 600; }
+  .uyari .s { color: var(--muted); font-size: 14px; margin-bottom: 14px; }
+  .uyari .dg { display: flex; flex-wrap: wrap; gap: 8px; }
+  .uyari .dg span { padding: 6px 14px; border-radius: 999px; font-size: 14px; font-weight: 600; border: 1px solid var(--field); color: var(--muted); }
+  .uyari .dg .sec { color: var(--ink); border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 28%, transparent); }
+  .gorsel .chip { margin-top: 16px; }
+  .ceviri-ornek { display: grid; grid-template-columns: 1fr auto 1fr; gap: 14px; align-items: center; }
+  .ceviri-ornek .k { border-radius: 16px; background: var(--pop); border: 1px solid var(--card-border); padding: 14px 16px; box-shadow: var(--shadow); }
+  .ceviri-ornek .k small { display: block; color: var(--muted); font-size: 13px; margin-bottom: 4px; }
+  .ceviri-ornek .k p { margin: 0; font-size: 15.5px; }
+  .ceviri-ornek .ok { color: var(--accent-strong); }
+  .ceviri-ornek .ok svg { width: 22px; height: 22px; display: block; }
+  .diller { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+  .diller li { margin: 0; padding: 5px 12px; border-radius: 999px; font-size: 14px; background: var(--icon-bg); box-shadow: inset 0 0 0 1px var(--card-border); }
+  .diller li.gelir { background: color-mix(in srgb, var(--accent) 14%, var(--card)); }
+  h2.sss { font-size: 22px; margin: 40px 0 14px; }
+  .faq { display: grid; gap: 12px; margin-bottom: 36px; }
+  .faq details { background: var(--card); border: 1px solid var(--card-border); border-radius: 16px; box-shadow: var(--shadow); }
+  .faq summary {
+    list-style: none; cursor: pointer; padding: 18px 20px; border-radius: 16px;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    font-size: 17px; font-weight: 600;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: ""; flex: none; width: 9px; height: 9px; margin: -4px 4px 0 0;
+    border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(45deg); transition: transform .25s;
+  }
+  .faq details[open] summary::after { transform: rotate(-135deg); margin-top: 4px; }
+  .faq summary:focus { outline: none; }
+  .faq summary:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 2px; }
+  .faq details p { margin: 0; padding: 0 20px 20px; color: var(--muted); font-size: 15.5px; max-width: 64ch; }
+  .diger { border-top: 1px solid var(--card-border); padding-top: 24px; }
+  .diger p { color: var(--muted); font-size: 14px; margin: 0 0 12px; }
+  .diger nav { display: flex; flex-wrap: wrap; gap: 8px; }
+  @media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn:hover { transform: none; } }
+  @media (max-width: 620px) {
+    .ico { width: 48px; height: 48px; border-radius: 14px; }
+    .cevap { font-size: 17.5px; }
+    .gorsel { padding: 20px 18px; }
+    .olcum { grid-template-columns: 1fr; gap: 20px; }
+    .ceviri-ornek { grid-template-columns: 1fr; }
+    .ceviri-ornek .ok { justify-self: center; transform: rotate(90deg); }
+    .eylem .btn.primary { width: 100%; justify-content: center; }
+  }
+  /* Last, so it wins over each part's own "font: inherit". */
+  h1, h2, h3, h4, .kicker, .eyebrow, nav.links a, nav.dil a, .back, .btn, .store span, .faq summary, .mini b, .points b, .strip li b, .copy, .smenu .big, .sp .greet, .adimlar b, .olcum caption, .uyari .t, .chip {
+    font-family: "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, sans-serif;
+  }
+  code { font: 600 .9em/1.4 "Cascadia Mono", Consolas, monospace; color: var(--ink); overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- logo-yap: site begin (logo\logo-yap.py writes this part) -->
+    <linearGradient id="sdg" gradientUnits="userSpaceOnUse" x1="8" y1="8" x2="248" y2="248"><stop offset="0" stop-color="#FFB84D"/><stop offset=".55" stop-color="#FF5E2A"/><stop offset="1" stop-color="#C81F55"/></linearGradient><radialGradient id="sdl" gradientUnits="userSpaceOnUse" cx="128" cy="8" r="192"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".34"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient><filter id="sdf" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#5A0F1E" flood-opacity=".45"/></filter><linearGradient id="sdw" gradientUnits="userSpaceOnUse" x1="8" y1="58.4" x2="8" y2="197.6"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#FFE4D6"/></linearGradient><linearGradient id="sdr" gradientUnits="userSpaceOnUse" x1="8" y1="8" x2="8" y2="248"><stop offset="0" stop-color="rgba(255,255,255,.55)"/><stop offset=".35" stop-color="rgba(255,255,255,.06)"/><stop offset="1" stop-color="rgba(255,255,255,.22)"/></linearGradient>
+    <symbol id="dodo" viewBox="0 0 256 256"><path fill="url(#sdg)" d="M128 8C219.2 8 248 36.8 248 128C248 219.2 219.2 248 128 248C36.8 248 8 219.2 8 128C8 36.8 36.8 8 128 8Z"/><path fill="url(#sdl)" d="M128 8C219.2 8 248 36.8 248 128C248 219.2 219.2 248 128 248C36.8 248 8 219.2 8 128C8 36.8 36.8 8 128 8Z"/><path fill="url(#sdw)" fill-rule="evenodd" d="M94.4 58.4L135.2 58.4C178.4 58.4 204.8 89.6 204.8 128C204.8 166.4 178.4 197.6 135.2 197.6L94.4 197.6C86.48 197.6 80 191.12 80 183.2L80 72.8C80 64.88 86.48 58.4 94.4 58.4ZM113.6 87.2L113.6 168.8L134 168.8C156.8 168.8 171.2 151.52 171.2 128C171.2 104.48 156.8 87.2 134 87.2Z" filter="url(#sdf)"/><path fill="none" stroke="url(#sdr)" stroke-width="2.88" d="M128 9.44C218.24 9.44 246.56 37.76 246.56 128C246.56 218.24 218.24 246.56 128 246.56C37.76 246.56 9.44 218.24 9.44 128C9.44 37.76 37.76 9.44 128 9.44Z"/></symbol>
+    <symbol id="dodo-yazi" viewBox="0 0 835.89 104.77" overflow="visible"><path style="fill: var(--logo-dodo, currentColor)" d="M35.55 104.77H8.97V88.34H34.59Q45.52 88.34 52.85 84.36Q60.19 80.38 63.87 72.35Q67.56 64.32 67.56 52.28Q67.56 40.3 63.9 32.34Q60.24 24.37 53.01 20.4Q45.77 16.43 35.1 16.43H8.47V0H36.23Q51.85 0 63.06 6.27Q74.28 12.54 80.3 24.26Q86.32 35.99 86.32 52.28Q86.32 68.64 80.27 80.4Q74.22 92.17 62.87 98.47Q51.51 104.77 35.55 104.77ZM18.96 0V104.77H0V0ZM130.86 106.34Q119.37 106.34 110.92 101.26Q102.47 96.19 97.86 87.06Q93.26 77.93 93.26 65.84Q93.26 53.62 97.86 44.47Q102.47 35.33 110.92 30.25Q119.37 25.17 130.86 25.17Q142.39 25.17 150.84 30.25Q159.29 35.33 163.92 44.47Q168.55 53.62 168.55 65.84Q168.55 77.93 163.92 87.06Q159.29 96.19 150.84 101.26Q142.39 106.34 130.86 106.34ZM130.92 91.41Q137.27 91.41 141.44 87.99Q145.6 84.57 147.68 78.74Q149.76 72.91 149.76 65.78Q149.76 58.54 147.68 52.73Q145.6 46.93 141.44 43.52Q137.27 40.11 130.92 40.11Q124.62 40.11 120.41 43.52Q116.21 46.93 114.13 52.73Q112.04 58.54 112.04 65.78Q112.04 72.91 114.13 78.74Q116.21 84.57 120.41 87.99Q124.62 91.41 130.92 91.41ZM206.31 106.17Q197.06 106.17 189.72 101.42Q182.38 96.67 178.16 87.59Q173.94 78.51 173.94 65.62Q173.94 52.48 178.27 43.46Q182.59 34.44 189.92 29.81Q197.24 25.17 206.29 25.17Q213.26 25.17 217.7 27.49Q222.13 29.81 224.76 33.08Q227.39 36.35 228.79 39.18H229.54V0H248.02V104.77H229.91V92.33H228.79Q227.34 95.2 224.65 98.42Q221.97 101.63 217.53 103.9Q213.09 106.17 206.31 106.17ZM211.4 91.01Q217.34 91.01 221.46 87.8Q225.58 84.59 227.75 78.86Q229.91 73.12 229.91 65.53Q229.91 57.88 227.79 52.22Q225.66 46.56 221.52 43.45Q217.38 40.33 211.4 40.33Q205.3 40.33 201.17 43.59Q197.03 46.86 194.94 52.54Q192.84 58.22 192.84 65.53Q192.84 72.86 194.96 78.62Q197.08 84.39 201.21 87.7Q205.34 91.01 211.4 91.01ZM294.48 106.34Q282.99 106.34 274.54 101.26Q266.09 96.19 261.48 87.06Q256.88 77.93 256.88 65.84Q256.88 53.62 261.48 44.47Q266.09 35.33 274.54 30.25Q282.99 25.17 294.48 25.17Q306.01 25.17 314.46 30.25Q322.91 35.33 327.54 44.47Q332.17 53.62 332.17 65.84Q332.17 77.93 327.54 87.06Q322.91 96.19 314.46 101.26Q306.01 106.34 294.48 106.34ZM294.54 91.41Q300.89 91.41 305.06 87.99Q309.22 84.57 311.3 78.74Q313.38 72.91 313.38 65.78Q313.38 58.54 311.3 52.73Q309.22 46.93 305.06 43.52Q300.89 40.11 294.54 40.11Q288.24 40.11 284.03 43.52Q279.83 46.93 277.75 52.73Q275.66 58.54 275.66 65.78Q275.66 72.91 277.75 78.74Q279.83 84.57 284.03 87.99Q288.24 91.41 294.54 91.41ZM343.41 104.77V0H380.12Q391.01 0 398.12 3.76Q405.22 7.52 408.7 13.85Q412.18 20.18 412.18 27.84Q412.18 34.59 409.79 38.99Q407.4 43.38 403.53 45.95Q399.66 48.52 395.16 49.78V50.77Q400.01 51.05 404.87 54.14Q409.72 57.23 412.99 62.93Q416.26 68.62 416.26 76.92Q416.26 84.8 412.67 91.09Q409.08 97.38 401.38 101.07Q393.69 104.77 381.24 104.77ZM356.07 93.52H381.24Q393.69 93.52 398.92 88.66Q404.16 83.81 404.16 76.92Q404.16 71.58 401.45 67.08Q398.75 62.58 393.76 59.84Q388.76 57.09 381.94 57.09H356.07ZM356.07 46.12H379.69Q385.39 46.12 390.03 43.84Q394.67 41.55 397.38 37.44Q400.08 33.33 400.08 27.84Q400.08 20.95 395.3 16.1Q390.52 11.25 380.12 11.25H356.07ZM427.33 104.77V26.16H438.86V38.11H439.71Q441.89 32.27 447.55 28.65Q453.21 25.03 460.24 25.03Q461.57 25.03 463.54 25.07Q465.51 25.1 466.57 25.17V37.41Q465.93 37.27 463.75 36.98Q461.57 36.7 459.11 36.7Q453.42 36.7 448.92 39.09Q444.42 41.48 441.85 45.63Q439.28 49.78 439.28 55.12V104.77ZM502.11 106.45Q491.49 106.45 483.48 101.39Q475.46 96.33 471 87.19Q466.53 78.05 466.53 65.95Q466.53 53.65 471 44.47Q475.46 35.3 483.48 30.23Q491.49 25.17 502.11 25.17Q512.8 25.17 520.81 30.23Q528.83 35.3 533.33 44.47Q537.83 53.65 537.83 65.95Q537.83 78.05 533.33 87.19Q528.83 96.33 520.81 101.39Q512.8 106.45 502.11 106.45ZM502.11 95.62Q510.27 95.62 515.47 91.48Q520.67 87.33 523.2 80.54Q525.74 73.76 525.74 65.95Q525.74 58.01 523.2 51.19Q520.67 44.37 515.47 40.18Q510.27 36 502.11 36Q494.09 36 488.89 40.18Q483.69 44.37 481.16 51.19Q478.63 58.01 478.63 65.95Q478.63 73.76 481.16 80.54Q483.69 87.33 488.89 91.48Q494.09 95.62 502.11 95.62ZM563.18 104.77 539.27 26.16H551.93L568.94 86.34H569.79L586.52 26.16H599.46L615.91 86.2H616.76L633.77 26.16H646.43L622.52 104.77H610.71L593.41 44.44H592.29L574.99 104.77ZM709.82 43.88 698.99 46.83Q697.44 42.82 693.68 39.2Q689.92 35.58 681.97 35.58Q674.8 35.58 670.02 38.92Q665.24 42.26 665.24 47.25Q665.24 51.75 668.51 54.42Q671.78 57.09 678.74 58.78L690.41 61.59Q700.89 64.12 706.05 69.4Q711.22 74.67 711.22 82.83Q711.22 89.58 707.36 94.92Q703.49 100.27 696.6 103.36Q689.71 106.45 680.57 106.45Q668.54 106.45 660.7 101.18Q652.86 95.91 650.75 85.92L662.14 83.11Q663.76 89.44 668.37 92.6Q672.97 95.77 680.43 95.77Q688.79 95.77 693.82 92.14Q698.85 88.52 698.85 83.53Q698.85 75.23 687.18 72.42L674.1 69.33Q663.27 66.73 658.21 61.38Q653.14 56.04 653.14 47.95Q653.14 41.27 656.91 36.14Q660.67 31.01 667.21 28.09Q673.75 25.17 681.97 25.17Q693.71 25.17 700.36 30.34Q707 35.51 709.82 43.88ZM754.22 106.45Q742.9 106.45 734.64 101.39Q726.38 96.33 721.95 87.22Q717.52 78.12 717.52 66.09Q717.52 54 721.88 44.79Q726.24 35.58 734.15 30.38Q742.06 25.17 752.67 25.17Q758.79 25.17 764.84 27.21Q770.88 29.25 775.84 33.82Q780.8 38.39 783.75 45.91Q786.7 53.44 786.7 64.41V69.61H726.09V59.2H780.17L774.61 63.14Q774.61 55.27 772.15 49.15Q769.69 43.03 764.8 39.52Q759.92 36 752.67 36Q745.43 36 740.26 39.55Q735.09 43.1 732.35 48.8Q729.61 54.49 729.61 61.03V67.92Q729.61 76.85 732.7 83.04Q735.8 89.23 741.35 92.43Q746.91 95.62 754.22 95.62Q758.93 95.62 762.8 94.25Q766.67 92.88 769.48 90.11Q772.29 87.33 773.77 83.25L785.44 86.62Q783.61 92.53 779.29 97Q774.96 101.46 768.56 103.96Q762.17 106.45 754.22 106.45ZM796.65 104.77V26.16H808.19V38.11H809.03Q811.21 32.27 816.87 28.65Q822.53 25.03 829.56 25.03Q830.9 25.03 832.87 25.07Q834.83 25.1 835.89 25.17V37.41Q835.26 37.27 833.08 36.98Q830.9 36.7 828.44 36.7Q822.74 36.7 818.24 39.09Q813.74 41.48 811.17 45.63Q808.61 49.78 808.61 55.12V104.77Z"/></symbol>
+    <symbol id="dodo-slogan" viewBox="0 0 314.16 29.33" overflow="visible"><path fill="currentColor" d="M0 29.33V0H4.43V12.75H19.04V0H23.47V29.33H19.04V16.55H4.43V29.33ZM35.07 29.81Q32.98 29.81 31.28 29.04Q29.59 28.26 28.61 26.76Q27.62 25.27 27.62 23.11Q27.62 21.24 28.34 20.05Q29.06 18.85 30.28 18.15Q31.5 17.44 33 17.08Q34.5 16.73 36.07 16.55Q38.05 16.31 39.27 16.16Q40.49 16.01 41.06 15.67Q41.62 15.32 41.62 14.55V14.44Q41.62 12.59 40.57 11.56Q39.52 10.53 37.44 10.53Q35.29 10.53 34.05 11.47Q32.8 12.41 32.33 13.58L28.3 12.66Q29.02 10.65 30.4 9.42Q31.79 8.18 33.59 7.62Q35.39 7.05 37.37 7.05Q38.69 7.05 40.17 7.36Q41.64 7.66 42.95 8.48Q44.26 9.3 45.09 10.81Q45.91 12.33 45.91 14.73V29.33H41.72V26.32H41.57Q41.17 27.13 40.33 27.94Q39.5 28.74 38.2 29.28Q36.9 29.81 35.07 29.81ZM35.99 26.39Q37.78 26.39 39.04 25.68Q40.3 24.98 40.97 23.84Q41.64 22.7 41.64 21.41V18.56Q41.4 18.79 40.76 18.98Q40.11 19.17 39.28 19.31Q38.45 19.46 37.66 19.56Q36.87 19.66 36.35 19.73Q35.11 19.9 34.08 20.27Q33.05 20.64 32.43 21.33Q31.82 22.02 31.82 23.18Q31.82 24.76 32.99 25.58Q34.17 26.39 35.99 26.39ZM61.28 7.32V10.77H48.86V7.32ZM52.25 29.33V4.77Q52.25 2.72 53.16 1.35Q54.07 -.02 55.56 -.7Q57.05 -1.38 58.77 -1.38Q60.08 -1.38 61.01 -1.17Q61.93 -.95 62.36 -.78L61.35 2.69Q61.06 2.58 60.59 2.46Q60.12 2.35 59.44 2.35Q57.88 2.35 57.19 3.13Q56.51 3.91 56.51 5.37V29.33ZM64.8 29.33V7.32H69.06V29.33ZM66.94 3.95Q65.83 3.95 65.04 3.2Q64.24 2.45 64.24 1.39Q64.24 .33 65.04 -.41Q65.83 -1.16 66.94 -1.16Q68.05 -1.16 68.85 -.41Q69.64 .33 69.64 1.39Q69.64 2.45 68.85 3.2Q68.05 3.95 66.94 3.95ZM84.43 7.32V10.77H72.01V7.32ZM75.4 29.33V4.77Q75.4 2.72 76.31 1.35Q77.22 -.02 78.71 -.7Q80.2 -1.38 81.92 -1.38Q83.24 -1.38 84.16 -1.17Q85.08 -.95 85.52 -.78L84.5 2.69Q84.21 2.58 83.74 2.46Q83.28 2.35 82.59 2.35Q81.03 2.35 80.34 3.13Q79.66 3.91 79.66 5.37V29.33ZM88.87 29.62Q87.67 29.62 86.83 28.78Q85.99 27.95 85.99 26.76Q85.99 25.56 86.83 24.73Q87.67 23.89 88.87 23.89Q90.06 23.89 90.9 24.73Q91.74 25.56 91.74 26.76Q91.74 27.95 90.9 28.78Q90.06 29.62 88.87 29.62ZM106.6 29.33V0H111.03V12.75H125.64V0H130.07V29.33H125.64V16.55H111.03V29.33ZM135.28 29.33V7.32H139.54V29.33ZM143.98 29.33V26.41L155.88 11.26V11.05H144.35V7.32H161.21V10.47L149.76 25.4V25.61H161.6V29.33ZM170.03 0V29.33H165.77V0ZM174.93 29.33V7.32H179.19V29.33ZM187.28 29.62Q186.08 29.62 185.24 28.78Q184.4 27.95 184.4 26.76Q184.4 25.56 185.24 24.73Q186.08 23.89 187.28 23.89Q188.47 23.89 189.31 24.73Q190.15 25.56 190.15 26.76Q190.15 27.95 189.31 28.78Q188.47 29.62 187.28 29.62ZM214.83 29.81Q211.55 29.81 209.14 28.78Q206.73 27.74 205.37 25.81Q204 23.88 203.86 21.22H208.3Q208.44 22.81 209.34 23.87Q210.24 24.92 211.67 25.44Q213.1 25.96 214.81 25.96Q216.69 25.96 218.16 25.36Q219.63 24.76 220.48 23.69Q221.32 22.61 221.32 21.18Q221.32 19.88 220.58 19.05Q219.83 18.23 218.58 17.69Q217.32 17.15 215.75 16.73L212.29 15.79Q208.76 14.84 206.71 12.96Q204.67 11.09 204.67 8.02Q204.67 5.5 206.03 3.6Q207.4 1.71 209.75 .66Q212.11 -.39 215.04 -.39Q218.02 -.39 220.3 .66Q222.58 1.7 223.9 3.53Q225.23 5.36 225.29 7.69H220.99Q220.77 5.67 219.12 4.55Q217.47 3.43 214.95 3.43Q213.16 3.43 211.83 3.99Q210.51 4.56 209.79 5.54Q209.07 6.52 209.07 7.79Q209.07 9.17 209.92 10.04Q210.78 10.91 212.01 11.41Q213.25 11.91 214.39 12.22L217.24 12.99Q218.63 13.34 220.11 13.93Q221.58 14.53 222.85 15.48Q224.12 16.43 224.9 17.84Q225.69 19.25 225.69 21.24Q225.69 23.71 224.41 25.65Q223.13 27.59 220.71 28.7Q218.29 29.81 214.83 29.81ZM239.21 29.79Q235.97 29.79 233.61 28.39Q231.25 26.98 229.99 24.44Q228.73 21.89 228.73 18.48Q228.73 15.09 229.98 12.52Q231.23 9.95 233.5 8.5Q235.77 7.05 238.83 7.05Q240.7 7.05 242.46 7.66Q244.22 8.27 245.61 9.59Q247.01 10.91 247.83 13.01Q248.64 15.11 248.64 18.1V19.62H231.14V16.43H246.44L244.45 17.49Q244.45 15.46 243.82 13.91Q243.19 12.35 241.94 11.47Q240.7 10.58 238.84 10.58Q236.99 10.58 235.68 11.48Q234.37 12.37 233.68 13.83Q232.99 15.29 232.99 17.02V19.19Q232.99 21.45 233.77 23.03Q234.56 24.61 235.97 25.43Q237.38 26.26 239.25 26.26Q240.46 26.26 241.46 25.9Q242.46 25.55 243.18 24.84Q243.91 24.13 244.29 23.1L248.34 23.85Q247.86 25.63 246.62 26.97Q245.37 28.31 243.49 29.05Q241.61 29.79 239.21 29.79ZM256.69 16.28V29.33H252.43V7.32H256.58V10.94H256.87Q257.63 9.16 259.22 8.11Q260.81 7.05 263.3 7.05Q265.55 7.05 267.23 7.99Q268.91 8.92 269.85 10.77Q270.79 12.62 270.79 15.35V29.33H266.53V15.87Q266.53 13.48 265.28 12.12Q264.02 10.76 261.85 10.76Q260.37 10.76 259.2 11.41Q258.03 12.06 257.36 13.29Q256.69 14.51 256.69 16.28ZM275.68 29.33V7.32H279.94V29.33ZM277.82 3.95Q276.71 3.95 275.92 3.2Q275.12 2.45 275.12 1.39Q275.12 .33 275.92 -.41Q276.71 -1.16 277.82 -1.16Q278.93 -1.16 279.73 -.41Q280.53 .33 280.53 1.39Q280.53 2.45 279.73 3.2Q278.93 3.95 277.82 3.95ZM289.1 16.28V29.33H284.84V7.32H288.99V10.94H289.27Q290.03 9.16 291.62 8.11Q293.22 7.05 295.7 7.05Q297.95 7.05 299.64 7.99Q301.32 8.92 302.26 10.77Q303.19 12.62 303.19 15.35V29.33H298.93V15.87Q298.93 13.48 297.68 12.12Q296.43 10.76 294.25 10.76Q292.77 10.76 291.6 11.41Q290.44 12.06 289.77 13.29Q289.1 14.51 289.1 16.28ZM311.28 29.62Q310.09 29.62 309.25 28.78Q308.41 27.95 308.41 26.76Q308.41 25.56 309.25 24.73Q310.09 23.89 311.28 23.89Q312.48 23.89 313.32 24.73Q314.16 25.56 314.16 26.76Q314.16 27.95 313.32 28.78Q312.48 29.62 311.28 29.62Z"/></symbol>
+    <!-- logo-yap: site end -->
+    <!-- Language switch flags (nav.dil): round crops of the flags of Turkey and the United Kingdom. -->
+    <symbol id="f-tr" viewBox="0 0 24 24"><rect width="24" height="24" fill="#E30A17"/><circle cx="11.15" cy="12" r="6" fill="#FFFFFF"/><circle cx="12.65" cy="12" r="4.8" fill="#E30A17"/><path fill="#FFFFFF" d="M12.9 12 14.97 11.33 14.97 9.15 16.25 10.91 18.33 10.24 17.05 12 18.33 13.76 16.25 13.09 14.97 14.85 14.97 12.67Z"/></symbol>
+    <clipPath id="f-gb-t"><path d="M30 15h30v15zv15H0zH0V0zV0h30z"/></clipPath>
+    <symbol id="f-gb" viewBox="15 0 30 30"><path fill="#012169" d="M0 0h60v30H0z"/><path stroke="#FFFFFF" stroke-width="6" d="M0 0l60 30m0-30L0 30"/><path stroke="#C8102E" stroke-width="4" clip-path="url(#f-gb-t)" d="M0 0l60 30m0-30L0 30"/><path stroke="#FFFFFF" stroke-width="10" d="M30 0v30M0 15h60"/><path stroke="#C8102E" stroke-width="6" d="M30 0v30M0 15h60"/></symbol>
+  </defs>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo-link" href="/"><svg aria-hidden="true"><use href="#dodo"/></svg><svg class="wm" role="img" aria-label="DodoBrowser"><use href="#dodo-yazi"/></svg></a>
+    <a class="back" href="/" aria-label="Ana sayfa">←<span class="uzun"> Ana sayfa</span></a>
+    <nav class="dil" aria-label="Dil seçimi">
+      <a href="/ceviri" lang="tr" hreflang="tr" aria-current="page" aria-label="Türkçe"><svg aria-hidden="true"><use href="#f-tr"/></svg><span>TR</span></a>
+      <a href="/en/translation" lang="en" hreflang="en" aria-label="English"><svg aria-hidden="true"><use href="#f-gb"/></svg><span>EN</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg></div>
+    <div><p class="kicker">Özellik</p><h1>Sayfa çevirisi</h1></div>
+  </div>
+  <p class="cevap">DodoBrowser yabancı dildeki sayfaları bilgisayarında Türkçeye çevirir. Sayfanın metni çeviri için gönderilmez. İngilizceden çeviri programla gelir; Almanca, Fransızca ve Rusça dahil 20 dilin dosyası ilk kullanımda bir kez iner.</p>
+  <div class="eylem">
+    <a class="btn primary" href="https://apps.microsoft.com/detail/9P17GF8DSSL1?cid=site"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18l-1.5 12.5a2 2 0 0 1-2 1.5H6.5a2 2 0 0 1-2-1.5Z"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg>Microsoft Store'dan al</a>
+    <small>Ücretsiz · Windows 10 ve 11</small>
+  </div>
+
+  <section class="gorsel">
+    <h2>Örnek</h2>
+    <p class="sr">Örnek: İngilizce bir cümle bilgisayarında Türkçeye çevrilir.</p>
+    <div class="ceviri-ornek" aria-hidden="true">
+      <div class="k"><small>İngilizce</small><p>The weather will be sunny this weekend.</p></div>
+      <span class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
+      <div class="k"><small>Türkçe · bilgisayarında</small><p>Bu hafta sonu hava güneşli olacak.</p></div>
+    </div>
+    <div aria-hidden="true"><span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Sayfa çevrildi</span></div>
+  </section>
+
+  <section>
+    <h2>Nasıl çalışır?</h2>
+    <ol class="adimlar">
+      <li><b>Düğmeye tıkla</b><span>Yabancı dilde bir sayfa açınca adres çubuğundaki çeviri düğmesine tıkla.</span></li>
+      <li><b>Bilgisayarında çevrilir</b><span>Çeviri, Mozilla'nın çeviri motoruyla bilgisayarında yapılır. Sayılar ve adresler olduğu gibi kalır.</span></li>
+      <li><b>İstediğin gibi</b><span>Bir dildeki sayfaları hep çevirmeyi ya da bir siteyi hiç çevirmemeyi seçebilir, seçtiğin yazıyı sağ tıkla çevirebilirsin.</span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Hangi dillerden?</h2>
+    <p>21 dilden Türkçeye. İngilizce programla gelir; diğer diller ilk çevirdiğinde iner.</p>
+    <ul class="diller">
+      <li class="gelir">İngilizce · programla gelir</li>
+      <li>Almanca</li>
+      <li>Fransızca</li>
+      <li>İspanyolca</li>
+      <li>İtalyanca</li>
+      <li>Portekizce</li>
+      <li>Felemenkçe</li>
+      <li>Rusça</li>
+      <li>Ukraynaca</li>
+      <li>Lehçe</li>
+      <li>Arapça</li>
+      <li>Farsça</li>
+      <li>Yunanca</li>
+      <li>Bulgarca</li>
+      <li>Rumence</li>
+      <li>İsveççe</li>
+      <li>Çekçe</li>
+      <li>Macarca</li>
+      <li>Azerice</li>
+      <li>Çince (geleneksel)</li>
+      <li>Danca</li>
+    </ul>
+    <p class="not">Arayüzü İngilizce kullanırsan bu 20 dil İngilizceye çevrilir.</p>
+  </section>
+
+  <section>
+    <h2>Bilmen gerekenler</h2>
+    <ul class="liste">
+      <li>Makine çevirisidir; özenli bir insan çevirisinin yerini tutmaz.</li>
+      <li>İngilizce dışındaki bir dili ilk çevirdiğinde o dilin 22–37 MB'lık dosyası iner; sonra o dil de internetsiz çevrilir.</li>
+      <li>Gizli pencere dil dosyası indirmez, daha önce indirilmiş olanı kullanır.</li>
+      <li>Sayfalar sadece arayüzün diline çevrilir: Türkçe ya da İngilizce.</li>
+    </ul>
+  </section>
+
+  <h2 class="sss">Sık sorulanlar</h2>
+  <div class="faq">
+    <details><summary>Çeviri internet olmadan çalışır mı?</summary><p>Evet. İngilizceden Türkçeye çeviri programla gelir. Başka bir dili ilk çevirdiğinde o dilin dosyası bir kez iner; sonra o dil de internetsiz çevrilir.</p></details>
+    <details><summary>Çevirdiğim sayfanın metni bir yere gönderilir mi?</summary><p>Hayır. Çeviri bilgisayarında yapılır. Dil dosyası inerken sadece hangi dilin dosyasının istendiği belli olur.</p></details>
+    <details><summary>Hangi dillerden çevirir?</summary><p>21 dilden Türkçeye: İngilizce, Almanca, Fransızca, İspanyolca, İtalyanca, Portekizce, Felemenkçe, Rusça, Ukraynaca, Lehçe, Arapça, Farsça, Yunanca, Bulgarca, Rumence, İsveççe, Çekçe, Macarca, Azerice, Çince (geleneksel) ve Danca.</p></details>
+    <details><summary>Sadece seçtiğim bir yazıyı çevirebilir miyim?</summary><p>Evet. Yazıyı seç, sağ tıkla ve çevir.</p></details>
+  </div>
+
+  <div class="diger">
+    <p>DodoBrowser'ın diğer özellikleri</p>
+    <nav aria-label="DodoBrowser'ın diğer özellikleri">
+      <a class="btn ghost sm" href="/kalkan">Kalkan</a>
+      <a class="btn ghost sm" href="/cerez">Çerez uyarıları</a>
+      <a class="btn ghost sm" href="/ceviri" aria-current="page">Sayfa çevirisi</a>
+      <a class="btn ghost sm" href="/#ozellikler">Tüm özellikler</a>
+    </nav>
+  </div>
+</main>
+
+<footer class="bottom">
+  <div class="wrap">
+    <a class="logo-link" href="/" style="font-size:10.6px;gap:5.3px"><svg aria-hidden="true" style="width:26px;height:26px"><use href="#dodo"/></svg><svg class="wm" role="img" aria-label="DodoBrowser"><use href="#dodo-yazi"/></svg></a>
+    <a href="/">Ana sayfa</a>
+    <a href="/kalkan">Kalkan</a>
+    <a href="/cerez">Çerez uyarıları</a>
+    <a href="/ceviri">Sayfa çevirisi</a>
+    <a href="/gizlilik">Gizlilik politikası</a>
+    <a href="/guvenlik">Güvenlik</a>
+    <span class="lang"><a href="/ceviri" lang="tr" hreflang="tr" aria-current="page">Türkçe</a><span aria-hidden="true">/</span><a href="/en/translation" lang="en" hreflang="en">English</a></span>
+    <span>© 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>

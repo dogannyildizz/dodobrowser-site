@@ -56,4 +56,46 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://dodobrowser.com/en/android"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dodobrowser.com/android"/>
   </url>
+  <url>
+    <loc>https://dodobrowser.com/kalkan</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://dodobrowser.com/kalkan"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dodobrowser.com/en/shield"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dodobrowser.com/kalkan"/>
+  </url>
+  <url>
+    <loc>https://dodobrowser.com/en/shield</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://dodobrowser.com/kalkan"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dodobrowser.com/en/shield"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dodobrowser.com/kalkan"/>
+  </url>
+  <url>
+    <loc>https://dodobrowser.com/cerez</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://dodobrowser.com/cerez"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dodobrowser.com/en/cookies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dodobrowser.com/cerez"/>
+  </url>
+  <url>
+    <loc>https://dodobrowser.com/en/cookies</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://dodobrowser.com/cerez"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dodobrowser.com/en/cookies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dodobrowser.com/cerez"/>
+  </url>
+  <url>
+    <loc>https://dodobrowser.com/ceviri</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://dodobrowser.com/ceviri"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dodobrowser.com/en/translation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dodobrowser.com/ceviri"/>
+  </url>
+  <url>
+    <loc>https://dodobrowser.com/en/translation</loc>
+    <lastmod>2026-11-14</lastmod>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://dodobrowser.com/ceviri"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dodobrowser.com/en/translation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dodobrowser.com/ceviri"/>
+  </url>
 </urlset>

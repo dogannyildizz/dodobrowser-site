@@ -30,6 +30,7 @@
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
+  "@id": "https://dodobrowser.com/#windows-uygulama",
   "name": "DodoBrowser",
   "alternateName": "Dodo",
   "description": "A free, refined browser for Windows. Blocks ads and trackers and declines cookie banners. Your history and saved passwords are stored on your computer.",
@@ -37,7 +38,7 @@
   "operatingSystem": "Windows 10 (version 1809 or later, 64-bit), Windows 11 (64-bit)",
   "inLanguage": ["en", "tr"],
   "softwareVersion": "1.12.0",
-  "disambiguatingDescription": "A browser for Windows from dodobrowser.com; not the Dodo Browser app for Mac.",
+  "disambiguatingDescription": "A browser for Windows from dodobrowser.com; not the Dodo Browser app for Mac or any other product named Dodo Browser.",
   "url": "https://dodobrowser.com/en/",
   "image": "https://dodobrowser.com/paylasim-en.png",
   "offers": {
@@ -145,10 +146,10 @@
     },
     {
       "@type": "Question",
-      "name": "Is DodoBrowser the same as Dodo Browser for Mac?",
+      "name": "Is DodoBrowser the same as Dodo Browser for Mac, or another Dodo Browser?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No, they're separate products. DodoBrowser is for Windows and Android, and its site is dodobrowser.com. There's no Mac version for now."
+        "text": "No. Other products also use the name “Dodo Browser”: an app for Mac and an announced AI browser. They're made by other developers and aren't connected to DodoBrowser. DodoBrowser is for Windows and Android; its name is one word, and its site is dodobrowser.com. There's no Mac version for now."
       }
     },
     {
@@ -372,6 +373,9 @@
   @keyframes nudge { 50% { transform: translateY(4px); } }
   .btn.ghost { color: var(--ink); background: var(--card); border: 1px solid var(--field); }
   .btn.ghost:hover { border-color: var(--accent); transform: translateY(-2px); }
+  /* The feature pages (/en/shield, /en/cookies; 14 Nov 2026): small pills under the Shield card's text. */
+  .btn.sm { font-size: 14px; padding: 7px 14px; }
+  .daha { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
   /* Microsoft Store badge: a link (class "store live") since DodoBrowser went live in the Store (11 Oct 2026). */
   /* Split button (12 Eki → 28 Eki 2026, "Çift parça"): left part says where from, right part is the action.
      Used for the Store and Android download links; hover widens the right part and "İndir" slides in. */
@@ -1206,6 +1210,7 @@
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.4 19.4 5.1a1 1 0 0 1 .6.9v5.6c0 4.8-3.3 8.5-8 10-4.7-1.5-8-5.2-8-10V6a1 1 0 0 1 .6-.9Z"/><path d="m8.6 12.1 2.3 2.3 4.6-4.8"/></svg></div>
           <h3>Shield: fewer ads, fewer distractions.</h3>
           <p>Blocks ads and trackers and clears away the empty ad spaces. Declines cookie banners, and leaves the choice to you when it can't. Closes notification permission prompts. You can turn the Shield off on any site you like.</p>
+          <div class="daha"><a class="btn ghost sm" href="/en/shield">How Shield works</a><a class="btn ghost sm" href="/en/cookies">Cookie notices</a></div>
         </div>
         <!-- A small copy of the shield menu in DodoBrowser: the count, and the switch for this one site. -->
         <div class="smenu" aria-hidden="true">
@@ -1243,7 +1248,7 @@
         <li class="reveal" style="--d:2"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 6H3"/><path d="M10 12H3"/><path d="M10 18H3"/><circle cx="17" cy="15" r="3"/><path d="m21 19-1.9-1.9"/></svg></span><b>Search within sites</b><span>Search the site you want directly, using short keywords.</span></li>
         <li class="reveal" style="--d:3"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="12" r="3"/><rect width="20" height="14" x="2" y="5" rx="7"/></svg></span><b>Site permissions</b><span>Manage permissions like camera and location from the address bar.</span></li>
         <li class="reveal wide" style="--d:0"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M9 4v16"/></svg></span><b>Side menu</b><span>Choose its items, add a site you use often or type its address. Show icons or labels, move it to the right if you like, and have it open when you reach the edge or hide completely.</span></li>
-        <li class="reveal wide" style="--d:0"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg></span><b>Page translation</b><span>Translate pages from 20 languages into English on your device. Download the language files when you need them. The page text isn't sent anywhere to be translated.</span></li>
+        <li class="reveal wide" style="--d:0"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg></span><b>Page translation</b><span>Translate pages from 20 languages into English on your device. Download the language files when you need them. The page text isn't sent anywhere to be translated. <a href="/en/translation">How it works</a></span></li>
       </ul>
     </div>
   </section>
@@ -1330,7 +1335,7 @@
         <details class="reveal"><summary>Can I install extensions?</summary><p>Not for now. Ad and tracker blocking and cookie banner refusal are built in.</p></details>
         <details class="reveal"><summary>How do updates arrive?</summary><p>The Windows version updates itself through Microsoft Store. The page engine updates separately; DodoBrowser lets you know when a restart is needed. On Android, Dodo tells you about a new version in the menu; tap “Güncelle” (Update) and it downloads it itself, and you approve the install in Android's window. Your bookmarks and settings are kept.</p></details>
         <details class="reveal"><summary>Is there an Android version?</summary><p>Yes. For Android 10 and later, you can download it as an APK file from the <a href="/en/android">Android page</a>. It isn't on Google Play; it's free and needs no account. The Android app's interface is Turkish only for now.</p></details>
-        <details class="reveal"><summary>Is DodoBrowser the same as Dodo Browser for Mac?</summary><p>No, they're separate products. DodoBrowser is for Windows and Android, and its site is dodobrowser.com. There's no Mac version for now.</p></details>
+        <details class="reveal"><summary>Is DodoBrowser the same as Dodo Browser for Mac, or another Dodo Browser?</summary><p>No. Other products also use the name “Dodo Browser”: an app for Mac and an announced AI browser. They're made by other developers and aren't connected to DodoBrowser. DodoBrowser is for Windows and Android; its name is one word, and its site is dodobrowser.com. There's no Mac version for now.</p></details>
         <details class="reveal"><summary>Why DodoBrowser?</summary><p>It brings together an English and Turkish interface, a built-in Shield and on-device translation. It's designed for everyday use.</p></details>
       </div>
     </div>

@@ -1,7 +1,7 @@
 #!/bin/bash
 # Signs a list for the program (review B-04, 29 Oct 2026). Copied to the public site repository
 # as liste/imzala.sh and run by .github/workflows/liste.yml after the lists are built.
-#   bash liste/imzala.sh <file> <list name: engelli-alanlar | filtreler> <key id>
+#   bash liste/imzala.sh <file> <list name: engelli-alanlar | engelli-alanlar-pro | filtreler> <key id>
 # The private key (RSA-3072, PEM) comes only from the environment variable LISTE_IMZA_ANAHTARI
 # (a GitHub secret); it is never written to the repository or printed.
 # Three comment lines end the list: "! dodo-liste: <name>", "! dodo-zaman: <UTC seconds>",

@@ -4,7 +4,8 @@
 # user's decision). Run every day by .github/workflows/liste.yml.
 # Only data goes in, never code (the Microsoft Store's rule 10.2.2): every rule
 # that runs or injects a script, or changes what a site sends, is dropped
-# (#%#, #$#, #?#, $redirect, $replace, $removeparam, $csp, $header ...).
+# (#%#, #$#, #?#, $replace, $removeparam, $csp, $header ...); $redirect only
+# with a stand-in built into the program (below, 15 Nov 2026).
 # Site fixes (10 Oct 2026): "a.com##+js(name, values)" stays only for a named
 # site and only with a name of a fix built into the program (src\FilterEngine.cs
 # FixNames, adblock\duzeltmeler.js); the line is data: which fix, where, with
@@ -24,6 +25,19 @@ versions=""
 fixnames='set-constant|set|abort-on-property-read|aopr|abort-on-property-write|aopw|abort-current-script|acs|abort-current-inline-script|acis|abort-on-stack-trace|aost|addEventListener-defuser|aeld|no-setTimeout-if|nostif|setTimeout-defuser|no-setInterval-if|nosiif|setInterval-defuser|adjust-setTimeout|nano-stb|nano-setTimeout-booster|adjust-setInterval|nano-sib|nano-setInterval-booster|no-window-open-if|nowoif|window\.open-defuser|prevent-fetch|no-fetch-if|no-xhr-if|prevent-xhr|remove-attr|ra|remove-class|rc|set-attr|remove-node-text|rmnt|json-prune|set-local-storage-item|set-session-storage-item|set-cookie|remove-cookie|cookie-remover|m3u-prune'
 # Options that change what a site sends (data, never code: Store 10.2.2).
 changers='[$,](redirect|redirect-rule|rewrite|replace|removeparam|queryprune|csp|header|removeheader|hls|permissions|urltransform|uritransform|empty|mp4|cookie|jsonprune|xmlprune)(=|,|$)'
+# Stand-ins (15 Nov 2026, Kalkan plan P11): "$redirect=name" / "$redirect-rule=name" stays
+# only with a name of a stand-in built into the program (src\Redirects.cs Names, adblock\
+# taklit-*.js); the line is data: which of our stand-ins answers a blocked request. No other
+# changer on the line, no "@@" (keep in step with Redirects.Names). A DodoBrowser without
+# src\Redirects.cs skips these lines (FilterEngine.AddNetwork: an option it doesn't know).
+standins='noop\.js|noopjs|abp-resource:blank-js|noop\.txt|nooptext|noop\.html|noopframe|noopjson|noop\.json|1x1\.gif|1x1-transparent\.gif|googlesyndication_adsbygoogle\.js|googlesyndication\.com/adsbygoogle\.js|googletagservices_gpt\.js|googletagservices\.com/gpt\.js|google-analytics_analytics\.js|google-analytics\.com/analytics\.js|googletagmanager_gtm\.js|googletagmanager\.com/gtm\.js'
+standin="[\$,]redirect(-rule)?=($standins)(,|\$)"
+# A network line (no "@@", no "#" rule) with one of our stand-ins, kept when the line without
+# it holds no changer: a second stand-in, an unknown name or another changer drops it whole.
+keep_standins() {
+  grep -E "$standin" | grep -v -E '^@@|#[@?$%]?#' \
+    | S="$standin" C="$changers" awk '{ t = $0; sub(ENVIRON["S"], ",", t); if (t !~ ENVIRON["C"]) print }' || true
+}
 for name in easylist easyprivacy adguard-turkce; do
   curl -fsSL --max-time 120 "${src[$name]}" -o "$name.tmp"
   v=$(grep -m1 -E '^! (Version|Last modified):' "$name.tmp" | sed -E 's/^! (Version|Last modified): *//' || true)
@@ -37,6 +51,7 @@ for name in easylist easyprivacy adguard-turkce; do
     | grep -v -E '##\+js|#@#\+js|#%#|#@%#|#\$#|#@\$#|#\?#|#@\?#|\$\$|\$\@\$' \
     | grep -v -E "$changers" \
     >> filtre.tmp
+  tr -d '\r' < "$name.tmp" | grep -v -E '^[[:space:]]*(!|\[|$)' | keep_standins >> filtre.tmp
   rm "$name.tmp"
 done
 # Lines that break a site (filtre-istisnalari.txt, 10 Oct 2026): taken out as they are;

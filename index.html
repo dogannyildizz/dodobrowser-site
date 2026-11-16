@@ -845,12 +845,25 @@
   .faq summary::-webkit-details-marker { display: none; }
   .faq summary::after {
     content: ""; flex: none; width: 9px; height: 9px; margin: -4px 4px 0 0;
-    border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(45deg); transition: transform .25s;
+    border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: translateY(0) rotate(45deg); transition: transform .24s var(--yumusak);
   }
-  .faq details[open] summary::after { transform: rotate(-135deg); margin-top: 4px; }
+  .faq details[open] summary::after { transform: translateY(4px) rotate(-135deg); }
   .faq summary:focus { outline: none; }
   .faq summary:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 2px; }
   .faq details p { margin: 0; padding: 0 20px 20px; color: var(--muted); font-size: 15.5px; max-width: 64ch; }
+  /* The answer slides open and shut (~240 ms, smootherstep: soft start, soft end, like Motion.Ease).
+     Browsers without ::details-content keep today's instant toggle; "reduce motion" makes it instant. */
+  .faq { --yumusak: linear(0, 0.0022, 0.0161, 0.0488, 0.1035, 0.18, 0.2752, 0.384, 0.5, 0.616, 0.7248, 0.82, 0.8965, 0.9512, 0.9839, 0.9978, 1); }
+  @supports (interpolate-size: allow-keywords) and selector(::details-content) {
+    .faq { interpolate-size: allow-keywords; }
+    .faq details::details-content {
+      block-size: 0; overflow: clip; opacity: 0;
+      transition: block-size .24s var(--yumusak), opacity .24s var(--yumusak), content-visibility .24s allow-discrete;
+    }
+    .faq details[open]::details-content { block-size: auto; opacity: 1; }
+    @media (prefers-reduced-motion: reduce) { .faq details::details-content { transition: none; } }
+  }
+  @media (prefers-reduced-motion: reduce) { .faq summary::after { transition: none; } }
 
   /* Closing + contact */
   .closing { text-align: center; padding: 120px 0 0; }

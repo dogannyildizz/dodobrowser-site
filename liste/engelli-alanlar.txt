@@ -1,8 +1,10 @@
 # DodoBrowser reklam ve izleyici listesi (alan adi basina bir satir, alt alan adlari da)
 # Kaynak: HaGeZi's Multi LIGHT, https://github.com/hagezi/dns-blocklists (GPL-3.0, liste/HAGEZI-LISANS.txt)
-# HaGeZi surumu: 2026.1115.0834.15
+# HaGeZi surumu: 2026.1115.2325.32
+# DodoBrowser degisiklik tarihi (UTC): 2026-11-16T03:01:35Z
+# Degisiklikler: alan adlari ayiklandi, tekrarlar ve istisnalarin alt alan adlari cikarildi.
 # Cikarilanlar: liste/istisnalar.txt
-# Satir: 91449
+# Satir: 91528
 0--d.com
 0-02.net
 0-btc.com
@@ -3052,6 +3054,7 @@
 7nasmi-launches.appsflyersdk.com
 7nbebz9jo87v13nn3zexy52h1vc9.cfd
 7nt9p4d4.de
+7nwt5qq78.com
 7oavaac8i.com
 7odxv0l067ka.net
 7offers.ru
@@ -3192,7 +3195,6 @@
 85yfpm-launches.appsflyersdk.com
 864feb57ruary.com
 866.com
-868d6-z09x0-qjay-p2d-d456h.pages.dev
 86k3uw8q98.com
 86ovzc-adrevenue.appsflyersdk.com
 86rfzs-cdn-settings.appsflyersdk.com
@@ -3908,6 +3910,7 @@ a64x.com
 a6688744-0p7lzdhu.cname.ebis.ne.jp
 a6cbc246-scxitlgt.cname.ebis.ne.jp
 a747mp-cdn-settings.appsflyersdk.com
+a79ab95c1589a13f8a4cab612bc71f9f7.com
 a7vrvd-cdn-settings.appsflyersdk.com
 a7vrvd-inapps.appsflyersdk.com
 a7vrvd-launches.appsflyersdk.com
@@ -5097,6 +5100,7 @@ ad.solverlabs.com
 ad.southcn.com
 ad.sp.mbga.jp
 ad.sprinthost.ru
+ad.ssp.v4c.ru
 ad.stardima.com
 ad.streameiei.xyz
 ad.study-less.com
@@ -6384,6 +6388,7 @@ ads.cancaonova.com
 ads.cannaclicks.com
 ads.careerviet.vn
 ads.casinocontroller.com
+ads.cdn.951dns.com
 ads.cdn.asset.aparat.com
 ads.cdn.ayvasoftware.io
 ads.cdn.fetlife.com
@@ -7637,6 +7642,8 @@ adtimaserver.vn
 adtiming.com
 adtimize.dk
 adtimizer.co
+adtk-eu.temu.com
+adtk-global.temu.com
 adtlagarbxiz.in
 adtlgc.com
 adtm.spreadshirts.net
@@ -8433,6 +8440,8 @@ agrrzty.web.app
 agrvt.com
 agrwelled.cyou
 agtegarantning.com
+agtm.boerse-online.de
+agtm.deraktionaer.de
 agudistinsnare.cyou
 agvmufccuavus.online
 agw1.bam.de
@@ -8529,7 +8538,6 @@ aintere.com
 aipmedia.com
 aipom.net
 aipsurveyschina.com
-air-jordan4.com
 air2s.com
 air360tracker.net
 airbornvolente.cfd
@@ -8553,7 +8561,6 @@ airseahawaii.com
 airshipgraphs.qpon
 airsonett.se
 airtag-apple.fr
-airtbpwzylosx.online
 airtoken.typeform.com
 airtrackshop.de
 airtran.com.102.122.2o7.net
@@ -9426,6 +9433,7 @@ analitycs.net
 analogydid.com
 analy.qq.com
 analys.live
+analyse.bnn.de
 analyse.dipf.de
 analyse.vergleichen-und-sparen.de
 analyse.volkshochschule.de
@@ -15267,6 +15275,7 @@ api-analytics.zepp.com
 api-ao.g.adison.co
 api-bho.exponea.com
 api-bloomreach.comfy.ua
+api-cc-livelog-events-production.prod.tivoservice.com
 api-cloudfalcon.hismarttv.com
 api-cn.cdo.heytapmobi.com
 api-compatible.mixpanel.com
@@ -15540,8 +15549,6 @@ api.youngle.site
 api.youtu.qq.com
 api.zetaglobal.net
 api.zwizzarmyknife.com
-api16-access-ttp-b.tiktokpangle-b.us
-api16-access-ttp.tiktokpangle-b.us
 api168168.com
 api2.amplitude.com
 api2.appsflyer.com
@@ -15746,6 +15753,7 @@ app.bxapi.de
 app.cdnproxy1.top
 app.cobrowser.com
 app.datorama.com
+app.flipsnack.com
 app.friendlyanalytics.ch
 app.geogen.io
 app.getwoohoo.com
@@ -15963,6 +15971,7 @@ appslime.com
 appslocked.com
 appsontrcks.com
 appsrv.display.io
+appsst.eventim.de
 appstore-trace-h5sdk.vivo.com.cn
 appstore.cdn.pandora.xiaomi.com
 appstore.pandora.xiaomi.com
@@ -16019,7 +16028,6 @@ apzptquixoyr.com
 aq9d0g-inapps.appsflyersdk.com
 aq9d0g-launches.appsflyersdk.com
 aqcctacta.in
-aqcynlidqcqtj.site
 aqewpj-cdn-settings.appsflyersdk.com
 aqfyrgb.in
 aqi.wd.amberweather.com
@@ -16702,7 +16710,6 @@ atrgprhdzfhfb.online
 atrium-copernicus.pl
 atroblxac.in
 atrunjgdjfyku.space
-atrvcdsjuqcwi.online
 atrxardarovr.com
 ats.gmarket.co.kr
 ats.otto.de
@@ -17335,6 +17342,7 @@ b.big7.com
 b.clc2l.com
 b.clictoload.com
 b.clipkit.co
+b.focusplus.de
 b.fox.com
 b.foxsports.com
 b.fr3.eu.criteo.com
@@ -17417,6 +17425,7 @@ b3mny.com
 b3mxnuvcer.com
 b3xp5p-cdn-settings.appsflyersdk.com
 b3xp5p-launches.appsflyersdk.com
+b406929acabac9b095f124c81bdfcf57f.com
 b41q-4hw57-gk7-xau6fq-kdjbn.pages.dev
 b43t3ckolyh9c221ebxpot56.cfd
 b4q.ru
@@ -17502,7 +17511,6 @@ ba697fp.ba697f6a3d41d02db78536d832f6077fda6eb675.com
 ba862930-6pusefyf.cname.ebis.ne.jp
 baalizekoussogrommet.cfd
 baalmorbleu.com
-baalskelams.vercel.app
 babaroni.de
 babator.com
 babelfreak.com
@@ -18650,6 +18658,7 @@ bg.pensionhotel.com
 bg.search.etargetnet.com
 bgblnjirhksri.online
 bgconsulting.pl
+bgdk.apotheken-umschau.de
 bgdugbsdvpkcx.space
 bgeneral-personas-web.web.app
 bgg.baidu.com
@@ -18665,7 +18674,6 @@ bgmedia.online
 bgpnode-whatsapp.com
 bgrect.firebaseapp.com
 bgtee.com
-bgutflddvlvjm.online
 bgwsktadxvgjv.website
 bgxywynpesqlj.site
 bgyfguewhfyjx.site
@@ -18742,6 +18750,7 @@ bidder.a11.vega.aurion11.io
 bidder.criteo.com
 bidder.doceree.com
 bidder.dsp.outfit7.com
+bidder.voodoo-adn.com
 bidderads.com
 biddersaromal.com
 biddersas.com
@@ -18881,7 +18890,6 @@ bimaskeymen.rest
 bimbim.com
 bimmerpartswholesale.com.102.122.2o7.net
 bin-layer.de
-binanceverify.live
 binapisgp1.pcloud.com
 binarycent.com
 binaryedge.ninja
@@ -20264,6 +20272,7 @@ bsdudarncaiytz.com
 bserail.com
 bserver.gp-guia.net
 bservr.com
+bsfxvouc.shop
 bsgefrduwiaxk.site
 bsgnovvkcrnyb.site
 bshhyxoy62.com
@@ -20730,7 +20739,6 @@ byxugdfmltqgp.space
 byzanvende.store
 bz-ad-lgsmartad-com.aws-prd.net
 bzasfwznuzzzn.site
-bzaykoxkpefyf.site
 bzdljwenoqfbw.online
 bzdtdagnyiven.space
 bzehilwijjf.in
@@ -21310,6 +21318,7 @@ c7d741c1-ppn7hhsn.cname.ebis.ne.jp
 c7xxbd.ru
 c8.net.ua
 c802e1f3-kqwcfkqu.cname.ebis.ne.jp
+c81358859121583b7adf2ace89cb39f44.com
 c869f80c-o64iubrv.cname.ebis.ne.jp
 c886pu-cdn-settings.appsflyersdk.com
 c8bjzj-cdn-settings.appsflyersdk.com
@@ -21584,7 +21593,6 @@ cantripobliges.com
 canulatusker.qpon
 canvas-cdn.gdt.qq.com
 caocidadao.bubbleapps.io
-caomddembovjm.site
 caoviet.net
 capablearea.com
 capablekettle.com
@@ -21592,6 +21600,7 @@ capablespruer.qpon
 capaciousdrewreligion.com
 capeannmortgagesccm.com
 capformationsgouv.fr
+capi-ata.cargurus.com
 capi.kikocosmetics.com
 capi.tr.ee
 capig.stape.ai
@@ -22115,6 +22124,7 @@ cdn-cf.ts.mtvnservices.com
 cdn-channels-pixel.ex.co
 cdn-cl-res.tlauncher.org
 cdn-clavis-advancelocal-prod.arc-perso.aws.arc.pub
+cdn-creatives-cf-prd.acquire.unity3dusercontent.com
 cdn-dataroid.akbank.com.tr
 cdn-elogia-net.affex.org
 cdn-engagement.inmarket.com
@@ -22574,6 +22584,7 @@ cf-eba.everytime.kr
 cf-native.karte.io
 cf-oss.gname.net
 cf-pixelfront-analytics.widencdn.net
+cf-ws-ctracker-v2-europe.monterosa.cloud
 cf-ysonetwork.com
 cf.vast.doubleverify.com.cdn.cloudflare.net
 cf.xad.com
@@ -22611,6 +22622,7 @@ cfusion-internet.com
 cfusionsys.com
 cfw.dexscreener.com
 cg-ad-lgsmartad-com.aws-prd.net
+cgapigw.immobiliare.it
 cgcg01050ht.com
 cgcshlpzacjjg.site
 cgctv.com
@@ -22689,6 +22701,7 @@ charbonforerun.com
 chargecracker.com
 chargeit.baby
 chargeplatform.com
+charkshiite.qpon
 charlesroddin.com
 charlottejensen.dk
 charlottewindclaim.com
@@ -22711,6 +22724,7 @@ chat-analytics.zuzana.ai
 chat-deep.ai
 chat-gpt.com
 chat-gpt.org
+chat-insights.getstream.io
 chat1.jd.com
 chatauth-whatsapp.com
 chatchu.jp
@@ -23939,7 +23953,6 @@ coinads.online
 coinagedraftee.com
 coinbank247.com
 coinbase.re
-coinbaseoffers.com
 coinboxtradeoption.com
 coincasinos.fr
 coincasso.com
@@ -24006,6 +24019,7 @@ collagenselect.pl
 collarity.com
 collect-ap2.attraqt.io
 collect-ca.moomoobull.com.eo.dnse2.com
+collect-cz.prod.tds-p.com
 collect-dk.prod.tds-p.com
 collect-eu-fy2015.myhomescreen.tv
 collect-eu-fy2016.myhomescreen.tv
@@ -24020,6 +24034,7 @@ collect-fr.prod.tds-p.com
 collect-hu.prod.tds-p.com
 collect-meilleurtaux-com-cddc.at-o.net
 collect-my.moomoobull.com.eo.dnse2.com
+collect-nl.prod.tds-p.com
 collect-sa.hik-partner.com
 collect-sg.moomoobull.com.eo.dnse2.com
 collect-stat.um.warszawa.pl
@@ -24488,7 +24503,6 @@ concernedcollection.com
 concert.io
 concertads-configs.vox-cdn.com
 concertblogger.com
-conchamalg.store
 concludelivingshowman.com
 concretehawk.com
 concursolutionseudatacenter.112.2o7.net
@@ -24525,6 +24539,7 @@ confesschairs.com
 confessinvaluable.com
 confiant-integrations.global.ssl.fastly.net
 confiant-integrations.net
+config-backend.crowdsourcing.netcheck.services
 config-code.usergram.info
 config-factory.com
 config.ad.falconnet.app
@@ -24648,6 +24663,7 @@ contadordevisitas.es
 contadorgratis.com
 contadorvisitasgratis.com
 contadorweb.com
+container.easyjet.com
 containerstahlhaus.com
 containerworldllc.store
 contalyze.com
@@ -25182,6 +25198,7 @@ covoruloltenesc.ro
 covrvjzcjcnoj.site
 cowardrainbowactual.com
 cowardsfumbler.cyou
+cowboy-brothers.de
 cowboyspin-casino.fr
 cowboysspin.fr
 cowkinecloven.cfd
@@ -25855,7 +25872,6 @@ curiosity.sg
 curiousbirch.mobi
 curioushingefast.com
 curiousmetal.com
-curioustastedidj-jp.com
 curjclpfbyand.online
 curledhexagrampatio.com
 curneyraggles.com
@@ -26506,6 +26522,7 @@ da.hunantv.com
 da.mgtv.com
 da.mmarket.com
 da.us.criteo.com
+da.usaa.com
 da05398188.com
 daadpefptsdqv.online
 daaeckcdr.web.app
@@ -26828,6 +26845,7 @@ data.bulk.com
 data.burgosconecta.es
 data.campaign.prenatal.com
 data.campaign.toyscenter.it
+data.campingwagner.de
 data.canarias7.es
 data.capella.edu
 data.caudalie.com
@@ -26946,6 +26964,7 @@ data.isabelmarant.com
 data.jellycat.com
 data.jerkmate.com
 data.joongna.com
+data.kinopolis.de
 data.klassikradio.de
 data.klassikradioplus.de
 data.krueger-dirndl.de
@@ -27072,6 +27091,7 @@ data.user-telemetry.vectra.ai
 data.vevor.com
 data.vogels.com
 data.vzhh.de
+data.web.clickup.com
 data.welife.es
 data.westbahn.at
 data.westlotto.de
@@ -27095,6 +27115,7 @@ databridge.kinto-jp.greylabeldelivery.com
 databridge.mtgec.jp.greylabeldelivery.com
 databridge.sixpad.jp.greylabeldelivery.com
 databuddy.cc
+databuilder.oetker.de
 datacapture.dropsolid.com
 datacollect.cisco.com
 datacollection.adelaideuni.edu.au
@@ -27104,6 +27125,7 @@ datacollector-dre.dt.dbankcloud.cn
 dataconsumed.com
 datactively.com
 datacygnal.io
+datadog-mobile-sdk-data-relay.mona.co
 datadrivenpromotion.com
 datadrives.ai
 datafa.st
@@ -27260,11 +27282,13 @@ dc-tag.jp
 dc-telemetry.net
 dc-us.adswizz.com
 dc.areacliente.repsolluzygas.com
+dc.avg.com
 dc.di.atlas.samsung.com
 dc.di.runestone.samsung.com
 dc.dqa.samsung.com
 dc.heytapmobile.com
 dc.letv.com
+dc.norton.com
 dc.oppomobile.com
 dc.realmadrid.com
 dc.repsol.es
@@ -27874,6 +27898,7 @@ detaillog-global-dual.coolzcloud.com
 detaillog-global-us-dual-base.coolacloud.com
 detaillog-global.coolacloud.com
 detaillog-global.coolzcloud.com
+detaillog-sgp-dual-base.coolacloud.com
 detailroi.com
 detal.pl
 detatbulkier.com
@@ -28668,6 +28693,8 @@ dmrtb.com
 dmrtx.com
 dmsik.com
 dmsktmld.com
+dmt.argos.co.uk
+dmt.sainsburys.co.uk
 dmtag.jp
 dmtgvn.com
 dmtracker.com
@@ -28792,6 +28819,7 @@ dogearsalypine.cyou
 doglobal.net
 dogmantilers.qpon
 dogooccho.com.vn
+dogswin.com
 dogtrace.fr
 dogtrack.es
 doh.cq0.co
@@ -28854,7 +28882,6 @@ domorivella.shop
 dompurify.com
 domself.de
 domslc.com
-domugthhpdtft.space
 domzpbsymwbtf.online
 donado.ru
 donagggfdfgzd.space
@@ -30130,7 +30157,6 @@ eddoc7-cdn-settings.appsflyersdk.com
 eddoc7-conversions.appsflyersdk.com
 edealsclub.net
 edeuafcrlhtel.online
-edfdc0fa5e2ae6e3c6d7156f3b2ce00c.cdn.bubble.io
 edfrecrute.fr
 edge-cgi.silpo.ua
 edge-metrics.base.be
@@ -30791,7 +30817,6 @@ enertecwindow.ca
 enewwholesale.com
 enexdirecto.com
 enfanttheft.qpon
-enfermeriacanaria.com
 enfuozgtraoyq.site
 eng-io-gate.wixstudio.com
 eng9hc-cdn-settings.appsflyersdk.com
@@ -30990,7 +31015,6 @@ epem1wcu172pkob67xuifg9.cyou
 epglwmppludtu.online
 eph-adsjutarnji.cdn.sysbee.net
 ephebeurgingcitrean.cfd
-ephrvhtwhffar.website
 epi-cooler.at
 epi.st.bitban.com
 epibenie.dz
@@ -31230,7 +31254,6 @@ esoferta.com
 esopgh-cdn-settings.appsflyersdk.com
 esopgh-launches.appsflyersdk.com
 esotti.com
-espace-assurance.info
 espace-renouvellement-enligne.fr
 espaces-primes-video-essais.com
 espacio351.com
@@ -31307,6 +31330,7 @@ etarg.network
 etarget.hu
 etbkkyaiqjaix.online
 etercitenal.com
+eternaljewelry-eu.shop
 eternaljewelry-nl.shop
 eternaljewelry.shop
 eternaljewelrys.shop
@@ -31857,6 +31881,9 @@ evs.aayinltcs.arduino.cc
 evs.analytics.gothamsports.com
 evs.analytics.pulumi.com
 evs.analytics.qdrant.tech
+evs.cdp.consumerreports.org
+evs.cdp.dr.dk
+evs.cdp.postman.com
 evs.data.ciceksepeti.com
 evs.icy-lake.kickstarter.com
 evs.metrics.tide.co
@@ -32874,6 +32901,7 @@ ferqandulio.shop
 ferryhill.net
 ferthhagboat.com
 ferularfirmerauncel.qpon
+fervandulio.shop
 fervorsixtiesveteran.com
 fervvqxoshqfa.space
 feschi.com
@@ -32969,7 +32997,6 @@ fhpxjbryxqwoak.com
 fhtmpftopdrllm.com
 fhujkvxcgfv.com
 fhyatbab.in
-fhylxvhtxpnwo.space
 fhyrpz-cdn-settings.appsflyersdk.com
 fhyrpz-conversions.appsflyersdk.com
 fi-ad-lgsmartad-com.aws-prd.net
@@ -34345,6 +34372,7 @@ fugger.matomo.vb-tool.de
 fugiosnivels.com
 fugitivequilt.com
 fugohpvw.in
+fugwin.com
 fuhbla-cdn-settings.appsflyersdk.com
 fuhbla-conversions.appsflyersdk.com
 fuhidd.com
@@ -34530,6 +34558,7 @@ fxucecy.in
 fxvdrrcjoqana.website
 fxxavsxmuovyd.website
 fxyqclltmwpbb.site
+fxzoiyhajl.shop
 fyabyq.com
 fyadenmac.org
 fyber.com
@@ -35726,7 +35755,6 @@ gke.econodata.com.br
 gkeafm-gcdsdk.appsflyersdk.com
 gkeafm-launches.appsflyersdk.com
 gkeafm-skadsdkless.appsflyersdk.com
-gklsatdqunufn.website
 gklzfjohwrrvd.website
 gkmwjxiv.com
 gknnuqpmvgjrh.online
@@ -35822,6 +35850,7 @@ global-ad-extranet-pri-azams.alb.xiaomi.com
 global-ad-extranet-pri-azpn.alb.xiaomi.com
 global-ad-intl-pri-alisgp.alb.xiaomi.com
 global-analytics-reporting-dashboard-advanced-suite.620c9fa5fb5a1d17d72e930098a0a8cb.r2.cloudflarestorage.com
+global-beacons.kooply.com
 global-go.experian.com
 global-kaufhaus.com
 global-report.ml.youngjoygame.com
@@ -36966,7 +36995,6 @@ gtrack.shop.toptenreviews.com
 gtrk.s3.amazonaws.com
 gtw420.com
 gtzsczqtttoqd.site
-guadscfwaweae.site
 guanaresubvert.cfd
 guandads.com
 guangzhouroot.com
@@ -37329,7 +37357,6 @@ ha5fyi-launches.appsflyersdk.com
 ha5fyi-register.appsflyersdk.com
 ha5fyi-skadsdk.appsflyersdk.com
 ha9.ru
-haadqzvaencuq.online
 haaretz.pushwoosh.com
 haavi.yle.fi
 hababmayda.cyou
@@ -37672,7 +37699,6 @@ hcikmq-launches.appsflyersdk.com
 hcjdhgjbeeecafieaaeb.world
 hckhnvotwnchr.site
 hclkrrnvxeztm.space
-hclnjzgwzbamn.space
 hcotvwpasqknw.space
 hcp1jp-cdn-settings.appsflyersdk.com
 hcp1jp-gcdsdk.appsflyersdk.com
@@ -37759,6 +37785,7 @@ hearstdigital.122.2o7.net
 heartbeat.airserve.net
 heartbeat.dm.origin.com
 heartbeat.pmd.444.hu
+heartbeatcdn.willhaben.at
 hearthmint.com
 heartlessanthemantiquity.com
 heartmatch.jp
@@ -37938,7 +37965,6 @@ het-wittehuis.nl
 heta.umeng.com
 hetadinh.com
 hetairysaugers.com
-heterintab.store
 hethsminter.com
 hetnu.com
 hettycircs.cfd
@@ -38773,7 +38799,6 @@ hr2v0e-launches.appsflyersdk.com
 hr2v0e-skadsdk.appsflyersdk.com
 hra.am
 hrbhtjx.com
-hrdqfkqfkhxca.website
 href.asia
 hrgde.adocean.pl
 hrjjdg-attr.appsflyersdk.com
@@ -39645,6 +39670,7 @@ idhmr3-inapps.appsflyersdk.com
 idhmr3-launches.appsflyersdk.com
 idhtm.bb.com.br
 idid.pl
+idiomborrowinggrandfather.com
 idismghats.com
 idj.no
 idjbwb-gcdsdk.appsflyersdk.com
@@ -39816,7 +39842,6 @@ ihcdeyhdoh.eu.cc
 ihcjfeclbdzde.site
 ihct.mx
 iheaven.us
-ihhqwaurke.com
 ihi.flowplayer.com
 ihihbckxoquli.online
 ihmmkvkaiwnilneauhfn.supabase.co
@@ -39947,7 +39972,6 @@ illicium.wmtransfer.com
 illinformed-imagination.com
 illinformed-summer.com
 illiterate-reserve.com
-illtrilac.store
 illumenix.com
 illumin.com
 illustrationyoursstair.com
@@ -40354,6 +40378,7 @@ inboxads.com
 inc-metrics.upwork.com
 incarnadine-abacus.shop
 incarnadine-frieze.shop
+incarnadine-quoin.shop
 incarnadine-rafter.shop
 incarnadine-transom.shop
 incarnatepicturesque.com
@@ -40535,7 +40560,6 @@ infos-sante.fr
 infos.anz.com
 infos.anz.com.au
 infosayz.com
-infosecure.fit
 infosisconsultancy.com
 infostation.digital
 infostore.org
@@ -40568,6 +40592,7 @@ ingest.in.signoz.cloud
 ingest.m2catalyst.com
 ingest.make.rvapps.io
 ingest.make.rvohealth.com
+ingest.monium.yandex
 ingest.promptwatch.com
 ingest.telemetry.apprentio.de
 ingest.telemetry.plus.yango.com
@@ -40991,6 +41016,7 @@ ios.bugly.tencent.com
 iostart-apps.wixstudio.com
 iostarts-ldgercdn.wixstudio.com
 iot-analytics.com
+iot-cn-logser.realme.com
 iot-earbuds-cn.heytapmobi.com
 iot-eu-logser.realme.com
 iot-in-logser.realme.com
@@ -41448,11 +41474,9 @@ ixbrdykmup.com
 ixbua.xyz
 ixcwymwgckgva.site
 ixegbqlflqiqf.site
-ixgiptwewocov.space
 ixiondartman.com
 ixjplbufdjnnz.website
 ixjwi.xyz
-ixngopmimflal.website
 ixnow.xyz
 ixnp.com
 ixorituyaubcu.site
@@ -42173,6 +42197,7 @@ jnhuggvjhbn.plutio.com
 jnhykgiysawuq.site
 jnjn.jp
 jnmncpoktqope.online
+jnno9y1a9.com
 jnoxpedpszqfok.com
 jnppwfozovsqd.online
 jnqahbreekala.space
@@ -42446,6 +42471,7 @@ js1lw9n6w.com
 js2json.com
 js7k.com
 js88.ag
+jsb.snssdk.com
 jsbpqnvraflghc.com
 jsc.idealmedia.io
 jsc.mgid.com
@@ -42648,7 +42674,6 @@ jv9b33-launches.appsflyersdk.com
 jvaxsufsyldqj.space
 jvaydgfiwmxkk.online
 jvdbmydbujxrb.online
-jvelknhcjragq.space
 jvfepwrvuvfrm.space
 jvi0tz-cdn-settings.appsflyersdk.com
 jvjvq6wl36mtnn1.cfd
@@ -42772,7 +42797,6 @@ k1n2fx-dlsdk.appsflyersdk.com
 k1n2fx-inapps.appsflyersdk.com
 k1n2fx-launches.appsflyersdk.com
 k1nm7c66rh4fgh.cfd
-k1ppj0-hzup-5cka2p-ym5k4.pages.dev
 k1w3jqep8zpy1kfo.cfd
 k1xw3m4v2mnjml7jiq7z1utu2.cyou
 k203.adn.com
@@ -43309,7 +43333,6 @@ kgt025-pia.appsflyersdk.com
 kguvnnjbznanx.online
 kgvuhnihhxiyf.site
 kgwflkngnuyzm.site
-kgyslcenljtfj.website
 kh-ad-lgsmartad-com.aws-prd.net
 khaek.top
 khaledayesh.org
@@ -43342,7 +43365,6 @@ khlqxsnahhfps.space
 khmey.ir
 khmglkiztyjtm.online
 khmokgikyejzq.site
-khoobqoxrxid.com
 khphzkhftgexp.site
 khpsfhwwdzly.com
 khqspd-cdn-settings.appsflyersdk.com
@@ -43546,6 +43568,7 @@ kkr6ev-gcdsdk.appsflyersdk.com
 kkr6ev-inapps.appsflyersdk.com
 kkr6ev-launches.appsflyersdk.com
 kkrbahvkpoypa.space
+kkupteraz.sbs
 kkvfyv-cdn-settings.appsflyersdk.com
 kkvfyv-inapps.appsflyersdk.com
 kkvfyv-launches.appsflyersdk.com
@@ -45073,7 +45096,6 @@ lgfktruknrjbxc.com
 lgforbes.akamaized.net
 lgh8ua4fj.com
 lgioqrurewsub.site
-lgiromzpcheyo.space
 lgqtazntjylp.com
 lgrckt-in.com
 lgse.com
@@ -45108,6 +45130,8 @@ li-me.com
 li-neeee.net
 liabilis.com
 liadm.com
+liamsviponline.shop
+liamsvipstore.shop
 lian-yis.com
 lianmeng.360.cn
 lianoidmachar.com
@@ -45153,6 +45177,7 @@ lidloffes.com
 lidlpromofr.com
 lidlsolooggi.com
 lidshometheater.shop
+lidwwagvip.shop
 liebeart.de
 liebes-decke.de
 liebeverpackt.com
@@ -45215,6 +45240,7 @@ likwispect.com
 lilac-fortune.com
 lilahub.com
 lilisshop.de
+lilplay.com
 lilstts.com
 limbaafirekenlore.cyou
 limbecyblent.com
@@ -45480,6 +45506,7 @@ livesearchnow.com
 livesetwebs.org
 livesports088.net
 livestats.fr
+liveswallpapers.com
 livetech.shopee.co.id
 livetech.shopee.co.id.c.byteplusfcdn-oversea.com
 livetech.shopee.co.id.cdn20.com
@@ -46039,6 +46066,7 @@ log.samsunghrm.com
 log.scanqrcodedesign.live
 log.services.video.ibm.com
 log.sggp.org.vn
+log.sgsnssdk.com
 log.shopfully.cloud
 log.shortbread.aws.dev
 log.shufoo.net
@@ -47325,6 +47353,7 @@ mail-ksp-gov-in.weebly.com
 mail-organized-update.weebly.com
 mail-organizer.weebly.com
 mail-spinner.com
+mail-tracking.phrasee.co
 mail.captiv8axosinfluencer.com
 mail2update-c386.firebaseapp.com
 mail2update-c484.firebaseapp.com
@@ -50852,6 +50881,7 @@ medyanative.com
 medymarkt.live
 medzrezeptfrei.com
 meecareers.com
+meedfulunsappy.com
 meekermonglerdkl.cyou
 meendocash.com
 meenoceokub.com
@@ -50961,7 +50991,6 @@ membrana-cdn.media
 membrana.media
 membro.at
 memcjxmslbbsv.space
-memcyco.com
 memeglobal.com
 mempalace.tech
 memtoyfnkqojw.online
@@ -52446,7 +52475,6 @@ mgfkdk-inapps.appsflyersdk.com
 mgfkdk-launches.appsflyersdk.com
 mgfkdk-register.appsflyersdk.com
 mghkpg.com
-mgipvwwhasvpw.online
 mgirl.jp
 mgkcacokjqgft.website
 mglsk.com
@@ -52850,7 +52878,6 @@ mk.nextlgsdp.com
 mk8tghjxgcruxyobv.cfd
 mkadujfywhxis.website
 mkconstructions.net
-mkdhwyqybkwqe.online
 mkefhmdydhnck.site
 mkentertainment.nl
 mkhjezishccmt.space
@@ -52903,7 +52930,6 @@ mlcet.goatcounter.com
 mlcvxdkhonjjo.site
 mlepzhgpdtyfb.site
 mleqb8227.com
-mletnkddrqios.space
 mleymr-cdn-settings.appsflyersdk.com
 mleymr-inapps.appsflyersdk.com
 mleymr-launches.appsflyersdk.com
@@ -53113,6 +53139,7 @@ mobile-collector.newrelic.com
 mobile-collector.newrelic.com.cdn.cloudflare.net
 mobile-ent.biz
 mobile-events.eservice.emarsys.net
+mobile-events.guardianapis.com
 mobile-http-intake.logs.datadoghq.com
 mobile-http-intake.logs.datadoghq.eu
 mobile-metrics.timo.vn
@@ -53286,6 +53313,7 @@ momovayi.com
 momowa.momoshop.com.tw
 momoxxio.com
 momrollback.com
+mon-bd-johor.byteintlapi.com
 mon-boot.capcutapi.com
 mon-boot.tiktokv.com
 mon-boot.tiktokv.com.edgekey.net
@@ -53312,6 +53340,7 @@ mon.avito.ru
 mon.byteoversea.com
 mon.capcutapi.us
 mon.capcutapi.us.edgesuite.net
+mon.sgsnssdk.com
 mon.snssdk.com
 mon.tiktokv.com
 mon.tiktokv.eu.ttdns3.com
@@ -53490,7 +53519,6 @@ mora-gartenbau.de
 moraeirrupt.com
 moralvinata.com
 moraswaiting.shop
-morbicave.space
 morbusrani.cfd
 more-root-411216.framer.app
 morefriendly.com
@@ -53584,7 +53612,6 @@ moviads.pl
 moviead55.ru
 moviecpot.com
 movielio.com
-movielocations.de.cool
 moviemad.com.in
 movies-mania.com
 moviesatm.com
@@ -53827,6 +53854,7 @@ mt-ad-lgsmartad-com.aws-prd.net
 mt-api.itpub.cloud
 mt.9gag.com
 mt.gigazine.net
+mt.handyvertrag.check24.de
 mt.inmotion.dhl
 mt.waipu-ad.tv
 mt0tmk-launches.appsflyersdk.com
@@ -54369,7 +54397,6 @@ mz.unity3d.com
 mzansi-casino.fr
 mzaqgfzlmlmhw.website
 mzbdzmuldbkfw.website
-mzblz7aiv.pro
 mzehuksmeanp.in
 mzgeyizpftsvb.space
 mzhvlsjtzjff.com
@@ -54721,7 +54748,6 @@ nbitai-inapps.appsflyersdk.com
 nbitai-launches.appsflyersdk.com
 nbitai-register.appsflyersdk.com
 nbovvhut6yituwec.cyou
-nbqodmcrxrjks.online
 nbryb.com
 nbsdk-baichuan.alicdn.com
 nbsdk-baichuan.taobao.com
@@ -56149,7 +56175,6 @@ nzonduetevcmj.online
 nzppxnjtwffgy.space
 nzqiunmenothx.online
 nzrag.com
-nztlkspnxelbz.site
 nztrt.top
 nzwecadkryhup.site
 nzxepbrvqtmwn.online
@@ -56463,7 +56488,6 @@ ocular.pepperdeals.se
 ocular.preisjaeger.at
 ocular.promodescuentos.com
 ocvoqvalko.com
-ocvzylsrdcetn.website
 ocxojkjun.in
 oczq9i-cdn-settings.appsflyersdk.com
 oczq9i-dynamic-report-api.appsflyersdk.com
@@ -56504,7 +56528,6 @@ odgbnc-dlsdk.appsflyersdk.com
 odgbnc-inapps.appsflyersdk.com
 odgbnc-launches.appsflyersdk.com
 odhbhwvmpwhht.site
-odhjvpntwowjq.site
 odhxzvbnoliix.website
 odibleled.com
 odipgsswzzzju.online
@@ -57795,6 +57818,7 @@ otel-collector.taylorfrancis.com
 otel-fr.dvdfab.me
 otel-gw.booking.com
 otel-mobile.doordash.com
+otel-mobile.production.traderepublic.com
 otel-us.dvdfab.me
 otel.ama.usfoods.com
 otel.amtrustgroup.com
@@ -58224,6 +58248,7 @@ p.minds.com
 p.permalink-system.com
 p.ravm.tv
 p.retool.com
+p.searchhub.io
 p.skimresources.com
 p.smartertravel.com
 p.softmedia.cz
@@ -58381,6 +58406,7 @@ pa-walibi-nl-cddc.at-o.net
 pa.br.de
 pa.centrefrance.com.cdn.cloudflare.net
 pa.pinpoll.com
+pa.swr.de
 pa5wf5-cdn-settings.appsflyersdk.com
 pa5wf5-inapps.appsflyersdk.com
 pa5wf5-launches.appsflyersdk.com
@@ -59355,6 +59381,7 @@ ph.112.2o7.net
 ph.carvertical.com
 ph.koyeb.com
 ph.nether-realm.com
+ph.supabase.com
 ph.vapi.ai
 ph4qbf-cdn-settings.appsflyersdk.com
 ph4qbf-conversions.appsflyersdk.com
@@ -59592,7 +59619,6 @@ pimpampum.tv
 pimperysuguaro.cyou
 pimpmypr.de
 pimproll.com
-pimtdaqgvozsx.website
 pin.hpplay.cn
 pinaccesscode.com
 pinapple.pl
@@ -61428,6 +61454,7 @@ popcashjs.b-cdn.net
 popclck.com
 popclck.org
 popcornflix.pl
+popcorntime-update.xyz
 popdemission.com
 popedomwresterfingian.qpon
 popeld.com
@@ -61538,6 +61565,7 @@ pos.baidu.com
 pos23t6jw.com
 poscompra.shopconvert.com.br
 poseidonbikeworld.shop
+poshmark-assists.com
 poshoburse.rest
 positional-bucket.com
 positive-ads.com
@@ -61701,6 +61729,7 @@ postmasterbannernet.com
 postmedia-ai.wehaacdn.com
 postmedia.app
 postnorddks.com
+postoffice.adobe.com
 postoffice.edge.nc0.co
 postquare.com
 postrelease.com
@@ -62485,6 +62514,7 @@ prutaozonic.cfd
 prvk.io
 prw.lenovomm.com
 prwave.info
+prwxzitd.shop
 prx.wayfair.com
 pryerssnuffed.cyou
 pryingapollobemba.cfd
@@ -62825,7 +62855,6 @@ pub-f32e66758a9a450b96be3d29561975ff.r2.dev
 pub-f36b05599c3043ddb16520acf6cc3cce.r2.dev
 pub-f4a72e7216b44d24addf91fedb99ba11.r2.dev
 pub-f567dc03e26e4f3cb9564649c453004c.r2.dev
-pub-f5ae22f51e044b9488d7040a1856ea0f.r2.dev
 pub-f7b0a9d97d464fce9678ad18a7f1e812.r2.dev
 pub-f7b727523d554b9994d78cd558ff99cd.r2.dev
 pub-f7f3d109f218460aa479f325c6f66dcd.r2.dev
@@ -62944,7 +62973,9 @@ pug.max.com
 pugliasounds.it
 puhjbhhnuofgo.site
 puhyjyf.com
+puke-dentil.shop
 puke-keystone.shop
+puke-volute.shop
 pukekoassent.com
 puldhukelpmet.com
 pulgarinrealtor.com
@@ -63177,7 +63208,6 @@ pwiiojtkfpdf.com
 pwk.datawrapper.de
 pwlzrgbk.com
 pwmann.online
-pwnl-n4r950-0fu4-c8yf5-h23m1.pages.dev
 pwnz.org
 pwqkktxddgblg.space
 pwr-ads.com
@@ -63476,7 +63506,6 @@ qdfdqe-cdn-settings.appsflyersdk.com
 qdfdqe-inapps.appsflyersdk.com
 qdfdqe-launches.appsflyersdk.com
 qdgjpsiqkjiet.website
-qdkjlaslytowm.space
 qdmil.com
 qdmwrrtpfokna.online
 qdp.qidian.com
@@ -63526,7 +63555,6 @@ qgjmk8-launches.appsflyersdk.com
 qgooqrubsgwgk.online
 qgripsearwax.com
 qgtikzptctcju.website
-qgtldjqiofbxp.website
 qguhxvmzvkdyd.online
 qguzeitrchyce.space
 qgvbym-cdn-settings.appsflyersdk.com
@@ -63967,6 +63995,7 @@ quiouhxxk.com
 quiritetimotesargo.qpon
 quisma-com.affex.org
 quisma.com
+quistamelo.pro
 quistrecastslexemic.qpon
 quitcertify.com
 quitschemed.com
@@ -64105,7 +64134,6 @@ qzpjkj-conversions.appsflyersdk.com
 qzpjkj-launches.appsflyersdk.com
 qzrohlnbbyeft.website
 qzsggxxjeddwj.site
-qzwzbemuupzbl.space
 qzyyvctvjqiqz.com
 qzzzzzzzzzqq.com
 r-ad.ne.jp
@@ -64456,6 +64484,7 @@ rashelslawdesk.com
 rashfulexplees.com
 rashlyblowfly.com
 rashmimaheshwari.com
+rasmonti.pro
 raspiteteachyargyria.cfd
 raspiwares.com
 rasskaz18.ru
@@ -64898,7 +64927,6 @@ reedbusiness.com
 reedsbullyingpastel.com
 reedsoutpop.com
 reefierblibe.qpon
-reegphjhnoifu.online
 reejectdoaty.click
 reelcentric.com
 reelcombat.com
@@ -64986,6 +65014,7 @@ reichelcormier.bid
 reichweite.heise.de
 reifencheck.net
 reifenquick.de
+reifenvaro.com
 reifkogel24.de
 reignfans.com
 reignwertmere.com
@@ -65609,7 +65638,6 @@ rfw4vv-register.appsflyersdk.com
 rfwcwtszauors.website
 rfwhdtsxfcwtd.space
 rfxqu0v7.xyz
-rfxvxqcgsieib.site
 rg-be.ru
 rgbaayfdyjzou.online
 rggctiphxzoco.space
@@ -65965,6 +65993,7 @@ robustbass.com
 robustlamp.com
 robustloaf.com
 robustpsychology.com
+robuxx.top
 roby-casinos.fr
 robycasino-france.fr
 robycasinoavis.fr
@@ -66002,7 +66031,6 @@ rodgerlaziest.com
 rodlikemortal.com
 rodmareni.com
 rodratton.qpon
-rodyddvfxywwx.space
 roeck-performance.at
 roemerweg-seefeld.com
 rogde.adocean.pl
@@ -66079,7 +66107,6 @@ roockmobile.com
 roodho-launches.appsflyersdk.com
 rooftechconstruction.com
 rookee.ru
-roolgage.com
 room-haven.shop
 room-pagesmonth.com
 roomard.xyz
@@ -66284,6 +66311,7 @@ rslw0r-cdn-settings.appsflyersdk.com
 rslw0r-conversions.appsflyersdk.com
 rslw0r-inapps.appsflyersdk.com
 rslw0r-launches.appsflyersdk.com
+rsmappapi-cdp.rossmann.net
 rsmuelfxhyrbh.website
 rsppartners.com
 rsriezdmvjocq.com
@@ -66673,6 +66701,10 @@ runelitepluginhub.net
 runerank.org
 runerskyfte.cyou
 runetki.co
+runforrest.otz.de
+runforrest.thueringer-allgemeine.de
+runforrest.waz.de
+runforrest.wp.de
 rungbeacon.com
 rungkimloc.com
 rungthanage.com
@@ -66767,7 +66799,6 @@ rwqhlg-launches.appsflyersdk.com
 rwrtub-cdn-settings.appsflyersdk.com
 rwrtub-conversions.appsflyersdk.com
 rwrtub-gcdsdk.appsflyersdk.com
-rwsuvsuzihnib.space
 rwupvdrxiaeyk.online
 rwvcuxrnnouwx.online
 rx-discount.com
@@ -67022,6 +67053,7 @@ s.pdfcraft.live
 s.pie.org
 s.playa.to
 s.po.st
+s.quilvem.com
 s.richaudience.com
 s.searforsear.online
 s.serus.ai
@@ -67113,10 +67145,12 @@ s2s.adjust.com
 s2s.aniview.com
 s2s.appsflyer.com
 s2s.appsflyersdk.com
+s2s.happy-size.de
 s2s.ledlenser.com
 s2s.mparticle.com
 s2s.portaventuraworld.com
 s2s.singular.net
+s2s.ullapopken.de
 s2stracking.com
 s2w3wc.firebaseapp.com
 s3-analytics-events.easybrain.com
@@ -68936,10 +68970,12 @@ server-side-tagging-zy3gxtetba-uc.a.run.app
 server-side-tagging-zz3ycazxxq-uc.a.run.app
 server-side-tagging.prd.partnersysteme.omad.bi.otto.de
 server-side.oko.press
+server-side.yougov.com
 server-whatsapp.com
 server.adform.net
 server.bidstack.com
 server.connecto.io
+server.eon.de
 server.idreams.pl
 server.megabrain.co
 server.nicematin.com
@@ -68959,6 +68995,7 @@ serverside-tracking.ew.r.appspot.com
 serverside.cisalfasport.it
 serverside.doubleclick.net
 serverside.myticket.de
+serverside.rhein-zeitung.de
 serverside.transa.ch
 serversidegtm.prod.apps.web.geberit.com
 servertag.nespresso.com
@@ -70349,6 +70386,7 @@ shamelesspackage.pro
 shamining.com
 shamipeuxppor.site
 shamoysburlesksolacer.cyou
+shanechkalik.qpon
 shanhutech.cn
 shaniasutherland.com
 shanjewelry.com
@@ -70898,6 +70936,7 @@ sittiad.com
 situateddivine.com
 siv-immat.fr
 sivacycle.com
+sivaro.shop
 sivorentix-ai.com
 sivycafybemude.com
 six.net.pk
@@ -71157,6 +71196,7 @@ slooshsnarer.com
 slootz.io
 slopeac.com
 slotexoofficiel.fr
+slothcaama.com
 slotlair-fr.fr
 slotlaircasino.fr
 slotonline.fr
@@ -71188,7 +71228,6 @@ slunkenfulgora.click
 slut2fuck.net
 slutloadlive.com
 slvrlake-denim.com
-slwzbjciejyhy.space
 sly.fishing
 slymdlssjeoaz.online
 sm-tc.cn
@@ -72342,6 +72381,21 @@ sokdikksiiefgsdf.cyou
 soklove.net
 soknm.com
 sokrati.com
+sol.4p.de
+sol.abendblatt.de
+sol.bildderfrau.de
+sol.braunschweiger-zeitung.de
+sol.brigitte.de
+sol.derwesten.de
+sol.essen-und-trinken.de
+sol.futurezone.de
+sol.gala.de
+sol.gofeminin.de
+sol.nrz.de
+sol.thueringer-allgemeine.de
+sol.urbia.de
+sol.waz.de
+sol.wp.de
 solacebeauty.shop
 solads.media
 solancie.com
@@ -72474,6 +72528,7 @@ sophiaberlin.de
 sophisticatedpin.com
 sophus3.com
 sopital.com
+soporte-de-renovacion.com
 soppersklater.cyou
 sopr-api.cian.ru
 sopracinci.store
@@ -72594,7 +72649,6 @@ sp11ct-melsar-biz8-ronvek-ladrix.pages.dev
 sp11ct-ravnor-biz8-kelsik-domvek.pages.dev
 sp11ct-torzan-biz8-felkor-drunel.pages.dev
 sp11ct-zavdok-biz8-pralor-kesvik.pages.dev
-sp11ct-zolvik-biz8-marnor-prasel.pages.dev
 sp12ct-kolvik-biz-harmok-fresan.pages.dev
 sp12ct-lovmer-biz-zarnik-frosel.pages.dev
 sp12ct-vardor-biz-helsik-zamnor.pages.dev
@@ -72620,6 +72674,7 @@ spacepools.org
 spacesarchitects-ka.com
 spacetraff.com
 spacetricgroup.com
+spaceware.to
 spadelack.com
 spadsync.com
 spahierectercandyh.cyou
@@ -72782,7 +72837,6 @@ spjrfcogai.com
 spkeokimt.com
 spklmis.com
 spktdsjraqfae.space
-spktmxycjeeke.site
 spl-energie.com
 spl-energie.de
 spl.greenhouse.io
@@ -73389,6 +73443,7 @@ ssrbjc.org
 ssrituals.shop
 ssrsa.org
 sss.umeng.com
+sst-datacollection.trimble.com
 sst.1083.fr
 sst.123zorgwinkel.nl
 sst.190a.de
@@ -74936,14 +74991,17 @@ sstats.www.o2.cz
 sstatstest.adobe.com
 sstdk.staypro.dk
 sstfi.staypro.fi
+sstg.weg.de
 sstiktiktok.com
 sstm.rado.com
 sstm.sport2000.fr
+sstm.tesco.com
 sstm2.asu.edu
 sstno.staypro.no
 sstortorus.com
 sstpm.proffsmagasinet.se
 sstrk.auvieuxcampeur.fr
+sstrk.qobuz.com
 ssts.westcoasthifi.com.au
 ssts.www.hoyer.de
 ssttags.argenta.be.greylabeldelivery.com
@@ -74956,6 +75014,7 @@ st-n.ads6-adnow.com
 st-sentinel.vivo.com.cn
 st-sl.vivoglobal.com
 st.appsad.cn
+st.championat.com
 st.eberspaecher.com
 st.fahrkartenshop2-bahn.de
 st.film.ru
@@ -75098,7 +75157,6 @@ startappexchange.com
 startappnetwork.com
 startapps-io-trexor.wixstudio.com
 startapps-ledgrrcdn.wixstudio.com
-startapps-trezrcdn.wixstudio.com
 startappservice.com
 startcdn-ledgrss.wixstudio.com
 startdcore-ledzercn.wixstudio.com
@@ -75427,6 +75485,7 @@ statistics.grimselstrom.ch
 statistics.hashbite.net
 statistics.hattenkofermedia.de
 statistics.hoflaede.li
+statistics.i-med.ac.at
 statistics.ice.tobii.com
 statistics.immowebapi.be
 statistics.jfmedier.dk
@@ -75716,6 +75775,7 @@ stats.breakflip.com
 stats.bremerhaven.de
 stats.bsg.bravesoftware.com
 stats.bundesarchiv.de
+stats.bundeswehr.de
 stats.bunkr.ru
 stats.bylo.ai
 stats.cardinalacres.com
@@ -75864,6 +75924,7 @@ stats.lemonlearning.com
 stats.llaun.ch
 stats.locallabs.com
 stats.lotlinx.com
+stats.lutte-ouvriere.org
 stats.macg.io
 stats.maglr.com
 stats.mahtava.de
@@ -75974,6 +76035,7 @@ stats.slashed.cloud
 stats.smartberatung.com
 stats.smarthome-aber-sicher.de
 stats.smartmobil.de
+stats.soap2day.day
 stats.solavia.at
 stats.spidersense.xyz
 stats.splyne.app
@@ -77170,6 +77232,7 @@ t-ulog-snack.kwaipros.com
 t-ulog.br.kwai-pro.com
 t-ulog.br.kwaipros.com
 t-ulog.ga.kwai-pro.com
+t-ulog.ga.kwaipros.com
 t-ulog.sg.kwai-pro.com
 t-ulog.sg.kwaipros.com
 t-ulogl2.kwai-pro.com
@@ -77305,6 +77368,7 @@ t.simply-hentai.com
 t.skimresources.com
 t.smartads.tech
 t.snowblowersdirect.com.greylabeldelivery.com
+t.solakon.de
 t.soonersports.com
 t.sports.ru
 t.stereogum.com
@@ -77341,6 +77405,7 @@ t0k.d72577a9dd0ec74.cfd
 t0zbhh-attr.appsflyersdk.com
 t0zbhh-cdn-settings.appsflyersdk.com
 t0zbhh-conversions.appsflyersdk.com
+t1.adac.de
 t1.market.xiaomi.com
 t1.stormiq.com
 t1.teads.tv
@@ -77367,6 +77432,7 @@ t1p-adtech.aws.route71.net
 t1tgame.com
 t1ufw6nz5f.com
 t2.aboutyou.de
+t2.adac.de
 t2.chartboost.com
 t2.hulu.com
 t2.market.xiaomi.com
@@ -77394,14 +77460,19 @@ t2xnoh-attr.appsflyersdk.com
 t2xnoh-cdn-settings.appsflyersdk.com
 t2xnoh-conversions.appsflyersdk.com
 t2xnoh-launches.appsflyersdk.com
+t3.aboutyou.de
+t3.adac.de
 t3.cdnpure.com
 t3.market.xiaomi.com
 t3.zcvh.net
 t3gvot8nxp7z3cb9vri8r.cfd
+t4.adac.de
 t4.market.xiaomi.com
 t4.zcvh.net
+t5.adac.de
 t5.market.xiaomi.com
 t5.zcvh.net
+t6.adac.de
 t6.zcvh.net
 t6139.playdigo.live
 t6141.playdigo.live
@@ -77421,6 +77492,7 @@ t6sroy-cdn-settings.appsflyersdk.com
 t6sroy-conversions.appsflyersdk.com
 t6sroy-launches.appsflyersdk.com
 t6sroy-register.appsflyersdk.com
+t7.adac.de
 t7.zcvh.net
 t733.wjcl.com
 t7cp4fldl.com
@@ -78118,6 +78190,7 @@ tartarfeast.com
 tartarmatelot.rest
 tartestblocksjimmer.cyou
 tartrylwaned.cfd
+tas.netcologne.de
 tasktrivialaggregated.com
 tasmotizer.com
 tassardbasenet.cyou
@@ -78328,6 +78401,7 @@ te-mytoys-de.oghub.io
 te-otto-de.oghub.io
 te-ottoversand-at.oghub.io
 te-quelle-de.oghub.io
+te-receiver.vividrama.com
 te-sheego-de.oghub.io
 te-sieh-an-at.oghub.io
 te-sieh-an-ch.oghub.io
@@ -79203,7 +79277,6 @@ tfpjos-conversions.appsflyersdk.com
 tfpjos-inapps.appsflyersdk.com
 tfpjos-launches.appsflyersdk.com
 tftgkxgwoiyib.space
-tftxmcofqtcjs.space
 tfuxcxvzsuglw.online
 tfvzkwcckixuu.online
 tfxnl.pro
@@ -79237,6 +79310,7 @@ tgcsthai.com
 tggtudrdytkps.site
 tgknt.com
 tgldaqlqeltbt.site
+tgm.klarmobil.de
 tgmacro.org
 tgnvngbiwnfcv.space
 tgocketieimfj.site
@@ -79686,6 +79760,7 @@ tikstream-metrics.zerody.one
 tiktok.tray.com.br
 tiktokclaim.eu
 tiktokclaim.org
+tiktokpangle-b.us
 tiktokpangle.us
 tiktokw.com
 tikzycjyhvlbu.site
@@ -79867,6 +79942,7 @@ tk-1464303226.cos.ap-guangzhou.myqcloud.com
 tk-babyzeit-matomo.tk.de
 tk-doc-matomo.tk.de
 tk-energiemanagement.de
+tk-ikea.com
 tk-treuhand.de
 tk.amazon-adsystem.com
 tk.d.mi.com
@@ -79964,10 +80040,12 @@ tm.kemmler.de
 tm.krautundrueben.de
 tm.landundforst.de
 tm.loquis.com
+tm.lr-online.de
 tm.meineentega.de
 tm.msgs.jp
 tm.nissan.co.za
 tm.nissan.de
+tm.pflege.de
 tm.pirsch.de
 tm.plantur.com
 tm.pluto.tv.greylabeldelivery.com
@@ -80462,7 +80540,6 @@ tostonpament.com
 totaladblock.protected.net
 totalfittherapy.com
 totalpropertycare.ae
-totalvalidationemail.weebly.com
 totem.tvmaze.com
 totemcash.com
 totlnkcl.com
@@ -81911,9 +81988,11 @@ trk301.com
 trk42.net
 trkapi.impact.com
 trkbc.com
+trkcapybara03.org
 trkcare.hmhn.org
 trkcliq.com
 trkcpbrbw01.org
+trkcpbrht01.org
 trkd-asia.com
 trkepcs.com
 trker.com
@@ -82037,7 +82116,6 @@ trustisimportant.fun
 trustkiwi.com
 trustlink.ru
 trustmeds24.com
-trustmklog.weebly.com
 trustpielote.com
 trustseal.e-rasaneh.ir
 trusttraff.com
@@ -82054,6 +82132,7 @@ trvsmv-launches.appsflyersdk.com
 trvsmv-skadsdkless.appsflyersdk.com
 trw12.com
 trwahbld.shop
+trwetvxvg.com
 trwl1.com
 trx-cdn.zip.co
 trx.zip.co
@@ -82801,6 +82880,7 @@ udxhzseguwjdr.space
 udzialownia.com
 udzpel.com
 ue.a-bly.com
+ue.databricks.com
 ued.app
 uefa.pushwoosh.com
 uehcxbllgjxzj.space
@@ -82901,6 +82981,7 @@ uhabo.com
 uhedsplo.com
 uhfdsplo.com
 uhiemvxigendy.space
+uhkmhhnx.shop
 uhlanmendole.qpon
 uhodsplo.com
 uhpdsplo.com
@@ -83858,7 +83939,6 @@ uojmdgacsagrp.site
 uoouxqwqcgcmi.online
 uotgsvuyfczoe.online
 uoupnsykwtbzn.space
-uoztjrkrqugni.site
 up-banner.wavecdn.net
 up-hl.3g.qq.com
 up.banchibipack.com
@@ -83912,7 +83992,6 @@ upholdbrilliancerecast.com
 uphtenydsrbdt.space
 uphufwudbxxhq.website
 upie.buzz
-upiprxfoyeikp.space
 upjjlwirqifhe.space
 upkmkz-adrevenue.appsflyersdk.com
 upkmkz-cdn-settings.appsflyersdk.com
@@ -83925,6 +84004,7 @@ upliftengine.io
 uplink.aruba.it
 uplinksspindly.cyou
 upload.analytics.networksurvey.app
+upload.crowdsourcing.netcheck.services
 upload4earn.org
 uploadb81c.analytics-cobbr-198.ae2db7088b6.sussybaka.store
 uploaddeimagens.com.br
@@ -84371,13 +84451,11 @@ uwagaonline.sbs
 uwagaonline.xyz
 uwmedupl.webflow.io
 uwmlhomlctldk.space
-uwmvszhfyodqc.site
 uwnxnw-cdn-settings.appsflyersdk.com
 uwnxnw-launches.appsflyersdk.com
 uwpcgw-cdn-settings.appsflyersdk.com
 uwpcgw-launches.appsflyersdk.com
 uwtgyywrefbls.website
-uwuhzjkgswmao.website
 uwvdhaopwtvpw.online
 uwy4.aegon.es
 uwzwqadqkcjgw.site
@@ -85774,9 +85852,11 @@ vogate.com
 voguefrenzy.net
 voice-chat.richrelevance.com
 voiceads.cn
+voicersvapid.cfd
 voicingnarcosenoils.cfd
 voidnetwork.cloud
 voidstrap.net
+voinix.org
 voipvendors.net
 voitto.com.br
 vokydy-attr.appsflyersdk.com
@@ -85975,7 +86055,6 @@ vsjxfeaygxajm.site
 vsnctrfamkmai.online
 vsnoon.com
 vsottbykmvlzx.space
-vsqmwlmyyljyz.website
 vssxgl-cdn-settings.appsflyersdk.com
 vssxgl-conversions.appsflyersdk.com
 vst.sibnet.ru
@@ -85991,6 +86070,7 @@ vswwyy-dlsdk.appsflyersdk.com
 vswwyy-inapps.appsflyersdk.com
 vswwyy-launches.appsflyersdk.com
 vsxahkco.com
+vt.payback.de
 vtaftibuvbib.in
 vtd.deritrade.com.greylabeldelivery.com
 vtd.twentyfouram.com.greylabeldelivery.com
@@ -86286,6 +86366,7 @@ w93fgll6oghxezykh1mtp8kcbeogw8vy.cyou
 w9kcl4q8umguc4.cfd
 wa.appsflyer.com
 wa.appsflyersdk.com
+wa.billygraham.org
 wa.childrensplace.com
 wa.gmx.at
 wa.gmx.ch
@@ -86293,6 +86374,7 @@ wa.gmx.com
 wa.gmx.fr
 wa.gmx.net
 wa.gtimg.com
+wa.krankenkassen.check24.de
 wa.mail.com
 wa.nxp.com
 wa.pe
@@ -86438,6 +86520,7 @@ warlog.ru
 warmeholze.de
 warmersleptbanter.com
 warmlyanti.com
+warmuper.com
 warmupskenned.com
 warndon.net
 warnerbros.112.2o7.net
@@ -87311,6 +87394,7 @@ wgu58g-conversions.appsflyersdk.com
 wgu58g-launches.appsflyersdk.com
 wgwt5p8.com
 wgyqjngndjhdl.website
+wgyt.shz.de
 wgytbefamiqoj.online
 wh.balzadicyema.com
 wh.ipaddress.com
@@ -87718,7 +87802,6 @@ wkctj.baidu.com
 wkduza2x10.com
 wkkfypqwrmgud.online
 wkmedovidsp2017.112.2o7.net
-wkmuiqnokrsji.site
 wknd.ai
 wko.com
 wkrd.tingyun.com
@@ -88117,6 +88200,8 @@ wsomtn-register.appsflyersdk.com
 wspgroupplc.112.2o7.net
 wspublicprod.112.2o7.net
 wsqgpybvussjb.site
+wst.heine.de
+wst.witt-weiden.de
 wstats.ageverif.com
 wstats.porndig.com
 wstats.slashed.cloud
@@ -88298,6 +88383,10 @@ www-net-link.top
 www-phmapalad.com
 www-sbc-verifier-sign-in-93beec.webflow.io
 www-searching.com
+www-sst.cosmopolitan.com
+www-sst.elle.com
+www-sst.esquire.com
+www-sst.goodhousekeeping.com
 www-wps-cn.com
 www.2012dvd.com
 www.24-fahrradladen.com
@@ -88844,7 +88933,6 @@ xcahxp-conversions.appsflyersdk.com
 xcahxp-inapps.appsflyersdk.com
 xcahxp-launches.appsflyersdk.com
 xcartpro.com
-xccfjnscolnnc.site
 xccntpclgxpkn.space
 xcec.ru
 xceehglvudviv.space
@@ -89060,7 +89148,6 @@ xjwhad.com
 xjzkkbfqfotbc.space
 xk.ai
 xkcjchvzhrtio.com
-xkdfimjqgpsyj.site
 xkf3el-cdn-settings.appsflyersdk.com
 xklierukbx7yzbq7ev7.cfd
 xkmtmsgm.shop
@@ -89077,7 +89164,6 @@ xl415.com
 xlbz.com
 xlcdasucgbvqh.site
 xlctqkydza.com
-xldadwsosaqiq.site
 xletics.net
 xlfccb.com
 xlgmedia.com
@@ -89287,6 +89373,7 @@ xrw1yf-launches.appsflyersdk.com
 xrymwt5bap.com
 xrytsukfyr6ygasfxcgjh-ryyzxsctuyjdvkytkdrsu6ytg.teemill.com
 xs.cottywarily.shop
+xs27ycutl.com
 xschnnbbciyvq.com
 xscueumaijhmk.website
 xscwsgdmgnjfo.space
@@ -89757,7 +89844,6 @@ yearlyartist.com
 yearlybeak.com
 yeatthetics.shop
 yed9.us
-yedkarifis.store
 yeelen.cg
 yeesshh.com
 yeezy-450.com
@@ -89831,7 +89917,6 @@ yfly0f-launches.appsflyersdk.com
 yfly0f-skadsdkless.appsflyersdk.com
 yfovokduwyp.com
 yfqenilayjovs.site
-yfqgyzuifmkjw.space
 yfsnorpbhiejq.website
 yfxkedinghbze.space
 yg.tigrishraches.cfd
@@ -89881,7 +89966,6 @@ yhtaefcjiocjikkocisc.com
 yhxpacevrlsmc.space
 yhyumuoyahocw.website
 yhzn0f.ru
-yi.charkshiite.qpon
 yiacorwiwiyud.space
 yiblyc-cdn-settings.appsflyersdk.com
 yiblyc-conversions.appsflyersdk.com
@@ -90006,7 +90090,6 @@ yloeyuprkiyrf.online
 ylog.huya.com
 ylog.nimo.tv
 ylqreltdrixef.website
-ylqtjplsdrspb.space
 yltsqa-cdn-settings.appsflyersdk.com
 yltsqa-conversions.appsflyersdk.com
 yltsqa-dlsdk.appsflyersdk.com
@@ -90293,7 +90376,6 @@ ytv-viewing-logs.com
 ytvancedpro.com
 ytzwxc-cdn-settings.appsflyersdk.com
 yuan-paygroup.com
-yubx9d.top
 yuce-mizandanim.com
 yucemizandanim.net
 yuchmastmanestuary.cfd
@@ -90378,7 +90460,6 @@ yx301g-conversions.appsflyersdk.com
 yx301g-dlsdk.appsflyersdk.com
 yx301g-launches.appsflyersdk.com
 yx301g-register.appsflyersdk.com
-yxaasylsdjado.site
 yxcrl.com
 yxcruyhkddqkn.site
 yxgawnoujeedu.space
@@ -90452,6 +90533,7 @@ z2ujbn-cdn-settings.appsflyersdk.com
 z2ujbn-conversions.appsflyersdk.com
 z2ujbn-inapps.appsflyersdk.com
 z3.cnzz.com
+z3vkcnj9f.com
 z492.ctinsider.com
 z568zimbra.weebly.com
 z5c4tnjw6p.com
@@ -91241,7 +91323,6 @@ zsm3uj-launches.appsflyersdk.com
 zsmartech.com
 zsnlodckthbjz.online
 zsp1.ah.nl
-zsqvinbljjkkv.website
 zssdi.it
 zsskpezylxdts.space
 zsvtqanqnw.com
@@ -91453,5 +91534,5 @@ zzycj.com
 zzz-event.com
 zzz-log-upload.mihoyo.com
 ! dodo-liste: engelli-alanlar
-! dodo-zaman: 1794743856
-! dodo-imza: 1 LEqZ/0GFluhVhKt5KMGIcM/DxZwlmNCrFZNLzINUEC0nJB5IpRrTPUSTVR9JMxQBj/wHX70DItMDEBr4E5jnl6KIWodY0A9ylKlB8h0niC3YwVt1yLSHIPF2MJLo1yNX8Anw+viBodWVNVLdalfThHe095t0eo66BWAaFhWo5j07AwMJH6HK0ufvGS/w5j5Lzt1BAojJ6DZjR9VqHR5at6n0u227ao/E3qcsmugZhfSmM27nrJY56H5VJsi53We3HJdDmJlqYGho9K3Lp/M0xfl4l35FXUt3ASTyZYXIEjV9FJIRvIi0DR7huip7aGf8QZXX+gp1hGvmEtkUX3FrkrgOAyr3sDjgG5zL3mc+93N0DPoPf/zolO5Nj+uJ27t5mHeF9CFbZTq90ZOo8HDS9JTuf0vq2AB5ZHc/rR6TdkO9ewNGPK6P/DmvidSJSjSFckiOfg4hMIy1oWzIKajyNer6OmDek3+ly5I7TTMOvKkBBNnCW4L14+TPtZW7OPI9
+! dodo-zaman: 1794798102
+! dodo-imza: 1 S10PoRVDAg3FfVvltR3/jaOPlqJbELmzPkpGEEeBXq/DqV67ZpDmq+JOntYcur+9srthJS0RjR06I93bEle66zxkJJVt9fUpmziNZZvK16Qe68JBLVOGs2PIyDh5yhVmkeRcfZgde4e7+9Uk8hvrvRNqoOtfowrTOp+pPdG78DhjlcSKb5Zh7uVoq4tklxr5QYdvjsAeWu4VFMfQ5Wp3JtJygkMhIRZq+JbccTAgs024HzwVZRC2P4QIaCPrxYsC5A8IomHyK47TmOnRZGCvV5EYmOPYi8cNKh7lnb6mcgazbcoKa7V1mZA/p3zOq3rBCKohJ3DWegkmBNHa/7Z7Fu6RmQyEy5Dnv5xRCfI4Kl3qRKLbGOfg5dpD5V6L4QMOJK4QZuvq+StyIJOCNjQXgh2LIqxOwNIJh3/6PVe1mUAlLHDwJjDdR/C8WC8LhR/IzYdlrV45ZbHqgOnN/h5lgzoYt7ioZWZ8fj40xeJyqrxSf7WY6RZ4YGDv7Ce78Eax

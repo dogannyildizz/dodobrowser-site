@@ -78,7 +78,7 @@
       "name": "What if a site doesn't work properly because of Shield?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Click the shield in the toolbar and turn Shield off for that site. Your choice applies to that site only and is remembered."
+        "text": "Click the shield in the toolbar and turn Shield off for that site, or turn off just one part of it from the same menu. Your choice applies to that site only and is remembered."
       }
     },
     {
@@ -399,7 +399,7 @@
   <section>
     <h2>How it works</h2>
     <ol class="adimlar">
-      <li><b>While the page loads</b><span>Shield checks every request against the ad and tracker lists. Addresses on the lists are never downloaded.</span></li>
+      <li><b>While the page loads</b><span>Shield checks every request against the ad and tracker lists. Addresses on the lists are never downloaded. Tracking tags (like utm_ and fbclid) are removed from the links you open, and the site is asked “don't sell my data”.</span></li>
       <li><b>While the page is drawn</b><span>Empty ad boxes are removed. Windows the page opens on its own are stopped, notification prompts don't appear, and cookie notices are answered.</span></li>
       <li><b>Afterwards</b><span>The shield in the toolbar shows how many ads and trackers were stopped on that page. The Shield page shows it day by day and site by site.</span></li>
     </ol>
@@ -426,7 +426,9 @@
     <h2>You're in control</h2>
     <ul class="liste">
       <li>Turn Shield off and on for every site with one switch.</li>
-      <li>If a site doesn't work properly, turn Shield off for just that site from the shield in the toolbar; your choice is remembered.</li>
+      <li>If a site doesn't work properly, turn Shield off for just that site from the shield in the toolbar, or just one part of it (ad and tracker blocking, hiding ad spaces, site fixes, cookie banners); your choice is remembered.</li>
+      <li>Pick the protection level in Settings → Shield: Light, Standard or Strict.</li>
+      <li>Right-click something you don't want on a site and choose “Hide this item”, and it stays hidden on that site; show it again in Settings → Shield.</li>
       <li>The ad lists are updated from DodoBrowser's own site at most once a day, and their signature is checked every time they're read. The only question asked is “is there a new list?”; nothing about you is sent.</li>
       <li>The lists are built from open lists everyone uses: EasyList, EasyPrivacy, AdGuard's Turkish list and HaGeZi.</li>
     </ul>
@@ -445,7 +447,7 @@
   <h2 class="sss">Questions</h2>
   <div class="faq">
     <details><summary>Do I need an extension for Shield?</summary><p>No. Shield comes built into DodoBrowser and is on from the first start. DodoBrowser doesn't install extensions for now.</p></details>
-    <details><summary>What if a site doesn't work properly because of Shield?</summary><p>Click the shield in the toolbar and turn Shield off for that site. Your choice applies to that site only and is remembered.</p></details>
+    <details><summary>What if a site doesn't work properly because of Shield?</summary><p>Click the shield in the toolbar and turn Shield off for that site, or turn off just one part of it from the same menu. Your choice applies to that site only and is remembered.</p></details>
     <details><summary>Does Shield make pages faster?</summary><p>Often, yes, because ads and trackers are never downloaded. In our measurement, news sites with ads opened in about 6 seconds in Edge and in about 0.9 seconds in DodoBrowser. Results vary with the computer, the site and the connection.</p></details>
     <details><summary>Is anything about me sent when the ad lists update?</summary><p>No. At most once a day, DodoBrowser asks its own site “is there a new list?”. You can turn updates off in Settings → Shield.</p></details>
   </div>

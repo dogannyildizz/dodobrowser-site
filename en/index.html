@@ -37,7 +37,7 @@
   "applicationCategory": "BrowserApplication",
   "operatingSystem": "Windows 10 (version 1809 or later, 64-bit), Windows 11 (64-bit)",
   "inLanguage": ["en", "tr"],
-  "softwareVersion": "1.12.0",
+  "softwareVersion": "1.13.0",
   "disambiguatingDescription": "A browser for Windows from dodobrowser.com; not the Dodo Browser app for Mac or any other product named Dodo Browser.",
   "url": "https://dodobrowser.com/en/",
   "image": "https://dodobrowser.com/paylasim-en.png",
@@ -803,7 +803,13 @@
       linear-gradient(135deg, #1B191E, #27252A 60%, #1B191E);
     color: #F3F1F5; border-radius: 28px; padding: 56px;
   }
-  .rings { position: absolute; right: -90px; top: -90px; width: 360px; height: 360px; pointer-events: none; }
+  /* The rings pulse only while the card is on screen and motion is allowed (the script adds
+     .canli): left on their own they ran off screen too, and with "reduce motion" the outer
+     ring stood still at full size across the list and, on a phone, the heading (19 Nov). The
+     words sit above them. */
+  .rings { position: absolute; right: -90px; top: -90px; width: 360px; height: 360px; pointer-events: none; display: none; }
+  .privacy.canli .rings { display: block; }
+  .privacy > div:not(.rings) { position: relative; z-index: 1; }
   .rings span { position: absolute; inset: 0; border-radius: 50%; border: 2px solid rgba(255, 176, 110, .35); animation: ring 5s ease-out infinite; }
   .rings span:nth-child(2) { animation-delay: 1.66s; }
   .rings span:nth-child(3) { animation-delay: 3.33s; }
@@ -1452,6 +1458,12 @@
     }, { threshold: .15 }).observe(el);
   }
 
+  (function () {
+    var card = document.querySelector(".privacy");
+    if (!card || calm) return;
+    whileVisible(card, function () { card.classList.add("canli"); }, function () { card.classList.remove("canli"); });
+  })();
+
   // The address bar stays plain "dodobrowser.com": links inside the page scroll
   // without adding #…, and /index.html or a #… arriving from another page is tidied away.
   (function () {
@@ -1633,7 +1645,7 @@
           { transform: "translate(" + dx + "px, " + dy + "px) scale(.03) rotate(-12deg)", opacity: .3 }
         ], { duration: 700, delay: 300 + i * 220, easing: "cubic-bezier(.5, 0, .8, .5)", fill: "forwards" });
         fly.onfinish = function () {
-          copy.remove();
+          copy.remove();   // ani: uçuş bitti, kopya kalkanın içinde %3 boyda ve soluk
           setCount(n + Number(a.el.getAttribute("data-n")));
           arrive();
           if (--left === 0) closeUp();

@@ -145,7 +145,10 @@
     background: var(--card); border: 1px solid var(--card-border); border-radius: 16px;
     padding: 22px 26px; margin-bottom: 14px; box-shadow: var(--shadow);
   }
-  section.lead { border-left: 4px solid var(--accent); }
+  /* The accent bar inside a 1 px edge like the other cards': a 4 px border moved the text
+     3 px right of theirs (17 Nov visual inventory). */
+  section.lead { border-left-color: var(--accent); box-shadow: inset 3px 0 0 var(--accent), var(--shadow); }
+  @media (forced-colors: active) { section.lead { border-left-width: 4px; } }   /* no shadows there: the bar is the edge again */
   h2 { font-size: 18px; margin: 0 0 8px; }
   p { margin: 0 0 10px; }
   p:last-child { margin-bottom: 0; }
@@ -156,6 +159,9 @@
   footer.bottom { border-top: 1px solid var(--card-border); padding: 28px 0 40px; color: var(--muted); font-size: 14.5px; }
   footer.bottom .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; }
   footer.bottom .wrap > :first-child { margin-right: auto; }
+  /* On a phone the logo has a line of its own: beside it the first links were pushed right and
+     the next lines started at the left (17 Nov visual inventory). */
+  @media (max-width: 620px) { footer.bottom .wrap > :first-child { flex-basis: 100%; } }
   footer.bottom a { color: var(--muted); }
   footer.bottom .lang { display: inline-flex; align-items: center; gap: 8px; }
   footer.bottom .lang [aria-current] { color: var(--ink); font-weight: 600; }

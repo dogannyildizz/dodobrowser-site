@@ -829,7 +829,8 @@
   .privacy li b { color: #fff; }
 
   /* Shortcuts */
-  .keys { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; max-width: 900px; }
+  /* The full column like the feature cards above it: at 900 px its right edge stood alone (17 Nov visual inventory). */
+  .keys { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .key {
     display: flex; align-items: center; justify-content: space-between; gap: 12px;
     background: var(--card); border: 1px solid var(--card-border); border-radius: 14px; padding: 14px 18px;
@@ -888,7 +889,7 @@
   .closing .wm, .closing .wm-slogan { margin: 0 auto; }
   .closing .sub { margin: 0 auto 28px; }
   /* Two cards side by side: direct address + socials, and the (optionally nameless) form */
-  .reach { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr); gap: 20px; align-items: start; text-align: left; }
+  .reach { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr); gap: 20px; align-items: stretch; text-align: left; }   /* both cards end on one line (17 Nov) */
   .direct, .contact {
     background: var(--card); border: 1px solid var(--card-border); border-radius: 16px;
     padding: 28px; box-shadow: var(--shadow);
@@ -955,6 +956,9 @@
   footer.bottom { border-top: 1px solid var(--card-border); padding: 28px 0 40px; color: var(--muted); font-size: 14.5px; }
   footer.bottom .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; }
   footer.bottom .wrap > :first-child { margin-right: auto; }
+  /* On a phone the logo has a line of its own: beside it the first links were pushed right and
+     the next lines started at the left (17 Nov visual inventory). */
+  @media (max-width: 620px) { footer.bottom .wrap > :first-child { flex-basis: 100%; } }
   footer.bottom a { color: var(--muted); }
   footer.bottom .lang { display: inline-flex; align-items: center; gap: 8px; }
   footer.bottom .lang [aria-current] { color: var(--ink); font-weight: 600; }
@@ -987,15 +991,21 @@
     .mini { grid-template-columns: 1fr; }
     .kalkan { padding: 24px; }
     .store { width: 100%; }
-    .store .l { justify-content: center; }
+    /* .store .l keeps its left start: centred, the two buttons' icons stood 18 px apart (17 Nov). */
     .n-grid { grid-template-columns: minmax(0, 1fr) 84px; }
     .bar { grid-template-columns: 82px 1fr; }
     section.block { padding-top: 76px; }
     .privacy { border-radius: 20px; }
     .contact, .direct { padding: 20px; }
     .contact .row { grid-template-columns: 1fr; }
-    .tiles { gap: 6px; }
-    .tile { width: 58px; }
+    /* One row that narrows to the phone's column: at a fixed 58 px the fifth tile ("Ekle")
+       went down to a line of its own (17 Nov visual inventory). */
+    .tiles { gap: 6px; flex-wrap: nowrap; }
+    .tile { width: auto; flex: 0 1 58px; min-width: 0; }
+    .tile div { width: 100%; max-width: 52px; height: auto; aspect-ratio: 1; }
+    /* The count doesn't fit one line here: two even lines in a rounded card, not a pill broken
+       after its first word (17 Nov visual inventory). */
+    .lk-count { border-radius: 16px; text-wrap: balance; }
   }
   .switch, .d-shield { touch-action: manipulation; }
   .btn:focus-visible, .store:focus-visible, .copy:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 3px; }

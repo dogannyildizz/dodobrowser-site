@@ -86,7 +86,7 @@
       "name": "Does Shield make pages faster?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Often, yes, because ads and trackers are never downloaded. In our measurement, news sites with ads opened in about 6 seconds in Edge and in about 0.9 seconds in DodoBrowser. Results vary with the computer, the site and the connection."
+        "text": "On pages with ads, often yes, because ads and trackers are never downloaded. On sites without ads there's no difference. Results vary with the computer, the site and the connection."
       }
     },
     {
@@ -179,7 +179,7 @@
      the symbol D is that x 2.29, the gap D x .3. */
   .wm, .wm-slogan { display: block; height: 1em; width: auto; overflow: visible; fill: currentColor; }
   .wm { aspect-ratio: 7.98; }
-  .wm-slogan { aspect-ratio: 10.71; }
+  .wm-slogan { aspect-ratio: 11.04; }
   /* logo-yap: site-css end */
   .logo-link svg:not(.wm) { width: 34px; height: 34px; }
   .back { margin-left: auto; color: var(--muted); text-decoration: none; font-size: 15px; padding: 8px 12px; border-radius: 999px; }
@@ -287,15 +287,6 @@
   .chip { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px 8px 12px; border-radius: 999px; background: var(--card); border: 1px solid var(--card-border); box-shadow: var(--shadow); font-size: 14px; font-weight: 600; }
   .chip svg { width: 18px; height: 18px; color: var(--accent-strong); }
   .liste b { font-weight: 600; }
-  .olcum { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
-  .olcum table { width: 100%; border-collapse: collapse; }
-  .olcum caption { text-align: left; font-weight: 600; font-size: 15px; padding: 0 0 10px; }
-  .olcum th { text-align: left; font-weight: 400; color: var(--muted); font-size: 14px; padding: 5px 12px 5px 0; white-space: nowrap; width: 1%; }
-  .olcum td { padding: 5px 0; display: flex; align-items: center; gap: 10px; }
-  .olcum td div { flex: 1; height: 8px; border-radius: 999px; background: color-mix(in srgb, var(--muted) 16%, transparent); overflow: hidden; }
-  .olcum td i { display: block; height: 100%; width: var(--w); border-radius: 999px; background: var(--field); }
-  .olcum tr.dodo td i { background: var(--accent); }
-  .olcum td b { font-weight: 600; font-size: 14px; min-width: 52px; text-align: right; font-variant-numeric: tabular-nums; }
   .uyari { max-width: 440px; border-radius: 16px; background: var(--pop); border: 1px solid var(--card-border); padding: 18px 20px; box-shadow: var(--shadow); }
   .uyari p { margin: 0 0 4px; }
   .uyari .t { font-weight: 600; }
@@ -351,13 +342,12 @@
     .ico { width: 48px; height: 48px; border-radius: 14px; }
     .cevap { font-size: 17.5px; }
     .gorsel { padding: 20px 18px; }
-    .olcum { grid-template-columns: 1fr; gap: 20px; }
     .ceviri-ornek { grid-template-columns: 1fr; }
     .ceviri-ornek .ok { justify-self: center; transform: rotate(90deg); }
     .eylem .btn.primary { width: 100%; justify-content: center; }
   }
   /* Last, so it wins over each part's own "font: inherit". */
-  h1, h2, h3, h4, .kicker, .eyebrow, nav.links a, nav.dil a, .back, .btn, .store span, .faq summary, .mini b, .points b, .strip li b, .copy, .smenu .big, .sp .greet, .adimlar b, .olcum caption, .uyari .t, .chip {
+  h1, h2, h3, h4, .kicker, .eyebrow, nav.links a, nav.dil a, .back, .btn, .store span, .faq summary, .mini b, .points b, .strip li b, .copy, .smenu .big, .sp .greet, .adimlar b, .uyari .t, .chip {
     font-family: "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, sans-serif;
   }
   code { font: 600 .9em/1.4 "Cascadia Mono", Consolas, monospace; color: var(--ink); overflow-wrap: anywhere; }
@@ -411,21 +401,12 @@
     </ol>
   </section>
 
-  <section class="gorsel">
-    <h2>What we measured</h2>
-    <div class="olcum">
-      <table>
-        <caption>Opening news sites with ads</caption>
-        <tr><th scope="row">Edge</th><td><div aria-hidden="true"><i style="--w:100%"></i></div><b>~6 s</b></td></tr>
-        <tr class="dodo"><th scope="row">DodoBrowser</th><td><div aria-hidden="true"><i style="--w:15%"></i></div><b>~0.9 s</b></td></tr>
-      </table>
-      <table>
-        <caption>Requests made for the same page</caption>
-        <tr><th scope="row">Edge</th><td><div aria-hidden="true"><i style="--w:100%"></i></div><b>~750</b></td></tr>
-        <tr class="dodo"><th scope="row">DodoBrowser</th><td><div aria-hidden="true"><i style="--w:17%"></i></div><b>~130</b></td></tr>
-      </table>
-    </div>
-    <p class="not">Measured on a Windows 11 laptop, compared with Microsoft Edge. Results vary with the computer, the site and the connection.</p>
+  <section>
+    <h2>Speed</h2>
+    <ul class="liste">
+      <li>Blocked ads and trackers are never downloaded, so pages with ads often open faster and make fewer requests.</li>
+      <li>On sites without ads there's no difference. Results vary with the computer, the site and the connection.</li>
+    </ul>
   </section>
 
   <section>
@@ -454,7 +435,7 @@
   <div class="faq">
     <details><summary>Do I need an extension for Shield?</summary><p>No. Shield comes built into DodoBrowser and is on from the first start. DodoBrowser doesn't install extensions for now.</p></details>
     <details><summary>What if a site doesn't work properly because of Shield?</summary><p>Click the shield in the toolbar and turn Shield off for that site, or turn off just one part of it from the same menu. Your choice applies to that site only and is remembered.</p></details>
-    <details><summary>Does Shield make pages faster?</summary><p>Often, yes, because ads and trackers are never downloaded. In our measurement, news sites with ads opened in about 6 seconds in Edge and in about 0.9 seconds in DodoBrowser. Results vary with the computer, the site and the connection.</p></details>
+    <details><summary>Does Shield make pages faster?</summary><p>On pages with ads, often yes, because ads and trackers are never downloaded. On sites without ads there's no difference. Results vary with the computer, the site and the connection.</p></details>
     <details><summary>Is anything about me sent when the ad lists update?</summary><p>No. At most once a day, DodoBrowser asks its own site “is there a new list?”. You can turn updates off in Settings → Shield.</p></details>
   </div>
 

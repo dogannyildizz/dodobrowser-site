@@ -32,7 +32,6 @@
   "@type": "SoftwareApplication",
   "@id": "https://dodobrowser.com/#windows-uygulama",
   "name": "DodoBrowser",
-  "alternateName": "Dodo",
   "description": "Windows için ücretsiz, Türkçe tarayıcı. Reklamları ve izleyicileri engeller, çerez uyarılarını reddeder. Geçmişin ve kayıtlı şifrelerin bilgisayarında saklanır.",
   "applicationCategory": "BrowserApplication",
   "operatingSystem": "Windows 10 (1809 ve üzeri, 64 bit), Windows 11 (64 bit)",
@@ -344,7 +343,7 @@
   }
   .eyebrow svg { width: 18px; height: 18px; }
   .hero h1 { font-size: clamp(44px, 6.4vw, 76px); line-height: 1.02; letter-spacing: -.03em; margin: 0 0 20px; font-weight: 800; }
-  /* The category label sits inside the h1 (search engines read "Windows ve Android için Türkçe tarayıcı" as part of
+  /* The category label sits inside the h1 (search engines read the product's one definition as part of
      the heading) but keeps its own look; its bottom margin is the h1's old top margin. */
   .hero h1 .eyebrow { display: flex; width: max-content; max-width: 100%; margin-bottom: 22px; line-height: 1.6; letter-spacing: normal; }
   .hero h1 .w { display: inline-block; }
@@ -617,22 +616,12 @@
   .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s cubic-bezier(.2, .7, .2, 1); transition-delay: calc(var(--d, 0) * 90ms); }
   .js .reveal.in { opacity: 1; transform: none; }
 
-  /* Measurements */
+  /* Shield's proof cards: what it does, said in words. No figures against another browser
+     (20 Nov 2026, marka\TANITIM-STANDARDI.md T2-T3: a rival-named comparison needs independent proof). */
   .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
   .stat { background: var(--card); border: 1px solid var(--card-border); border-radius: 16px; padding: 24px; box-shadow: var(--shadow); }
-  /* Each card is a real table (search engines and AI answers can quote it); the grid keeps the bar look.
-     The explicit roles keep the table readable to screen readers that drop it when display changes. */
-  .stat table, .stat caption, .stat tbody { display: block; }
-  .stat caption { margin: 0 0 18px; font-size: 16px; letter-spacing: -.1px; font-weight: 600; text-align: left; }
-  .bar { display: grid; grid-template-columns: 96px 1fr; gap: 10px; align-items: center; font-size: 13.5px; margin-bottom: 10px; }
-  .bar th { color: var(--muted); font-weight: 400; text-align: left; padding: 0; }
-  .bar td { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; padding: 0; }
-  .bar div { height: 12px; background: var(--track); border-radius: 999px; overflow: hidden; }
-  .bar i { display: block; height: 100%; width: 0; border-radius: 999px; background: var(--other); transition: width 1.4s cubic-bezier(.2, .7, .2, 1) .2s; }
-  .bar.dodo i { background: var(--ember); transition-delay: .5s; }
-  .bar.dodo b { color: var(--accent-strong); }
-  .in .bar i, html:not(.js) .bar i { width: var(--w); }
-  .note { margin: 18px 0 0; color: var(--muted); font-size: 13.5px; line-height: 1.5; }
+  .stat h3 { margin: 0 0 8px; font-size: 16px; letter-spacing: -.1px; font-weight: 600; }
+  .stat p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
 
   /* Appearance (13 Nov 2026, in place of the memory chart; the felsefe-premium decision): DodoBrowser's
      look in small. A frosted toolbar and start page over the page's lights; the swatches recolour it as
@@ -693,7 +682,7 @@
   .lk-pick button[aria-pressed="true"] { outline: 2px solid var(--lk-text); outline-offset: 3px; }
   .lk-pick button[aria-pressed="true"] i::after { content: "✓"; }
   .lk-pick button:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
-  /* The measurements, now the shield's proof under its card (no longer a promise of their own). */
+  /* The proof cards under the shield's card (no longer a promise of their own). */
   .kanit { margin: 0 0 18px; }
   .kanit .stats { grid-template-columns: repeat(2, 1fr); }
   @media (max-width: 620px) {
@@ -993,7 +982,6 @@
     .store { width: 100%; }
     /* .store .l keeps its left start: centred, the two buttons' icons stood 18 px apart (17 Nov). */
     .n-grid { grid-template-columns: minmax(0, 1fr) 84px; }
-    .bar { grid-template-columns: 82px 1fr; }
     section.block { padding-top: 76px; }
     .privacy { border-radius: 20px; }
     .contact, .direct { padding: 20px; }
@@ -1025,7 +1013,6 @@
     html { scroll-behavior: auto; }
     *, *::before, *::after { animation: none !important; transition: none !important; }
     .js .reveal { opacity: 1; transform: none; }
-    .bar i { width: var(--w); }
   }
   /* Language switch (14 Nov 2026, the user: flags at the bar's right end, in the site's own
      language). Two languages, so no menu: one click goes to the same page in the other one.
@@ -1056,7 +1043,7 @@
   }
   @media (prefers-reduced-motion: reduce) { nav.dil a, nav.dil svg { transition: none; } }
   /* Last, so it wins over each part's own "font: inherit". */
-  h1, h2, h3, h4, .stat caption, .kicker, .eyebrow, nav.links a, nav.dil a, .back, .btn, .store .tx, .store em, .faq summary, .mini b, .points b, .strip li b, .copy, .smenu .big, .sp .greet {
+  h1, h2, h3, h4, .kicker, .eyebrow, nav.links a, nav.dil a, .back, .btn, .store .tx, .store em, .faq summary, .mini b, .points b, .strip li b, .copy, .smenu .big, .sp .greet {
     font-family: "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, sans-serif;
   }
   h1 .w { font-family: "Inter Tight", "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, sans-serif; }   /* the slogan */
@@ -1184,7 +1171,7 @@
   <div class="strip">
     <ul class="wrap">
       <li class="reveal" style="--d:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.4 19.4 5.1a1 1 0 0 1 .6.9v5.6c0 4.8-3.3 8.5-8 10-4.7-1.5-8-5.2-8-10V6a1 1 0 0 1 .6-.9Z"/><path d="m8.6 12.1 2.3 2.3 4.6-4.8"/></svg><div><b>Yerleşik Kalkan</b><small>Eklenti gerektirmez</small></div></li>
-      <li class="reveal" style="--d:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg><div><b>Yerel geçmiş</b><small>Cihazında saklanır</small></div></li>
+      <li class="reveal" style="--d:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg><div><b>Yerel geçmiş</b><small>Eşitlenmez</small></div></li>
       <li class="reveal" style="--d:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg><div><b>Ücretsiz</b><small>Hesap gerektirmez</small></div></li>
       <li class="reveal" style="--d:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14M5 8a7 7 0 0 1 14 0M5 8v3a7 7 0 0 0 14 0V8"/><path d="M12 15v6M8 21h8"/></svg><div><b>Türkçe arayüz</b><small>Sade ve anlaşılır</small></div></li>
     </ul>
@@ -1249,18 +1236,15 @@
       </article>
       <div class="kanit">
         <div class="stats">
-        <div class="stat reveal" style="--d:0"><table role="table">
-          <caption>Reklamlı haber sitelerinin açılışı</caption>
-          <tr role="row" class="bar"><th role="rowheader" scope="row">Edge</th><td role="cell"><div aria-hidden="true"><i style="--w:100%"></i></div><b>~6 sn</b></td></tr>
-          <tr role="row" class="bar dodo"><th role="rowheader" scope="row">DodoBrowser</th><td role="cell"><div aria-hidden="true"><i style="--w:15%"></i></div><b>~0,9 sn</b></td></tr>
-        </table></div>
-        <div class="stat reveal" style="--d:1"><table role="table">
-          <caption>Aynı sayfa için yapılan istek</caption>
-          <tr role="row" class="bar"><th role="rowheader" scope="row">Edge</th><td role="cell"><div aria-hidden="true"><i style="--w:100%"></i></div><b>~750</b></td></tr>
-          <tr role="row" class="bar dodo"><th role="rowheader" scope="row">DodoBrowser</th><td role="cell"><div aria-hidden="true"><i style="--w:17%"></i></div><b>~130</b></td></tr>
-        </table></div>
+        <div class="stat reveal" style="--d:0">
+          <h3>Reklamlı sayfalar çoğu zaman daha çabuk açılır</h3>
+          <p>Kalkan reklamları ve izleyicileri hiç indirmez; sayfa daha az şey yükler. Reklamsız sitelerde fark yoktur.</p>
         </div>
-        <p class="note reveal">Ölçüm: Windows 11 yüklü bir dizüstü bilgisayarda Microsoft Edge ile karşılaştırıldı. Sonuçlar bilgisayara, siteye ve bağlantıya göre değişir.</p>
+        <div class="stat reveal" style="--d:1">
+          <h3>Ne durduğunu sen görürsün</h3>
+          <p>Kaç reklamın ve izleyicinin durdurulduğu Kalkan istatistiklerinde gün gün, site site görünür.</p>
+        </div>
+        </div>
       </div>
 
       <ul class="mini">
@@ -1289,10 +1273,10 @@
         <div class="brand"><svg><use href="#dodo"/></svg><svg class="wm" role="img" aria-label="DodoBrowser"><use href="#dodo-yazi"/></svg></div>
         <div class="search"><span class="q ph" id="q">Hadi, aklından geçeni yaz!</span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></i></div>
         <div class="tiles" id="tiles">
-          <div class="tile"><div style="color:#E8453C">▶</div>YouTube</div>
-          <div class="tile"><div style="color:#C15F3C">✳</div>Claude</div>
-          <div class="tile"><div style="color:#1A73E8">M</div>Gmail</div>
-          <div class="tile"><div style="color:#4D6BFE">D</div>DeepSeek</div>
+          <div class="tile"><div style="color:#3D7BD9">V</div>Vikipedi</div>
+          <div class="tile"><div style="color:#D9762B">T</div>Tarifler</div>
+          <div class="tile"><div style="color:#2E9E6A">H</div>Harita</div>
+          <div class="tile"><div style="color:var(--accent)">D</div>DodoBrowser</div>
           <div class="tile"><div style="color:var(--muted)">+</div>Ekle</div>
         </div>
       </div>
@@ -1315,8 +1299,8 @@
         <div class="rings" aria-hidden="true"><span></span><span></span><span></span></div>
         <div>
           <p class="kicker">Gizlilik ve eşitleme</p>
-          <h2>Geçmişin cihazında. Eşitleme senin seçimin.</h2>
-          <p>Geçmişin ve Windows'ta kaydettiğin şifrelerin cihazında saklanır, eşitlenmez. Verilerin satılmaz, reklam için kullanılmaz.</p>
+          <h2>Eşitleme senin seçimin.</h2>
+          <p>Geçmişin ve kayıtlı şifrelerin eşitlenmez. Verilerin satılmaz, reklam için kullanılmaz.</p>
           <p>Windows'ta Google hesabınla yer imlerini, kısayollarını ve ayarlarını eşitleyebilir, diğer bilgisayarlarındaki açık sekmeleri görebilirsin.</p>
           <p>Sorun bildirimleri, iletişim mesajları ve dış servislerle paylaşılan bilgiler <a href="/gizlilik">Gizlilik politikasında</a> açıklanır.</p>
         </div>

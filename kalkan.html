@@ -86,7 +86,7 @@
       "name": "Kalkan sayfaları hızlandırır mı?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Çoğu zaman evet, çünkü reklam ve izleyici hiç indirilmez. Ölçümümüzde reklamlı haber siteleri Edge'de yaklaşık 6 saniyede, DodoBrowser'da yaklaşık 0,9 saniyede açıldı. Sonuç bilgisayara, siteye ve bağlantıya göre değişir."
+        "text": "Reklamlı sayfalarda çoğu zaman evet, çünkü reklam ve izleyici hiç indirilmez. Reklamsız sitelerde fark yoktur. Sonuç bilgisayara, siteye ve bağlantıya göre değişir."
       }
     },
     {
@@ -287,15 +287,6 @@
   .chip { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px 8px 12px; border-radius: 999px; background: var(--card); border: 1px solid var(--card-border); box-shadow: var(--shadow); font-size: 14px; font-weight: 600; }
   .chip svg { width: 18px; height: 18px; color: var(--accent-strong); }
   .liste b { font-weight: 600; }
-  .olcum { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
-  .olcum table { width: 100%; border-collapse: collapse; }
-  .olcum caption { text-align: left; font-weight: 600; font-size: 15px; padding: 0 0 10px; }
-  .olcum th { text-align: left; font-weight: 400; color: var(--muted); font-size: 14px; padding: 5px 12px 5px 0; white-space: nowrap; width: 1%; }
-  .olcum td { padding: 5px 0; display: flex; align-items: center; gap: 10px; }
-  .olcum td div { flex: 1; height: 8px; border-radius: 999px; background: color-mix(in srgb, var(--muted) 16%, transparent); overflow: hidden; }
-  .olcum td i { display: block; height: 100%; width: var(--w); border-radius: 999px; background: var(--field); }
-  .olcum tr.dodo td i { background: var(--accent); }
-  .olcum td b { font-weight: 600; font-size: 14px; min-width: 52px; text-align: right; font-variant-numeric: tabular-nums; }
   .uyari { max-width: 440px; border-radius: 16px; background: var(--pop); border: 1px solid var(--card-border); padding: 18px 20px; box-shadow: var(--shadow); }
   .uyari p { margin: 0 0 4px; }
   .uyari .t { font-weight: 600; }
@@ -351,13 +342,12 @@
     .ico { width: 48px; height: 48px; border-radius: 14px; }
     .cevap { font-size: 17.5px; }
     .gorsel { padding: 20px 18px; }
-    .olcum { grid-template-columns: 1fr; gap: 20px; }
     .ceviri-ornek { grid-template-columns: 1fr; }
     .ceviri-ornek .ok { justify-self: center; transform: rotate(90deg); }
     .eylem .btn.primary { width: 100%; justify-content: center; }
   }
   /* Last, so it wins over each part's own "font: inherit". */
-  h1, h2, h3, h4, .kicker, .eyebrow, nav.links a, nav.dil a, .back, .btn, .store span, .faq summary, .mini b, .points b, .strip li b, .copy, .smenu .big, .sp .greet, .adimlar b, .olcum caption, .uyari .t, .chip {
+  h1, h2, h3, h4, .kicker, .eyebrow, nav.links a, nav.dil a, .back, .btn, .store span, .faq summary, .mini b, .points b, .strip li b, .copy, .smenu .big, .sp .greet, .adimlar b, .uyari .t, .chip {
     font-family: "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, sans-serif;
   }
   code { font: 600 .9em/1.4 "Cascadia Mono", Consolas, monospace; color: var(--ink); overflow-wrap: anywhere; }
@@ -411,21 +401,12 @@
     </ol>
   </section>
 
-  <section class="gorsel">
-    <h2>Ölçtük</h2>
-    <div class="olcum">
-      <table>
-        <caption>Reklamlı haber sitelerinin açılışı</caption>
-        <tr><th scope="row">Edge</th><td><div aria-hidden="true"><i style="--w:100%"></i></div><b>~6 sn</b></td></tr>
-        <tr class="dodo"><th scope="row">DodoBrowser</th><td><div aria-hidden="true"><i style="--w:15%"></i></div><b>~0,9 sn</b></td></tr>
-      </table>
-      <table>
-        <caption>Aynı sayfa için yapılan istek</caption>
-        <tr><th scope="row">Edge</th><td><div aria-hidden="true"><i style="--w:100%"></i></div><b>~750</b></td></tr>
-        <tr class="dodo"><th scope="row">DodoBrowser</th><td><div aria-hidden="true"><i style="--w:17%"></i></div><b>~130</b></td></tr>
-      </table>
-    </div>
-    <p class="not">Ölçüm: Windows 11 yüklü bir dizüstü bilgisayarda Microsoft Edge ile karşılaştırıldı. Sonuçlar bilgisayara, siteye ve bağlantıya göre değişir.</p>
+  <section>
+    <h2>Hız</h2>
+    <ul class="liste">
+      <li>Engellenen reklamlar ve izleyiciler hiç indirilmediği için reklamlı sayfalar çoğu zaman daha çabuk açılır ve daha az istek yapar.</li>
+      <li>Reklamsız sitelerde fark yoktur. Sonuç bilgisayara, siteye ve bağlantıya göre değişir.</li>
+    </ul>
   </section>
 
   <section>
@@ -454,7 +435,7 @@
   <div class="faq">
     <details><summary>Kalkan için eklenti kurmam gerekir mi?</summary><p>Hayır. Kalkan DodoBrowser'ın içinde gelir ve ilk açılıştan itibaren açıktır. DodoBrowser şimdilik eklenti yüklemez.</p></details>
     <details><summary>Bir site Kalkan yüzünden düzgün çalışmazsa ne yaparım?</summary><p>Araç çubuğundaki kalkana tıkla ve Kalkan'ı o site için kapat ya da aynı menüden yalnız bir parçasını kapat. Seçimin sadece o sitede geçerlidir ve hatırlanır.</p></details>
-    <details><summary>Kalkan sayfaları hızlandırır mı?</summary><p>Çoğu zaman evet, çünkü reklam ve izleyici hiç indirilmez. Ölçümümüzde reklamlı haber siteleri Edge'de yaklaşık 6 saniyede, DodoBrowser'da yaklaşık 0,9 saniyede açıldı. Sonuç bilgisayara, siteye ve bağlantıya göre değişir.</p></details>
+    <details><summary>Kalkan sayfaları hızlandırır mı?</summary><p>Reklamlı sayfalarda çoğu zaman evet, çünkü reklam ve izleyici hiç indirilmez. Reklamsız sitelerde fark yoktur. Sonuç bilgisayara, siteye ve bağlantıya göre değişir.</p></details>
     <details><summary>Reklam listeleri güncellenirken benim hakkımda bir şey gider mi?</summary><p>Hayır. DodoBrowser günde en çok bir kez kendi sitesine “yeni liste var mı?” diye sorar. İstersen güncellemeyi Ayarlar → Kalkan'dan kapatırsın.</p></details>
   </div>
 

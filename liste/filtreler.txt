@@ -2,10 +2,10 @@
 ! EasyList ve EasyPrivacy: https://easylist.to (GPL-3.0 ya da CC BY-SA 3.0, The EasyList authors)
 ! AdGuard Turkish filter: https://github.com/AdguardTeam/AdGuardFilters (GPL-3.0)
 ! Lisans metni: liste/HAGEZI-LISANS.txt (GPL-3.0)
-! Surumler: easylist=202611201244 easyprivacy=202611201244 adguard-turkce=2.0.70.6
-! DodoBrowser degisiklik tarihi (UTC): 2026-11-20T12:54:21Z
+! Surumler: easylist=202611211234 easyprivacy=202611211234 adguard-turkce=2.0.70.9
+! DodoBrowser degisiklik tarihi (UTC): 2026-11-21T12:40:16Z
 ! Degisiklikler: kaynaklar birlestirildi, desteklenmeyen kurallar ve liste/filtre-istisnalari.txt satirlari suzuldu.
-! Satir: 141507
+! Satir: 141881
 ###AC_ad
 ###AD_160
 ###AD_300
@@ -17466,6 +17466,7 @@ $xhr,3p,denyallow=mega.co.nz|mega.nz|libs.baidu.com|ilfcdn.li|bytecdntp.com|dood
 /plausible.manual.js
 /plausible.outbound-links.js$domain=~plausible.io
 /plausible.tagged-events.js
+/player-extras.$domain=ashemaletube.com|boyfriendtv.com|fetishpapa.com
 /player-test-impression?
 /player/ads/*$~xmlhttprequest
 /player/stats.php?
@@ -19010,6 +19011,7 @@ $xhr,3p,denyallow=mega.co.nz|mega.nz|libs.baidu.com|ilfcdn.li|bytecdntp.com|dood
 /zone?pub=*&zone_id=
 /zp-redirect?$popup
 /ztracker.js
+/zv3/b/*$domain=ashemaletube.com|boyfriendtv.com|fetishpapa.com
 /~cdn/ads/*
 /~shared/do/api/plausible/?id=$xmlhttprequest
 /~shared/do/~/click/?$image
@@ -19054,7 +19056,7 @@ $xhr,3p,denyallow=mega.co.nz|mega.nz|libs.baidu.com|ilfcdn.li|bytecdntp.com|dood
 123av.com,javplayer.cc##[style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;display: block;z-index: 9999999;cursor: auto"]
 1280wnam.com##a[href^="http://www.milwaukeezoo.org/visit/animals/"]
 1280wnam.com##a[href^="https://wistatefair.com/fair/tickets/"]
-12news.com,8gwifi.org,9news.com,9to5google.com,9to5mac.com,aad.org,advfn.com,all3dp.com,allaboutcookies.org,allnovel.net,amny.com,athleticbusiness.com,audiokarma.org,beeradvocate.com,beliefnet.com,bizjournals.com,bolavip.com,bonappetit.com,breakingac.com,britishheritage.com,businessday.ng,businessinsider.com,capemaynjdaily.com,cbs8.com,cc.com,ccjdigital.com,centralbucksnews.com,dailytrust.com,delish.com,downbeach.com,dutchnews.nl,ecr.co.za,electrek.co,engineeringnews.co.za,equipmentworld.com,euromaidanpress.com,fastcompany.com,fishermap.org,footyheadlines.com,fox10phoenix.com,fox13news.com,fox26houston.com,fox29.com,fox2detroit.com,fox32chicago.com,fox35orlando.com,fox4news.com,fox5atlanta.com,fox5dc.com,fox5ny.com,fox7austin.com,fox9.com,foxbusiness.com,foxla.com,foxnews.com,funkidslive.com,gfinityesports.com,globalspec.com,gmanetwork.com,grammarbook.com,greatbritishchefs.com,greatitalianchefs.com,hbr.org,highdefdigest.com,historynet.com,horshamnow.com,howstuffworks.com,huffpost.com,ibtimes.sg,inc.com,insidehook.com,intouchweekly.com,irishcentral.com,karanpc.com,khou.com,koat.com,ktvu.com,lifeandstylemag.com,longislandpress.com,macstories.net,mail.com,memuplay.com,metro.us,metrophiladelphia.com,minecraftforum.net,miningweekly.com,mixed-news.com,mobilesyrup.com,modernhealthcare.com,namemc.com,nbcnews.com,newrepublic.com,northpennnow.com,nzherald.co.nz,ocnjdaily.com,oneesports.gg,opb.org,outkick.com,papermag.com,perkvalleynow.com,phillydaily.com,physiology.org,pixiv.net,podcastaddict.com,punchng.com,qns.com,realsport101.com,reason.com,refinery29.com,ringsidenews.com,roadandtrack.com,runguides.com,scroll.in,seaislenews.com,seattletimes.com,songkick.com,sportskeeda.com,storyboard18.com,techrepublic.com,the-decoder.com,thedailybeast.com,thelocal.at,thelocal.ch,thelocal.de,thelocal.dk,thelocal.es,thelocal.fr,thelocal.it,thelocal.no,thelocal.se,thenationonlineng.net,thenewstack.io,thepost.co.nz,thetimes.com,tmz.com,toofab.com,tuasaude.com,uploadvr.com,usmagazine.com,vanguardngr.com,wildtangent.com,willowgrovenow.com,wired.com,wogx.com,worldsoccertalk.com,wral.com,yahoo.com##.ad-container
+12news.com,8gwifi.org,9news.com,9to5google.com,9to5mac.com,aad.org,advfn.com,all3dp.com,allaboutcookies.org,allnovel.net,amny.com,athleticbusiness.com,audiokarma.org,beeradvocate.com,beliefnet.com,bizjournals.com,bolavip.com,bonappetit.com,breakingac.com,britishheritage.com,businessday.ng,businessinsider.com,capemaynjdaily.com,cbs8.com,cc.com,ccjdigital.com,centralbucksnews.com,dailytrust.com,delish.com,downbeach.com,dutchnews.nl,ecr.co.za,electrek.co,engineeringnews.co.za,equipmentworld.com,euromaidanpress.com,fastcompany.com,fishermap.org,footyheadlines.com,fox10phoenix.com,fox13news.com,fox26houston.com,fox29.com,fox2detroit.com,fox32chicago.com,fox35orlando.com,fox4news.com,fox5atlanta.com,fox5dc.com,fox5ny.com,fox7austin.com,fox9.com,foxbusiness.com,foxla.com,foxnews.com,funkidslive.com,gfinityesports.com,globalspec.com,gmanetwork.com,grammarbook.com,greatbritishchefs.com,greatitalianchefs.com,hbr.org,highdefdigest.com,historynet.com,horshamnow.com,howstuffworks.com,huffpost.com,ibtimes.sg,inc.com,insidehook.com,intouchweekly.com,irishcentral.com,karanpc.com,khou.com,koat.com,ktvu.com,lifeandstylemag.com,longislandpress.com,macstories.net,mail.com,memuplay.com,metro.us,metrophiladelphia.com,minecraftforum.net,miningweekly.com,mixed-news.com,mobilesyrup.com,modernhealthcare.com,namemc.com,nbcnews.com,newrepublic.com,northpennnow.com,nzherald.co.nz,ocnjdaily.com,oneesports.gg,opb.org,outkick.com,papermag.com,perkvalleynow.com,phillydaily.com,physiology.org,pixiv.net,podcastaddict.com,punchng.com,qns.com,realsport101.com,reason.com,refinery29.com,ringsidenews.com,roadandtrack.com,runguides.com,scroll.in,seaislenews.com,seattletimes.com,songkick.com,sportskeeda.com,storyboard18.com,techrepublic.com,the-decoder.com,thelocal.at,thelocal.ch,thelocal.de,thelocal.dk,thelocal.es,thelocal.fr,thelocal.it,thelocal.no,thelocal.se,thenationonlineng.net,thenewstack.io,thepost.co.nz,thetimes.com,tmz.com,toofab.com,tuasaude.com,uploadvr.com,usmagazine.com,vanguardngr.com,wildtangent.com,willowgrovenow.com,wired.com,wogx.com,worldsoccertalk.com,wral.com,yahoo.com##.ad-container
 12punto.com.tr##.subNews
 12tomatoes.com###footboard
 12tomatoes.com,allwomenstalk.com,bloomberg.com,datpiff.com,gransnet.com,hockeybuzz.com,koreaboo.com,logotv.com,news.sky.com,onthesnow.co.uk,onthesnow.com,penny-arcade.com,publishersweekly.com,skysports.com,thedrinknation.com,theserverside.com,vacations.info###leaderboard
@@ -20295,7 +20297,7 @@ $xhr,3p,denyallow=mega.co.nz|mega.nz|libs.baidu.com|ilfcdn.li|bytecdntp.com|dood
 @@||image.shutterstock.com^$image,domain=icons8.com
 @@||images-eu.ssl-images-amazon.com/images/$domain=amazon.com.tr
 @@||imasdk.googleapis.com/js/core/bridge*.html$subdocument,domain=~airtelxstream.in|~danet.vn|~einthusan.tv|~sonyliv.com|~spotify.com
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=247sports.com|airtelxstream.in|antena3.ro|api.screen9.com|asianctv.upns.pro|asianembed.cam|autokult.pl|bbc.com|bloomberg.co.jp|bloomberg.com|bsfuji.tv|cbc.ca|cbsnews.com|cbssports.com|cnet.com|crunchyroll.com|delish.com|digi24.ro|distro.tv|doubtnut.com|einthusan.tv|etonline.com|filmweb.pl|france24.com|game.pointmall.rakuten.net|gamebox.gesoten.com|gamepix.com|gameplayneo.com|gbnews.com|geo.dailymotion.com|givemesport.com|gospodari.com|humix.com|ignboards.com|insideedition.com|laurelberninteriors.com|lemino.docomo.ne.jp|locipo.jp|maharashtratimes.com|maxpreps.com|metacritic.com|minigame.aeriagames.jp|missoulian.com|nettavisen.no|newsweek.com|njbeachcams.com|open.video|paralympic.org|paramountplus.com|player.abacast.net|player.amperwave.net|player.earthtv.com|player.performgroup.com|plex.tv|pointmall.rakuten.co.jp|realmadrid.com|rfi.fr|root.cz|rte.ie|s.yimg.jp|scrippsdigital.com|sonyliv.com|southpark.lat|southparkstudios.com|spiele.heise.de|sportsbull.jp|stirr.com|tbs.co.jp|tdn.com|truvid.com|tubitv.com|tunein.com|tv-asahi.co.jp|tv.abcnyheter.no|tv.finansavisen.no|tv.rakuten.co.jp|tver.jp|tvp.pl|univtec.com|video.tv-tokyo.co.jp|vlive.tv|watch.nba.com|weather.com|webdunia.com|wellgames.com|worldsurfleague.com|wowbiz.ro|wsj.com|wtk.pl|zdnet.com|zeebiz.com
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=247sports.com|airtelxstream.in|antena3.ro|api.screen9.com|asianctv.upns.pro|asianembed.cam|autokult.pl|bbc.com|bloomberg.co.jp|bloomberg.com|bsfuji.tv|cbc.ca|cbsnews.com|cbssports.com|cnet.com|crunchyroll.com|dashboard.videograph.ai|delish.com|digi24.ro|distro.tv|doubtnut.com|einthusan.tv|etonline.com|filmweb.pl|france24.com|game.pointmall.rakuten.net|gamebox.gesoten.com|gamepix.com|gameplayneo.com|gbnews.com|geo.dailymotion.com|givemesport.com|gospodari.com|humix.com|ignboards.com|insideedition.com|laurelberninteriors.com|lemino.docomo.ne.jp|locipo.jp|maharashtratimes.com|maxpreps.com|metacritic.com|minigame.aeriagames.jp|missoulian.com|nettavisen.no|newsweek.com|njbeachcams.com|open.video|paralympic.org|paramountplus.com|player.abacast.net|player.amperwave.net|player.earthtv.com|player.performgroup.com|plex.tv|pointmall.rakuten.co.jp|realmadrid.com|rfi.fr|root.cz|rte.ie|s.yimg.jp|scrippsdigital.com|sonyliv.com|southpark.lat|southparkstudios.com|spiele.heise.de|sportsbull.jp|stirr.com|tbs.co.jp|tdn.com|truvid.com|tubitv.com|tunein.com|tv-asahi.co.jp|tv.abcnyheter.no|tv.finansavisen.no|tv.rakuten.co.jp|tver.jp|tvp.pl|univtec.com|video.tv-tokyo.co.jp|vlive.tv|watch.nba.com|weather.com|webdunia.com|wellgames.com|worldsurfleague.com|wowbiz.ro|wsj.com|wtk.pl|zdnet.com|zeebiz.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=beinsports.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=dramadunyam.com
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=exxen.com
@@ -22162,6 +22164,7 @@ artificialintelligence-news.com##[href^="https://bit.ly/"]
 artificialintelligence-news.com##[href^="https://www.ai-expo.net/"]
 artificialintelligence-news.com##[href^="https://www.artificialintelligence-news.com/go/"]
 artificialintelligence-news.com,autoaction.com.au,cryptoreporter.info,dafont.com,developer-tech.com,forexmt4indicators.com,gamblingnewsmagazine.com,godradio1.com,irishcatholic.com,runnerstribe.com,tntribune.com,tryorthokeys.com##[width="728"]
+artnews.com,deadline.com,goldderby.com,hollywoodreporter.com,variety.com,vibe.com##.boomerang
 artscanvas.org##.funders
 artsy.net##.IITnS
 artsy.net##.dDusYa
@@ -22175,6 +22178,10 @@ as.com,gokunming.com##.prom
 ascii-code.com##.text-center.mb-3
 ascii.jp#@#.adrect
 ascopost.com,fermanaghherald.com,sofx.com##.ad-text
+ashemaletube.com##div[class*="pinbar"]
+ashemaletube.com,boyfriendtv.com,fetishpapa.com##.grid:has(a[href*="faphouse.com"])
+ashemaletube.com,boyfriendtv.com,fetishpapa.com##.right-rail-block
+ashemaletube.com,boyfriendtv.com,fetishpapa.com##a[href*="faphouse.com"]
 asheville.com##.injected-ads
 asiangay.tv,asiangaysex.net,gaysex.tv,gayxx.net,japangaysex.com,jav.com.co##.float-ck
 asianjournal.com###fancybox-overlay
@@ -22227,6 +22234,7 @@ astrology.com##.primis-video-module-horoscope
 astrologyanswers.com##.astro-entity-placement
 astrozop.com##.relative.z-5
 asyaanimeleri.com##+js(abort-current-script, doOpen, edsiga.com)
+asyaanimeleri.top###u5ub8bzte40
 asyadiziizle.com###content > a
 asyadiziizle.com##+js(remove-attr, style, #episode)
 asyafanatiklerim.com##.fbox > a
@@ -23210,11 +23218,8 @@ boyfriend.tv,boyfriendtv.com,hentaigasm.com,masahub.net,missav.ai,missav.ws,miss
 boyfriendtv.com###b-page-frame > * {pointer-events:auto;}
 boyfriendtv.com###b-page-frame {padding-top:0;}
 boyfriendtv.com###b-page-frame {pointer-events:none;}
-boyfriendtv.com##.grid:has(a[href*="faphouse.com"])
 boyfriendtv.com##.info-block-wrapper
-boyfriendtv.com##.right-rail-block
 boyfriendtv.com##.side-content-block
-boyfriendtv.com##a[href*="faphouse.com"]
 boyfriendtv.com##body {cursor:default;}
 boykot.co###Muslimer
 boykot.co###mobileBanner
@@ -23784,8 +23789,8 @@ chronline.com##.cq-creative
 cifraclub.com##.styles_advertising__nZwCO
 ciftlikdergisi.com.tr##a[target="_blank"]:not([href^="http://www.ciftlikdergisi.com.tr/"]) > img
 ciiradio.com,hapskorea.com##[height="300"]
-cimcime183.live###ads-inside-main
-cimcime183.live##+js(addEventListener-defuser, DOMContentLoaded, openPopup)
+cimcime184.live###ads-inside-main
+cimcime184.live##+js(addEventListener-defuser, DOMContentLoaded, openPopup)
 cimri.com###__next > div > div[class*="-"] > a[rel^="nofollow"][target="_blank"]
 cimri.com###cimri-masthead
 cimri.com###cimri-product ~ section:has(> div[id^="adslot-"])
@@ -24461,8 +24466,8 @@ dagens.com##.c-1 > .i-2
 dagens.com##.r-1
 dagens.com##.r-3
 dagens.com##.r-6
-dahahizli170.live###ads-inside-main
-dahahizli170.live###video-player-ads
+dahahizli171.live###ads-inside-main
+dahahizli171.live###video-player-ads
 daijiworld.com###pnlCricket
 daijiworld.com##.hidden-xs > [href]
 daijiworld.com##.hpRightAdvt
@@ -26603,6 +26608,7 @@ gamelevate.com##[data-adpath]
 gamemodding.com##.big_banner
 gamemodding.com##.right_banner
 gamepadla.com##.gpPartnerCard
+gamepadla.com##.panel-container:has(img[src*="/upload/slider/"])
 gamepadla.com##div:has(> div > div > a[href^="/visit/"][href*="cmp=slider"])
 gamepix.com##div[id^="gpx-banner"]
 gameplay.tips##.ads_sticky
@@ -28149,6 +28155,7 @@ indianmasterminds.com##.elementor-widget-image > .elementor-widget-container:has
 indianmasterminds.com##.ftrstkyad
 indianpornvideos.com##.vdo-unit
 indiatimes.com###adslot_wrapper
+indiatimes.com###custom_ad_wrapper_0
 indiatimes.com##.amazonProductSidebar
 indiatimes.com##.article_first_ad
 indiatimes.com##.bottom-ad-height
@@ -28156,6 +28163,10 @@ indiatimes.com##.btf_ads
 indiatimes.com##.ecom-widget
 indiatimes.com##.product-cont
 indiatimes.com##.rmfp
+indiatimes.com##div:has(> div[id^="div-gpt-ad-"][id$="-atf"])
+indiatimes.com##div:has(> div[id^="div-gpt-ad-atf-"])
+indiatimes.com##div[data-type="in_view"]:has(> span + div .adWrapperPlaceholder > div[id^="div-gpt-ad-mrec"])
+indiatimes.com##li:has(> .adInv:only-child)
 indiatimes.com#@#.adhide
 indiatoday.in##.shopping__widget
 indiatodaygaming.com##.ads__container_rhs
@@ -33858,10 +33869,12 @@ teknoblog.com##.e-con-boxed:has(> .e-con-inner > .elementor-widget-shortcode > .
 teknoblog.com##.tb-ad-placement
 teknoblog.com##.tb-ad-slot
 teknoblog.com##.tb-ad-wrap
+teknoblog.com##.tbis-masthead-wrap
 teknoblog.com##.tbl-explore-more-has-overlay::before:style(display: none !important;)
 teknoblog.com##.tbl-explore-more-has-overlay:style(overflow: auto !important;)
 teknoblog.com##.tbn-rail-ad
 teknoblog.com##.tps-inline-card:has(> a[href^="https://www.google.com/preferences/source?q="])
+teknoblog.com##div[id^="taboola-below-article-widget"]
 teknoburada.net##div[class^="bigbanner_"]
 teknoburada.net##iframe[src^="https://ad.doubleclick.net/"]
 teknodiot.com###custom_html-119
@@ -34029,12 +34042,12 @@ thecourier.com###TCFO_Middle2_300x250
 thecourier.com###TCFO_Middle_300x250
 thecricketlounge.com##.wp-image-88221
 thecrimson.com##.card-container
-thedailybeast.com##.CheatSheetList__placeholder
-thedailybeast.com##.Cheat__top-ad
-thedailybeast.com##.Footer__coupons-wrapper
-thedailybeast.com##.Sizer
-thedailybeast.com##.mobiledoc-sizer
-thedailybeast.com##.tdb-ads-block
+thedailybeast.com###ad--pre-comments
+thedailybeast.com###header-ad__wrapper
+thedailybeast.com###outstream-video-ad-wrap
+thedailybeast.com##.ad-slot-shell
+thedailybeast.com##.body-ad
+thedailybeast.com##.tdb-ad
 thedailydigest.com##.promocion_celda
 thedailyjagran.com##.w-full:has(> .container > .webAds)
 thedailymash.co.uk##.border-brand
@@ -34794,7 +34807,7 @@ turkhackteam.org##.reklam-row > .rro-col > .rro-bg > a[href][target="_blank"] > 
 turkhackteam.org,kibrispostasi.com##.banner-row
 turkifsa.blog##.center-overlay
 turkifsa.porn,turkifsa1.porn,turkifsa2.porn,turkifsa3.porn,turkifsa4.porn,turkifsa5.porn,turkifsa6.porn,turkifsa7.porn,turkifsa8.porn,turkifsa9.porn,turkifsa10.porn,turkifsa11.porn,turkifsa12.porn,turkifsa13.porn,turkifsa14.porn,turkifsa15.porn,turkifsa16.porn,turkifsa17.porn,turkifsa18.porn,turkifsa19.porn,turkifsa20.porn,turkifsa21.porn,turkifsa22.porn,turkifsa23.porn,turkifsa24.porn,turkifsa25.porn,turkifsa26.porn,turkifsa27.porn,turkifsa28.porn,turkifsa29.porn##+js(abort-on-property-read, doOpen)
-turkifsa24.best##+js(prevent-fetch, /pecannerous\.com|octo25\.me|brigsgunster\.com/)
+turkifsa25.best##+js(prevent-fetch, /pecannerous\.com|octo25\.me|brigsgunster\.com/)
 turkifsa5.site,turkifsa32.site,turkifsa40.site,turkifsa42.site,turkifsa45.site##.ad-banner-frame
 turkifsa5.site,turkifsa32.site,turkifsa40.site,turkifsa42.site,turkifsa45.site##div[class]:has(> a:is([href^="https://cutt.ly/"],[href="https://denemebonusumi.com/"]))
 turkifsa5.site,turkifsa32.site,turkifsa40.site,turkifsa42.site,turkifsa45.site##div[class][style^="min-height:"][style*="calc("]
@@ -36215,8 +36228,8 @@ yasemin.com##div[id^="dfp-anasayfa-masthead-"]
 yasemin.com,haber7.com##.ad-right-block
 yatirimnedir.com##.container > div.mb-4:has(> div.col > a[href^="https://www.getmidas.com/"])
 yatsan.com##.personaclick-recommend
-yavasgir137.live,yavasgir138.live,yavasgir139.live,yavasgir140.live,yavasgir141.live,yavasgir142.live,yavasgir144.live,yavasgir145.live,yavasgir146.live,yavasgir147.live,yavasgir148.live,yavasgir149.live,yavasgir150.live,yavasgir151.live,yavasgir152.live,yavasgir153.live,yavasgir154.live,yavasgir156.live,yavasgir157.live,yavasgir158.live,yavasgir159.live,yavasgir160.live,yavasgir161.live,yavasgir162.live,yavasgir163.live,yavasgir164.live,yavasgir165.live,yavasgir166.live,yavasgir167.live,yavasgir168.live,yavasgir169.live,yavasgir170.live,yavasgir171.live,yavasgir172.live,yavasgir173.live,yavasgir174.live,yavasgir175.live,yavasgir176.live,yavasgir177.live,yavasgir143.live,yavasgir155.live,yavasgir178.live,yavasgir179.live,yavasgir180.live,yavasgir181.live###ads-inside-main
-yavasgir137.live,yavasgir138.live,yavasgir139.live,yavasgir140.live,yavasgir141.live,yavasgir142.live,yavasgir144.live,yavasgir145.live,yavasgir146.live,yavasgir147.live,yavasgir148.live,yavasgir149.live,yavasgir150.live,yavasgir151.live,yavasgir152.live,yavasgir153.live,yavasgir154.live,yavasgir156.live,yavasgir157.live,yavasgir158.live,yavasgir159.live,yavasgir160.live,yavasgir161.live,yavasgir162.live,yavasgir163.live,yavasgir164.live,yavasgir165.live,yavasgir166.live,yavasgir167.live,yavasgir168.live,yavasgir169.live,yavasgir170.live,yavasgir171.live,yavasgir172.live,yavasgir173.live,yavasgir174.live,yavasgir175.live,yavasgir176.live,yavasgir177.live,yavasgir143.live,yavasgir155.live,yavasgir178.live,yavasgir179.live,yavasgir180.live,yavasgir181.live##+js(addEventListener-defuser, DOMContentLoaded, openPopup)
+yavasgir137.live,yavasgir138.live,yavasgir139.live,yavasgir140.live,yavasgir141.live,yavasgir142.live,yavasgir144.live,yavasgir145.live,yavasgir146.live,yavasgir147.live,yavasgir148.live,yavasgir149.live,yavasgir150.live,yavasgir151.live,yavasgir152.live,yavasgir153.live,yavasgir154.live,yavasgir156.live,yavasgir157.live,yavasgir158.live,yavasgir159.live,yavasgir160.live,yavasgir161.live,yavasgir162.live,yavasgir163.live,yavasgir164.live,yavasgir165.live,yavasgir166.live,yavasgir167.live,yavasgir168.live,yavasgir169.live,yavasgir170.live,yavasgir171.live,yavasgir172.live,yavasgir173.live,yavasgir174.live,yavasgir175.live,yavasgir176.live,yavasgir177.live,yavasgir143.live,yavasgir155.live,yavasgir178.live,yavasgir179.live,yavasgir180.live,yavasgir181.live,yavasgir182.live###ads-inside-main
+yavasgir137.live,yavasgir138.live,yavasgir139.live,yavasgir140.live,yavasgir141.live,yavasgir142.live,yavasgir144.live,yavasgir145.live,yavasgir146.live,yavasgir147.live,yavasgir148.live,yavasgir149.live,yavasgir150.live,yavasgir151.live,yavasgir152.live,yavasgir153.live,yavasgir154.live,yavasgir156.live,yavasgir157.live,yavasgir158.live,yavasgir159.live,yavasgir160.live,yavasgir161.live,yavasgir162.live,yavasgir163.live,yavasgir164.live,yavasgir165.live,yavasgir166.live,yavasgir167.live,yavasgir168.live,yavasgir169.live,yavasgir170.live,yavasgir171.live,yavasgir172.live,yavasgir173.live,yavasgir174.live,yavasgir175.live,yavasgir176.live,yavasgir177.live,yavasgir143.live,yavasgir155.live,yavasgir178.live,yavasgir179.live,yavasgir180.live,yavasgir181.live,yavasgir182.live##+js(addEventListener-defuser, DOMContentLoaded, openPopup)
 yayinekrani.com,macrehberi.com,sporekrani.com##div[id*="BannerDiv"]
 yayinekrani.com,macrehberi.com,sporekrani.com##div[id^="event_ad_"]
 ye-mek.net##.addForMainPage
@@ -37312,6 +37325,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||2uhxnrj7qreorju4xfq.cfd^
 ||2v2.io/ads/
 ||2v378cds.xyz^
+||2v6pb5xbhunnmy8o.cfd^
 ||2watchmygf.com/spot/
 ||2xclick.ru^$third-party
 ||2yh6rubr2nwkyyrx.cfd^
@@ -37327,6 +37341,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||302kslgdl.de^
 ||303ag0nc7.de^
 ||303marketplace.com^
+||306068c782.com^
 ||307i6i7do.de^
 ||30986g8ab.de^
 ||309e7ed67e.com^
@@ -37499,6 +37514,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||3plworldwide.actonservice.com^
 ||3pohpyurxxirl1mqtzj1mj2p1ftj.cfd^
 ||3prn.com/even/ok.js
+||3q71nx23ewrl482z7jbnx.cfd^
 ||3qfe1gfa.de^
 ||3r3zok58ihon3teu7vvggt.cfd^
 ||3rdspacetech.com^
@@ -37544,6 +37560,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||43abd4fb52.com^
 ||43b0d022d5.com^
 ||43df81ab37.com^
+||43ih5huij5znfocgz5i3e7to.rest^
 ||43ors1osh.com^
 ||43t53c9e.de^
 ||44.228.85.26^
@@ -37629,6 +37646,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||4pornhd.com/nb/
 ||4puzh1khwkuovbr9ipujmtf.cfd^
 ||4pxbxqzp98wmte.cfd^
+||4qhg8h56veuu9mmj4c.rest^
 ||4rabettraff.com^
 ||4rfv.co.uk/advnew/
 ||4shared.com/js/d1VisitsCounter.4min.js
@@ -37649,6 +37667,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||4wnetwork.com^
 ||4wppcr4tenfwjfl72vm2v.cfd^
 ||4xfreedom.com^
+||4xo99r3nuoqno64lgjvj.rest^
 ||4zb5xl3twol78b.cfd^
 ||5.45.79.15^$popup
 ||5.61.55.143^
@@ -37794,6 +37813,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||5rnlorejupwwvr2g.rest^
 ||5ro76jxwweylgt18rm56qw.cfd^
 ||5toft8or7on8tt.com^
+||5v8xnjmivocmuh6zul.cfd^
 ||5vbs96dea.com^
 ||5vbs96dea.com^$popup
 ||5vobauua3ojpklx.icu^
@@ -38180,6 +38200,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||8s5s.com^$popup
 ||8sfdladng.xyz^
 ||8ue4rp6yxyis.www.tapmyback.com^
+||8urqj3m2wrx4cqkbo2lpp74q.cfd^
 ||8vwp464b.xyz^
 ||8vwxqg.tapin.gg^
 ||8w5v8jtixyirpe1p.cfd^
@@ -42198,6 +42219,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||aaat.2ndstreet.jp^
 ||aab.taboohome.com^
 ||aabbjjcuaputt.site^
+||aablubxglrvvc.site^
 ||aachener-zeitung.de/zva/drive.js
 ||aacjdq.pontoslivelo.com.br^
 ||aad-marketing.ascendeventmedia.com^
@@ -42322,6 +42344,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||abcd.coderays.com^
 ||abclegal.actonservice.com^
 ||abcompteur.com^$third-party
+||abdeurqce.com^
 ||abdlnk.com^
 ||abdncdbuocpvf.space^
 ||abdpac.williamsshoes.com.au^
@@ -43589,6 +43612,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||adgreed.com^$third-party
 ||adgrid.io^$third-party
 ||adgroups.com^$third-party
+||adgrowthpro.com^
 ||adgrx.com^$third-party
 ||adguard-dns.io/-/event/
 ||adguard-dns.io/-/logs/
@@ -43668,6 +43692,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||adk2x.com^$popup
 ||adk2x.com^$third-party
 ||adkaora.space^
+||adkbrfxxkgtlf.online^
 ||adkernel.com^
 ||adklimages.com^
 ||adklip.com^$third-party
@@ -43966,6 +43991,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||adora-cdn.com/adora-start.js
 ||adorableanger.com^
 ||adorableattention.com^
+||adorablebass.com^
 ||adorableoil.pro^
 ||adorableold.com^
 ||adorableorchid.com^
@@ -44473,6 +44499,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||advancedadblocker.pro^$popup
 ||advancedmp3players.co.uk/themes/basic/js/analytics.js
 ||advancedsolutions.actonservice.com^
+||advancedtechdev.buzz^
 ||advancing.acams.org^
 ||advancingtheirs.com^
 ||advangelists.com^$third-party
@@ -44686,6 +44713,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||aeqnvirziyfof.space^
 ||aerezb.nepamall.com^
 ||aerialapps.com^
+||aeridesnoshed.cyou^
 ||aerifyspiky.com^
 ||aerksrxqolhmf.website^
 ||aerlingus.com/ahktqsewxjhguuxe.js
@@ -45308,6 +45336,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||aitotop.com^*/collect.js?
 ||aitrejydphpbl.website^
 ||aitsatho.com^$popup
+||aiuaraudkcpjp.online^
 ||aiukjrpgxwiqh.website^
 ||aiuxwxlnsoitj.website^
 ||aiv-delivery.net/Events/
@@ -45316,6 +45345,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||aivali.openapp.link^
 ||aivwuxzgcygjq.site^
 ||aivzqagmhkndd.online^
+||aiwsdkxqizteg.online^
 ||aixcdn.com^
 ||aixifan.com/acsdk/log.min.js?
 ||aixkmxfejbsvb.online^
@@ -45370,6 +45400,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||ajo-lp-salesvelocity.adobedemo.com^
 ||ajo-zensar.adobesandbox.com^
 ||ajo1gdc.ajo1gdc.adobevlab.com^
+||ajogbellon.com^
 ||ajourerabbity.com^
 ||ajplzyvuto.in^
 ||ajptwiopvptab.website^
@@ -45575,6 +45606,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||alerts.steadyapp.com^
 ||alerts.wolterskluwerfs.com^
 ||alertsatwork.americanexpress.com^
+||aleshotglairesdecodon.cfd^
 ||aletheanunlet.cfd^
 ||alex.leonard.ie/misc-images/transparent.png
 ||alexa.com/minisiteinfo/$third-party
@@ -45774,6 +45806,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||aloofvest.com^
 ||alospodeybpnx.site^
 ||alota.xyz^
+||alowpirl.click^
 ||alp1.drimki.fr^
 ||alpenridge.top^$popup
 ||alpha-affiliates.com^$third-party
@@ -47446,6 +47479,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||apnlsrhwvtoeg.site^
 ||apnoeicporella.cyou^
 ||apnpr.com^
+||apnqvhqlhzvhc.site^
 ||apocharetzian.com^
 ||apollofind.com^$third-party
 ||apolloprogram.io^$third-party
@@ -48733,6 +48767,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||arminius.io^$popup
 ||armitasbensail.com^
 ||armjqociqjaij.online^
+||armletwouf.rest^
 ||armpitgratitudecruelty.com^
 ||armsnerveattestation.com^
 ||armvupzc.in^
@@ -48752,6 +48787,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||arphzc.woodica.pl^
 ||arpoyoiriphet.space^
 ||arpxs.com^$third-party
+||arqftuaksk.in^
 ||arqxsubyxuxao.space^
 ||arrangedateslocally.com^
 ||arrayasolutions.actonservice.com^
@@ -48811,7 +48847,9 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||arumhelps.com^
 ||aruntacondo.com^
 ||aruoyf.peterhahn.ch^
+||aruvejhhmtqtf.site^
 ||arvalgasman.shop^
+||arvhcgnmpsero.online^
 ||arvig.actonservice.com^
 ||arvigorothan.com^
 ||arvwwu.stepstone.be^
@@ -48823,6 +48861,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||arxahqjztjnj.com^
 ||arxbuoyage.cyou^
 ||arxoplagziavr.site^
+||arztgkaxj.com^
 ||as-api.whitecoatinvestor.com^
 ||as.autobild.de^
 ||as.axelspringer.com^
@@ -49022,6 +49061,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||asprnrwmfvxkv.website^
 ||aspservice.jp^$third-party
 ||aspshalers.com^
+||aspyhobbil.com^
 ||asqawnbcap.in^
 ||asqconn.com^
 ||asqconn.com^$popup
@@ -49228,6 +49268,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||atdmt.com^
 ||atdogan.site^
 ||atdtigfkumig.in^
+||atdzfavz.in^
 ||atecomprisedispel.com^
 ||atencion.banrural.com.gt^
 ||atendimen.to^$third-party
@@ -49512,6 +49553,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||ausclh.castlery.com^
 ||auslanced.com^
 ||ausmflow.com^
+||auspicypartage.rest^
 ||auspipe.com^
 ||austeemsa.com^$popup
 ||austerefriendship.com^
@@ -49692,6 +49734,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||avqjufpki.in^
 ||avqovczcoanp.com^
 ||avqvapdzqkycf.website^
+||avredpzsensto.online^
 ||avrupabettv*.com/wp-content/uploads/
 ||avs.adpinfo.com^
 ||avsfppmelmkzr.online^
@@ -50083,6 +50126,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||azeriondigital.com^
 ||azerty.nl/ambannerslider/analytic/
 ||azetvyqeskrcs.space^
+||azevalaovugqg.space^
 ||azflce.fragrances.bg^
 ||azfpkrxjbsduf.space^
 ||azg1.emalu-store.com^
@@ -50431,6 +50475,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||bajorbriwza.in^
 ||bajrgcgpxk.com^
 ||bakalbicarb.rest^
+||bakayyflvurcg.online^
 ||bakercommunications.actonservice.com^
 ||bakersequaled.com^
 ||bakingbeheld.com^
@@ -50902,6 +50947,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||bdphtzfhmnfxo.space^
 ||bdqzcj.micuento.com^
 ||bdrrtgdhzqbxk.online^
+||bdrykffavezxq.website^
 ||bdsynhotmkefy.online^
 ||bdtegylolpdmf.site^
 ||bdtestsendpulse.branch.rocks^
@@ -51387,6 +51433,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||betterhealthrewards.headuplabs.com^
 ||bettermedical-app.hotdoc.com.au^
 ||bettermeter.com^$third-party
+||betterviolet.org^
 ||bettingads.365scores.com^
 ||bettingcurly.com^
 ||bettingnetwork-pw.cdn.ampproject.org/*/bettingnetwork.pw/xdb/
@@ -51562,6 +51609,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||bhphotovideo.com/aperture/shared/js/dataLayer.js
 ||bhphotovideo.com/imp/
 ||bhpiegtkglvba.online^
+||bhpobyrxozcod.site^
 ||bhqmtagovcyon.online^
 ||bhqxaoiesguld.site^
 ||bhrhqhzqrckry.website^
@@ -51599,6 +51647,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||bicea.org^
 ||bicp-analytics.postscript.io^
 ||bicqfuzamos.in^
+||bicqgspcmlawd.space^
 ||bicyclebusgrave.work^
 ||biczjgwylcbdn.online^
 ||bid.glass^
@@ -51945,6 +51994,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||bjnlpuyppgfvp.space^
 ||bjnstrujhqmna.space^
 ||bjoblfbaldpzj.site^
+||bjpgvtscpiohh.site^
 ||bjpsuk.fray-id.com^
 ||bjqnpe.i-office1.net^
 ||bjquhxvicujcc.online^
@@ -52022,6 +52072,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||bl230126pb.com^
 ||bl367nz16vf4ti.rest^
 ||bla.blok.link/p4.php
+||blackandwhite-language.pro^
 ||blackandwhite-temporary.com^
 ||blackandwhite-temporary.com^$popup
 ||blackbelted.com^
@@ -52099,6 +52150,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||bleaterpolys.com^
 ||bleatstringinch.com^
 ||bleawwsm.com^
+||bleckaugrim.com^
 ||bleedlight.com^
 ||bleedsretrial.rest^
 ||bleepgizmorecital.com^
@@ -52406,6 +52458,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||bmulryyarqqmh.space^
 ||bmupametryuzx.space^
 ||bmurfsjsvvfhy.space^
+||bmvdqqwslbvyo.online^
 ||bmwebm.org^
 ||bmwjdcvvlhbrb.space^
 ||bmxpsxdqliuhj.space^
@@ -52484,6 +52537,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||bnyudysiqapdc.space^
 ||bnzkua.trussardi.com.br^
 ||bo.facesbet.com^$3p
+||bo8cpcnv938mi9kxxjg5z3ncp.rest^
 ||boannre.com^
 ||boardbumpers.com^
 ||boardceyxgrissel.cyou^
@@ -52621,6 +52675,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||bongaropianyl.qpon^
 ||bongossepium.cyou^
 ||bonitrust.de^$third-party
+||bonjoursizers.cyou^
 ||bonkingrefrain.qpon^
 ||bonmed.se/monitoring?
 ||bonne-terre-data-layer.com^
@@ -52909,6 +52964,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||bpi.zip.co/trx/
 ||bpifosgceukau.space^
 ||bpigydbzlrszz.online^
+||bpjqdogqeiesv.website^
 ||bpkeydnjfxnlr.site^
 ||bpleaaekrdvnj.site^
 ||bpm.global360.com^
@@ -52996,6 +53052,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||braceripe.com^
 ||bracesstot.cfd^
 ||bracketauthorizedportray.com^
+||braconamphion.click^
 ||bractivacar.eccocar.com^
 ||braddumacar.eccocar.com^
 ||brahuimiswendgranat.cfd^
@@ -53235,6 +53292,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||breitbart.com/t/assets/js/prebid
 ||breixmdldvvfa.website^
 ||brenzcdjozwpw.website^
+||brephapumrh.in^
 ||brespark.eccocar.com^
 ||brevitychestprocess.com^
 ||brevityfurs.rest^
@@ -53342,6 +53400,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||brittlesturdyunlovable.com^
 ||brjhzmubffzja.site^
 ||brjjkd.calzedonia.com^
+||brjlaiuuvrxxl.online^
 ||brkbaawvypikso.com^
 ||brkpvjrxjgutb.site^
 ||brldassustitucion.eccocar.com^
@@ -53384,6 +53443,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||broflask.com^
 ||broggleceburbetire.qpon^
 ||broigneakra.com^
+||broilerroseous.click^
 ||broken-fun.com^
 ||brokerbabe.com^
 ||brominer.com^$third-party
@@ -53496,6 +53556,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||brwkazikfxctc.site^
 ||brwsrfrm.com^
 ||brxqlwrzcpcvx.website^
+||bryanyippie.com^
 ||brycys.24mx.se^
 ||brygella.com^
 ||bryurent.eccocar.com^
@@ -54066,6 +54127,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||bxnxktodzsdom.space^
 ||bxoiaheslgsqi.online^
 ||bxolifojkkbue.space^
+||bxozlgmmqvvvb.site^
 ||bxrcbgbdtpfoz.site^
 ||bxrlptloondxl.space^
 ||bxtag.com^
@@ -54896,6 +54958,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||castordevata.cyou^
 ||casual-flirt-hub1.com^
 ||casual-sweetsite.com^
+||casualcitrus.biz^
 ||casualphysics.com^
 ||casualstat.com^$third-party
 ||casualviolet.com^
@@ -55459,6 +55522,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||centumshough.com^
 ||ceoapr.donjoyperformance.com^
 ||ceowyn.eseltree.com^
+||ceoxl3115ih9j1p4kg39.cfd^
 ||cepesbritons.qpon^
 ||cephei-b.com^
 ||cephenbacurycarses.qpon^
@@ -55692,6 +55756,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||charlotte-content.cresa.com^
 ||charlottemice.com^
 ||charmedwater.com^
+||charmingarea.com^
 ||charmingplate.com^
 ||charmingpoliteinjunction.com^
 ||charmingtiger.me^
@@ -55989,6 +56054,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||chzcjttcjtycz.site^
 ||chzhqwirsxmad.online^
 ||chzowqzedjocl.space^
+||chzukqyxheldq.website^
 ||ci.intuit.ca^
 ||ci.intuit.co.uk^
 ||ci.intuit.com^
@@ -56072,6 +56138,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||cissusbilchrepale.cyou^
 ||cissyhymner.cfd^
 ||cistronawn.qpon^
+||cistronboatly.qpon^
 ||cistusetnean.com^
 ||cisyxmahhotxf.site^
 ||ciszhp.finanzfrage.net^
@@ -56122,9 +56189,11 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||cixcljugcznlu.site^
 ||cixeizobtuije.online^
 ||ciyxejfqrtvqq.site^
+||cizegfgxpavpz.site^
 ||cizzvi.beldona.com^
 ||cj2550.com^
 ||cj9wycx5gc5ztr.cfd^
+||cjakqrpjmodet.online^
 ||cjbdme.conquer.org^
 ||cjckvqrfbiqid.space^
 ||cjcqls.onbuy.com^
@@ -56339,6 +56408,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||clerks.doccheck.com^
 ||clerrrep.com^
 ||clerumperes.com^
+||clerusotiose.click^
 ||cletkgeeyjqsu.space^
 ||cleverads.vn^$third-party
 ||cleverbasin.com^
@@ -56948,6 +57018,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||cmmeglobal.com/evt?
 ||cmmeglobal.com^$third-party
 ||cmmeglobal.com^*/page-view?
+||cmmrlbbmvxrky.website^
 ||cmmugifxhmlbv.space^
 ||cmmwpkihpyefy.website^
 ||cmolkehwqwiur.online^
@@ -57038,6 +57109,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||cnebis.eisai.jp^
 ||cnebis.i-no-science.com^
 ||cnejpkmvsjvft.com^
+||cnemishippen.com^
 ||cnet.com/prebid-client.js
 ||cnetcontent.com/log?
 ||cnethvmomtnsh.site^
@@ -57120,12 +57192,15 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||coalmerchants.com^
 ||coalyelves.com^
 ||coaqhbgliewbm.space^
+||coarse-double.pro^
+||coarse-representative.pro^
 ||coastalbloom.xyz^
 ||coastalbloom.xyz^$document
 ||coastersim.com^
 ||coastuniversalintroducing.com^
 ||coatfood.com^
 ||coatsanguine.com^
+||coaxermanism.cfd^
 ||coazdbbxocvgi.site^
 ||coazoveekjecr.space^
 ||cobaltgroup.com^$third-party
@@ -57204,6 +57279,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||coffinlapflight.com^
 ||cofflehexapla.com^
 ||cofgwqfwefzrl.site^
+||cofhfk9ffwgvm2oxci6l11i9gl.rest^
 ||coftbvdtlkpmt.website^
 ||coftfgnjvnyew.online^
 ||coggingbrocard.com^
@@ -57409,6 +57485,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||colonistnobilityheroic.com^$popup
 ||coloradoserves.com^
 ||colorandnoise.com^
+||colorfilter.net^
 ||colorfuleconomy.pro^
 ||colorfulneon.com^
 ||colorfulpet.com^
@@ -58356,6 +58433,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||corporatepages.proximus.com^
 ||corporateplatino.americanexpress.it^
 ||corpsenoodleflakes.com^
+||corpsesbuchloe.cfd^
 ||corpulentperjury.com^
 ||corramba.lol^
 ||correctdialperch.com^
@@ -58410,6 +58488,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||cotrck.com^
 ||cotrck.com^$popup
 ||cottagewidowy.qpon^
+||cotttortor.cyou^
 ||cotxriwmudsth.website^
 ||coucalhidated.com^
 ||couchsurfing.com/bEcn7fQX/init.js
@@ -58844,6 +58923,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||creative.camsplanetlive.com^
 ||creative.favy.cam^
 ||creative.homejavlive.com^
+||creative.janusaent.com^
 ||creative.javhdporn.live^
 ||creative.live.javdock.com^
 ||creative.live.javmix.tv^
@@ -58885,6 +58965,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||credistory.ru/api/v1/LiveMetrics/
 ||credospuppets.rest^
 ||creeduserbane.com^
+||creek-reach.site^
 ||creenborsht.cfd^
 ||creeperoaring.cyou^
 ||creeperplotgrove.com^
@@ -59022,6 +59103,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||crosspreferrite.com^
 ||crossseasent.com^
 ||crosswalkmail.com^$third-party
+||crotaltendrac.com^
 ||crouchedmonarch.com^
 ||croupyacouchysheers.cfd^
 ||crowbarrinds.com^
@@ -59385,6 +59467,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||cuhyucfeymzw.com^
 ||cuisineenvoyadvertise.com^
 ||cuisinevoyager.com^
+||cuissenwardage.rest^
 ||cuivordvonnsy.site^
 ||cujgqmnqwsgjt.website^
 ||cujkqrmdhoqap.website^
@@ -59449,9 +59532,11 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||cuplikenominee.com^
 ||cupoabie.net^
 ||cuppenbedsore.cyou^
+||cuprenecanvas.cfd^
 ||cupriteaffile.qpon^
 ||cuprumbenet.com^
 ||cups.republicoftea.com^
+||cupulesdaur.rest^
 ||cuqtrlibylbiv.website^
 ||curacoapips.com^
 ||curacyphobism.qpon^
@@ -61209,6 +61294,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||dapperskyward.cyou^
 ||dapsujahh.in^
 ||dapxl.com^$third-party
+||dapxugkmfcdds.website^
 ||daqsvmdrgchu.com^
 ||darbymetepa.com^
 ||dardicvv.cfd^
@@ -61989,6 +62075,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||dbujksp6lhljo.cloudfront.net^
 ||dbvcmwmqdgcpg.online^
 ||dbw7j2q14is6l.cloudfront.net^
+||dbwnavacspyxc.space^
 ||dbxkzizfgildn.site^
 ||dby7kx9z9yzse.cloudfront.net^
 ||dbyoei.styleggom.co.kr^
@@ -62132,6 +62219,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||dcssptrack.com^
 ||dcujytxymslst.site^
 ||dcunkpgzsysvg.website^
+||dcuyufdhlfhza.online^
 ||dcv4p460uqa46.cloudfront.net^
 ||dcvigbosdkrhp.space^
 ||dcvssaited.com^
@@ -62405,6 +62493,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||deeplinktest.yooture.info^
 ||deeplinkuat.upoker.net^
 ||deepmetrix.com^
+||deepoceandrop.biz^
 ||deepretainer.com^
 ||deeptack.com^
 ||deepweb.net/api/event
@@ -62643,6 +62732,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||deployads.com^
 ||deployfondly.com^
 ||deployinput.com^
+||deployskind.com^
 ||depmestiza.com^
 ||deporvillage.com/tracking-library/
 ||deprecated-custom-domains.b-cdn.net^$third-party
@@ -62902,6 +62992,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||dfr.deloitte.com^
 ||dfrgxsiydjbfj.space^
 ||dfrhgivzjpkil.site^
+||dfsjvdvyejmfs.site^
 ||dfuijqrojtvcb.site^
 ||dfunqslocpfir.site^
 ||dfuufcsikcian.website^
@@ -62948,6 +63039,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||dgoynwlmoxgsx.space^
 ||dgrtccqbovu.com^
 ||dgtsowpvnhodi.site^
+||dguveltqwkzyg.online^
 ||dguvjpegbqawv.online^
 ||dgvhzcxksncni.website^
 ||dgw7ae5vrovs7.cloudfront.net^
@@ -63011,6 +63103,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||dhynxkwbsqrgp.website^
 ||dhyrdvvxrxjtn.online^
 ||dhysllhtvdbfa.online^
+||dhzpxeelmcuae.website^
 ||di-capt.com^$third-party
 ||di.fotos-fuers-leben.ch^
 ||di.ifolor.at^
@@ -63041,6 +63134,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||diagnose.igstatic.com^
 ||diagnosisscript.com^
 ||diagnostics.thermo.com^
+||diagramgrog.cyou^
 ||diagramjawlineunhappy.com^
 ||diagramjawlineunhappy.com^$document
 ||diagramjawlineunhappy.com^$popup
@@ -63094,6 +63188,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||diazidehematid.com^
 ||dibbedschizosmarinal.cfd^
 ||dibbledbest.com^
+||dibblesrabbishsergei.cyou^
 ||diboji.class101.net^
 ||dibres.xyz^
 ||dibsemey.com^
@@ -63206,6 +63301,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||digitru.st^$third-party
 ||digiturkburada.com.tr/images/digiturk-internet-banner-ns.png$3p
 ||diglloyd.com/js2/pub-wide2-ck.js
+||dignecashews.com^
 ||dignow.org^$third-party
 ||digreality.com^$third-party
 ||dihutyaiafuhr.cloudfront.net^
@@ -63425,6 +63521,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||dinsbetrlsiqc.space^
 ||dinxkqucszaza.space^
 ||dinzfafad.in^
+||dinzzqoitqmeo.online^
 ||dioaueqgulrdm.site^
 ||diocgn.biltorvet.dk^
 ||diolsetchesdracma.cyou^
@@ -63433,6 +63530,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||dior.com/contcdc/
 ||dioramatupuna.cyou^
 ||dioxansandust.cyou^
+||dipcdzuixfaot.website^
 ||diploiswhet.com^
 ||dipperflightrecommend.com^
 ||dippergeologyprescribe.com^
@@ -63855,6 +63953,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||dkvtbjavjme96.cloudfront.net^
 ||dkvvwq.aosom.ca^
 ||dkwwiibjjvawu.website^
+||dkxqafejvrfai.website^
 ||dkxtzubbtmzie.space^
 ||dkxutggyyyajh.website^
 ||dkyp75kj7ldlr.cloudfront.net^
@@ -64015,6 +64114,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||dmclick.cn^$third-party
 ||dmcnyf.nevzatonay.com^
 ||dmctdfwldpwou.online^
+||dmddzmkytvw.com^
 ||dmdgdu.atmosphera.com^
 ||dmdi.pl^$third-party
 ||dmdksxjnvudwg.site^
@@ -64222,6 +64322,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||dohxgyjobgzfb.website^
 ||doibyspdqlbmd.online^
 ||doinntz6jwzoh.cloudfront.net^
+||dojmyftcqwcjx.space^
 ||dojomojo.com^$third-party
 ||dojomojo.ninja^$third-party
 ||dojx47ab4dyxi.cloudfront.net^
@@ -64383,6 +64484,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||dotyruntchan.com^$popup
 ||double-check.com^
 ||double.net^
+||doubleacingawheel.cyou^
 ||doubleadserve.com^
 ||doubleadserve.com^$popup
 ||doubleclick-cn.net^
@@ -64923,6 +65025,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||dsiblb.com^
 ||dsicxo.com^
 ||dsidas.com^
+||dsifphfbfeazr.space^
 ||dsiill.com^
 ||dsikyf.com^
 ||dsilbm.com^
@@ -65625,6 +65728,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||dzloljaqszhbx.online^
 ||dzmrbjehnpkah.site^
 ||dzmycrwpwvurg.site^
+||dznrjqixfcvyb.space^
 ||dzpnheknnjwmdh.com^
 ||dzqxwy.com^
 ||dzr4v2ld8fze2.cloudfront.net^
@@ -65867,6 +65971,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||eagerangle.com^
 ||eagerbrass.com^
 ||eagercandy.com^
+||eagerdish.org^
 ||eagerflame.com^
 ||eagerknight.com^
 ||eagerlycuisinecast.com^
@@ -66527,6 +66632,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||efo-bf.net/wp-content/uploads/*.gif
 ||efoepfgcitoqe.online^
 ||eforebuthehadsta.org^
+||efpaprrpjzzao.website^
 ||efplso.epost.go.kr^
 ||efpsschecslmc.online^
 ||efpzwwfgmblee.site^
@@ -66581,6 +66687,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||eggxctumiredj.online^
 ||eghrbf.immowelt.at^
 ||egitqmdbccuih.space^
+||egjnfdemvnbsr.online^
 ||egkckilnsuzzk.website^
 ||egksxbmaehh.com^
 ||eglujzjlgxlhq.space^
@@ -66771,6 +66878,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||ekiisawyaretz.online^
 ||ekitan.com/*-analytics.js
 ||ekitan.com/common/ek-tracker/
+||ekivqiqnzv.com^
 ||eklexu.kibuba.com^
 ||ekmas.com^
 ||ekmpinpoint.co.uk^$third-party
@@ -66784,6 +66892,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||ekrvzaqtbhxjx.site^
 ||ektmyescfvnmb.website^
 ||ektxsfkdnciut.space^
+||ekumzqgyixjqj.space^
 ||ekvdywdjcwejw.space^
 ||ekvhgfruqyadw.site^
 ||ekvoffgfhdtoj.website^
@@ -67400,6 +67509,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||emails.watchown.tv^
 ||emailtemporario.com.br/*/trackevents
 ||emailtemporario.com.br/~api/analytics
+||emanateswellyunci.cfd^
 ||emarbox.com^$third-party
 ||emarketeer.com/tracker/
 ||emarketing.landisgyr.com^
@@ -67462,6 +67572,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||emergencystopped.com^
 ||emergeskid.com^
 ||emeritiillano.com^
+||emerodfurmity.click^
 ||emeroidcaufle.com^
 ||emetrics.bose.ca^
 ||emetrics.bose.com^
@@ -68678,6 +68789,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||evaluationgrievedaudacity.com^
 ||evanescentedge.com^
 ||evangelspatzle.com^
+||evasedebteefardage.cfd^
 ||evasiuywadnox.space^
 ||evasivejar.com^
 ||evcvjikcfwqesx.com^
@@ -69638,6 +69750,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||fancytravelingrid.com^
 ||fancywhim.com^
 ||fandommetrics.com^$third-party
+||fangassneesttrothed.cfd^
 ||fangedrouts.click^
 ||fangfeeling.com^
 ||fangmoonlight.com^
@@ -69683,6 +69796,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||farawayamber.com^
 ||farcesjobbish.cfd^
 ||farcialscoon.cfd^
+||fardageproverb.rest^
 ||fardasub.xyz^
 ||fardasub.xyz^$popup
 ||fardobruited.cfd^
@@ -69801,6 +69915,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||faxardent.net^
 ||faxcoupons.com^
 ||faxopdow.in^
+||fayingperine.rest^
 ||faylesshapen.qpon^
 ||fayybdzpqezlr.website^
 ||fazanppq.com^
@@ -69837,6 +69952,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||fbot.me/error
 ||fbot.me/events/
 ||fbouuanxwspzh.website^
+||fbpqqxhfnryaf.website^
 ||fbpqvs.com^$popup
 ||fbqehotinnkwq.space^
 ||fbqhhioxipvfn.space^
@@ -70023,6 +70139,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||fefrkjfxxazpp.store^
 ||fefupklsamwme.online^
 ||fegarythack.cfd^
+||fegbzyfhjrthb.space^
 ||fegekejynewyhe.com^
 ||fegent.xyz^
 ||fegg37mtpm6h55.rest^
@@ -70034,6 +70151,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||feignoccasionedmound.com^
 ||feilbeclaw.com^
 ||feintunface.cfd^
+||feisoutsulk.cfd^
 ||feistymeet.pro^
 ||fekljtbhbtzqv.online^
 ||fekqqwrgrrshg.space^
@@ -70616,6 +70734,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||fjj8bbltvw4fm1n1nycnhoupqotjug.rest^
 ||fjjdwjwtfnouy.website^
 ||fjkjaj.peterhahn.nl^
+||fjlcversoivxy.site^
 ||fjordsand.com^
 ||fjordsand.com^$redirect=noopjs,script
 ||fjortk.braun-hamburg.com^
@@ -70986,6 +71105,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||fmpezkwxyqryq.website^
 ||fmpjka.moroccanoil.com^
 ||fmpub.net^
+||fmpyblulujqff.online^
 ||fmqidg.letras.com^
 ||fmqidg.letras.mus.br^
 ||fmqidg.ouvirmusica.com.br^
@@ -71069,6 +71189,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||fogvnoq.com^
 ||fohshxrgpzlkj.site^
 ||fohztovjigukz.space^
+||foiadhsltuock.site^
 ||foicuoxmzjthm.site^
 ||foilunflaweduproot.com^
 ||foinedmtscmd.com^
@@ -71132,6 +71253,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||foodpanda.ro/lJuB4eTB/init.js
 ||foodpanda.sg/lJuB4eTB/init.js
 ||foodsouvlakibar.openapp.link^
+||foolerystrop.com^
 ||foolhardy-wall.com^
 ||foomaque.net^
 ||foomjy.teacollection.com^
@@ -71910,6 +72032,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||fsosaocjrfcql.site^
 ||fspark-ap.com/ft/analytics_log
 ||fspark-ap.com^$third-party
+||fspcixhvcmsrd.website^
 ||fsqgocmhgaikr.site^
 ||fsqmmzzeimsgi.online^
 ||fsqwdj.live-tennis.eu^
@@ -72675,6 +72798,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||gaolcomptlytaxable.cfd^
 ||gapasjodvjul.in^
 ||gapcontroversialprodigal.com^
+||gapgwfmsaibho.online^
 ||gapmeezmpklpd.website^
 ||gapwadfcmeilz.space^
 ||gaqxkizfpyhpc.site^
@@ -72916,6 +73040,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||gdsfkwghjspep.site^
 ||gdsngr.chainreactioncycles.com^
 ||gdt.qq.com^
+||gdxledmzqcpyz.online^
 ||gdxxfncujmrjm.site^
 ||gdyfoedcfpusk.online^
 ||gdzrozskajiuk.space^
@@ -73766,6 +73891,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||gkx.gokwik.co/gke/
 ||gkx.gokwik.co/kp/api/v1/fp/
 ||gkxixncsphfli.online^
+||gkxrdprnfzcxz.website^
 ||gkxuifkljnmet.online^
 ||gkyaggtewwucj.online^
 ||gkyjjhlmll.com^
@@ -74906,6 +75032,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||googlevads-cn.com^
 ||gooierworrit.com^
 ||gooloeboonpia.com^
+||goonieanvilmanic.cfd^
 ||goonsupper.com^$popup
 ||goonutteredconfessed.com^
 ||gooo.al^$third-party
@@ -75588,6 +75715,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||guidepaparazzisurface.com^
 ||guidepointglobal.actonservice.com^
 ||guideposts.actonservice.com^
+||guidon40hyporadius9.com^
 ||guidonsfeeing.com^
 ||guigegoriest.click^
 ||guildalpha.com^
@@ -75782,6 +75910,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||gxrzabyhreybz.online^
 ||gxteysujhcypg.online^
 ||gxtihgivnpgei.online^
+||gxuntweapylyx.website^
 ||gxusko.pinkpanda.hu^
 ||gxvdzkmvwmgua.online^
 ||gxvlkzwimkiyb.site^
@@ -75790,6 +75919,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||gxyaxf.pixartprinting.be^
 ||gxyojn.underarmour.fr^
 ||gxyvfniyctnrd.site^
+||gxyzkmsksthas.website^
 ||gxzkljfo.com^
 ||gyassacrunk.cyou^
 ||gyazo.com^$domain=turbobit.net
@@ -75851,6 +75981,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||gzdsnsgboqrbs.online^
 ||gzekicodtacr.in^
 ||gzewqaxbkwijp.website^
+||gzgyjduudyvmh.website^
 ||gzhcrireklbaw.online^
 ||gzhpalnhttkad.online^
 ||gzjroa.bradsdeals.com^
@@ -75949,6 +76080,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||hagech.com^$document
 ||hagglebudh.cfd^
 ||haggletsuba.com^
+||hagglycrappy.com^
 ||haginsensiblesupervise.com^
 ||hagprepay.cyou^
 ||hagridpnxt.com^
@@ -76070,6 +76202,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||hankookilbo.com/service/kt/trk.js$script,domain=koreatimes.co.kr
 ||hankyenchant.com^
 ||hannover-stadtplan.com/t.gif
+||hanoemimcoins.cyou^
 ||hanojdofxaw.in^
 ||hanseazido.com^
 ||hanselsgipping.com^
@@ -76113,6 +76246,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||hardenferbams.cfd^
 ||hardexpendstrategy.com^
 ||hardfinbanana.com^
+||hardiesguardedascus.cfd^
 ||hardinet.actonservice.com^
 ||hardockpanmancasern.cfd^
 ||hardsixhockey.net^
@@ -76302,6 +76436,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||hcdnpe.iareduceri.ro^
 ||hcegngzriixcl.site^
 ||hceofhekgmpu.com^
+||hcgkcebafqgqm.site^
 ||hcgzmbfewulwh.website^
 ||hchlqx.ghbass.com^
 ||hchwkwwflqsrc.website^
@@ -76425,6 +76560,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||headphonedilution.com^
 ||headquartersfallclassify.com^
 ||headydegree.com^
+||heafquinze.click^
 ||healflowers.com^
 ||healingebcasc.cyou^
 ||healte.de^$third-party
@@ -76507,6 +76643,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||hedgeabruptunlucky.com^
 ||hedgesniffle.com^
 ||hedwigflooredventure.com^
+||hedyirthpalar.cfd^
 ||heedychickrehangs.cfd^
 ||heeloven.com^
 ||heezyocdqfdfk.site^
@@ -76535,6 +76672,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||heise.de/recommendation/m/impression$xmlhttprequest
 ||heise.de/recommendation/m/view$xmlhttprequest
 ||heixidor.com^
+||heiyaffle.click^
 ||hej.henriksommerfeld.se^
 ||hekhnn.turnkeyvr.com^
 ||hekowutus.com^
@@ -76644,6 +76782,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||heptix.net^$document
 ||heptix.net^$popup
 ||heqipjkwjhnnn.online^
+||heqwjmewurngy.space^
 ||heraldandtimeslabs.com/sugar.js
 ||heratheacle.com^$popup
 ||herbgreencolumn.com^
@@ -77221,6 +77360,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||hleouh.feelunique.com^
 ||hlfzxeuezujhf.space^
 ||hlgdxdfwnqqug.online^
+||hlggpgruglizv.website^
 ||hlgmrrzoeayw.com^
 ||hlhyzh.fann.cz^
 ||hlinit.com^
@@ -77469,6 +77609,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||honeycombastrayabound.com^
 ||honeyscene.com^
 ||honeywhyvowel.com^
+||honkeybatavi.cfd^
 ||honorablehydrant.com^
 ||honorableland.com^
 ||honourcountry.com^
@@ -77657,6 +77798,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||householdjeopardy.com^
 ||housejomadkc.com^
 ||housemaiddevolution.com^
+||housewheels.com^
 ||housingtrap.com^
 ||houston-content.cresa.com^
 ||houston.advgo.net^
@@ -77882,6 +78024,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||hstats.hepsiburada.com^
 ||hstatstest.hepsiburada.com^
 ||hstrck.com^$third-party
+||hstvlfnnrjgll.space^
 ||hstxodhtqfyko.site^
 ||hsvpxtzcinvgi.online^
 ||hsvqdflwzputv.website^
@@ -78419,6 +78562,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||i0.wp.com/maksatbilgi.com/MaksatReklam/
 ||i0.wp.com/maksatbilgi.com/wp-content/uploads/2019/08/takipci-com-tr.jpg
 ||i1.wp.com/koinfinans.com/app/uploads/*/binance-register-new.png
+||i1337yreugulr499qp6r58.rest^
 ||i2.milimaj.com/i/milliyet/75/770x0/61efcb5686b24a11e046229a.jpg$domain=milliyet.com.tr
 ||i218435.net^
 ||i27oyw199u2jwzrcnyr9xx26t1c1.cfd^
@@ -78430,6 +78574,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||i5nb1iokj8lwiel.cfd^
 ||i5u85h973w93o1ghy4uiggnlq2qe2.cfd^
 ||i5uhx9464wi8epyfp.cfd^
+||i8vk5ccf1ucblwr.rest^
 ||i8xkjci7nd.com^
 ||i993.com^
 ||i994zc74pxrc9uhx.cfd^
@@ -78800,6 +78945,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||ifpiawqeievju.online^
 ||ifqieoxkkghff.space^
 ||ifqtfo.rugsusa.com^
+||ifquayfkshevq.online^
 ||ifqurqkzqnupr.site^
 ||iframe.adultfriendfinder.com^$third-party
 ||ifriends.net^$subdocument,third-party
@@ -78931,6 +79077,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||iicvdlmypkugr.space^
 ||iid-network.jp^$third-party
 ||iieixflrhfkeo.website^
+||iiepzyvhtdqoi.space^
 ||iifvcfwiqi.com^
 ||iihhfyukxcyrp.site^
 ||iihqiezojdtcx.online^
@@ -78993,6 +79140,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||ijutpkixrburi.space^
 ||ijvpzsijsvwih.online^
 ||ijwedylvbjgdx.space^
+||ijysugjcq.com^
 ||ijyyunqcjscfa.website^
 ||ik8f68pffhmbhxc89wg8z.cfd^
 ||ik8uf01fm7neloo9.edge41.testandtarget.omniture.com^
@@ -79019,6 +79167,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||ikquaycaaygib.space^
 ||ikqyazeadzqvo.space^
 ||ikrluvzleiqze.online^
+||iksbgcsgufkdt.website^
 ||ikscwzjgxpeqy.site^
 ||ikuftjxylifwl.online^
 ||ikumbbfcrfxhk.online^
@@ -79987,6 +80136,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||inbound-step.heavenmedia.com^$third-party
 ||inbox.lv^*/ga.js
 ||inboxtag.com^$third-party
+||incampconchiedining.cyou^
 ||incapdns.net/monitor.js
 ||incarnatepicturesque.com^
 ||incegceozdsrt.space^
@@ -80144,6 +80294,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||inferior-stick.com^
 ||infestnolle.com^
 ||infibeam.com/affiliate/
+||infideloutwaitidion.cfd^
 ||infinigraph.com^$third-party
 ||infinite-ads.com^$third-party
 ||infinity-tracking.com^$third-party
@@ -81551,6 +81702,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||involve.asia^$third-party
 ||involvingparentalducks.com^
 ||involvingrallyanthem.com^
+||inwardsscamped.click^
 ||inwardupsettingcudgel.com^
 ||inwheelmasks.cyou^
 ||inwindsseppukulenitic.cfd^
@@ -81951,6 +82103,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||ispehcsibrwft.site^
 ||ispeirmusyrvn.online^
 ||ispnsjcdiubjf.online^
+||ispuxelmvitav.space^
 ||isqrunylbxfpp.space^
 ||israelicoelome.com^
 ||isseidemark.cyou^
@@ -81963,6 +82116,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||istats.nl^$third-party
 ||istdptmcbzpnn.site^
 ||istipaumophy.com^$popup
+||istjmvigsaaij.online^
 ||istlnkbn.com^
 ||istlnkcl.com^$popup
 ||istrack.com^$third-party
@@ -82134,6 +82288,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||ivisa.com/widgets/*utm_medium=affiliate$subdocument,third-party
 ||ivitrack.com^$third-party
 ||ivjpj5ntrxr14gj87bxtj37r2zve.cfd^
+||ivlxufaxxdlll.site^
 ||ivmwbl.hear.com^
 ||ivonitsa.openapp.link^
 ||ivoxkuybivbme.space^
@@ -82141,6 +82296,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||ivpnxhqsbbuabi.com^
 ||ivr.com.tr^$3p
 ||ivrnfvlcgubm.www.cefirates.com^
+||ivslbsnaxongp.space^
 ||ivstracker.net^
 ||ivsuqzosbdrir.site^
 ||ivuaqimnwpvdc.space^
@@ -82204,6 +82360,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||ixegbqlflqiqf.site^
 ||ixelgwaalonhe.website^
 ||ixfbdmdduqypv.online^
+||ixfbyzmamkeol.space^
 ||ixffxruloykhf.site^
 ||ixfzykfnvpwro.online^
 ||ixhqrfzzijjjz.site^
@@ -82519,6 +82676,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||jbqtnmomoetzz.site^
 ||jbrieonvryioo.space^
 ||jbsckzvzaxdop.online^
+||jbsotkpqajdfm.website^
 ||jbsvgmoshntii.website^
 ||jbtqolskzxoky.online^
 ||jbtul.com^
@@ -82563,6 +82721,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||jcqwudfidmevr.online^
 ||jcr3.onlyyouhotels.com^
 ||jcrhpslysoaww.site^
+||jcsqmedeywtly.site^
 ||jcsubfkhazsil.website^
 ||jcsyknyvserff.online^
 ||jcunttyfnkqps.online^
@@ -82926,6 +83085,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||jirot.xyz^
 ||jiroxkqcnymkrgm.cfd^
 ||jirqrmfxaeoyr.site^
+||jisfrynuwf.in^
 ||jisgwdtbqciof.site^
 ||jiswpgqjpegnp.online^
 ||jitanvlw.com^
@@ -83047,6 +83207,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||jlpuzawkaasxh.site^
 ||jlq5vj7kckf5u75oub7j1.rest^
 ||jlrgovibptuzp.online^
+||jltonxzvezifs.website^
 ||jltpxzdwnnwuj.space^
 ||jlujxipdixrw.com^
 ||jlvhwqtkmttgq.site^
@@ -83390,6 +83551,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||jqfffomcfppgu.space^
 ||jqhdonugbkmfo.online^
 ||jqhxsrqhvztee.site^
+||jqigbwwsqscnl.online^
 ||jqioregvpxgte.website^
 ||jqjinjmymyfbc.site^
 ||jqjpdxlywnqam.site^
@@ -83413,6 +83575,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||jqsklowxurgbh.online^
 ||jqsouo.gourmetcaree.jp^
 ||jqueryoi.com^
+||jqwprcbgiohuf.site^
 ||jqwqxdboznygi.online^
 ||jqxueosbasxgx.space^
 ||jqyjonjxonnzp.space^
@@ -83451,6 +83614,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||jrqwvqcbmhwjq.site^
 ||jrqzmiipckcvm.website^
 ||jrrmojsntectt.site^
+||jrrswcrteqcdu.website^
 ||jrtixpxqtqafv.online^
 ||jrtuestoqzral.space^
 ||jrucbb.guestreservations.com^
@@ -83588,6 +83752,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||jtinbgeyzmcjd.online^
 ||jtiyjiasjcapf.space^
 ||jtjuuybgohcay.website^
+||jtkkccxrsnskg.space^
 ||jtktdlkjrh.com^
 ||jtmmxldoxjdcz.site^
 ||jtnjuzidtzzsb.website^
@@ -83635,6 +83800,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||judebelii.com^
 ||judebelii.com^$popup
 ||judgedfancyhowl.com^
+||judgestonner.click^
 ||judicialimpatientgenerator.com^
 ||judsosvhqpuio.online^
 ||juexsoowv.com^
@@ -83829,6 +83995,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||jweekuxflrgqj.site^
 ||jwegptdhydbhd.space^
 ||jweqai.amen.fr^
+||jwestzlioaqo.com^
 ||jwfaregtarvql.space^
 ||jwjtbna.com^
 ||jwkexnqakskaj.online^
@@ -83914,6 +84081,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||jynmirqnknupr.space^
 ||jynwlg.veromoda.com^
 ||jypcqvpgewajj.site^
+||jypgjzagcphbd.website^
 ||jyphhfkvrutek.site^
 ||jyprvthqonbxi.online^
 ||jyqckbryepksj.site^
@@ -84333,6 +84501,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||kektds.com^
 ||kektds.com^$popup
 ||kelchincasasia.com^
+||kelewverfsrbr.online^
 ||kelfnfabbwugq.online^
 ||kelkoogroup.net/st?
 ||kelpiesregna.com^
@@ -84477,6 +84646,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||kgioxibrrjqep.online^
 ||kgiqptmzhkidx.website^
 ||kgjbjnfgnnwea.online^
+||kgkjwsubtad.com^
 ||kgkoaqjngpvvx.online^
 ||kglxixzitjbri.space^
 ||kgmipfngmsypp.online^
@@ -84989,6 +85159,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||knshow.com/ab?
 ||knsoknmyvyhab.website^
 ||knsveecsvcxxl.online^
+||kntlfthwgqsbqv.com^
 ||kntuknifvkfmw.space^
 ||knucklemonthsedifice.com^
 ||knucqgzjrzyxs.online^
@@ -85277,6 +85448,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||kswlplkgtovxr.site^
 ||ksxqznsgtwfiz.space^
 ||ksxteldtlbtss.website^
+||ksyibwnigfijv.space^
 ||ksyrium0014.com^$third-party
 ||kszpsc.waschbaer.ch^
 ||kszuxn.snidel.com^
@@ -85503,6 +85675,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||kxgadtlettueg.website^
 ||kxgjouendnfez.online^
 ||kxgteafuhnpoz.online^
+||kxhewlmedyzqe.online^
 ||kxiojzupnyyif.website^
 ||kxjpjbuiaukjq.space^
 ||kxjxjuoyfawwf.website^
@@ -85898,6 +86071,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||landlordbg.com/abox.js
 ||landlordspy.com^
 ||landmantinaja.com^
+||landmilbonzery.com^
 ||landrykling.actonservice.com^
 ||landscaperedressave.com^
 ||landscapestoleabbey.com^
@@ -86077,6 +86251,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||lbc.lesbonscommerces.fr^
 ||lbdntfvcafqjp.online^
 ||lbdphmpwmwdzw.online^
+||lbeato.store^
 ||lbefscvpuihal.website^
 ||lbfespmneslew.space^
 ||lbffrgzxxorsd.space^
@@ -86096,6 +86271,8 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||lbnrrh.autouncle.dk^
 ||lborikfrxkooz.online^
 ||lbosovartuxkv.online^
+||lboswndciku.com^
+||lbpusudllcoes.site^
 ||lbpxotmjtdbom.site^
 ||lbpzmnnrhnfhf.website^
 ||lbqoewlxbeydk.site^
@@ -86115,9 +86292,11 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||lc3wrxwcxenqp894rfttey8v6expi6w7.cfd^
 ||lc92nnt464lq3n1vbk1.cfd^
 ||lcaxfhprvnwaq.online^
+||lcbxdjoaryrja.website^
 ||lccwslgiotyub.site^
 ||lccygeowkysvo.online^
 ||lcdqwmfwbkbby.site^
+||lcdsdwehypscu.space^
 ||lcdsyj.daily.co.jp^
 ||lcdvqdiiovsxj.site^
 ||lcefua.timberland.ru^
@@ -86852,6 +87031,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||lilydreamer.com^
 ||limbaafirekenlore.cyou^
 ||limbasmaoist.cyou^
+||limbatalonsobud.cyou^
 ||limbecyblent.com^
 ||limbiegenesvistas.cyou^
 ||limbik.com/static/tracking-script.js
@@ -87906,6 +88086,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||littlesun.net^
 ||littlevigorously.com^
 ||littlinpickage.com^
+||liuspylrbeqgi.website^
 ||livableprelacy.com^
 ||livdnkbosjtwv.website^
 ||live-tv.top/js/k.min.js
@@ -88025,6 +88206,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||ljpnovfknjqyl.space^
 ||ljqpvo.hardrock.com^
 ||ljtcjahzugefb.website^
+||ljueytdnmpfsn.online^
 ||ljuknwtnaqlgq.site^
 ||ljwaerigtjrxe.store^
 ||ljxpbshzqmnxd.site^
@@ -88111,6 +88293,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||llllhshgscfda.site^
 ||llmometrics.b-cdn.net^
 ||llntrack.messe-duesseldorf.de^
+||llolioxmsrfsj.site^
 ||lloogg.com^$third-party
 ||llpgphvdkxzky.site^
 ||llpgpro.com^$popup
@@ -88178,6 +88361,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||lmorsb.highstreettv.com^
 ||lmp3.org^$popup
 ||lmpygevzkenzr.online^
+||lmqduqzuqzjbs.space^
 ||lmrebuyskosjy.online^
 ||lmrwupcucuprv.site^
 ||lms.roblox.com^
@@ -89089,6 +89273,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||lufgukvh.in^
 ||lufmlapgrpooc.site^
 ||lufudmcfxchay.space^
+||lufurfkbeplol.site^
 ||lugansk-info.ru^$third-party
 ||luggagesynchronize.com^
 ||luggedaswirl.cyou^
@@ -89167,6 +89352,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||luupbprahqlvc.site^
 ||luuspdbnxvyjs.site^
 ||luvaihoo.com^$popup
+||luvttuhc.in^
 ||luwjcqbkeeeni.site^
 ||luwzem.skala.nl^
 ||luxadv.com^
@@ -89604,6 +89790,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||madnessbuzz.com^
 ||madnesscoupon.com^
 ||madnet.ru^$third-party
+||madnqdujgqcwj.website^
 ||madoverrice.com^
 ||madqwcbhobeca.space^
 ||madratesforall.com^
@@ -89921,6 +90108,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||mantesmeckcervoid.cfd^
 ||mantisadnetwork.com^$third-party
 ||mantlechacona.com^
+||mantletpirojki.com^
 ||mantuaquatre.cyou^
 ||manua.ls/gtag
 ||manufacturemoustache.com^
@@ -91579,6 +91767,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||maskedadmin.com^
 ||masklink.org^
 ||masklink.org^$popup
+||masondown.com^
 ||masonerthoria.shop^
 ||masonplantsirresponsibility.com^
 ||masque-ads.b-cdn.net^
@@ -91799,6 +91988,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||mblrkaoudwbrx.space^
 ||mbltzqounmuzh.space^
 ||mbmgivexdvpajr.com^
+||mbmperdtymzae.website^
 ||mbmrttiprx.com^
 ||mbna.bruker.com^
 ||mbns.bruker.com^
@@ -91815,6 +92005,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||mbp-japan.com/js/pv.js
 ||mbpbhnyearygv.site^
 ||mbpfacwfxnahh.site^
+||mbqobdfnlplgs.online^
 ||mbrbtdivelmlv.website^
 ||mbreviewer.com^
 ||mbreviewer.com^$document
@@ -91872,6 +92063,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||mcdonalds.com/tags/js/*/mparticle.js
 ||mcdonalds.com/webevents/
 ||mcdp-*.outbrain.com^
+||mcdrhiplbfxfk.website^
 ||mcegpoujeecux.online^
 ||mcepadnkovcy.in^
 ||mcfeely.net.mydays.de^
@@ -91915,6 +92107,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||mcsvudycufzgo.site^
 ||mctxyvltgfvuv.space^
 ||mcufzgnigghqb.site^
+||mcupugojztic.in^
 ||mcurrentlysea.info^$popup
 ||mcw.actonservice.com^
 ||mcymghkpdhqmk.website^
@@ -92484,6 +92677,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||merchant.libertycarz.com^
 ||merchantequationresponse.com^
 ||merchenta.com^
+||mercu-wgp.com^
 ||mercury.jd.com^
 ||mercuryace.com^
 ||mercurybest.com^$popup,domain=hltv.org
@@ -94175,9 +94369,11 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||mftdhrlywaeil.space^
 ||mftnsjsenkwau.online^
 ||mfuhwxojchmit.site^
+||mfuqmubyjlktg.space^
 ||mfvskuommxwep.online^
 ||mfwbsveljxjsq.space^
 ||mfxtlm.mobiup.ro^
+||mfxvjgzyyefdp.space^
 ||mfyavsmiha.com^
 ||mfynwrbjbbybm.site^
 ||mfzjiodzpsjdk.space^
@@ -94268,6 +94464,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||mhtgouywqxrxa.online^
 ||mhtr.be/public/tr/tracker.min.js
 ||mhtulkoysljdg.site^
+||mhuavwvdvdkbg.website^
 ||mhubhlushghex.site^
 ||mhuzsmkbekzrk.site^
 ||mhvgzqdmtecnc.site^
@@ -94339,6 +94536,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||midgerelativelyhoax.com^
 ||midgetbreakfast.com^
 ||midgetreckon.com^
+||midhvgopdqsia.online^
 ||midlegsquisle.cyou^
 ||midnightmead.com^
 ||midnighttraditionally.com^
@@ -94519,6 +94717,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||miserly-phone.com^$popup
 ||miserly-wrap.com^
 ||miserybisksbishari.cyou^
+||misesbenton.rest^
 ||misformchipsggr.cyou^
 ||misgrewgelding.cyou^
 ||misgrowducked.cfd^
@@ -94833,6 +95032,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||mmdcokadaklfg.website^
 ||mmentorapp.com^
 ||mmentorapp.com^$popup
+||mmfmfputtadfl.space^
 ||mmfykwayhgftt.space^
 ||mmg.whatsapp.net.iberostar.com^
 ||mmgzxnkwgjpnx.space^
@@ -94859,6 +95059,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||mmpecnkesjkuq.site^
 ||mmpool.org^$third-party
 ||mmqmskaixmdkl.space^
+||mmsocdgdbsowd.online^
 ||mmstat.com^$third-party
 ||mmsvnwwhayokq.space^
 ||mmtgythuozksx.online^
@@ -94896,6 +95097,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||mnfqyj.corello.com.br^
 ||mng-ads.com^
 ||mng.jiji.com/cookie.html
+||mngkcovsxs.com^
 ||mnhgdifwfxvzt.website^
 ||mnhjk.com^
 ||mnhjkl.com^
@@ -94930,6 +95132,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||mo3i5n46.de^
 ||mo8it.com/count.js
 ||moa.mediaoutcast.com^
+||moanfultirls.click^
 ||moaningfoe.com^
 ||moartraffic.com^
 ||moartraffic.com^$popup
@@ -95036,6 +95239,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||moetxylosid.qpon^
 ||mofa.go.jp^*/count.cgi?
 ||mofebueaztzad.website^
+||moffpubsweary.cyou^
 ||moflix-stream.click/ad?
 ||moghulnash.com^
 ||mogmsaastslor.site^
@@ -95622,6 +95826,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||mt.plateiq.com^
 ||mt48.net^
 ||mtag.mman.kr^
+||mtagnpuxbkhon.site^
 ||mtb-news.de/metric/
 ||mtbflj.elementaree.ru^
 ||mtbgbthbz.com^
@@ -95855,6 +96060,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||mva1.maeva.com^
 ||mvasuhdpfivqh.online^
 ||mvbcsloqebjfv.site^
+||mvbrtfcn.com^
 ||mvc.shopjapan.co.jp^
 ||mvcfkpklzjhoc.site^
 ||mvctfbwtxjtar.site^
@@ -96266,6 +96472,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||mzxpqrtmyhqqm.online^
 ||mzykitcgblmwl.online^
 ||mzypnfarkhqww.site^
+||mzzfchkcyiclj.website^
 ||mzzzpvllsjxpy.online^
 ||n-analytics.io^$third-party
 ||n.clips4sale.com^$third-party
@@ -96501,6 +96708,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||nature.com/platform/track/
 ||naturebeans.com^
 ||nauervqyecwbx.space^
+||naugerbaffing.rest^
 ||naughtyblog.org/wp-content/images/k2s/
 ||naughtycdn.com/public/iframes/
 ||naughtydate.com^$popup
@@ -96651,6 +96859,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||ndcomemunica.com^$popup
 ||ndcyoghbozx.com^
 ||ndcywq.ullapopken.fr^
+||nddlfmvbww.com^
 ||ndeaevniyitst.site^
 ||ndegj3peoh.com^
 ||ndenceschemica.org^
@@ -97269,6 +97478,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||nhtkdwffnlgvl.store^
 ||nhtosawxpqjxu.site^
 ||nhubwikasji.in^
+||nhvwznuygysno.site^
 ||nhwfqtzcftqxi.site^
 ||nhwlkqoodhlar.online^
 ||nhzczuzvmmcfh.website^
@@ -97424,6 +97634,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||nitridslah.com^
 ||nitrilenurling.cyou^
 ||nitroflare.com/img/banners/
+||nitrojiveband.com^
 ||nitropay.com^$third-party
 ||nitroscripts.com^$third-party
 ||nitrous-analytics.s3.amazonaws.com^
@@ -98377,12 +98588,14 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||nvpdaa.brightcellars.com^
 ||nvqvibvtalsmj.online^
 ||nvrblck.com^
+||nvremngibpsll.space^
 ||nvrmd.novaramedia.com^
 ||nvsvlphrynhoq.website^
 ||nvumcv.standoil.kr^
 ||nvwfdjlpjpzpt.site^
 ||nvwmvpmsaiuer.space^
 ||nvwsrvdunhxbo.website^
+||nvxgxuthh.com^
 ||nvxlag.liligo.fr^
 ||nvxntvdttjbrg.site^
 ||nvxxspkywoqig.space^
@@ -98551,6 +98764,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||nzigunflybfhu.store^
 ||nzihbokpcqppj.website^
 ||nziwsczyscroj.online^
+||nzjhxvelasrcy.site^
 ||nzkkolbh.com^
 ||nzlvnypmdkjsd.online^
 ||nzme-ads.co.nz^
@@ -98785,6 +98999,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||obxbpdykkxswe.online^
 ||obykgswpqwccn.site^
 ||obysbqrqxdgnz.online^
+||obyzyxkayqcij.online^
 ||obzdiqozp.in^
 ||obzmactgmqccp.site^
 ||obzxiqas.in^
@@ -98858,6 +99073,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||ocpwlmqdpkdnn.site^
 ||ocqmbcwysestl.website^
 ||ocqywlcwfwypz.online^
+||ocracyaftmost.cfd^
 ||ocrgduldhsxkc.site^
 ||ocrghebunvuc.in^
 ||ocrlmgqgqlfqt.store^
@@ -99117,6 +99333,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||ofterdurwanencoder.cfd^
 ||oftheownouncillo.com^
 ||oftmnsrnhkmtu.site^
+||oftoggsfu.in^
 ||oftwxfnfhfjdy.site^
 ||ofuqfehwctbgw.space^
 ||ofvosb.jumbo.com.tr^
@@ -100088,6 +100305,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||oouutjpavsxfv.site^
 ||oouvhmoxzsevq.online^
 ||oowqcmolqtwai.online^
+||oowuqiqdmlfkh.website^
 ||oowvaygribfhj.space^
 ||oowxeugbvqfnr.site^
 ||ooyala.com/3rdparty/comscore_
@@ -100338,6 +100556,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||oqmjiikaoomyy.online^
 ||oqmobxwufwu.in^
 ||oqmzuxgipc.in^
+||oqnbzrytqmwhs.site^
 ||oqncedhjskaak.website^
 ||oqpelffjccmjf.space^
 ||oqphmccprsyie.site^
@@ -100400,6 +100619,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||orderjumper.com^
 ||orderlyuponprecipitation.com^
 ||ordfkfcnrrlzr.online^
+||ordinalzero.com^
 ||ordinary-check.com^
 ||ordinarygoonwritten.com^
 ||ordinaryneckegg.com^
@@ -100424,6 +100644,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||organizationwoundedvast.com^
 ||organizerprocedure.com^
 ||organsblond.com^
+||organygrabbed.com^
 ||orgassme.com^$popup
 ||orgbackups.com^
 ||orgyxxxhub.com/js/965eka57.js
@@ -100743,6 +100964,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||ougmxykcrtaud.space^
 ||ouhoxibwjvwuz.site^
 ||ouiiadyzaieqx.space^
+||ouijarapper.com^
 ||ouiwfrtqcwjeu.online^
 ||oujudpodmnumr.space^
 ||oujwauznuwofh.site^
@@ -100874,6 +101096,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||ouvimymvxqhkp.site^
 ||ouviqwzxkkejz.website^
 ||ouvjnb.westernbikeworks.com^
+||ouvrierchases.click^
 ||ouxbqcndwoyze.site^
 ||oval.id/tracker/
 ||ovalitysepultplenism.cfd^
@@ -101046,6 +101269,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||oxlikeunkin.com^
 ||oxlmsxqhjtykk.online^
 ||oxlqojvewyjni.site^
+||oxlrblhsjtafa.space^
 ||oxlueigiwmyxh.com^
 ||oxmanwashier.cyou^
 ||oxmhrrzmoqnco.online^
@@ -101126,6 +101350,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||ozcxapzkppgke.space^
 ||ozdoir.meundies.com^
 ||ozelmedikal.com^$third-party
+||ozf4iek3.xyz^
 ||ozfisiodlybdi.site^
 ||ozfxwlyarvwzy.site^
 ||ozihlzpeabppp.online^
@@ -101460,6 +101685,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||pagolnhssj.com^
 ||pahbypbqkgnhu.online^
 ||pahdtytqrrcyd.space^
+||pahlevimouses.com^
 ||paht.tech^
 ||pahtag.tech^$third-party
 ||pahtdz.tech^
@@ -101810,6 +102036,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||patakaendymal.top^
 ||patclxqwxybvn.site^
 ||patekral.cfd^
+||patencyviddhal.com^
 ||paternitypassengersift.com^
 ||patesihobbet.com^
 ||patesizink.cfd^
@@ -101979,6 +102206,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||pc20160522.com^$third-party
 ||pc2121.com^
 ||pcapredict.com/js/sensor.js
+||pcaqedtlygwlt.website^
 ||pcash.imlive.com^
 ||pcbixpbwdxqoa.site^
 ||pcbqgxhvsvjuk.online^
@@ -102028,6 +102256,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||pctlwm.com^
 ||pctsrv.com^$popup
 ||pctv.xyz^
+||pcuhsvrytqd.com^
 ||pcummujxtpyve.website^
 ||pcxpmbmuialjb.space^
 ||pcykgc.onetravel.com^
@@ -102539,6 +102768,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||pharmacycoercive.com^
 ||pharmcash.com^
 ||phaseflotter.cfd^
+||phasqwoicmiwv.site^
 ||phatfiles.com^
 ||phbkicidapnar.online^
 ||phbnix.rocelec.com^
@@ -102731,6 +102961,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||pigeonsetc.com^
 ||pigeonsresourcefulretired.com^
 ||pigeoon.com^$3p
+||pigherdkuttar.com^
 ||pigmentpaper.com^
 ||pigsneyyfacks.cfd^
 ||pigstykea.cyou^
@@ -102831,6 +103062,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||pinkvisualgames.com/?revid=
 ||pinlcfmlbeiev.site^
 ||pinnacle.com/ru/?btag=
+||pinnetdor.cfd^
 ||pinnulepagedom.com^
 ||pinotfoozles.cfd^
 ||pinoymovies.es/links/$popup
@@ -102841,6 +103073,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||pintfunnel.com^
 ||pintlesregesbergs.cyou^
 ||pinttalewag.com^
+||pinusproviso.click^
 ||pinusrimbase.cfd^
 ||pioletfroom.com^
 ||pionaocmsbrfx.site^
@@ -103048,6 +103281,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||pixrealm.com^
 ||piyeaztpdsmaj.space^
 ||piyjmdcabrxpo.online^
+||pizivuvawntzl.online^
 ||pizxqoqajauix.space^
 ||pizzacamels.openapp.link^
 ||pizzaexpress.openapp.link^
@@ -103175,7 +103409,9 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||plain-plane.com^
 ||plaincapsize.com^
 ||plainenglish.io/assets/sponsors/
+||plainsphere.pro^
 ||plainsuburbtoilet.com^
+||plainsunset.com^
 ||plaintive-east.pro^
 ||plaintsupleap.cfd^
 ||plaitcurtis.cfd^
@@ -103522,6 +103758,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||ploybite.com^
 ||ployimmediately.com^
 ||plqfevftpkfsq.site^
+||plqrvnpy.com^
 ||plrjs.org^
 ||plrohetmanyfj.space^
 ||pls.ambue.com^
@@ -103533,6 +103770,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||plsrsvpgciwex.online^
 ||plt67r3b12lqc43r7jt77bl3y7qm443ri.cfd^
 ||pltamaxr.com^
+||plteiytxbgeyx.online^
 ||pltmsckbnlloy.website^
 ||plucheavennel.com^
 ||pluckstot.com^
@@ -103639,6 +103877,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||pnaagn.haekplanter-heijnen.dk^
 ||pnajcjelrjxnm.website^
 ||pnbglewqjxmab.space^
+||pnbmoezxtewgv.site^
 ||pnbopaatdmcgu.online^
 ||pncirjjzsnoqt.website^
 ||pncloudfl.com^
@@ -103967,8 +104206,10 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||popviking.com^
 ||popxperts.com^
 ||popxyz.com^
+||popzu-srv.live^
 ||poqsrzievvwqy.site^
 ||poqwepljjnepo.online^
+||poralscarpehilts.cyou^
 ||porchadvertise.com^
 ||porculahoning.com^
 ||porikatha.com^
@@ -104179,6 +104420,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||pp8.com^$third-party
 ||ppaamxfm.com^
 ||ppadv.actonservice.com^
+||ppautngfonjao.website^
 ||ppauvlzcsdotc.website^
 ||ppbbhvizrkryo.website^
 ||ppc-direct.com^$third-party
@@ -105111,6 +105353,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||pstats.com^$third-party
 ||pstciayvpsmhj.site^
 ||pstfkyapfrrfk.site^
+||pstopening.rest^
 ||pstreetma.com^
 ||pstt.mtb-news.de^
 ||psuhofevzdnyz.online^
@@ -105119,6 +105362,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||psvyszwcjlflr.site^
 ||pswec.com/px/$third-party
 ||pswgpb.seshop.com^
+||psxlkwmzitocq.site^
 ||psxzadkhsaevp.space^
 ||psychcentral.com/api/drivers/
 ||psychedelicarithmetic.com^
@@ -105401,6 +105645,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||punishgreater.com^
 ||punishutrubi.com^
 ||punishworld.com/prerolls/
+||punkaactuary.com^
 ||punkierdetruck.com^
 ||punkspyke.com^
 ||punosy.com^
@@ -105420,6 +105665,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||puporn.com/xahnqhalt/
 ||puppetcorp.com^
 ||puppiesart.com^
+||puppilyendhand.rest^
 ||puppyderisiverear.com^
 ||pupspu.com^
 ||pupspu.com^$document
@@ -105641,6 +105887,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||pvwranjflcsmj.online^
 ||pvx.xcar.com.cn^
 ||pvzesryoifiit.online^
+||pvzwcgmwulngj.site^
 ||pw.gigazine.net^
 ||pwaefamkqslht.site^
 ||pwbgfclmc5hwuuh.cfd^
@@ -105712,6 +105959,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||pxls4gm.space^
 ||pxlstat.com^
 ||pxltrck.com^
+||pxlxgtktpfpap.online^
 ||pxmzlk.redfin.com^
 ||pxnzwgdyvcaqd.online^
 ||pxoceymjcvkzc.com^
@@ -106385,6 +106633,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||qozwuskwwzqua.space^
 ||qpadmalav.in^
 ||qpastswynfzcb.space^
+||qpaypmpajlzdkm.com^
 ||qpbiyued.com^
 ||qpc4.visilab.ch^
 ||qpcnbzqpzckag.space^
@@ -106745,6 +106994,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||quirkybliss.com^
 ||quirkybodega.com^
 ||quirkysugar.com^
+||quisbyquassia.click^
 ||quisma.com/tracking/
 ||quistrecastslexemic.qpon^
 ||quitcertify.com^
@@ -106960,6 +107210,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||qzdqta.com^
 ||qzdsycgjsiakb.site^
 ||qzfxcf.coastal.com^
+||qzhjpkgifhcfh.space^
 ||qzizvxzcdvxnd.website^
 ||qzl8.destinia.fi^
 ||qzlaudzwcepvq.site^
@@ -107041,11 +107292,13 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||r2b2.cz^$third-party
 ||r2b2.io^$third-party
 ||r2bv2igwyin2e52n.cfd^
+||r2fww1gz3681hu.cfd^
 ||r2r.utas.edu.au^
 ||r3f.technology^$popup
 ||r3y8661xhr944471pb99ptm49.cfd^
 ||r42tag.com^
 ||r4nds.absorba.com^
+||r5hk5ebznt9t8f6tmjqqy6nk81no5.rest^
 ||r66net.com^
 ||r66net.net^
 ||r7.com/comscore/
@@ -107293,6 +107546,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||rapidinvoicebasket.com^
 ||rapidlylassoed.qpon^
 ||rapidpanda.io^
+||rapidscraper.com^
 ||rapidspike.com/performance/
 ||rapidspike.com/static/js/timingpcg.min.js
 ||rapidstats.net^$third-party
@@ -107526,6 +107780,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||rdhrtfdrttyuyk.site^
 ||rdhzeagmyxdim.site^
 ||rdiul.com^$third-party
+||rdjhnucipcrbr.site^
 ||rdlrbm.studying.jp^
 ||rdmnisjfbdrbl.space^
 ||rdoblrtquasu.com^
@@ -108442,6 +108697,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||reshin.de^$third-party
 ||reshipscopolar.qpon^
 ||reshoestimo.cyou^
+||reshootsoget.rest^
 ||reshutgobio.com^
 ||resideour.com^
 ||resideyawney.qpon^
@@ -108645,6 +108901,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||retentionscience.com^$third-party
 ||retenueyeven.com^
 ||retestscortin.rest^
+||retestskiranti.click^
 ||retgspondingco.com^$popup
 ||reth45dq.de^
 ||rethetritestleaches.cfd^
@@ -108826,6 +109083,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||rfpx1.com^
 ||rfr-69.com^$third-party
 ||rfsdvudff.com^
+||rfsryzpywmtig.website^
 ||rftjsuwyyzrjf.site^
 ||rftlseazrjgue.site^
 ||rftseepsjwbdl.site^
@@ -108873,6 +109131,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||rgxqdzkajysfj.website^
 ||rgybahkdsqnsz.website^
 ||rgzrys.hangikredi.com^
+||rgzxscibgg.com^
 ||rh.adp.ca^
 ||rh.grupoocq.com.br^
 ||rh.ocq.com.br^
@@ -109110,6 +109369,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||rjemafqzprwxc.space^
 ||rjfhtwwdkebho.online^
 ||rjfskgjstkfts.website^
+||rjfxxciv.com^
 ||rjg2.destinia.ly^
 ||rjgsjm.gigameubel.nl^
 ||rjhfdigsyzfgt.website^
@@ -109161,6 +109421,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||rkuaqpagcofuy.online^
 ||rkv1.com^
 ||rkvhqhkztzlxk.website^
+||rkvlgtxzkxwdu.site^
 ||rkvmdajrdmfec.online^
 ||rkxmow.novasol-vacaciones.es^
 ||rl.finalprice.com^
@@ -109500,6 +109761,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||rottenray.com^
 ||rotundoselago.com^
 ||rotundotorma.cyou^
+||rotxggpqnbeqp.online^
 ||roucoutaivers.com^
 ||roudoduor.com^$popup
 ||rouellekarates.com^
@@ -109567,6 +109829,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||rozamimo9za10.com^$popup
 ||rp.mustreadnew.com^
 ||rpazdjrpnyycu.online^
+||rpcnimwhqaduc.online^
 ||rpegalclg.com^
 ||rpeylufgxcrsq.online^
 ||rpfkgf.rp-online.de^
@@ -109874,6 +110137,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||rubeletelench.cfd^
 ||rubestdealfinder.com^
 ||rubfjitvnyfty.space^
+||rubianmyopes.com^
 ||rubiconproject.com^
 ||rubiconredirect.com^$third-party
 ||rubiescalid.cfd^
@@ -110618,6 +110882,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||saat.dow.com^
 ||saatydsobhrtk.space^
 ||sabakhalassoes.com^
+||sabalosaukletswanhap.cyou^
 ||sabavision.com^$third-party
 ||sabbatsslighty.cfd^
 ||sabdljzmuakkt.space^
@@ -111132,6 +111397,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||sandbox-connectlp.keysight.com^
 ||sandbox-elq.keysight.com^
 ||sandboxbid.com^
+||sandburceride.com^
 ||sandelf.com^
 ||sandhowl.com^
 ||sandierswots.cyou^
@@ -111283,6 +111549,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||saturdaymarryspill.com^
 ||saturytiers.com^
 ||saucewonderdaytime.com^
+||saucinginne.com^
 ||saunasroil.com^
 ||saunatechnically.com^
 ||saunsocqmgynh.website^
@@ -111487,6 +111754,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||scaredstomach.com^
 ||scarefowl.com^
 ||scareshortnovel.com^
+||scarevapidly.com^
 ||scarf.sh^$third-party
 ||scarfsmash.com^
 ||scarfstartpickle.com^
@@ -111721,6 +111989,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||scrithemashingpolicy.cfd^
 ||scrivanfinlet.com^
 ||scrolller.com/scrolller/affiliates/
+||scrollnovela.click^
 ||scrollservice.com^
 ||scrubchi.com^
 ||scrubriding.com^
@@ -112582,6 +112851,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||seemingliveliness.com^
 ||seemingservantreap.com^
 ||seemingunevenlag.com^
+||seenitro.com^
 ||seenvault.com^
 ||seepedenticed.com^
 ||seerspicule.com^
@@ -112600,6 +112870,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||sefsdvc.com^
 ||seg.sharethis.com^
 ||segapi.whop.com^
+||seginusnervier.click^
 ||segment-api.inrix.com^
 ||segment.com^$third-party
 ||segment.io^$third-party
@@ -113489,6 +113760,8 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||shinobi.jp/track?
 ||shinobi.jp/zen?
 ||shinsegae.com/topNPopup.do
+||shinyalto.me^
+||shinyalto.mobi^
 ||shinybirdwhispered.com^
 ||shinypond.com^
 ||shinystat.com^$third-party
@@ -114106,6 +114379,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||sjpagifahohnk.space^
 ||sjpf.io^
 ||sjprdu.oakhouse.jp^
+||sjrdlqpvpzcay.online^
 ||sjremetrics.java.com^
 ||sjrwfndqzqelx.space^
 ||sjryno.fullyloadedchew.com^
@@ -114306,6 +114580,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||sleazyneasy.com/contents/images-banners/
 ||sleazyneasy.com/jsb/
 ||sleazytaste.com^
+||sleckeeyuchredout.cyou^
 ||sledderpatrole.com^
 ||sledfoolinfo.com^
 ||sledgeryelping.qpon^
@@ -114348,6 +114623,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||slidesimmure.com^
 ||slidexperimentalimmoral.com^
 ||slierpitmark.cfd^
+||slifpzvyfomsp.website^
 ||slightcareconditions.com^
 ||slightresignationswiftly.com^
 ||slimdein.icu^
@@ -117606,6 +117882,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||smokersarupa.cyou^
 ||smokerywanle.cfd^
 ||smoketester.com^
+||smokoscobb.cfd^
 ||smon.activate.cz^
 ||smon.blackhistorymonth.gov^
 ||smon.congress.gov^
@@ -117801,6 +118078,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||snlaavecjmpja.online^
 ||snnbtgzmzfrvt.site^
 ||sno1.snowrental.com^
+||snobismlowman.click^
 ||snohetta.com/js/plascript.js
 ||snonsfsrfeh.com^
 ||snoobi.com^$third-party
@@ -118026,6 +118304,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||solarscolder.cfd^
 ||solarwinds.com/ra-$script
 ||soldabbr.com^
+||soldersablatorhornish.cfd^
 ||soldierreproduceadmiration.com^$popup
 ||soldoutstubs.com^
 ||soleblinds.com^
@@ -118141,6 +118420,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||som.sears.com^
 ||som.vrbo.com^
 ||somainpdeirit.online^
+||somalounshiny.rest^
 ||sombernewspaper.com^
 ||somberscarecrow.com^
 ||sombersea.com^
@@ -118662,6 +118942,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||spatzleecotype.com^
 ||spaziogames.it/ajax/player_impression.ashx?
 ||spc.personalcreations.com^
+||spcfqmlodyqoh.website^
 ||spcyzybmoffjj.space^
 ||spdate.com^
 ||spdate.com^$popup
@@ -118782,6 +119063,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||spigte.shopee.tw^
 ||spikertrepan.com^
 ||spikesandcurrant.com^
+||spillmettle.click^
 ||spillsecale.qpon^
 ||spin.bergfreunde.*/wt?$image
 ||spin83qr.com^
@@ -118820,6 +119102,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||spkeokimt.com^
 ||spklmis.com^
 ||spklmis.com^$popup
+||spkqcrlngemrv.online^
 ||spktdsjraqfae.space^
 ||splash-screen.net^$third-party
 ||splashfailed.com^
@@ -119174,6 +119457,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||srimzivocntgw.site^
 ||srjqcahmdvhuh.online^
 ||srm4.destinia.co.no^
+||srmcychtzaeny.online^
 ||srmdata-eur.com^
 ||srmdata-us.com^$third-party
 ||srmdata.com^$third-party
@@ -119871,6 +120155,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||stackoverflow.com/_/client-timings
 ||stackrealreliant.com^
 ||stackshare.io/analytics.
+||stackup-ai.com^$third-party
 ||stadac.mobilapp.io^
 ||stadig.ifeng.com^
 ||stadiumzoo.net^
@@ -121260,12 +121545,14 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||steamanalyst.com/steeem/delivery/
 ||steamchina.com/events/
 ||steamtraffic.com^$third-party
+||steedlentor.com^
 ||steel.newmill.com^
 ||steelcasket.com^
 ||steelhousemedia.com^$third-party
 ||steelmaiden.com^
 ||steelradar.com/i/u/ads/
 ||steelreproach.com^
+||steenthbenumbs.cyou^
 ||steepinterview.pro^
 ||steepsister.com^
 ||steepsquirrel.com^
@@ -122473,6 +122760,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||sweetnessbrisk.com^
 ||sweetnessnewest.com^
 ||sweetnessspeaksintimidate.com^
+||sweetradish.biz^
 ||sweetslope.com^
 ||sweetsoul.net^
 ||sweetstudents.com^$third-party
@@ -122649,6 +122937,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||sxwxswg8z1xe.www.arnowebtv.com^
 ||sxxiocnjyqhxe.website^
 ||sxyrrjgrkwsvw.site^
+||sxzrwvidonkqe.space^
 ||sy57d8wi.com^
 ||syagypntcerhx.space^
 ||sybilevolver.shop^
@@ -123483,6 +123772,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||talesapricot.com^
 ||talk-test.stitch.cam^
 ||talk.stitch.cam^
+||talkative-version.pro^
 ||talkingdata.com^*/sdk_release.js
 ||talkingpointsmemo.com/whoami
 ||talkscreativity.com^
@@ -123496,6 +123786,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||talltouch.com^
 ||tally.bizanalyst.in^
 ||tally.so/api/forms/*/events
+||talonswhanged.com^
 ||talpa-analytics.com^$third-party
 ||talpiddullity.com^
 ||talroebnwhbif.space^
@@ -123966,6 +124257,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||tbmoxtvskajqz.space^
 ||tbmuriivgbidj.online^
 ||tbnhmzsszouqj.space^
+||tbnuacnbzsvgc.site^
 ||tbochagnhcwvf.site^
 ||tbpot.com^
 ||tbpykhosbxybb.online^
@@ -124213,6 +124505,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||teczoonbdxxug.site^
 ||ted.dailymail.co.uk^
 ||tedallthroughthe.org^
+||tedderlicketyselt.cyou^
 ||teddygroups.com^
 ||tediousbear.com^
 ||tediousrelinquish.com^
@@ -124418,6 +124711,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||terbit2.com^$popup
 ||tercabilis.info^
 ||tercept.com^$third-party
+||tercidnjfanbd.online^
 ||terciogouge.com^
 ||terciohagrid.click^
 ||terciohunting.cyou^
@@ -124743,7 +125037,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||thecounter.com^$third-party
 ||thecounter.net^
 ||thecrazychili.com^
-||thedailybeast.com/static/js/thirdparty.
+||thedailybeast.com/metrics/
 ||thedirecthor.com^
 ||theepsie.com^$popup
 ||theerrortool.com^$popup
@@ -125009,6 +125303,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||thyorctdsailep.com^
 ||thyriswh.cyou^
 ||thzdttylfphpn.site^
+||thzkhgy16zfo5fkom5g.cfd^
 ||thzowqlddhevp.space^
 ||thzqzvwmpxrdm.website^
 ||thzzlvjypvxex.site^
@@ -125203,6 +125498,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||tipslyrev.com^
 ||tipspasswords.com^
 ||tipsport.sk/c/1x1.php?
+||tipsripstop.com^
 ||tipstats.onepagelove.com^
 ||tiptailmannie.com^
 ||tiptoesmalt.qpon^
@@ -125272,6 +125568,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||tjmchkmpqfszj.online^
 ||tjndwmaotgyix.online^
 ||tjnffp.tilebar.com^
+||tjnporgfpkfqz.site^
 ||tjnuztjtlqihq.site^
 ||tjoomo.com^$popup
 ||tjosjuihqnxke.online^
@@ -125574,6 +125871,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||tmdwrfidwrdml.space^
 ||tmdwsuxytmmcj.site^
 ||tmedapgqtmqhs.store^
+||tmematamakah.com^
 ||tmetrics.hdfcbank.com^
 ||tmetrics.webex.com^
 ||tmetrix.my.chick-fil-a.com^
@@ -125944,6 +126242,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||toquetfirkin.cfd^
 ||torajapalaced.com^
 ||torassquegs.qpon^
+||torbacku.com^
 ||torbit.com^$third-party
 ||torbobit.net/js/analytics/
 ||torchfriendlypay.com^
@@ -126097,6 +126396,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||tp.yomonda.de^
 ||tp.your-look-for-less.nl^
 ||tp.your-look-for-less.se^
+||tp38iguht9eylfq4yk3iepkcu2pi6l.cfd^
 ||tp88trk.com^$third-party
 ||tpashaonebzmg.site^
 ||tpaytpewgktro.online^
@@ -128486,6 +128786,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||trackside.redbull.racing^
 ||tracksmart.se^$third-party
 ||trackspeeder.com^
+||tracksresteal.click^
 ||tracksrv.zdf.de^
 ||trackstracker.com^
 ||trackstracker.com^$popup
@@ -128592,6 +128893,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||trafficpimps.com^$third-party
 ||trafficregenerator.com^$third-party
 ||trafficroots.com^$third-party
+||trafficroutehub.com^
 ||trafficsan.com^$third-party
 ||trafficscanner.pl^$third-party
 ||trafficshop.com^
@@ -128833,6 +129135,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||treesmajestic.com^$popup
 ||trefahchouka.com^
 ||trefahlap.com^
+||tregetcroquethutchet.cyou^
 ||treilleunhewn.com^
 ||trelleborg.tecs1.com^
 ||trellian.com^
@@ -128895,6 +129198,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||trickyrock.com/redirect.aspx?pid=*&bid=$subdocument,third-party
 ||triconah.actonservice.com^
 ||triczjnzuktsh.website^
+||triduotrooly.click^
 ||triestorsilenutcake.cyou^
 ||triflevamp.qpon^
 ||triflinghighway.pro^
@@ -128953,6 +129257,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||triton.companyegg.com^
 ||tritonaneling.qpon^
 ||tritondigital.com/ondemand/impression?
+||tritonnidusbegoud.cyou^
 ||triumph.actonservice.com^
 ||triumphantthingsreading.com^
 ||triumphbull.com^
@@ -129441,6 +129746,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||trumparea.com/_adz/
 ||trumpgorry.com^
 ||trunblock.com^$third-party
+||truongpyrgom.cfd^
 ||truoptik.com^
 ||truoptik.com^$third-party
 ||trusa.xyz^
@@ -129849,6 +130155,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||tutbc1.www.tapmyback.com^
 ||tutorermulvelbekiss.cyou^
 ||tutorshelf.com^
+||tuttedoolemma.com^
 ||tutti.ch/api/v10/clientmetrics/report-metric
 ||tuttiesoilier.com^
 ||tuttocagliari.net/pixel
@@ -129885,6 +130192,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||tvmulesmelt.com^
 ||tvmwbebz.com^
 ||tvmx-defender.pro^
+||tvnacqljeskcc.website^
 ||tvnjbpgmvifca.space^
 ||tvnnumvfmrshrn.com^
 ||tvpage.com/tvpa.min.js
@@ -130122,6 +130430,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||typiccor.com^
 ||typisttuckerspurt.com^
 ||tyrantnosily.cyou^
+||tyrgzyhkwwsgb.space^
 ||tyrlqmhuldfid.space^
 ||tyroo.com^$third-party
 ||tyrotation.com^
@@ -130156,6 +130465,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||tzivigaxsxh.in^
 ||tzkfeixbdgecw.site^
 ||tzlaokwrwlmim.online^
+||tzlfiaxwbmcfu.site^
 ||tzmaasbuxigix.online^
 ||tzmpctwfjdlip.online^
 ||tzmsouoqvysag.site^
@@ -130347,6 +130657,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||ucgmznzpnance.space^
 ||ucgpgzquuhwey.space^
 ||uchbwsudh.com^
+||ucheaninhell.cyou^
 ||uchtcpyzexfjm.space^
 ||uchwgynkggjca.online^
 ||uciqsmzobweil.site^
@@ -130418,6 +130729,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||udsrvxbleatmk.site^
 ||udtpazbzuxgvw.website^
 ||udvgqxiykaq.com^
+||udvjfomfikxim.site^
 ||udwhjufhukjbda.com^
 ||udxbyiawbxrnp.space^
 ||udxhzseguwjdr.space^
@@ -130557,10 +130869,12 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||uhedsplo.com^
 ||uhenqb.manning.com^
 ||uhfdsplo.com^
+||uhfydnwcpafcs.space^
 ||uhhhhvyezikfh.space^
 ||uhhhvqaeswlzs.website^
 ||uhiecdaxioolb.online^
 ||uhiemvxigendy.space^
+||uhijbypctseox.space^
 ||uhinmknjemdtw.site^
 ||uhit.eu/id/$third-party
 ||uhjcnbzhnnqqb.space^
@@ -130645,6 +130959,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||ujkemwsgdlsmy.space^
 ||ujkewxkcnkyqg.online^
 ||ujkjhxeltkshw.online^
+||ujlolbxhbczbh.online^
 ||ujlqgbvetzjmf.space^
 ||ujlwwo.lehner-versand.ch^
 ||ujmlxnnzybfvh.online^
@@ -130740,6 +131055,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||uljvpfkcyktqf.website^
 ||ulkhtkbqjrtni.website^
 ||ulkjtanswjdyc.site^
+||ulkwsxqatkgzq.site^
 ||ulldyjdmjlxwm.online^
 ||ulljqegjdoqmt.store^
 ||ullmqufjprrcd.space^
@@ -130814,6 +131130,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||umgqpeyltjcea.com^
 ||umgzvlbrqzyeq.online^
 ||umhfftghpj.com^
+||umhhodwadqeo.com^
 ||umhkzidngrmor.website^
 ||umhyck.belvilla.com^
 ||umi.cloudful.de^
@@ -131014,6 +131331,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||ungirtgnatter.qpon^
 ||ungluedhaikwan.cyou^
 ||unguispolearmgemels.cyou^
+||unguisregaltylorarii.cyou^
 ||ungyptrvngfqp.site^
 ||unhappyweakness.com^
 ||unhaputterparking.cyou^
@@ -131302,6 +131620,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||upaitqexpunnz.online^
 ||upandsawhwh.com^
 ||upapi.net^$third-party
+||upaywxkviolqn.online^
 ||upbayfusain.cfd^
 ||upbeat-original.com^
 ||upbeatmeadow.com^
@@ -132278,9 +132597,11 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||uvqvvh.avva.com.tr^
 ||uvreconche.rest^
 ||uvrggpvzkobmx.store^
+||uvrudfygblbsc.online^
 ||uvrymdbcocnvl.space^
 ||uvtbimseazfye.site^
 ||uvtwcxrwiibvy.online^
+||uvularsbrogue.com^
 ||uvveosxckqell.site^
 ||uvvf6lzhlfgmem.cfd^
 ||uvvhimqchjcvq.site^
@@ -132306,6 +132627,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||uwterphco.com^
 ||uwtgyywrefbls.website^
 ||uwtybptzsqcvo.online^
+||uwudtptngvt.com^
 ||uwvdhaopwtvpw.online^
 ||uwvuepnaaefvm.space^
 ||uwvyhvamdjdbe.online^
@@ -132539,6 +132861,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||vanityfair.com/user-context?referrer
 ||vanlifehunt.com^
 ||vannacci.gay/~flock.js
+||vannedrigsenbrave.cfd^
 ||vanrcoanza.in^
 ||vansfeudeefemmes.cyou^
 ||vaokbuyvpiyzw.website^
@@ -132650,6 +132973,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||vbzmntworwdqt.website^
 ||vcaltfivskzon.online^
 ||vccsgefnnbhbj.site^
+||vcctzvjrfzvrp.website^
 ||vcdc.com^
 ||vcdc.com^$popup
 ||vcdndxcjufigz.site^
@@ -132683,6 +133007,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||vcvdfcspinmjs.online^
 ||vcvncewkfhtmp.website^
 ||vcvyvahlcxjah.online^
+||vcwvxvwpdliks.online^
 ||vcxzp.com^
 ||vcydrfif.com^
 ||vcytzeabqa.in^
@@ -132878,6 +133203,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||versionsphysicaldropper.com^
 ||verstespremiss.com^
 ||versuswall.com^
+||vertex8219.pro^
 ||vertexcs.actonservice.com^
 ||vertical-leap.co.uk^$third-party
 ||vertical-leap.net^$third-party
@@ -132910,6 +133236,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||vespymedia.com^$popup
 ||vesseldoubts.com^
 ||vesti.ru/counter/
+||vestralfoamers.rest^
 ||vesuvinaqueity.top^
 ||vetbcuibwqjpu.online^
 ||vetchesthiever.com^
@@ -133651,6 +133978,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||vlxrvlvnasoys.space^
 ||vlyby.com^$third-party
 ||vlzcnhjdgmenp.space^
+||vlzjclixxwedy.website^
 ||vm.target-video.com^
 ||vm5apis.com^$third-party
 ||vmapojovqesek.online^
@@ -133856,6 +134184,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||vpdcp.com^
 ||vpemsb.autocasion.com^
 ||vpf4.euskaltelofertas.com^
+||vpfcglnwbtrqn.space^
 ||vpfjruhgzfjy.com^
 ||vphcbereqtnlb.space^
 ||vphsiv.gsshop.com^
@@ -134060,6 +134389,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||vtzmcihxguzsv.space^
 ||vtzmfhdyaemzg.online^
 ||vubhmskprvebn.online^
+||vubhsoczpqfoa.space^
 ||vubmzx.com^
 ||vucxfzsavoxdd.online^
 ||vudequyangktk.site^
@@ -134747,6 +135077,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||wcbxugtfk.com^
 ||wccftech.com/0LDbU6Cv0mZ.js
 ||wccftech.com/cnt7vfDVvWa3.js
+||wcchcojjwxdww.site^
 ||wcdmvjbbkdhzc.space^
 ||wcedifmyfokol.online^
 ||wcfbc.net^$third-party
@@ -135480,6 +135811,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||weworkremotely.com/listing_ads/8/impression?
 ||wewqmwpeesisj.online^
 ||wextap.com^
+||weyfrlgbpcvxo.site^
 ||weygdpqepldez.space^
 ||weytnksofbrsj.site^
 ||wezbvq.heine-shop.nl^
@@ -135496,6 +135828,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||wffbdim.com^
 ||wfhhsfxvnluft.website^
 ||wfhrjmzhzzlmw.space^
+||wfifasask.in^
 ||wfilmizle.my/wp-content/uploads/*/wfilmizle.jpg
 ||wfinterface.com/tracking/$domain=wellsfargo.com
 ||wfiphsftezywo.space^
@@ -135523,6 +135856,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||wgaesioplofoq.site^
 ||wgbdkphdnh.com^
 ||wgchrrammzv.com^
+||wgcnxpayqnksw.website^
 ||wgdotbbdbfktr.space^
 ||wgeaqi.laredoute.gr^
 ||wgerhfypjlycg.site^
@@ -135548,6 +135882,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||wgsaralfncvvb.online^
 ||wgsas.com^$third-party
 ||wgsoajzvwvbed.site^
+||wgt.podcastswaves.com/jamx.player.js
 ||wgtxtdheugybd.site^
 ||wgvmzdmasfoyu.store^
 ||wgyapq.stormberg.com^
@@ -135635,6 +135970,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||whiprayoutkill.com^
 ||whireclogomod.com^
 ||whirlclick.com^
+||whirlitmo.click^
 ||whirlwealth.com^
 ||whirlwind-expression.com^
 ||whirlwindincrease.com^
@@ -135683,6 +136019,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||whoami.akamai.net.iberostar.com^
 ||whoaremyfriends.com^$third-party
 ||whoaremyfriends.net^$third-party
+||whobjoknitvnb.online^
 ||whoboring.com^
 ||whoeverhow.com^
 ||whoeverpensivepaternity.com^
@@ -135836,6 +136173,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||wikihow.com/x/zscsucgm?
 ||wikily-recovery.ark-unity.workers.dev^$subdocument,domain=wikily.gg
 ||wikily.gg/api/event
+||wikimjcxvwrps.space^
 ||wikimonde.com/matom.js
 ||wikipedia.de/tracking.js
 ||wikipedia.org/beacon/
@@ -136031,6 +136369,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||wjopvkcozzxif.online^
 ||wjqernneeknag.space^
 ||wjqpyvulryxtg.site^
+||wjrgpoblcwefi.space^
 ||wjssvg.descentekorea.co.kr^
 ||wjtckivks.com^
 ||wjtekf.vidaxl.bg^
@@ -136131,6 +136470,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||wmced.com^
 ||wmceimkrlnrgo.space^
 ||wmcgmujyedmxu.site^
+||wmdrsrgtsjqjo.site^
 ||wmdvampzbrzyg.online^
 ||wmedps.com^
 ||wmeoznybzmddz.space^
@@ -136254,6 +136594,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||wolsretet.net^
 ||wolsretet.net^$popup
 ||wolve.pro^
+||wolversmistful.rest^
 ||womangathering.com^
 ||wombalayah.com^
 ||wombierfloc.com^
@@ -136469,6 +136810,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||wpeivromesxa.com^
 ||wpengine.com/wp-json/api/advanced_placement/api-in-article-ad/
 ||wpfc.ml^$third-party
+||wpffvxgorbdbu.website^
 ||wpgobx.feber.se^
 ||wpgobx.marcusoscarsson.se^
 ||wph2.destinia.us^
@@ -136523,10 +136865,12 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||wqfflc.plantopedia.de^
 ||wqfkxohimhtrj.online^
 ||wqfzqvxvvanlq.site^
+||wqgasujugxgoz.space^
 ||wqgkqkjxrhike.site^
 ||wqhcjdmfwykdm.site^
 ||wqhgmzdbdgasc.space^
 ||wqhlaexymgkyu.site^
+||wqkbncbarqqzb.space^
 ||wqkptgmrlkkel.online^
 ||wqlbyrlaybip.com^
 ||wqldvxtfwamtu.online^
@@ -136546,6 +136890,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||wqwuidvvwakii.online^
 ||wqxnlujltqwmu.site^
 ||wqxvfzvqcqmcs.website^
+||wqyabrptshcsb.website^
 ||wqyenrdmgkikd.site^
 ||wqytxm.kurly.com^
 ||wqyvnielwcgvo.space^
@@ -136715,6 +137060,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||wtlfrlrhzwtru.site^
 ||wtm.interhyp.de^
 ||wtm.monitoringservice.co^$third-party
+||wtmohwtnafrbo.site^
 ||wtmtrack.com^$third-party
 ||wtmufjwypjjdg.website^
 ||wtmxfcptueyoz.store^
@@ -136813,6 +137159,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||wvgbkpbxgesay.online^
 ||wvhba6470p.com^
 ||wvhnmgwytrfsd.site^
+||wvhyqzwryckie.site^
 ||wvjqwcwtnydm.com^
 ||wvkevvesbisbb.website^
 ||wvlirb.lexoffice.de^
@@ -137814,6 +138161,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||xankzgpeqersd.site^
 ||xanthanraison.rest^
 ||xanthicara.com^
+||xaopakrqjqnkk.space^
 ||xapads.com^
 ||xaphxtqdlqk.com^
 ||xapi.juicyads.com^
@@ -138011,6 +138359,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||xfpmpdhrjvgrm.site^
 ||xfpnbatksikdf.space^
 ||xfqiwwdxryuvo.website^
+||xfqsdodesfacy.space^
 ||xfqvsbylvgpvv.site^
 ||xframbahdxnur.site^
 ||xfree.com/api/banner/
@@ -138101,6 +138450,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||xhohnr.fdm.pl^
 ||xhowfogabl.com^
 ||xhoxataf.in^
+||xhpjileqbhzwy.website^
 ||xhpygriykcgib.site^
 ||xhqdvrbaoybgw.site^
 ||xhqmvu.k-uno.co.jp^
@@ -138193,6 +138543,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||xjnpuvnvrrwtg.site^
 ||xjnqknpxdjows.space^
 ||xjoavfrckohwo.online^
+||xjokysmaaoipz.space^
 ||xjoptmbmfrcdr.site^
 ||xjoqmy.tuifly.be^
 ||xjorwrazdqlzg.online^
@@ -138292,6 +138643,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||xltwmuxchdsxt.site^
 ||xlucsjrgiunux.website^
 ||xludzt.alfastrah.ru^
+||xlvaaarmxtewv.site^
 ||xlvbxtkbhjnrx.online^
 ||xlviiirdr.com^
 ||xlviiirdr.com^$popup
@@ -138634,6 +138986,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||xtremline.com^$third-party
 ||xtrkyx5k52822om8igf89v47.cfd^
 ||xtroglobal.com^
+||xtryfpwnkzmxa.site^
 ||xttaff.com^
 ||xttwjjdocwcms.online^
 ||xtuirgdoviqif.online^
@@ -138738,6 +139091,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||xvzplbcsffibl.site^
 ||xvzplzvdeodkh.space^
 ||xw6rjm2fyvhn4kpj9mxrvzmirbn.rest^
+||xwckberprevic.online^
 ||xwdrmisubmm.com^
 ||xwdsofoflwimy.website^
 ||xwdteovmdbuwy.online^
@@ -138788,6 +139142,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||xxmwlprw.com^
 ||xxnzjkioqzuyl.space^
 ||xxpnnq.sklepmartes.pl^
+||xxrvhvgqksptg.online^
 ||xxsdtb.edreams.com^
 ||xxshdknfgltfr.site^
 ||xxsmknnvaxlxd.site^
@@ -138941,6 +139296,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||yadtbk.blacks.co.uk^
 ||yadwfcwutipim.space^
 ||yaffenbtrdlkx.website^
+||yafltxtjsjxdl.online^
 ||yafoivqxiuaby.online^
 ||yagcntwmijjcs.online^
 ||yagjugaevqdek.space^
@@ -139141,6 +139497,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||ydcksa.certideal.com^
 ||yddtah.takingshape.com^
 ||ydduszefhnscz.website^
+||ydheypen.com^
 ||ydiiowyprhnyz.online^
 ||ydijyktidlacj.site^
 ||ydikpdzvozzve.site^
@@ -139363,6 +139720,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||yhuamf.ktronix.com^
 ||yhumgukqhfplw.site^
 ||yhvewh.aboutyou.ro^
+||yhwadexncyozg.website^
 ||yhxpacevrlsmc.space^
 ||yhyumuoyahocw.website^
 ||yhyuxrfbsweho.site^
@@ -139641,6 +139999,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||yoc-adserver.com^
 ||yoc.younited-credit.com^
 ||yocezgkpwjrij.website^
+||yoclttsyrgisz.space^
 ||yocwdqigottqk.website^
 ||yodalytics.com^$third-party
 ||yodayo.com/scripts/pixel.js
@@ -140275,6 +140634,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||zacyncoewayan.site^
 ||zadlclqnequke.site^
 ||zafmbgwsshcce.website^
+||zafossbwimwu.in^
 ||zafsayaexptas.online^
 ||zagkozkvrqojx.online^
 ||zagrabiti.viessmann.hr^
@@ -140566,12 +140926,14 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||zetadeo.com^
 ||zetaframes.com^$popup
 ||zetjmzwbpuhbh.site^
+||zetunndncrbrf.online^
 ||zetusripwrecl.website^
 ||zeusadx.com^
 ||zeustechnology.com^$third-party
 ||zeustv*.com/*.gif|$image
 ||zevcigasyau.com^
 ||zevklifilm.com/ma5.js
+||zevljjvsjvwvl.space^
 ||zewkj.com^
 ||zewuwkawo.com^
 ||zextzccadpr.com^
@@ -140599,6 +140961,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||zfoickexwpjma.online^
 ||zfoo2relcykev7olu9okic9kq34pbye.cfd^
 ||zfptshtslxuxw.online^
+||zfqbutphtgciv.space^
 ||zfqmslr.com^
 ||zfqunezf.xyz^
 ||zfsdnkzmheyg.com^
@@ -140662,6 +141025,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||zhduni.rizap.jp^
 ||zhdwlnwvknhki.online^
 ||zhgcahjbqiiuu.website^
+||zhgcmhqmojdnc.site^
 ||zhgd3e17.xyz^
 ||zhhlbgtwrulfi.com^
 ||zhhmkiottyxgn.space^
@@ -140695,6 +141059,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||zhzewgbwymarz.site^
 ||zi-scripts.com/zi-tag.js
 ||zi8ivy4b0c7l.com^
+||ziaensqwaxzpu.online^
 ||ziametbaff.com^
 ||zibkqosgvtopd.website^
 ||ziblo.cloud^
@@ -140803,6 +141168,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||zjptg.com^
 ||zjpvvpattrjxx.website^
 ||zjqbxcdwwtvtt.site^
+||zjqhikudyexpw.space^
 ||zjrbwb.markenschuhe.de^
 ||zjskecnjpgdcm.online^
 ||zjspxohftdmow.site^
@@ -140832,6 +141198,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||zkdvaodpyoxvd.online^
 ||zkebwy.copenhagenstudios.com^
 ||zkfjdxlwwcilg.website^
+||zkgbexqaimtdr.space^
 ||zkggdzyagjzcp.website^
 ||zkggtossfobzd.space^
 ||zkkkvb.welovebags.de^
@@ -140989,6 +141356,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||znypnplxeanxw.online^
 ||znzkcgjognscp.space^
 ||znzoyrrgraazi.online^
+||zoaavvumyukwq.site^
 ||zoaisgughwyvm.space^
 ||zoapumtysehna.online^
 ||zoasmnxzyhzis.space^
@@ -141108,6 +141476,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||zppfgh.renovatuvestidor.com^
 ||zpptusrwzaapg.site^
 ||zppvjakzlptsd.site^
+||zpqdemyimlaqa.website^
 ||zpqdgwcusmklx.site^
 ||zpqfqxoczrwfq.space^
 ||zpqigdljesbnv.space^
@@ -141125,6 +141494,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||zpygdezovpdju.space^
 ||zpyxbftwhanbj.space^
 ||zpzcahumfmsyi.website^
+||zqaeuutwesr.com^
 ||zqbpgojxnbvzt.space^
 ||zqbtpjrjctwey.site^
 ||zqbxmcyztwdju.online^
@@ -141165,6 +141535,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||zqzwktfvahzno.space^
 ||zrbbbj.tf.com.br^
 ||zrbezdaddiahk.space^
+||zrcbckthwcsox.online^
 ||zrdezllgdthjb.site^
 ||zrdubetejajen.website^
 ||zrfgofxt.com^
@@ -141194,6 +141565,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||zrraksfxccuop.online^
 ||zrsaff.petworld.no^
 ||zrsetz.shutterstock.com^
+||zrsgpdgtnhkez.space^
 ||zrshcirokjuur.online^
 ||zrtrlgbdhvtwf.space^
 ||zrvwyyqpkeehx.online^
@@ -141345,6 +141717,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||zvfzqw.cotta.jp^
 ||zvglmqsgwbfhe.website^
 ||zvhkzb.ambiendo.de^
+||zvhruccgofmal.site^
 ||zvjbgsqpcnlku.site^
 ||zvjinchjnsjje.site^
 ||zvjsiihwctudv.online^
@@ -141448,6 +141821,7 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||zyfhytcqui.com^
 ||zyfsnsggeqdia.site^
 ||zygoojpfbiqdi.online^
+||zygrbnyipwvbe.site^
 ||zyguhojdymzqx.site^
 ||zyichcksiqhqn.online^
 ||zyihldjutmvmh.online^
@@ -141506,5 +141880,5 @@ zstacklife.com#@#[href^="https://zstacklife.com/"] img
 ||zzzmjfixezere.site^
 ||zzzmxvoxooaat.site^
 ! dodo-liste: filtreler
-! dodo-zaman: 1795179261
-! dodo-imza: 1 UJ3aNcTsK7lRlUrig3tYOACWdTXZUQA6qSjjGS6RnhrZeCOrxLPX58p9tL7p1GoI/IrowSkNudfMvuRCN7ESqxbmucFHHRKdp92czAxk7EcmtckbwRfVGQguyZmVg/X1+QTbky6z1VsQptarT+gwOPabX1bUbOvYCcMQKkevA8hzPr1eXUF3rhD05IHwxqkatBgzNsyXrK87GNqHfyMyFkqiLHohpdZjkbfN0uO1Ha7HhuRtApgDS0huthl/ksNcDY3k3jGBED+e14jKkRYJHr2pvQUavses1laIq7QryxE7Rp6KpktXaOohThfkFJ40AAj6JpsakOMzVt59MP9Te12u2q7K6D66oUS+GPKfZHYDb1lQKzef0J6IzEYNm5cs+2VYcUSzkqfEJx7NzQqA68wIWhmqkmVut3bBH1nFL5QSEXaVHb6HewaalA+OC9ADeVGDTK3fAwLLRaTQtxbY7LjuVnKd9cgZIwVzMDFicLTsoHDpsr1QFkobo4hcBhOv
+! dodo-zaman: 1795264816
+! dodo-imza: 1 Qj9Rg5GmwPtPipI9lXPyNWqwlgVgjWodCbTwkpff5KVydCyATJi5PKBKIV55sj5MVfFOeqDSPGkfZQBpncyk/93QAIxIswi8SMNpjo0IJ49nEQkPsSzW2HBmoNYWfPoYjB8/Atiq4/JT7AcP2e0sFlAzXxrbvsaPg/LORdnT4Q+Sy7TL6MT4vhY7ZWxxy2ap4uKrUzXv7oVdYsmrhIV32rGu+Fzr1AG4Nq2onJs0gXVlDHHB73yKE2uxjwK8RlF2wM37LXl1/+pNdYs+EF0MSPkFm2fSmN8vf7Y+5FTTKs3u4z/Scjmq2fq01SqzHbPmllnyE+Ye2TLFhogqMEfJwJP4vx8Q5TgiZDCIo36UPnK0ssOPlTQl0Bx8QdQHBsfByrmV6CFOXqr0tbvokAta9rAwUbLXriRZ9Nrc7YIHU8fYvzkkRPdFVJrCyxUWGhhnPvJ6nmcXjuiWIYx7Hc9tdsXkQZcafXjFFTkpGav0IC9PH70UPLyCfGPOmiVv9Mai

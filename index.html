@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DodoBrowser – Windows ve Android için özenli, Türkçe tarayıcı</title>
 <meta name="description" content="Windows ve Android için ücretsiz, Türkçe tarayıcı. Reklamları ve izleyicileri engeller, çerez uyarılarını reddeder. Sayfaları cihazında Türkçeye çevirir.">
-<meta name="theme-color" content="#FBF6F2" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#1B191E" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FAF8F4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161615" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://dodobrowser.com/">
 <link rel="alternate" hreflang="tr" href="https://dodobrowser.com/">
 <link rel="alternate" hreflang="en" href="https://dodobrowser.com/en/">
@@ -170,76 +170,60 @@
 <link rel="preload" href="yazi/InterTight.woff2" as="font" type="font/woff2" crossorigin>
 <style>
   :root {
-    --bg: #FBF6F2;
-    --bg-tint: #F6EFE9;
-    --glow: rgba(255, 94, 42, .12);
-    /* The Kehribar lights (start\hata.html): blue above right, amber on the left, rose low in the middle. */
-    --blob-a: rgba(150, 180, 255, .60);
-    --blob-b: rgba(255, 170, 110, .75);
-    --blob-c: rgba(255, 140, 160, .50);
-    --ink: #15121A;
-    --muted: #64605C;
-    --accent: #FF7A3D;          /* kehribar fill (buttons, bars); text on it is --on-accent */
-    --switch-on: #E8621C;       /* an "on" switch, as in DodoBrowser (start\dodo.css --accent) */
-    --accent-hover: #FF9C73;
-    --accent-strong: #8F4410;   /* kehribar as text, links and icons */
-    --brand: #15121A;   /* "DodoBrowser" in the logo (marka\LOGO-STANDARDI.md) */
-    --on-accent: #15121A;
+    --bg: #FAF8F4;
+    --bg-tint: #F4F1EB;
+    --glow: rgba(199, 163, 107, .14);
+    --ink: #1C1B18;
+    --muted: #635F57;
+    --accent: #C7A36B;          /* bronze fill (buttons, bars) = start\dodo.css --button; text on it is --on-accent */
+    --switch-on: #946F38;       /* an "on" switch, as in DodoBrowser (start\dodo.css --accent) */
+    --accent-hover: #DBB67D;
+    --accent-strong: #765626;   /* bronze as text, links and icons */
+    --brand: #1C1B18;   /* "DodoBrowser" in the logo (marka\LOGO-STANDARDI.md) */
+    --on-accent: #141311;
     --kalkan-tik: #FFFFFF;   /* the on shield's tick: white in the light theme, dark in the dark */
-    --ember: linear-gradient(90deg, #FFB84D 0%, #FF5E2A 55%, #D42A5A 100%);
-    --btn-glow: rgba(255, 94, 42, .32);
-    /* The big heading's shine: large text, each stop 3:1 or more on the page. */
-    --shine-a: #8F4410;
-    --shine-b: #C2410C;
-    --shine-c: #E8621C;
+    --ember: linear-gradient(90deg, #E2C592 0%, #C7A36B 55%, #946F38 100%);
     --card: #FFFFFF;
-    --card-border: rgba(143, 68, 16, .12);
-    --icon-bg: #F6F1ED;
-    --shadow: 0 1px 2px rgba(60, 30, 10, .06), 0 10px 28px rgba(60, 30, 10, .08);
-    --shadow-lg: 0 2px 6px rgba(60, 30, 10, .08), 0 30px 70px rgba(60, 30, 10, .16);
-    --win-bar: #F1EBE6;
-    --win-tab: #FFFFFF;
-    --win-field: #F6F1ED;
+    --card-border: rgba(118, 86, 38, .12);
+    --icon-bg: #F4F1EB;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .05), 0 8px 24px rgba(0, 0, 0, .06);
+    --shadow-lg: 0 2px 6px rgba(0, 0, 0, .06), 0 24px 56px rgba(0, 0, 0, .12);
+    --win-bar: #EFECE6;
+    --win-tab: #FAF8F4;
+    --win-field: #F4F1EB;
     --violet: #6A4BD8;
     --violet-bg: #EFEAFF;
-    --track: #EAE3DD;
+    --track: #D6D1C8;
     --other: #A39C96;
-    --field: #78716C;   /* form field edge, 3:1 on every surface */
+    --field: #8A867E;   /* form field edge, 3:1 on every surface */
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #1B191E;
-      --bg-tint: #221D21;
-      --glow: rgba(255, 120, 44, .16);
-      --blob-a: rgba(70, 72, 210, .45);
-      --blob-b: rgba(255, 120, 44, .50);
-      --blob-c: rgba(214, 40, 90, .42);
-      --ink: #F3F1F5;
-      --muted: #B7B5BC;
-      --accent: #FF8A3D;
-      --switch-on: #FF8A3D;
-      --accent-hover: #FEC29E;
-      --accent-strong: #FFB06E;
-      --brand: #F3F1F5;
-      --on-accent: #15121A;
-      --kalkan-tik: #15121A;
-      --btn-glow: rgba(255, 94, 42, .24);
-      --shine-a: #FFB06E;
-      --shine-b: #FF8A3D;
-      --shine-c: #FFD9B0;
-      --card: #27252A;
-      --card-border: rgba(255, 176, 110, .14);
-      --icon-bg: #333036;
-      --shadow: 0 1px 2px rgba(0, 0, 0, .35), 0 10px 28px rgba(0, 0, 0, .35);
-      --shadow-lg: 0 2px 6px rgba(0, 0, 0, .4), 0 30px 70px rgba(0, 0, 0, .55);
-      --win-bar: #201E23;
-      --win-tab: #27252A;
-      --win-field: #333036;
+      --bg: #161615;
+      --bg-tint: #1B1B19;
+      --glow: rgba(199, 163, 107, .10);
+      --ink: #ECE8E0;
+      --muted: #A39F96;
+      --accent: #C7A36B;
+      --switch-on: #C7A36B;
+      --accent-hover: #DBB67D;
+      --accent-strong: #DFC08E;
+      --brand: #ECE8E0;
+      --on-accent: #141311;
+      --kalkan-tik: #141311;
+      --card: #1B1B19;
+      --card-border: rgba(223, 192, 142, .14);
+      --icon-bg: #242422;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .28), 0 8px 24px rgba(0, 0, 0, .28);
+      --shadow-lg: 0 2px 6px rgba(0, 0, 0, .32), 0 24px 56px rgba(0, 0, 0, .44);
+      --win-bar: #111110;
+      --win-tab: #1B1B19;
+      --win-field: #242422;
       --violet: #B49CFF;
       --violet-bg: #251E3F;
-      --track: #3A373D;
+      --track: #46443F;
       --other: #77737B;
-      --field: #8F8A93;
+      --field: #7E7B74;
     }
   }
 
@@ -289,24 +273,21 @@
   .wm { aspect-ratio: 7.98; }
   .wm-slogan { aspect-ratio: 10.71; }
   /* logo-yap: site-css end */
-  .logo-link svg:not(.wm) { width: 34px; height: 34px; transition: transform .4s cubic-bezier(.3, 1.6, .5, 1); }
-  .logo-link:hover svg:not(.wm) { transform: rotate(-12deg) scale(1.08); }
-  /* Menu: links drop in one by one; a soft pill slides to the link under the mouse,
-     and while scrolling it rests on the section being read. */
+  .logo-link svg:not(.wm) { width: 34px; height: 34px; }
+  /* Menu: a soft pill slides to the link under the mouse, and while scrolling it rests on the
+     section being read. The links themselves stand still (sessiz lüks, 24 Nov). */
   nav.links { position: relative; margin-left: auto; display: flex; gap: 6px; }
   nav.links a {
     position: relative; z-index: 1; color: color-mix(in srgb, var(--ink) 72%, var(--muted)); text-decoration: none;
     font-size: 14.5px; font-weight: 560;
-    padding: 8px 13px; border-radius: 10px; transition: color .25s;
-    animation: drop .7s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(var(--i, 0) * 70ms + 150ms);
+    padding: 8px 13px; border-radius: 10px; transition: color .15s;
   }
   nav.links a:hover, nav.links a:focus-visible { color: var(--ink); }
   nav.links a.on { color: var(--accent-strong); }
-  @keyframes drop { from { opacity: 0; transform: translateY(-14px); } }
   .nav-pill {
     position: absolute; left: 0; top: 0; height: 100%; width: 0; border-radius: 10px; pointer-events: none;
     background: var(--card); box-shadow: var(--shadow); opacity: 0;
-    transition: transform .5s cubic-bezier(.3, 1.35, .5, 1), width .5s cubic-bezier(.3, 1.35, .5, 1), opacity .25s;
+    transition: transform .24s cubic-bezier(.65, 0, .35, 1), width .24s cubic-bezier(.65, 0, .35, 1), opacity .15s;
   }
   .nav-pill::after {
     content: ""; position: absolute; left: 50%; bottom: 3px; width: 18px; height: 3px; margin-left: -9px;
@@ -324,15 +305,8 @@
   }
 
   /* ---------- Hero ---------- */
-  .hero { position: relative; padding: 76px 0 110px; overflow: hidden; background: linear-gradient(var(--bg-tint), var(--bg) 90%); }
-  .aurora { position: absolute; inset: -20% -10% auto; height: 140%; pointer-events: none; filter: blur(70px); }
-  .aurora i { position: absolute; border-radius: 50%; }
-  .aurora i:nth-child(1) { width: 520px; height: 520px; left: 52%; top: -6%; background: var(--blob-a); animation: drift1 22s ease-in-out infinite alternate; }
-  .aurora i:nth-child(2) { width: 460px; height: 460px; left: -4%; top: 6%; background: var(--blob-b); animation: drift2 26s ease-in-out infinite alternate; }
-  .aurora i:nth-child(3) { width: 300px; height: 300px; left: 34%; top: 38%; background: var(--blob-c); animation: drift3 18s ease-in-out infinite alternate; }
-  @keyframes drift1 { to { transform: translate(-140px, 90px) scale(1.15); } }
-  @keyframes drift2 { to { transform: translate(160px, 60px) scale(.9); } }
-  @keyframes drift3 { to { transform: translate(-80px, -120px) scale(1.25); } }
+  /* A still background: the warm neutral and one soft bronze light that never moves (sessiz lüks ilke 3). */
+  .hero { position: relative; padding: 76px 0 110px; overflow: hidden; background: radial-gradient(900px 520px at 12% -10%, var(--glow), transparent 70%), linear-gradient(var(--bg-tint), var(--bg) 90%); }
 
   .hero .wrap { position: relative; display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.2fr); gap: 56px; align-items: center; }
   .eyebrow {
@@ -342,36 +316,24 @@
     padding: 5px 12px 5px 8px; border-radius: 999px; box-shadow: var(--shadow);
   }
   .eyebrow svg { width: 18px; height: 18px; }
-  .hero h1 { font-size: clamp(44px, 6.4vw, 76px); line-height: 1.02; letter-spacing: -.03em; margin: 0 0 20px; font-weight: 800; }
+  .hero h1 { font-size: clamp(44px, 6.4vw, 76px); line-height: 1.02; letter-spacing: -.03em; margin: 0 0 20px; font-weight: 700; }
   /* The category label sits inside the h1 (search engines read the product's one definition as part of
      the heading) but keeps its own look; its bottom margin is the h1's old top margin. */
   .hero h1 .eyebrow { display: flex; width: max-content; max-width: 100%; margin-bottom: 22px; line-height: 1.6; letter-spacing: normal; }
   .hero h1 .w { display: inline-block; }
-  .hero h1 em {
-    font-style: normal;
-    background: linear-gradient(100deg, var(--shine-a) 0%, var(--shine-b) 35%, var(--shine-c) 50%, var(--shine-b) 65%, var(--shine-a) 100%);
-    background-size: 250% 100%;
-    -webkit-background-clip: text; background-clip: text; color: transparent;
-    animation: shimmer 6s ease-in-out infinite;
-  }
-  @keyframes shimmer { 0%, 100% { background-position: 100% 0; } 50% { background-position: 0 0; } }
+  .hero h1 em { font-style: normal; color: var(--accent-strong); }
   .lead { font-size: 19px; color: var(--muted); margin: 0 0 32px; max-width: 34ch; }
   .cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
   .btn {
     display: inline-flex; align-items: center; gap: 8px; border: 0;
     font: inherit; font-size: 16px; font-weight: 600; text-decoration: none;
     padding: 13px 22px; border-radius: 999px; cursor: pointer;
-    transition: transform .2s, box-shadow .2s, filter .2s, border-color .2s;
+    transition: background-color .15s, border-color .15s;
   }
-  .btn.primary { color: var(--on-accent); background: var(--accent); box-shadow: 0 8px 22px var(--btn-glow); }
-  .btn.primary:hover { transform: translateY(-2px); background: var(--accent-hover); box-shadow: 0 14px 30px var(--btn-glow); }
-  /* Button icons move with the button and add their own small motion. */
-  .btn svg { transition: transform .3s cubic-bezier(.3, 1.4, .5, 1); }
-  .btn:hover svg.arrow { animation: nudge .9s ease-in-out infinite; }
-  .btn:hover svg.plane { transform: translate(3px, -3px) rotate(-8deg); }
-  @keyframes nudge { 50% { transform: translateY(4px); } }
+  .btn.primary { color: var(--on-accent); background: var(--accent); }
+  .btn.primary:hover { background: var(--accent-hover); }
   .btn.ghost { color: var(--ink); background: var(--card); border: 1px solid var(--field); }
-  .btn.ghost:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .btn.ghost:hover { border-color: var(--accent); }
   /* The feature pages (/kalkan, /cerez; 14 Nov 2026): small pills under the Shield card's text. */
   .btn.sm { font-size: 14px; padding: 7px 14px; }
   .daha { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
@@ -381,8 +343,8 @@
   .store {
     display: inline-flex; align-items: stretch; border-radius: 999px; overflow: hidden;
     color: var(--on-accent); text-decoration: none; line-height: 1.2; text-align: left;
-    box-shadow: 0 8px 22px var(--btn-glow), inset 0 0 0 1px rgba(21, 18, 26, .08);
-    transition: transform .25s, box-shadow .25s;
+    box-shadow: inset 0 0 0 1px rgba(20, 19, 17, .08);
+    transition: box-shadow .15s;
   }
   .store .l { display: flex; flex: 1; align-items: center; gap: 12px; padding: 12px 20px 12px 22px; background: var(--accent); }
   .store .l svg { width: 24px; height: 24px; flex: none; color: var(--on-accent); }
@@ -390,12 +352,12 @@
   .store small { font-size: 12px; font-weight: 400; color: var(--on-accent); opacity: .88; }
   .store .r {
     position: relative; display: grid; place-items: center; flex: none; width: 64px; overflow: hidden;
-    background: var(--accent); border-left: 1px solid rgba(21, 18, 26, .14);
-    transition: width .3s cubic-bezier(.3, 1.2, .5, 1), background .25s;
+    background: var(--accent); border-left: 1px solid rgba(20, 19, 17, .14);
+    transition: width .24s cubic-bezier(.65, 0, .35, 1), background-color .15s;
   }
   .store .r svg { width: 22px; height: 22px; transition: transform .3s, opacity .3s; }
   .store .r em { position: absolute; font-style: normal; font-size: 13px; font-weight: 600; white-space: nowrap; opacity: 0; transform: translateY(14px); transition: opacity .3s, transform .3s; }
-  .store:hover, .store:focus-visible { transform: translateY(-2px); box-shadow: 0 14px 30px var(--btn-glow), inset 0 0 0 1px rgba(21, 18, 26, .12); }
+  .store:hover, .store:focus-visible { box-shadow: inset 0 0 0 1px rgba(20, 19, 17, .12); }
   .store:hover .r, .store:focus-visible .r { width: 108px; background: var(--accent-hover); }
   .store:hover .r svg, .store:focus-visible .r svg { transform: translateY(-34px); opacity: 0; }
   .store:hover .r em, .store:focus-visible .r em { opacity: 1; transform: none; }
@@ -408,9 +370,10 @@
   .faq .cmdrow { margin: 0 20px 14px; border-radius: 14px; }
   .cmdrow code.mail { font: 600 14px/1.4 "Cascadia Mono", Consolas, monospace; color: var(--ink); }
 
-  /* Entrance: hero pieces rise in one after another. */
-  .rise { animation: rise .9s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(var(--d, 0) * 110ms + 100ms); }
-  @keyframes rise { from { opacity: 0; transform: translateY(26px); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+  /* Entrance, the page's one motion of its own (the slogan's first screen; sessiz lüks Bölüm 2):
+     the hero pieces fade in one after another, each 240 ms with the arrival curve. */
+  .rise { animation: rise .24s cubic-bezier(0, 0, 0, 1) both; animation-delay: calc(var(--d, 0) * 40ms); }
+  @keyframes rise { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 
   /* ---------- Shield demo: the visitor turns the shield on and off ---------- */
   .stage { position: relative; }
@@ -418,10 +381,8 @@
     position: relative; border-radius: 16px; overflow: hidden;
     background: var(--win-tab); border: 1px solid var(--card-border);
     box-shadow: var(--shadow-lg); font-size: 13px; user-select: none;
-    /* Floats twice, then rests: nothing on the page moves for more than a few seconds by itself. */
-    animation: rise 1s cubic-bezier(.2, .7, .2, 1) .35s both, float 2.4s ease-in-out 1.4s 2;
+    animation: rise .24s cubic-bezier(0, 0, 0, 1) .2s both;
   }
-  @keyframes float { 50% { transform: translateY(-8px); } }
   .d-tabs { display: flex; align-items: flex-end; gap: 4px; padding: 8px 8px 0; background: var(--win-bar); }
   .d-tab { display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 10px 10px 0 0; color: var(--muted); max-width: 200px; min-width: 0; }
   .d-tab.on { background: var(--win-tab); color: var(--ink); }
@@ -436,14 +397,14 @@
   .d-url { flex: 1; min-width: 0; display: flex; align-items: center; gap: 8px; background: var(--win-field); border-radius: 999px; padding: 6px 14px; color: var(--ink); }
   .d-url span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .d-url svg { width: 14px; height: 14px; color: var(--muted); }
-  .d-shield { position: relative; display: grid; color: var(--accent-strong); cursor: pointer; transition: color .3s; }
+  .d-shield { position: relative; display: grid; color: var(--ink); cursor: pointer; transition: color .15s; }
   .d-shield .kalkan-isareti { z-index: 1; width: 18px; height: 18px; }
   /* kalkan-isareti: begin */
   /* DodoBrowser's shield (5 Nov 2026, the "light dome"): a copy of start\dodo.css's .kalkan-isareti
      (the program draws the same paths; unit KIS1 checks them). Off: the matte shield with a dash. */
   .kalkan-isareti {
     position: relative; display: inline-block; flex: none; width: 24px; height: 24px;
-    background: linear-gradient(135deg, #FFB84D 0%, #FF5E2A 55%, #D42A5A 100%);
+    background: linear-gradient(135deg, #E2C592 0%, #C7A36B 55%, #946F38 100%);
     -webkit-mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2.4 19.4 5.1a1 1 0 0 1 .6.9v5.6c0 4.8-3.3 8.5-8 10-4.7-1.5-8-5.2-8-10V6a1 1 0 0 1 .6-.9Z'/></svg>") center / contain no-repeat;
     mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 2.4 19.4 5.1a1 1 0 0 1 .6.9v5.6c0 4.8-3.3 8.5-8 10-4.7-1.5-8-5.2-8-10V6a1 1 0 0 1 .6-.9Z'/></svg>") center / contain no-repeat;
     transition: background .3s;
@@ -471,18 +432,20 @@
   }
   .smenu .row .kalkan-isareti { width: 28px; height: 28px; }
   /* kalkan-isareti: end */
-  .d-shield b {
-    position: absolute; z-index: 2; right: -10px; top: -7px; min-width: 18px; text-align: center;
-    background: var(--accent); color: var(--on-accent);
-    font-size: 10px; line-height: 1; padding: 2px 4px; border-radius: 6px;
+  /* In the window's frame the shield is a flat line, as in DodoBrowser's side menu (24 Nov, sessiz lüks):
+     outline and tick in the ink colour when on, the dash in the muted one when off. The coloured mark
+     stays in the Shield menu (.smenu). */
+  .d-shield .kalkan-isareti, .lk-url .kalkan-isareti { background: transparent; }
+  .d-shield .kalkan-isareti::before, .d-shield .kalkan-isareti::after, .lk-url .kalkan-isareti::before, .lk-url .kalkan-isareti::after { background: currentColor; }
+  .d-shield .kalkan-isareti::before, .lk-url .kalkan-isareti::before { opacity: 1;
+    -webkit-mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2'><path d='M12 2.4 19.4 5.1a1 1 0 0 1 .6.9v5.6c0 4.8-3.3 8.5-8 10-4.7-1.5-8-5.2-8-10V6a1 1 0 0 1 .6-.9Z'/></svg>") center / contain no-repeat;
+    mask: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2'><path d='M12 2.4 19.4 5.1a1 1 0 0 1 .6.9v5.6c0 4.8-3.3 8.5-8 10-4.7-1.5-8-5.2-8-10V6a1 1 0 0 1 .6-.9Z'/></svg>") center / contain no-repeat;
   }
   .d-shield.off { color: var(--muted); }
-  .d-shield.off b { display: none; }
-  .d-shield.pop b { animation: pop .35s ease; }
-  @keyframes pop { 50% { transform: scale(1.35); } }
-  /* While ads are pulled in: a soft turquoise pull around the shield, and a ring for every arrival. */
+  /* While ads are pulled in: a soft bronze glow around the shield, and a ring for every arrival
+     (the program's vacuum: a real event, not decoration). */
   .d-shield::before, .d-shield::after { content: ""; position: absolute; left: 50%; top: 50%; border-radius: 50%; pointer-events: none; opacity: 0; }
-  .d-shield::before { width: 46px; height: 46px; margin: -23px 0 0 -23px; background: radial-gradient(circle, rgba(255, 94, 42, .45), transparent 70%); }
+  .d-shield::before { width: 46px; height: 46px; margin: -23px 0 0 -23px; background: radial-gradient(circle, rgba(199, 163, 107, .45), transparent 70%); }
   .d-shield::after { width: 30px; height: 30px; margin: -15px 0 0 -15px; border: 2px solid var(--accent); }
   .d-shield.pull::before { animation: pull .7s ease-in-out infinite; }
   .d-shield.ring::after { animation: ring-out .5s ease-out; }
@@ -526,7 +489,6 @@
   @keyframes nag { 0%, 80%, 100% { transform: translate(-50%, -50%); } 85% { transform: translate(-52%, -50%) rotate(-2deg); } 90% { transform: translate(-48%, -50%) rotate(2deg); } 95% { transform: translate(-51%, -50%); } }
   .popup .x { position: absolute; right: 8px; top: 4px; color: #B7C0C4; font-size: 12px; }
   .popup span.x { background: none; padding: 0; font-weight: 400; }
-  .popup .gift { font-size: 26px; line-height: 1; }
   .popup b { display: block; color: #D93025; font-size: 15px; margin: 6px 0 2px; letter-spacing: .4px; }
   .popup p { margin: 0 0 10px; font-size: 11.5px; color: #4A585D; }
   .popup span { display: inline-block; background: #D93025; color: #fff; font-weight: 700; font-size: 11.5px; padding: 6px 14px; border-radius: 8px; }
@@ -558,7 +520,7 @@
     box-shadow: var(--shadow-lg); padding: 10px 14px; font-size: 13px; white-space: nowrap;
     right: 16px; bottom: 96px;
   }
-  .stage.on .chip { display: flex; animation: rise .7s cubic-bezier(.2, .7, .2, 1) .2s both; }
+  .stage.on .chip { display: flex; animation: rise .2s cubic-bezier(0, 0, 0, 1) both; }
   .chip svg { width: 18px; height: 18px; color: var(--accent-strong); flex: none; }
 
   /* Under the window: the on/off switch (40x20, as in DodoBrowser) and what just happened. */
@@ -589,9 +551,6 @@
     top: 2px; left: 2px; width: 14px; height: 14px; transform: translateX(20px);
     background: var(--card); box-shadow: 0 1px 2px rgba(0, 0, 0, .18);
   }
-  /* A few soft calls to try it, then it waits quietly. */
-  .switch.invite .track { animation: invite 1.2s ease-out 3; }
-  @keyframes invite { from { box-shadow: 0 0 0 0 rgba(255, 94, 42, .55); } to { box-shadow: 0 0 0 12px rgba(255, 94, 42, 0); } }
   .d-say { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.4; }
   .d-say svg { width: 22px; height: 22px; flex: none; display: none; }
   .stage.on .d-say { color: var(--ink); }
@@ -612,8 +571,8 @@
   h2 { font-size: clamp(30px, 4vw, 44px); line-height: 1.1; letter-spacing: -.025em; margin: 0 0 14px; }
   .sub { color: var(--muted); font-size: 18px; max-width: 60ch; margin: 0 0 40px; }
 
-  /* Scroll reveal (only when JavaScript runs; without it everything is simply visible). */
-  .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s cubic-bezier(.2, .7, .2, 1); transition-delay: calc(var(--d, 0) * 90ms); }
+  /* Scroll reveal: a short fade, no slide (only when JavaScript runs; without it everything is simply visible). */
+  .js .reveal { opacity: 0; transition: opacity .2s cubic-bezier(0, 0, 0, 1); }
   .js .reveal.in { opacity: 1; transform: none; }
 
   /* Shield's proof cards: what it does, said in words. No figures against another browser
@@ -623,35 +582,27 @@
   .stat h3 { margin: 0 0 8px; font-size: 16px; letter-spacing: -.1px; font-weight: 600; }
   .stat p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
 
-  /* Appearance (13 Nov 2026, in place of the memory chart; the felsefe-premium decision): DodoBrowser's
-     look in small. A frosted toolbar and start page over the page's lights; the swatches recolour it as
-     Customize does in DodoBrowser. Values from start\renkler.css (each accent's fill, its text tone and
+  /* Appearance (13 Nov 2026; 24 Nov sessiz lüks: no lights, no glass, opaque like the program): DodoBrowser's
+     look in small. The tabs, the address bar and the new tab's search; the swatches recolour it as
+     Settings does in DodoBrowser. Values from start\renkler.css (each accent's fill, its text tone and
      the ink on the fill); the logo and the shield keep their own colours, as in the program. */
   .look { --lk: var(--accent); --lk-text: var(--accent-strong); --lk-on: var(--on-accent);
-    --lk-glass: rgba(255, 255, 255, .52); --lk-glass-2: rgba(255, 255, 255, .78); }
-  [data-renk="okyanus"] { --lk: #2F9BF5; --lk-text: #1559C0; --lk-on: #15121A; }
-  [data-renk="orkide"] { --lk: #F07ACB; --lk-text: #A3226F; --lk-on: #15121A; }
-  [data-renk="orman"] { --lk: #45C077; --lk-text: #0F7340; --lk-on: #15121A; }
-  [data-renk="grafit"] { --lk: #2A2B36; --lk-text: #3A3B48; --lk-on: #FFFFFF; }
+    --lk-glass: var(--bg-tint); --lk-glass-2: var(--card); }
+  [data-renk="okyanus"] { --lk: #7DA2C6; --lk-text: #2D4F72; --lk-on: #141311; }
+  [data-renk="orkide"] { --lk: #C98EAD; --lk-text: #733A5A; --lk-on: #141311; }
+  [data-renk="orman"] { --lk: #7EAD8E; --lk-text: #2B563C; --lk-on: #141311; }
+  [data-renk="grafit"] { --lk: #2B2926; --lk-text: #3E3C37; --lk-on: #FAF8F4; }
   .lk-pick [data-renk="dodo"] { --lk: var(--accent); }
   @media (prefers-color-scheme: dark) {
-    .look { --lk-glass: rgba(39, 37, 42, .50); --lk-glass-2: rgba(51, 48, 54, .80); }
-    [data-renk="okyanus"] { --lk: #4AA8F5; --lk-text: #9AD6FF; }
-    [data-renk="orkide"] { --lk: #F06EC0; --lk-text: #FFC2E6; }
-    [data-renk="orman"] { --lk: #4CC77A; --lk-text: #8EE0A8; }
-    [data-renk="grafit"] { --lk: #E4E4EA; --lk-text: #E4E4EA; --lk-on: #15121A; }
+    [data-renk="okyanus"] { --lk: #7DA2C6; --lk-text: #B4D0EC; }
+    [data-renk="orkide"] { --lk: #C78CAB; --lk-text: #ECC2D8; }
+    [data-renk="orman"] { --lk: #7EAD8E; --lk-text: #ABD0B8; }
+    [data-renk="grafit"] { --lk: #DDD9D0; --lk-text: #DDD9D0; --lk-on: #141311; }
   }
   .look-sec .sub { margin-bottom: 32px; }
   .look { display: grid; gap: 20px; }
   .lk-win { position: relative; height: 360px; border-radius: 22px; overflow: hidden; isolation: isolate; background: var(--bg); border: 1px solid var(--card-border); box-shadow: var(--shadow-lg); }
-  .lk-bg { position: absolute; inset: 0; z-index: -1; }
-  .lk-bg i { position: absolute; border-radius: 50%; filter: blur(44px); }
-  .lk-bg i:nth-child(1) { width: 62%; height: 70%; left: -14%; top: 30%; background: var(--blob-b); }
-  .lk-bg i:nth-child(2) { width: 58%; height: 70%; right: -16%; top: -18%; background: var(--blob-a); }
-  .lk-bg i:nth-child(3) { width: 50%; height: 60%; left: 34%; bottom: -34%; background: var(--blob-c); }
-  .lk-bg i:nth-child(4) { width: 46%; height: 56%; left: 27%; top: 22%; background-color: var(--lk); opacity: .38; transition: background-color .45s ease; }
-  .lk-bar { padding: 8px 10px 10px; background: var(--lk-glass); border-bottom: 1px solid var(--card-border);
-    -webkit-backdrop-filter: blur(18px) saturate(1.5); backdrop-filter: blur(18px) saturate(1.5); }
+  .lk-bar { padding: 8px 10px 10px; background: var(--lk-glass); border-bottom: 1px solid var(--card-border); }
   .lk-tabs { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; }
   .lk-tab { display: inline-flex; align-items: center; gap: 8px; height: 30px; padding: 0 14px 0 10px; border-radius: 8px; font-size: 12.5px; color: var(--muted); white-space: nowrap; }
   .lk-tab.on { background: var(--lk-glass-2); color: var(--ink); box-shadow: 0 1px 2px rgba(0, 0, 0, .08); }
@@ -662,17 +613,10 @@
   .lk-url span:first-child { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .lk-url .kalkan-isareti { width: 18px; height: 18px; }
   .lk-home { position: absolute; left: 0; right: 0; top: 92px; bottom: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 0 28px 20px; text-align: center; }
-  .lk-home .brand { display: inline-flex; align-items: center; gap: 8.7px; --logo-dodo: var(--brand); font-size: 17.5px; }
-  .lk-home .brand svg:not(.wm) { width: 42px; height: 42px; filter: drop-shadow(0 6px 12px rgba(200, 60, 30, .26)); }
-  .lk-search { display: flex; align-items: center; gap: 10px; width: 100%; max-width: 380px; padding: 6px 6px 6px 18px; border-radius: 999px; background: var(--lk-glass-2); border: 1px solid var(--card-border); box-shadow: var(--shadow); font-size: 14px; color: var(--muted); text-align: left;
-    -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
+  .lk-search { display: flex; align-items: center; gap: 10px; width: 100%; max-width: 380px; padding: 6px 6px 6px 18px; border-radius: 999px; background: var(--lk-glass-2); border: 1px solid var(--card-border); box-shadow: var(--shadow); font-size: 14px; color: var(--muted); text-align: left; }
   .lk-search span { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .lk-search i { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; flex: none; background-color: var(--lk); color: var(--lk-on); transition: background-color .45s ease, color .45s ease; }
   .lk-search i svg { width: 16px; height: 16px; }
-  .lk-count { display: inline-flex; align-items: center; gap: 8px; margin: 0; padding: 6px 14px 6px 10px; border-radius: 999px; background: var(--lk-glass); font-size: 13.5px; color: var(--ink);
-    -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
-  .lk-count .kalkan-isareti { width: 18px; height: 18px; }
-  .lk-count b { color: var(--lk-text); font-weight: 600; transition: color .45s ease; }
   /* The swatches: DodoBrowser's own (start\start.html .du-accent): a 40 px ring, the chosen one ringed and ticked. */
   .lk-pick { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px; }
   .lk-pick .lk-ad { color: var(--muted); font-size: 14px; margin-right: 4px; }
@@ -698,7 +642,7 @@
     background: var(--card); border: 1px solid var(--card-border); border-radius: 16px;
     padding: 24px; box-shadow: var(--shadow);
   }
-  .js .card.reveal { transition: opacity .8s ease, transform .8s cubic-bezier(.2, .7, .2, 1), box-shadow .3s, border-color .3s; }
+  .js .card.reveal { transition: opacity .2s cubic-bezier(0, 0, 0, 1), box-shadow .15s, border-color .15s; }
   .card::before {
     content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .3s;
     background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 0%), var(--glow), transparent 70%);
@@ -708,10 +652,9 @@
   .card > * { position: relative; }
   .card h3 { font-size: 18px; margin: 16px 0 6px; letter-spacing: -.2px; }
   .card p { margin: 0; color: var(--muted); font-size: 15.5px; }
-  .ico { width: 46px; height: 46px; border-radius: 13px; display: grid; place-items: center; background: var(--icon-bg); color: var(--accent-strong); transition: transform .4s cubic-bezier(.3, 1.6, .5, 1); }
+  .ico { width: 46px; height: 46px; border-radius: 13px; display: grid; place-items: center; background: var(--icon-bg); color: var(--accent-strong); }
   .ico svg { width: 22px; height: 22px; }
   .ico.violet { background: var(--violet-bg); color: var(--violet); }
-  .card:hover .ico { transform: rotate(-8deg) scale(1.1); }
   /* The one big card (the shield), with a small copy of DodoBrowser's shield menu beside it. */
   .kalkan { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 40px; align-items: center; padding: 36px; margin-bottom: 18px; }
   .kalkan h3 { font-size: 24px; margin: 16px 0 8px; font-weight: 600; }
@@ -753,19 +696,13 @@
     border: 1px solid var(--card-border); box-shadow: var(--shadow-lg);
     background: radial-gradient(520px 260px at 50% -10%, var(--glow), transparent 70%), linear-gradient(var(--bg-tint), var(--card) 80%);
   }
-  .sp .greet { color: var(--muted); font-size: 14px; margin: 0 0 14px; }
-  /* The program's start page in small: its logo by the standard (D 52.5 px: capitals 23.5 px, gap D/4). */
-  .sp .brand { display: inline-flex; align-items: center; gap: 11.4px; margin-bottom: 22px; --logo-dodo: var(--brand); font-size: 22.9px; }
-  .sp .brand svg:not(.wm) { width: 56px; height: 56px; filter: drop-shadow(0 6px 12px rgba(200, 60, 30, .28)); }
   .sp .search {
     display: flex; align-items: center; gap: 10px; margin: 0 auto 24px; max-width: 420px;
-    background: var(--card); border: 1px solid var(--card-border); box-shadow: var(--shadow), 0 0 0 4px var(--glow);
+    background: var(--card); border: 1px solid var(--card-border); box-shadow: var(--shadow);
     border-radius: 999px; padding: 10px 10px 10px 20px; text-align: left; font-size: 15px;
   }
   .sp .search .q { flex: 1; min-height: 1.5em; white-space: nowrap; overflow: hidden; }
   .sp .search .q.ph { color: var(--muted); }
-  .caret { display: inline-block; width: 2px; height: 1.1em; margin-left: 1px; vertical-align: -3px; background: var(--accent-strong); animation: blink 1s steps(1) infinite; }
-  @keyframes blink { 50% { opacity: 0; } }
   .sp .search i { width: 34px; height: 34px; border-radius: 50%; background: var(--accent); display: grid; place-items: center; flex: none; }
   .sp .search i svg { width: 16px; height: 16px; color: var(--on-accent); }
   .tiles { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
@@ -773,9 +710,8 @@
   .tile div {
     width: 52px; height: 52px; border-radius: 15px; display: grid; place-items: center;
     background: var(--card); border: 1px solid var(--card-border); box-shadow: var(--shadow);
-    font-weight: 600; font-size: 18px; transition: box-shadow .3s, transform .3s;
+    font-weight: 600; font-size: 18px;
   }
-  .tile.lift div { transform: scale(1.12) rotate(-4deg); box-shadow: var(--shadow-lg); }
   .points { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
   .points li { display: flex; gap: 14px; }
   .points li .ico { flex: none; }
@@ -787,34 +723,23 @@
     position: relative; overflow: hidden;
     display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center;
     background:
-      radial-gradient(55% 70% at 0% 115%, rgba(255, 120, 44, .40), transparent 70%),
-      radial-gradient(45% 60% at 100% -5%, rgba(70, 72, 210, .38), transparent 70%),
-      linear-gradient(135deg, #1B191E, #27252A 60%, #1B191E);
-    color: #F3F1F5; border-radius: 28px; padding: 56px;
+      radial-gradient(55% 70% at 0% 115%, rgba(199, 163, 107, .22), transparent 70%),
+      linear-gradient(135deg, #161615, #1F1E1C 60%, #161615);
+    color: #ECE8E0; border-radius: 28px; padding: 56px;
   }
-  /* The rings pulse only while the card is on screen and motion is allowed (the script adds
-     .canli): left on their own they ran off screen too, and with "reduce motion" the outer
-     ring stood still at full size across the list and, on a phone, the heading (19 Nov). The
-     words sit above them. */
-  .rings { position: absolute; right: -90px; top: -90px; width: 360px; height: 360px; pointer-events: none; display: none; }
-  .privacy.canli .rings { display: block; }
-  .privacy > div:not(.rings) { position: relative; z-index: 1; }
-  .rings span { position: absolute; inset: 0; border-radius: 50%; border: 2px solid rgba(255, 176, 110, .35); animation: ring 5s ease-out infinite; }
-  .rings span:nth-child(2) { animation-delay: 1.66s; }
-  .rings span:nth-child(3) { animation-delay: 3.33s; }
-  @keyframes ring { from { transform: scale(.3); opacity: 1; } to { transform: scale(1.3); opacity: 0; } }
-  .privacy .kicker { color: #FFB06E; }
+  .privacy > div { position: relative; z-index: 1; }
+  .privacy .kicker { color: #DFC08E; }
   .privacy h2 { color: #fff; }
-  .privacy p { color: #D6D2DA; font-size: 16.5px; margin: 0 0 14px; }
-  .privacy a { color: #FFB06E; }
+  .privacy p { color: #A39F96; font-size: 16.5px; margin: 0 0 14px; }
+  .privacy a { color: #DFC08E; }
   .privacy ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; position: relative; z-index: 1; }
   .privacy li {
     display: flex; gap: 12px; align-items: flex-start;
     background: rgba(255, 255, 255, .07); border: 1px solid rgba(255, 255, 255, .12);
-    border-radius: 14px; padding: 14px 16px; font-size: 15.5px; transition: background .3s, transform .3s;
+    border-radius: 14px; padding: 14px 16px; font-size: 15.5px; transition: background-color .15s;
   }
-  .privacy li:hover { background: rgba(255, 255, 255, .11); transform: translateX(4px); }
-  .privacy li svg { width: 20px; height: 20px; color: #FFB06E; flex: none; margin-top: 2px; }
+  .privacy li:hover { background: rgba(255, 255, 255, .11); }
+  .privacy li svg { width: 20px; height: 20px; color: #DFC08E; flex: none; margin-top: 2px; }
   .privacy li b { color: #fff; }
 
   /* Shortcuts */
@@ -827,8 +752,7 @@
   }
   .key span { color: var(--muted); line-height: 1.35; }
   .key div { flex: none; white-space: nowrap; }
-  .key.press { border-color: var(--accent); box-shadow: 0 0 0 4px var(--glow); }
-  .key.press kbd, .key:hover kbd { transform: translateY(2px); border-bottom-width: 1px; background: var(--accent); color: var(--on-accent); }
+  .key:hover kbd { transform: translateY(2px); border-bottom-width: 1px; background: var(--accent); color: var(--on-accent); }
 
   /* Questions: each opens and closes (also with the keyboard: Tab, then Enter or Space). */
   .faq { max-width: 760px; display: grid; gap: 12px; }
@@ -870,8 +794,7 @@
   .follow svg { width: 20px; height: 20px; }
   .reach-sec { text-align: center; padding-bottom: 90px; }
   .reach-sec .sub { margin: 0 auto 32px; }
-  .closing svg.big { width: 120px; height: 120px; filter: drop-shadow(0 10px 20px rgba(200, 60, 30, .3)); animation: hop 3.2s ease-in-out infinite; transform-origin: 50% 100%; }
-  @keyframes hop { 0%, 60%, 100% { transform: none; } 70% { transform: translateY(-14px) rotate(-6deg); } 80% { transform: translateY(0) scale(1.06, .94); } 88% { transform: translateY(-4px); } }
+  .closing svg.big { width: 120px; height: 120px; }
   /* The name and the tagline drawn (the logo standard's letters); font-size is their capitals' height. */
   .closing .wordmark { margin: 22px 0 0; font-size: clamp(28px, 4.2vw, 40px); line-height: 1; --logo-dodo: var(--brand); }
   .closing .tagline { margin: 16px 0 32px; font-size: clamp(13px, 1.8vw, 16px); line-height: 1; color: var(--muted); }
@@ -910,7 +833,7 @@
     border: 1px solid var(--card-border); border-radius: 14px; color: var(--ink); text-decoration: none;
     transition: border-color .2s, transform .2s, box-shadow .2s;
   }
-  .soc:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow); }
+  .soc:hover { border-color: var(--accent); box-shadow: var(--shadow); }
   .soc .si { display: grid; place-items: center; flex: none; width: 38px; height: 38px; border-radius: 11px; background: var(--icon-bg); transition: background .2s, color .2s; }
   .soc .si svg { width: 20px; height: 20px; }
   .soc .sn { display: grid; font-weight: 600; font-size: 15px; line-height: 1.25; }
@@ -939,8 +862,8 @@
   .contact .status { margin: 0; font-size: 15px; min-height: 1.4em; }
   .contact .status:empty { margin: 0; min-height: 0; }
   .contact .status.ok { color: var(--accent-strong); font-weight: 600; }
-  .contact .status.bad { color: #C2410C; }
-  @media (prefers-color-scheme: dark) { .contact .status.bad { color: #FB923C; } }
+  .contact .status.bad { color: #C42B1C; }
+  @media (prefers-color-scheme: dark) { .contact .status.bad { color: #FF99A4; } }
 
   footer.bottom { border-top: 1px solid var(--card-border); padding: 28px 0 40px; color: var(--muted); font-size: 14.5px; }
   footer.bottom .wrap { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; }
@@ -991,9 +914,6 @@
     .tiles { gap: 6px; flex-wrap: nowrap; }
     .tile { width: auto; flex: 0 1 58px; min-width: 0; }
     .tile div { width: 100%; max-width: 52px; height: auto; aspect-ratio: 1; }
-    /* The count doesn't fit one line here: two even lines in a rounded card, not a pill broken
-       after its first word (17 Nov visual inventory). */
-    .lk-count { border-radius: 16px; text-wrap: balance; }
   }
   .switch, .d-shield { touch-action: manipulation; }
   .btn:focus-visible, .store:focus-visible, .copy:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 3px; }
@@ -1043,7 +963,7 @@
   }
   @media (prefers-reduced-motion: reduce) { nav.dil a, nav.dil svg { transition: none; } }
   /* Last, so it wins over each part's own "font: inherit". */
-  h1, h2, h3, h4, .kicker, .eyebrow, nav.links a, nav.dil a, .back, .btn, .store .tx, .store em, .faq summary, .mini b, .points b, .strip li b, .copy, .smenu .big, .sp .greet {
+  h1, h2, h3, h4, .kicker, .eyebrow, nav.links a, nav.dil a, .back, .btn, .store .tx, .store em, .faq summary, .mini b, .points b, .strip li b, .copy, .smenu .big {
     font-family: "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, sans-serif;
   }
   h1 .w { font-family: "Inter Tight", "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, sans-serif; }   /* the slogan */
@@ -1055,7 +975,7 @@
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <!-- logo-yap: site begin (logo\logo-yap.py writes this part) -->
-    <linearGradient id="sdg" gradientUnits="userSpaceOnUse" x1="8" y1="8" x2="248" y2="248"><stop offset="0" stop-color="#FFB84D"/><stop offset=".55" stop-color="#FF5E2A"/><stop offset="1" stop-color="#C81F55"/></linearGradient><radialGradient id="sdl" gradientUnits="userSpaceOnUse" cx="128" cy="8" r="192"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".34"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient><filter id="sdf" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#5A0F1E" flood-opacity=".45"/></filter><linearGradient id="sdw" gradientUnits="userSpaceOnUse" x1="8" y1="58.4" x2="8" y2="197.6"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#FFE4D6"/></linearGradient><linearGradient id="sdr" gradientUnits="userSpaceOnUse" x1="8" y1="8" x2="8" y2="248"><stop offset="0" stop-color="rgba(255,255,255,.55)"/><stop offset=".35" stop-color="rgba(255,255,255,.06)"/><stop offset="1" stop-color="rgba(255,255,255,.22)"/></linearGradient>
+    <linearGradient id="sdg" gradientUnits="userSpaceOnUse" x1="8" y1="8" x2="248" y2="248"><stop offset="0" stop-color="#C7A36B"/><stop offset=".55" stop-color="#946F38"/><stop offset="1" stop-color="#765626"/></linearGradient><radialGradient id="sdl" gradientUnits="userSpaceOnUse" cx="128" cy="8" r="192"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".34"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></radialGradient><filter id="sdf" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#3B2A12" flood-opacity=".45"/></filter><linearGradient id="sdw" gradientUnits="userSpaceOnUse" x1="8" y1="58.4" x2="8" y2="197.6"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#F4EBDD"/></linearGradient><linearGradient id="sdr" gradientUnits="userSpaceOnUse" x1="8" y1="8" x2="8" y2="248"><stop offset="0" stop-color="rgba(255,255,255,.55)"/><stop offset=".35" stop-color="rgba(255,255,255,.06)"/><stop offset="1" stop-color="rgba(255,255,255,.22)"/></linearGradient>
     <symbol id="dodo" viewBox="0 0 256 256"><path fill="url(#sdg)" d="M128 8C219.2 8 248 36.8 248 128C248 219.2 219.2 248 128 248C36.8 248 8 219.2 8 128C8 36.8 36.8 8 128 8Z"/><path fill="url(#sdl)" d="M128 8C219.2 8 248 36.8 248 128C248 219.2 219.2 248 128 248C36.8 248 8 219.2 8 128C8 36.8 36.8 8 128 8Z"/><path fill="url(#sdw)" fill-rule="evenodd" d="M94.4 58.4L135.2 58.4C178.4 58.4 204.8 89.6 204.8 128C204.8 166.4 178.4 197.6 135.2 197.6L94.4 197.6C86.48 197.6 80 191.12 80 183.2L80 72.8C80 64.88 86.48 58.4 94.4 58.4ZM113.6 87.2L113.6 168.8L134 168.8C156.8 168.8 171.2 151.52 171.2 128C171.2 104.48 156.8 87.2 134 87.2Z" filter="url(#sdf)"/><path fill="none" stroke="url(#sdr)" stroke-width="2.88" d="M128 9.44C218.24 9.44 246.56 37.76 246.56 128C246.56 218.24 218.24 246.56 128 246.56C37.76 246.56 9.44 218.24 9.44 128C9.44 37.76 37.76 9.44 128 9.44Z"/></symbol>
     <symbol id="dodo-yazi" viewBox="0 0 835.89 104.77" overflow="visible"><path style="fill: var(--logo-dodo, currentColor)" d="M35.55 104.77H8.97V88.34H34.59Q45.52 88.34 52.85 84.36Q60.19 80.38 63.87 72.35Q67.56 64.32 67.56 52.28Q67.56 40.3 63.9 32.34Q60.24 24.37 53.01 20.4Q45.77 16.43 35.1 16.43H8.47V0H36.23Q51.85 0 63.06 6.27Q74.28 12.54 80.3 24.26Q86.32 35.99 86.32 52.28Q86.32 68.64 80.27 80.4Q74.22 92.17 62.87 98.47Q51.51 104.77 35.55 104.77ZM18.96 0V104.77H0V0ZM130.86 106.34Q119.37 106.34 110.92 101.26Q102.47 96.19 97.86 87.06Q93.26 77.93 93.26 65.84Q93.26 53.62 97.86 44.47Q102.47 35.33 110.92 30.25Q119.37 25.17 130.86 25.17Q142.39 25.17 150.84 30.25Q159.29 35.33 163.92 44.47Q168.55 53.62 168.55 65.84Q168.55 77.93 163.92 87.06Q159.29 96.19 150.84 101.26Q142.39 106.34 130.86 106.34ZM130.92 91.41Q137.27 91.41 141.44 87.99Q145.6 84.57 147.68 78.74Q149.76 72.91 149.76 65.78Q149.76 58.54 147.68 52.73Q145.6 46.93 141.44 43.52Q137.27 40.11 130.92 40.11Q124.62 40.11 120.41 43.52Q116.21 46.93 114.13 52.73Q112.04 58.54 112.04 65.78Q112.04 72.91 114.13 78.74Q116.21 84.57 120.41 87.99Q124.62 91.41 130.92 91.41ZM206.31 106.17Q197.06 106.17 189.72 101.42Q182.38 96.67 178.16 87.59Q173.94 78.51 173.94 65.62Q173.94 52.48 178.27 43.46Q182.59 34.44 189.92 29.81Q197.24 25.17 206.29 25.17Q213.26 25.17 217.7 27.49Q222.13 29.81 224.76 33.08Q227.39 36.35 228.79 39.18H229.54V0H248.02V104.77H229.91V92.33H228.79Q227.34 95.2 224.65 98.42Q221.97 101.63 217.53 103.9Q213.09 106.17 206.31 106.17ZM211.4 91.01Q217.34 91.01 221.46 87.8Q225.58 84.59 227.75 78.86Q229.91 73.12 229.91 65.53Q229.91 57.88 227.79 52.22Q225.66 46.56 221.52 43.45Q217.38 40.33 211.4 40.33Q205.3 40.33 201.17 43.59Q197.03 46.86 194.94 52.54Q192.84 58.22 192.84 65.53Q192.84 72.86 194.96 78.62Q197.08 84.39 201.21 87.7Q205.34 91.01 211.4 91.01ZM294.48 106.34Q282.99 106.34 274.54 101.26Q266.09 96.19 261.48 87.06Q256.88 77.93 256.88 65.84Q256.88 53.62 261.48 44.47Q266.09 35.33 274.54 30.25Q282.99 25.17 294.48 25.17Q306.01 25.17 314.46 30.25Q322.91 35.33 327.54 44.47Q332.17 53.62 332.17 65.84Q332.17 77.93 327.54 87.06Q322.91 96.19 314.46 101.26Q306.01 106.34 294.48 106.34ZM294.54 91.41Q300.89 91.41 305.06 87.99Q309.22 84.57 311.3 78.74Q313.38 72.91 313.38 65.78Q313.38 58.54 311.3 52.73Q309.22 46.93 305.06 43.52Q300.89 40.11 294.54 40.11Q288.24 40.11 284.03 43.52Q279.83 46.93 277.75 52.73Q275.66 58.54 275.66 65.78Q275.66 72.91 277.75 78.74Q279.83 84.57 284.03 87.99Q288.24 91.41 294.54 91.41ZM343.41 104.77V0H380.12Q391.01 0 398.12 3.76Q405.22 7.52 408.7 13.85Q412.18 20.18 412.18 27.84Q412.18 34.59 409.79 38.99Q407.4 43.38 403.53 45.95Q399.66 48.52 395.16 49.78V50.77Q400.01 51.05 404.87 54.14Q409.72 57.23 412.99 62.93Q416.26 68.62 416.26 76.92Q416.26 84.8 412.67 91.09Q409.08 97.38 401.38 101.07Q393.69 104.77 381.24 104.77ZM356.07 93.52H381.24Q393.69 93.52 398.92 88.66Q404.16 83.81 404.16 76.92Q404.16 71.58 401.45 67.08Q398.75 62.58 393.76 59.84Q388.76 57.09 381.94 57.09H356.07ZM356.07 46.12H379.69Q385.39 46.12 390.03 43.84Q394.67 41.55 397.38 37.44Q400.08 33.33 400.08 27.84Q400.08 20.95 395.3 16.1Q390.52 11.25 380.12 11.25H356.07ZM427.33 104.77V26.16H438.86V38.11H439.71Q441.89 32.27 447.55 28.65Q453.21 25.03 460.24 25.03Q461.57 25.03 463.54 25.07Q465.51 25.1 466.57 25.17V37.41Q465.93 37.27 463.75 36.98Q461.57 36.7 459.11 36.7Q453.42 36.7 448.92 39.09Q444.42 41.48 441.85 45.63Q439.28 49.78 439.28 55.12V104.77ZM502.11 106.45Q491.49 106.45 483.48 101.39Q475.46 96.33 471 87.19Q466.53 78.05 466.53 65.95Q466.53 53.65 471 44.47Q475.46 35.3 483.48 30.23Q491.49 25.17 502.11 25.17Q512.8 25.17 520.81 30.23Q528.83 35.3 533.33 44.47Q537.83 53.65 537.83 65.95Q537.83 78.05 533.33 87.19Q528.83 96.33 520.81 101.39Q512.8 106.45 502.11 106.45ZM502.11 95.62Q510.27 95.62 515.47 91.48Q520.67 87.33 523.2 80.54Q525.74 73.76 525.74 65.95Q525.74 58.01 523.2 51.19Q520.67 44.37 515.47 40.18Q510.27 36 502.11 36Q494.09 36 488.89 40.18Q483.69 44.37 481.16 51.19Q478.63 58.01 478.63 65.95Q478.63 73.76 481.16 80.54Q483.69 87.33 488.89 91.48Q494.09 95.62 502.11 95.62ZM563.18 104.77 539.27 26.16H551.93L568.94 86.34H569.79L586.52 26.16H599.46L615.91 86.2H616.76L633.77 26.16H646.43L622.52 104.77H610.71L593.41 44.44H592.29L574.99 104.77ZM709.82 43.88 698.99 46.83Q697.44 42.82 693.68 39.2Q689.92 35.58 681.97 35.58Q674.8 35.58 670.02 38.92Q665.24 42.26 665.24 47.25Q665.24 51.75 668.51 54.42Q671.78 57.09 678.74 58.78L690.41 61.59Q700.89 64.12 706.05 69.4Q711.22 74.67 711.22 82.83Q711.22 89.58 707.36 94.92Q703.49 100.27 696.6 103.36Q689.71 106.45 680.57 106.45Q668.54 106.45 660.7 101.18Q652.86 95.91 650.75 85.92L662.14 83.11Q663.76 89.44 668.37 92.6Q672.97 95.77 680.43 95.77Q688.79 95.77 693.82 92.14Q698.85 88.52 698.85 83.53Q698.85 75.23 687.18 72.42L674.1 69.33Q663.27 66.73 658.21 61.38Q653.14 56.04 653.14 47.95Q653.14 41.27 656.91 36.14Q660.67 31.01 667.21 28.09Q673.75 25.17 681.97 25.17Q693.71 25.17 700.36 30.34Q707 35.51 709.82 43.88ZM754.22 106.45Q742.9 106.45 734.64 101.39Q726.38 96.33 721.95 87.22Q717.52 78.12 717.52 66.09Q717.52 54 721.88 44.79Q726.24 35.58 734.15 30.38Q742.06 25.17 752.67 25.17Q758.79 25.17 764.84 27.21Q770.88 29.25 775.84 33.82Q780.8 38.39 783.75 45.91Q786.7 53.44 786.7 64.41V69.61H726.09V59.2H780.17L774.61 63.14Q774.61 55.27 772.15 49.15Q769.69 43.03 764.8 39.52Q759.92 36 752.67 36Q745.43 36 740.26 39.55Q735.09 43.1 732.35 48.8Q729.61 54.49 729.61 61.03V67.92Q729.61 76.85 732.7 83.04Q735.8 89.23 741.35 92.43Q746.91 95.62 754.22 95.62Q758.93 95.62 762.8 94.25Q766.67 92.88 769.48 90.11Q772.29 87.33 773.77 83.25L785.44 86.62Q783.61 92.53 779.29 97Q774.96 101.46 768.56 103.96Q762.17 106.45 754.22 106.45ZM796.65 104.77V26.16H808.19V38.11H809.03Q811.21 32.27 816.87 28.65Q822.53 25.03 829.56 25.03Q830.9 25.03 832.87 25.07Q834.83 25.1 835.89 25.17V37.41Q835.26 37.27 833.08 36.98Q830.9 36.7 828.44 36.7Q822.74 36.7 818.24 39.09Q813.74 41.48 811.17 45.63Q808.61 49.78 808.61 55.12V104.77Z"/></symbol>
     <symbol id="dodo-slogan" viewBox="0 0 314.16 29.33" overflow="visible"><path fill="currentColor" d="M0 29.33V0H4.43V12.75H19.04V0H23.47V29.33H19.04V16.55H4.43V29.33ZM35.07 29.81Q32.98 29.81 31.28 29.04Q29.59 28.26 28.61 26.76Q27.62 25.27 27.62 23.11Q27.62 21.24 28.34 20.05Q29.06 18.85 30.28 18.15Q31.5 17.44 33 17.08Q34.5 16.73 36.07 16.55Q38.05 16.31 39.27 16.16Q40.49 16.01 41.06 15.67Q41.62 15.32 41.62 14.55V14.44Q41.62 12.59 40.57 11.56Q39.52 10.53 37.44 10.53Q35.29 10.53 34.05 11.47Q32.8 12.41 32.33 13.58L28.3 12.66Q29.02 10.65 30.4 9.42Q31.79 8.18 33.59 7.62Q35.39 7.05 37.37 7.05Q38.69 7.05 40.17 7.36Q41.64 7.66 42.95 8.48Q44.26 9.3 45.09 10.81Q45.91 12.33 45.91 14.73V29.33H41.72V26.32H41.57Q41.17 27.13 40.33 27.94Q39.5 28.74 38.2 29.28Q36.9 29.81 35.07 29.81ZM35.99 26.39Q37.78 26.39 39.04 25.68Q40.3 24.98 40.97 23.84Q41.64 22.7 41.64 21.41V18.56Q41.4 18.79 40.76 18.98Q40.11 19.17 39.28 19.31Q38.45 19.46 37.66 19.56Q36.87 19.66 36.35 19.73Q35.11 19.9 34.08 20.27Q33.05 20.64 32.43 21.33Q31.82 22.02 31.82 23.18Q31.82 24.76 32.99 25.58Q34.17 26.39 35.99 26.39ZM61.28 7.32V10.77H48.86V7.32ZM52.25 29.33V4.77Q52.25 2.72 53.16 1.35Q54.07 -.02 55.56 -.7Q57.05 -1.38 58.77 -1.38Q60.08 -1.38 61.01 -1.17Q61.93 -.95 62.36 -.78L61.35 2.69Q61.06 2.58 60.59 2.46Q60.12 2.35 59.44 2.35Q57.88 2.35 57.19 3.13Q56.51 3.91 56.51 5.37V29.33ZM64.8 29.33V7.32H69.06V29.33ZM66.94 3.95Q65.83 3.95 65.04 3.2Q64.24 2.45 64.24 1.39Q64.24 .33 65.04 -.41Q65.83 -1.16 66.94 -1.16Q68.05 -1.16 68.85 -.41Q69.64 .33 69.64 1.39Q69.64 2.45 68.85 3.2Q68.05 3.95 66.94 3.95ZM84.43 7.32V10.77H72.01V7.32ZM75.4 29.33V4.77Q75.4 2.72 76.31 1.35Q77.22 -.02 78.71 -.7Q80.2 -1.38 81.92 -1.38Q83.24 -1.38 84.16 -1.17Q85.08 -.95 85.52 -.78L84.5 2.69Q84.21 2.58 83.74 2.46Q83.28 2.35 82.59 2.35Q81.03 2.35 80.34 3.13Q79.66 3.91 79.66 5.37V29.33ZM88.87 29.62Q87.67 29.62 86.83 28.78Q85.99 27.95 85.99 26.76Q85.99 25.56 86.83 24.73Q87.67 23.89 88.87 23.89Q90.06 23.89 90.9 24.73Q91.74 25.56 91.74 26.76Q91.74 27.95 90.9 28.78Q90.06 29.62 88.87 29.62ZM106.6 29.33V0H111.03V12.75H125.64V0H130.07V29.33H125.64V16.55H111.03V29.33ZM135.28 29.33V7.32H139.54V29.33ZM143.98 29.33V26.41L155.88 11.26V11.05H144.35V7.32H161.21V10.47L149.76 25.4V25.61H161.6V29.33ZM170.03 0V29.33H165.77V0ZM174.93 29.33V7.32H179.19V29.33ZM187.28 29.62Q186.08 29.62 185.24 28.78Q184.4 27.95 184.4 26.76Q184.4 25.56 185.24 24.73Q186.08 23.89 187.28 23.89Q188.47 23.89 189.31 24.73Q190.15 25.56 190.15 26.76Q190.15 27.95 189.31 28.78Q188.47 29.62 187.28 29.62ZM214.83 29.81Q211.55 29.81 209.14 28.78Q206.73 27.74 205.37 25.81Q204 23.88 203.86 21.22H208.3Q208.44 22.81 209.34 23.87Q210.24 24.92 211.67 25.44Q213.1 25.96 214.81 25.96Q216.69 25.96 218.16 25.36Q219.63 24.76 220.48 23.69Q221.32 22.61 221.32 21.18Q221.32 19.88 220.58 19.05Q219.83 18.23 218.58 17.69Q217.32 17.15 215.75 16.73L212.29 15.79Q208.76 14.84 206.71 12.96Q204.67 11.09 204.67 8.02Q204.67 5.5 206.03 3.6Q207.4 1.71 209.75 .66Q212.11 -.39 215.04 -.39Q218.02 -.39 220.3 .66Q222.58 1.7 223.9 3.53Q225.23 5.36 225.29 7.69H220.99Q220.77 5.67 219.12 4.55Q217.47 3.43 214.95 3.43Q213.16 3.43 211.83 3.99Q210.51 4.56 209.79 5.54Q209.07 6.52 209.07 7.79Q209.07 9.17 209.92 10.04Q210.78 10.91 212.01 11.41Q213.25 11.91 214.39 12.22L217.24 12.99Q218.63 13.34 220.11 13.93Q221.58 14.53 222.85 15.48Q224.12 16.43 224.9 17.84Q225.69 19.25 225.69 21.24Q225.69 23.71 224.41 25.65Q223.13 27.59 220.71 28.7Q218.29 29.81 214.83 29.81ZM239.21 29.79Q235.97 29.79 233.61 28.39Q231.25 26.98 229.99 24.44Q228.73 21.89 228.73 18.48Q228.73 15.09 229.98 12.52Q231.23 9.95 233.5 8.5Q235.77 7.05 238.83 7.05Q240.7 7.05 242.46 7.66Q244.22 8.27 245.61 9.59Q247.01 10.91 247.83 13.01Q248.64 15.11 248.64 18.1V19.62H231.14V16.43H246.44L244.45 17.49Q244.45 15.46 243.82 13.91Q243.19 12.35 241.94 11.47Q240.7 10.58 238.84 10.58Q236.99 10.58 235.68 11.48Q234.37 12.37 233.68 13.83Q232.99 15.29 232.99 17.02V19.19Q232.99 21.45 233.77 23.03Q234.56 24.61 235.97 25.43Q237.38 26.26 239.25 26.26Q240.46 26.26 241.46 25.9Q242.46 25.55 243.18 24.84Q243.91 24.13 244.29 23.1L248.34 23.85Q247.86 25.63 246.62 26.97Q245.37 28.31 243.49 29.05Q241.61 29.79 239.21 29.79ZM256.69 16.28V29.33H252.43V7.32H256.58V10.94H256.87Q257.63 9.16 259.22 8.11Q260.81 7.05 263.3 7.05Q265.55 7.05 267.23 7.99Q268.91 8.92 269.85 10.77Q270.79 12.62 270.79 15.35V29.33H266.53V15.87Q266.53 13.48 265.28 12.12Q264.02 10.76 261.85 10.76Q260.37 10.76 259.2 11.41Q258.03 12.06 257.36 13.29Q256.69 14.51 256.69 16.28ZM275.68 29.33V7.32H279.94V29.33ZM277.82 3.95Q276.71 3.95 275.92 3.2Q275.12 2.45 275.12 1.39Q275.12 .33 275.92 -.41Q276.71 -1.16 277.82 -1.16Q278.93 -1.16 279.73 -.41Q280.53 .33 280.53 1.39Q280.53 2.45 279.73 3.2Q278.93 3.95 277.82 3.95ZM289.1 16.28V29.33H284.84V7.32H288.99V10.94H289.27Q290.03 9.16 291.62 8.11Q293.22 7.05 295.7 7.05Q297.95 7.05 299.64 7.99Q301.32 8.92 302.26 10.77Q303.19 12.62 303.19 15.35V29.33H298.93V15.87Q298.93 13.48 297.68 12.12Q296.43 10.76 294.25 10.76Q292.77 10.76 291.6 11.41Q290.44 12.06 289.77 13.29Q289.1 14.51 289.1 16.28ZM311.28 29.62Q310.09 29.62 309.25 28.78Q308.41 27.95 308.41 26.76Q308.41 25.56 309.25 24.73Q310.09 23.89 311.28 23.89Q312.48 23.89 313.32 24.73Q314.16 25.56 314.16 26.76Q314.16 27.95 313.32 28.78Q312.48 29.62 311.28 29.62Z"/></symbol>
@@ -1095,7 +1015,6 @@
 
 <main>
   <section class="hero">
-    <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
     <div class="wrap">
       <div>
         <h1><span class="eyebrow rise" style="--d:0"><svg aria-hidden="true"><use href="#dodo"/></svg>Windows ve Android için Türkçe tarayıcı</span>
@@ -1125,7 +1044,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
             <svg class="m-hide" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>
             <div class="d-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span>son-dakika.haber</span></div>
-            <span class="d-shield off" id="shield" title="Kalkan"><span class="kalkan-isareti"></span><b id="count">0</b></span>
+            <span class="d-shield off" id="shield" title="Kalkan"><span class="kalkan-isareti"></span></span>
             <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="5" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="12" cy="19" r="1.8"/></svg>
           </div>
           <div class="d-view" id="view">
@@ -1153,7 +1072,7 @@
                 </div>
               </div>
               <div class="dim"></div>
-              <div class="popup" data-n="6"><span class="x">✕</span><div class="gift">🎁</div><b>TEBRİKLER!</b><p>Büyük ödülü kazandınız. Almak için hemen tıklayın.</p><span>Ödülü al</span></div>
+              <div class="popup" data-n="6"><span class="x">✕</span><b>TEBRİKLER!</b><p>Büyük ödülü kazandınız. Almak için hemen tıklayın.</p><span>Ödülü al</span></div>
               <div class="cookie"><p>Bu site, deneyiminizi iyileştirmek için çerezleri kullanır.</p><span>Ayarlar</span><span>Tümünü kabul et</span></div>
             </div>
             <span class="tag" id="tag">Kalkan kapalı</span>
@@ -1181,26 +1100,22 @@
     <div class="wrap show">
       <div>
         <p class="kicker reveal">Görünüm</p>
-        <h2 class="reveal" style="--d:1">Ayrıntısına kadar özenli.</h2>
-        <p class="sub reveal" style="--d:2">DodoBrowser, Windows 11'in tasarım diliyle ve sıcak kehribar rengiyle çizildi. Temasını ve rengini sen seç.</p>
+        <h2 class="reveal" style="--d:1">Sayfa önde, pencere geride.</h2>
+        <p class="sub reveal" style="--d:2">Sakin, sıcak nötr renkler. Temayı ve vurgu rengini sen seçersin.</p>
         <ul class="points">
-          <li class="reveal" style="--d:2"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor"/></svg></span><div><b>Tema</b><span>Açık, koyu ya da Windows'a uyan otomatik tema. Resim temasında arka planın parlaklığına göre değişir.</span></div></li>
-          <li class="reveal" style="--d:3"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="m7.5 13.5 6-6M10.5 16.5l6-6"/></svg></span><div><b>Cam ya da Mica</b><span>Sekmelerin, araç çubuğunun ve DodoBrowser'ın kendi sayfalarının arkası buzlu cam gibi görünür. İstersen Windows 11'in Mica zeminini seçersin.</span></div></li>
-          <li class="reveal" style="--d:4"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.9 0 1.6-.7 1.6-1.7 0-.4-.2-.8-.4-1.1-.3-.3-.4-.7-.4-1.1a1.6 1.6 0 0 1 1.6-1.7h2c3.1 0 5.6-2.5 5.6-5.5C22 6 17.5 2 12 2Z"/><circle cx="7.5" cy="11.5" r="1.2" fill="currentColor"/><circle cx="9.5" cy="7" r="1.2" fill="currentColor"/><circle cx="14.5" cy="6.5" r="1.2" fill="currentColor"/><circle cx="17.5" cy="10.5" r="1.2" fill="currentColor"/></svg></span><div><b>Vurgu rengi</b><span>Kehribar, Okyanus, Orkide, Orman ya da Grafit; istersen arka plan resmine en yakın renk seçilir.</span></div></li>
+          <li class="reveal" style="--d:2"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor"/></svg></span><div><b>Tema</b><span>Açık, koyu ya da Windows'a uyan otomatik tema.</span></div></li>
+          <li class="reveal" style="--d:4"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.9 0 1.6-.7 1.6-1.7 0-.4-.2-.8-.4-1.1-.3-.3-.4-.7-.4-1.1a1.6 1.6 0 0 1 1.6-1.7h2c3.1 0 5.6-2.5 5.6-5.5C22 6 17.5 2 12 2Z"/><circle cx="7.5" cy="11.5" r="1.2" fill="currentColor"/><circle cx="9.5" cy="7" r="1.2" fill="currentColor"/><circle cx="14.5" cy="6.5" r="1.2" fill="currentColor"/><circle cx="17.5" cy="10.5" r="1.2" fill="currentColor"/></svg></span><div><b>Vurgu rengi</b><span>Kehribar, Okyanus, Orkide, Orman ya da Grafit.</span></div></li>
         </ul>
       </div>
-      <!-- DodoBrowser's look in small: frosted tabs, address bar and start page; the swatches recolour it. -->
+      <!-- DodoBrowser's look in small: tabs, address bar and the new tab's search; the swatches recolour it. -->
       <div class="look reveal" style="--d:2" data-renk="dodo">
         <div class="lk-win" aria-hidden="true">
-          <div class="lk-bg"><i></i><i></i><i></i><i></i></div>
           <div class="lk-bar">
             <div class="lk-tabs"><span class="lk-tab on"><svg><use href="#dodo"/></svg>Yeni sekme</span><span class="lk-tab"><span class="lk-fav">H</span>Haberler</span><span class="lk-plus">+</span></div>
             <div class="lk-url"><span>Ara ya da adres yaz</span><span class="kalkan-isareti"></span></div>
           </div>
           <div class="lk-home">
-            <div class="brand"><svg><use href="#dodo"/></svg><svg class="wm"><use href="#dodo-yazi"/></svg></div>
-            <div class="lk-search"><span>Hadi, aklından geçeni yaz!</span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></i></div>
-            <p class="lk-count"><span class="kalkan-isareti"></span><span>Bugün <b>27</b> reklam ve izleyici durdu.</span></p>
+            <div class="lk-search"><span>Ara ya da adres yaz</span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></i></div>
           </div>
         </div>
         <div class="lk-pick" role="group" aria-labelledby="lk-ad">
@@ -1269,25 +1184,21 @@
   <section class="block" id="baslangic">
     <div class="wrap show">
       <div class="sp reveal" id="sp" aria-hidden="true">
-        <p class="greet" id="greet">&nbsp;</p>
-        <div class="brand"><svg><use href="#dodo"/></svg><svg class="wm" role="img" aria-label="DodoBrowser"><use href="#dodo-yazi"/></svg></div>
-        <div class="search"><span class="q ph" id="q">Hadi, aklından geçeni yaz!</span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></i></div>
+        <div class="search"><span class="q ph" id="q">Ara ya da adres yaz</span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></i></div>
         <div class="tiles" id="tiles">
           <div class="tile"><div style="color:#3D7BD9">V</div>Vikipedi</div>
           <div class="tile"><div style="color:#D9762B">T</div>Tarifler</div>
           <div class="tile"><div style="color:#2E9E6A">H</div>Harita</div>
-          <div class="tile"><div style="color:var(--accent)">D</div>DodoBrowser</div>
+          <div class="tile"><div style="color:var(--accent-strong)">D</div>DodoBrowser</div>
           <div class="tile"><div style="color:var(--muted)">+</div>Ekle</div>
         </div>
       </div>
       <div>
         <p class="kicker reveal">Başlangıç sayfası</p>
-        <h2 class="reveal" style="--d:1">Yeni sekmeni kendine göre düzenle.</h2>
+        <h2 class="reveal" style="--d:1">Yeni sekmede yalnız arama ve kısayolların.</h2>
         <ul class="points">
-          <li class="reveal" style="--d:2"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span><div><b>Hava durumu</b><span>Saatin yanında şehrinin havası; tıklayınca günün tahmini açılır.</span></div></li>
-          <li class="reveal" style="--d:3"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span><div><b>Seçtiğin arama motoru</b><span>Google, Bing, DuckDuckGo veya Yandex ile ara; aynı alandan site adresi aç.</span></div></li>
-          <li class="reveal" style="--d:4"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9l-3 3 3 3M9 5l3-3 3 3M15 19l-3 3-3-3M19 9l3 3-3 3M2 12h20M12 2v20"/></svg></span><div><b>Favori sitelerin</b><span>Kısayollarını ekle, sürükleyerek sırala.</span></div></li>
-          <li class="reveal" style="--d:5"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg></span><div><b>Kişiselleştir</b><span>Arka planı, saati, kısayolları ve hazır düzenleri seç; istersen her gün yeni bir manzara gelsin.</span></div></li>
+          <li class="reveal" style="--d:3"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span><div><b>Seçtiğin arama motoru</b><span>Google, Bing, DuckDuckGo ya da Yandex ile ara; aynı kutudan site adresi aç.</span></div></li>
+          <li class="reveal" style="--d:4"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9l-3 3 3 3M9 5l3-3 3 3M15 19l-3 3-3-3M19 9l3 3-3 3M2 12h20M12 2v20"/></svg></span><div><b>Kısayollar</b><span>Sık girdiğin siteleri ekle, sürükleyerek sırala.</span></div></li>
         </ul>
       </div>
     </div>
@@ -1296,7 +1207,6 @@
   <section class="block" id="gizlilik">
     <div class="wrap">
       <div class="privacy reveal">
-        <div class="rings" aria-hidden="true"><span></span><span></span><span></span></div>
         <div>
           <p class="kicker">Gizlilik ve eşitleme</p>
           <h2>Eşitleme senin seçimin.</h2>
@@ -1444,20 +1354,6 @@
 <script>
   var calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // Runs fn only while el is on screen (animations rest when nobody sees them).
-  function whileVisible(el, onShow, onHide) {
-    if (!("IntersectionObserver" in window)) { onShow(); return; }
-    new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) { if (e.isIntersecting) onShow(); else if (onHide) onHide(); });
-    }, { threshold: .15 }).observe(el);
-  }
-
-  (function () {
-    var card = document.querySelector(".privacy");
-    if (!card || calm) return;
-    whileVisible(card, function () { card.classList.add("canli"); }, function () { card.classList.remove("canli"); });
-  })();
-
   // The address bar stays plain "dodobrowser.com": links inside the page scroll
   // without adding #…, and /index.html or a #… arriving from another page is tidied away.
   (function () {
@@ -1563,23 +1459,21 @@
 
   // Hero: the shield demo. The visitor turns the shield on with the switch (or the shield in the
   // toolbar) and the ads fly into the shield the way DodoBrowser's vacuum does: nearest first, bending
-  // on the way, the shield glowing at every arrival while the counter climbs to 27; the cookie notice
-  // is refused and the page closes up. Untouched, it turns itself on once and stays on.
+  // on the way, the shield answering every arrival; the cookie notice is refused and the page closes up.
+  // It moves only when the visitor turns it on or off (sessiz lüks ilke 3 and 4, 24 Nov).
   (function () {
     var stage = document.getElementById("stage");
     var demo = document.getElementById("demo");
     var view = document.getElementById("view");
     var layer = view.querySelector(".layer");
     var shield = document.getElementById("shield");
-    var count = document.getElementById("count");
     var tag = document.getElementById("tag");
     var sw = document.getElementById("switch");
     var say = document.querySelector("#say span");
     var TOTAL = 27;
-    var on = false, busy = false, touched = false, autoTimer = null, invited = false, n = 0, anims = [];
+    var on = false, busy = false, anims = [];
 
-    function setCount(v) { n = v; count.textContent = v; }
-    function arrive() { shield.classList.remove("pop", "ring"); void shield.offsetWidth; shield.classList.add("pop", "ring"); }
+    function arrive() { shield.classList.remove("ring"); void shield.offsetWidth; shield.classList.add("ring"); }
     // The end state of either side, with every leftover of the flight cleared away.
     function settle(state) {
       on = state;
@@ -1593,8 +1487,7 @@
       sw.removeAttribute("aria-busy");
       tag.textContent = on ? "Kalkan açık" : "Kalkan kapalı";
       tag.classList.toggle("on", on);
-      say.textContent = on ? "Dodo " + TOTAL + " reklamı ve izleyiciyi durdurdu." : "Kalkanı aç, farkı gör.";
-      setCount(on ? TOTAL : 0);
+      say.textContent = on ? "Dodo " + TOTAL + " reklamı ve izleyiciyi durdurdu." : "Kalkan'ı aç, farkı gör.";
     }
 
     function turnOn() {
@@ -1607,7 +1500,6 @@
       tag.classList.add("on");
       shield.classList.remove("off");
       shield.classList.add("pull");
-      setCount(0);
       var box = demo.getBoundingClientRect(), s = shield.getBoundingClientRect();
       var sx = s.left + s.width / 2 - box.left, sy = s.top + s.height / 2 - box.top;
       var ads = Array.prototype.map.call(layer.querySelectorAll("[data-n]"), function (el) {
@@ -1640,7 +1532,6 @@
         ], { duration: 700, delay: 300 + i * 220, easing: "cubic-bezier(.5, 0, .8, .5)", fill: "forwards" });
         fly.onfinish = function () {
           copy.remove();   // ani: uçuş bitti, kopya kalkanın içinde %3 boyda ve soluk
-          setCount(n + Number(a.el.getAttribute("data-n")));
           arrive();
           if (--left === 0) closeUp();
         };
@@ -1667,89 +1558,11 @@
     }
 
     function toggle() {
-      touched = true;
-      clearTimeout(autoTimer); autoTimer = null;
-      sw.classList.remove("invite");
       if (busy) return;
       if (on) turnOff(); else turnOn();
     }
     sw.addEventListener("click", toggle);
     shield.addEventListener("click", toggle);
-
-    // Once the demo is on screen: the switch calls softly a few times; if nobody has touched it
-    // after a few seconds, the shield turns itself on once (and then stays as it is).
-    whileVisible(demo, function () {
-      if (touched || on || busy || autoTimer || calm) return;
-      if (!invited) { invited = true; sw.classList.add("invite"); }
-      autoTimer = setTimeout(function () { autoTimer = null; if (!touched && !on && !busy) turnOn(); }, 3500);
-    }, function () { clearTimeout(autoTimer); autoTimer = null; });
-  })();
-
-  // Start page showcase: greeting by the visitor's clock (same words as DodoBrowser),
-  // example searches typed by themselves, and two favourites trading places.
-  (function () {
-    var now = new Date(), h = now.getHours();
-    var hello = h < 6 ? "İyi geceler" : h < 12 ? "Günaydın" : h < 18 ? "İyi günler" : "İyi akşamlar";
-    document.getElementById("greet").textContent = hello + " · " + now.toLocaleDateString("tr-TR", { day: "numeric", month: "long", weekday: "long" });
-    if (calm) return;
-
-    var q = document.getElementById("q");
-    var tiles = document.getElementById("tiles");
-    var words = ["hava durumu", "nöbetçi eczane", "kolay akşam yemeği tarifi", "deprem son dakika", "ingilizce kelime çalışma"];
-    var active = false, loopOn = false, w = 0;
-    function sleep(ms) { return new Promise(function (r) { setTimeout(r, ms); }); }
-    function show(text, caret) {
-      q.classList.toggle("ph", !text && !caret);
-      q.textContent = text || (caret ? "" : "Hadi, aklından geçeni yaz!");
-      if (caret) { var c = document.createElement("span"); c.className = "caret"; q.appendChild(c); }
-    }
-    function swap() {
-      var list = tiles.children, a = list[0], b = list[2];
-      var ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
-      var afterB = b.nextSibling;
-      tiles.insertBefore(b, a); tiles.insertBefore(a, afterB);
-      [[a, ra], [b, rb]].forEach(function (p) {
-        var el = p[0], old = p[1], fresh = el.getBoundingClientRect();
-        el.style.transition = "none";
-        el.style.transform = "translate(" + (old.left - fresh.left) + "px," + (old.top - fresh.top) + "px)";
-        el.classList.add("lift");
-      });
-      void tiles.offsetWidth;
-      [a, b].forEach(function (el) {
-        el.style.transition = "transform .7s cubic-bezier(.2, .7, .2, 1)";
-        el.style.transform = "";
-        setTimeout(function () { el.classList.remove("lift"); }, 700);
-      });
-    }
-    async function loop() {
-      if (loopOn) return; loopOn = true;
-      while (active && !calm) {
-        var word = words[w++ % words.length];
-        for (var i = 1; i <= word.length && active; i++) { show(word.slice(0, i), true); await sleep(70 + Math.random() * 60); }
-        await sleep(1500);
-        for (var j = word.length - 1; j >= 0 && active; j--) { show(word.slice(0, j), true); await sleep(28); }
-        await sleep(350);
-        if (w % 2 === 0 && active) { swap(); await sleep(1100); }
-      }
-      show("", false);
-      loopOn = false;
-    }
-    whileVisible(document.getElementById("sp"), function () { active = true; loop(); }, function () { active = false; });
-  })();
-
-  // Shortcuts: the keys of one row after another get "pressed".
-  (function () {
-    if (calm) return;
-    var rows = document.querySelectorAll("#keys .key"), i = 0, timer = null;
-    whileVisible(document.getElementById("keys"), function () {
-      if (timer) return;
-      timer = setInterval(function () {
-        if (calm) return;
-        var row = rows[i++ % rows.length];
-        row.classList.add("press");
-        setTimeout(function () { row.classList.remove("press"); }, 650);
-      }, 1100);
-    }, function () { clearInterval(timer); timer = null; });
   })();
 
   // Contact form.

@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DodoBrowser – Windows ve Android için özenli, Türkçe tarayıcı</title>
-<meta name="description" content="Windows ve Android için ücretsiz, Türkçe tarayıcı. Reklamları ve izleyicileri engeller, çerez uyarılarını reddeder. Sayfaları cihazında Türkçeye çevirir.">
+<title>DodoBrowser: Windows için sade ve özenle yapılmış tarayıcı</title>
+<meta name="description" content="Windows için sade ve özenle yapılmış tarayıcı. Reklamları ve izleyicileri engeller, çerez uyarılarını reddeder, sayfaları bilgisayarında Türkçeye çevirir.">
 <meta name="theme-color" content="#FAF8F4" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#161615" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="https://dodobrowser.com/">
 <link rel="alternate" hreflang="tr" href="https://dodobrowser.com/">
 <link rel="alternate" hreflang="en" href="https://dodobrowser.com/en/">
 <link rel="alternate" hreflang="x-default" href="https://dodobrowser.com/">
-<meta property="og:title" content="DodoBrowser – Hafif. Hızlı. Senin.">
-<meta property="og:description" content="Windows ve Android için ücretsiz, Türkçe tarayıcı. Reklam ve izleyici engelleme, cihaz üzerinde sayfa çevirisi. Hesap gerektirmez.">
+<meta property="og:title" content="DodoBrowser · Hafif. Hızlı. Senin.">
+<meta property="og:description" content="Windows için sade ve özenle yapılmış tarayıcı. Reklamları ve izleyicileri engeller, çerez uyarılarını reddeder, sayfaları bilgisayarında Türkçeye çevirir.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dodobrowser.com/">
 <meta property="og:locale" content="tr_TR">
@@ -23,8 +23,8 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="DodoBrowser logosu ve sloganı: Hafif. Hızlı. Senin.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="DodoBrowser – Hafif. Hızlı. Senin.">
-<meta name="twitter:description" content="Windows ve Android için ücretsiz, Türkçe tarayıcı. Reklam ve izleyici engelleme, cihaz üzerinde sayfa çevirisi. Hesap gerektirmez.">
+<meta name="twitter:title" content="DodoBrowser · Hafif. Hızlı. Senin.">
+<meta name="twitter:description" content="Windows için sade ve özenle yapılmış tarayıcı. Reklamları ve izleyicileri engeller, çerez uyarılarını reddeder, sayfaları bilgisayarında Türkçeye çevirir.">
 <meta name="twitter:image" content="https://dodobrowser.com/paylasim.png">
 <script type="application/ld+json">
 {
@@ -32,11 +32,11 @@
   "@type": "SoftwareApplication",
   "@id": "https://dodobrowser.com/#windows-uygulama",
   "name": "DodoBrowser",
-  "description": "Windows için ücretsiz, Türkçe tarayıcı. Reklamları ve izleyicileri engeller, çerez uyarılarını reddeder. Geçmişin ve kayıtlı şifrelerin bilgisayarında saklanır.",
+  "description": "Windows için sade ve özenle yapılmış tarayıcı. Reklamları ve izleyicileri engeller, çerez uyarılarını reddeder, sayfaları bilgisayarında Türkçeye çevirir. Arayüzü Türkçe ve İngilizce.",
   "applicationCategory": "BrowserApplication",
   "operatingSystem": "Windows 10 (1809 ve üzeri, 64 bit), Windows 11 (64 bit)",
   "inLanguage": ["tr", "en"],
-  "softwareVersion": "1.13.0",
+  "softwareVersion": "1.14.0",
   "disambiguatingDescription": "dodobrowser.com'un Windows tarayıcısı; Mac'teki Dodo Browser uygulaması ya da Dodo Browser adlı başka bir ürün değildir.",
   "url": "https://dodobrowser.com/",
   "image": "https://dodobrowser.com/paylasim.png",
@@ -81,10 +81,10 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Ücretsiz mi?",
+      "name": "Ödeme ya da hesap gerekir mi?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Evet. DodoBrowser ücretsizdir, hesap gerektirmez ve kendi reklamlarını göstermez."
+        "text": "Hayır. DodoBrowser'ı kullanmak için ödeme yapman ya da hesap açman gerekmez. DodoBrowser kendi reklamlarını göstermez."
       }
     },
     {
@@ -92,7 +92,7 @@
       "name": "Hangi Windows sürümlerinde çalışır?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "64 bit Windows 10 (1809 ve sonrası) ve Windows 11'de çalışır. Gerekli sayfa motoru eksikse kurulmasına yardımcı olur."
+        "text": "64 bit Windows 10 (1809 ve sonrası) ve Windows 11'de çalışır. Sayfaları açan Microsoft Edge motoru bilgisayarında yoksa DodoBrowser bunu söyler ve Microsoft'un indirme sayfasını gösterir."
       }
     },
     {
@@ -100,7 +100,7 @@
       "name": "Microsoft Store uygulamasını açmadan kurabilir miyim?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Evet. Microsoft kurucusu küçük bir dosyadır; çalıştırınca DodoBrowser'ı Store uygulamasını açmadan kurar. İstersen komut isteminde şu komutu da çalıştırabilirsin: winget install 9P17GF8DSSL1 -s msstore İki yol da Microsoft'un imzaladığı aynı paketi kurar; güncellemeler yine kendiliğinden gelir. Başka sitelerde dolaşan .exe ya da .msix kopyaları bizim değildir."
+        "text": "Evet. Microsoft kurucusu küçük bir dosyadır; çalıştırınca DodoBrowser'ı Store uygulamasını açmadan kurar. İstersen komut isteminde şu komutu da çalıştırabilirsin: winget install 9P17GF8DSSL1 -s msstore İki yol da Microsoft'un imzaladığı aynı paketi kurar; güncellemeler yine kendiliğinden gelir. DodoBrowser başka sitelerde .exe ya da .msix dosyası olarak dağıtılmaz; böyle bir dosyayı kurma."
       }
     },
     {
@@ -124,7 +124,7 @@
       "name": "Eklenti yükleyebilir miyim?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Şimdilik eklenti desteği yoktur. Reklam ve izleyici engelleme ile çerez uyarılarını reddetme özellikleri yerleşik olarak sunulur."
+        "text": "Şimdilik hayır. Reklam ve izleyici engelleme ile çerez uyarılarını reddetme DodoBrowser'da yerleşik gelir; bunlar için eklenti gerekmez."
       }
     },
     {
@@ -132,7 +132,7 @@
       "name": "Güncellemeler nasıl gelir?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Windows sürümü Microsoft Store'dan kendiliğinden güncellenir. Sayfa motoru ayrıca güncellenir; yeniden başlatma gerektiğinde DodoBrowser haber verir. Android'de Dodo yeni sürümü menüde haber verir; “Güncelle”ye dokununca kendisi indirir, kurulumu Android'in penceresinde sen onaylarsın. Yer imlerin ve ayarların korunur."
+        "text": "Windows sürümü Microsoft Store'dan kendiliğinden güncellenir. Sayfa motoru ayrıca güncellenir; yeniden başlatma gerektiğinde DodoBrowser haber verir. Android'de DodoBrowser yeni sürümü menüde haber verir; “Güncelle”ye dokununca kendisi indirir, kurulumu Android'in penceresinde sen onaylarsın. Yer imlerin ve ayarların korunur."
       }
     },
     {
@@ -156,7 +156,7 @@
       "name": "Neden DodoBrowser?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Türkçe arayüz, yerleşik Kalkan ve cihaz üzerinde çeviriyi bir araya getirir. Günlük kullanım için tasarlanmıştır."
+        "text": "DodoBrowser sade ve özenle yapılmış bir tarayıcı. Kalkan, çerez uyarılarını reddetme ve bilgisayarında çalışan sayfa çevirisi yerleşik gelir; arayüzü Türkçe ve İngilizce."
       }
     }
   ]
@@ -1017,9 +1017,9 @@
   <section class="hero">
     <div class="wrap">
       <div>
-        <h1><span class="eyebrow rise" style="--d:0"><svg aria-hidden="true"><use href="#dodo"/></svg>Windows ve Android için Türkçe tarayıcı</span>
+        <h1><span class="eyebrow rise" style="--d:0"><svg aria-hidden="true"><use href="#dodo"/></svg>Windows için sade ve özenle yapılmış tarayıcı</span>
           <span class="w rise" style="--d:1">Hafif.</span> <span class="w rise" style="--d:2">Hızlı.</span><br><span class="w rise" style="--d:3"><em>Senin.</em></span></h1>
-        <p class="lead rise" style="--d:4">DodoBrowser reklamları ve izleyicileri engeller, çerez uyarılarını senin yerine reddeder. Ücretsizdir, hesap gerektirmez.</p>
+        <p class="lead rise" style="--d:4">DodoBrowser reklamları ve izleyicileri engeller, çerez uyarılarını senin yerine reddeder, sayfaları bilgisayarında Türkçeye çevirir. Hesap gerektirmez.</p>
         <div class="cta rise" style="--d:5">
           <a class="store live" href="https://apps.microsoft.com/detail/9P17GF8DSSL1?cid=site" rel="noopener"><span class="l"><svg aria-hidden="true"><use href="#i-store"/></svg><span class="tx"><small>Ücretsiz</small>Microsoft Store'dan al</span></span><span class="r" aria-hidden="true"><svg><use href="#i-tray"/></svg><em>İndir</em></span></a>
           <a class="store live" href="/android"><span class="l"><svg aria-hidden="true"><use href="#i-android"/></svg><span class="tx"><small>Ücretsiz · APK</small>Android için indir</span></span><span class="r" aria-hidden="true"><svg><use href="#i-tray"/></svg><em>İndir</em></span></a>
@@ -1081,7 +1081,7 @@
         <div class="chip" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Çerez uyarısı reddedildi</span></div>
         <div class="d-ctrl rise" style="--d:8">
           <button class="switch" id="switch" type="button" role="switch" aria-checked="false"><span class="track" aria-hidden="true"><i></i></span>Kalkan</button>
-          <p class="d-say" id="say" role="status" aria-live="polite"><svg aria-hidden="true"><use href="#dodo"/></svg><span>Kalkanı aç, farkı gör.</span></p>
+          <p class="d-say" id="say" role="status" aria-live="polite"><svg aria-hidden="true"><use href="#dodo"/></svg><span>Kalkan'ı aç, farkı gör.</span></p>
         </div>
       </div>
     </div>
@@ -1091,8 +1091,8 @@
     <ul class="wrap">
       <li class="reveal" style="--d:0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.4 19.4 5.1a1 1 0 0 1 .6.9v5.6c0 4.8-3.3 8.5-8 10-4.7-1.5-8-5.2-8-10V6a1 1 0 0 1 .6-.9Z"/><path d="m8.6 12.1 2.3 2.3 4.6-4.8"/></svg><div><b>Yerleşik Kalkan</b><small>Eklenti gerektirmez</small></div></li>
       <li class="reveal" style="--d:1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20"/></svg><div><b>Yerel geçmiş</b><small>Eşitlenmez</small></div></li>
-      <li class="reveal" style="--d:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg><div><b>Ücretsiz</b><small>Hesap gerektirmez</small></div></li>
-      <li class="reveal" style="--d:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14M5 8a7 7 0 0 1 14 0M5 8v3a7 7 0 0 0 14 0V8"/><path d="M12 15v6M8 21h8"/></svg><div><b>Türkçe arayüz</b><small>Sade ve anlaşılır</small></div></li>
+      <li class="reveal" style="--d:2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><div><b>Hesap gerektirmez</b><small>Eşitleme isteğe bağlı</small></div></li>
+      <li class="reveal" style="--d:3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14M5 8a7 7 0 0 1 14 0M5 8v3a7 7 0 0 0 14 0V8"/><path d="M12 15v6M8 21h8"/></svg><div><b>Türkçe ve İngilizce</b><small>Windows'un diline uyar</small></div></li>
     </ul>
   </div>
 
@@ -1134,7 +1134,7 @@
     <div class="wrap">
       <p class="kicker reveal">Özellikler</p>
       <h2 class="reveal" style="--d:1">Günlük kullanım için gerekenler.</h2>
-      <p class="sub reveal" style="--d:2">Aşağıdaki özellikler Windows sürümünü anlatır. Android'de Kalkan, sayfa çevirisi, gizli sekme ve bilgisayarla eşitleme bulunur; ayrıntılar <a href="/android">Android sayfasında</a>.</p>
+      <p class="sub reveal" style="--d:2">Burada Windows sürümü anlatılıyor; Android sürümünü <a href="/android">Android sayfası</a> anlatır.</p>
 
       <article class="card kalkan reveal">
         <div>
@@ -1145,7 +1145,7 @@
         </div>
         <!-- A small copy of the shield menu in DodoBrowser: the count, and the switch for this one site. -->
         <div class="smenu" aria-hidden="true">
-          <div class="row"><span class="kalkan-isareti"></span><span class="big">27</span><span>reklam ve izleyici<br>bu sayfada durdu</span></div>
+          <div class="row"><span class="kalkan-isareti"></span><span class="big">27</span><span>reklam ve izleyici<br>bu sayfada engellendi</span></div>
           <div class="row"><span class="site">son-dakika.haber</span><span class="tg"></span></div>
         </div>
       </article>
@@ -1164,19 +1164,19 @@
 
       <ul class="mini">
         <li class="reveal" style="--d:0"><span class="ico violet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.9 9.9a3 3 0 1 0 4.2 4.2"/><path d="M10.7 5.1A10.4 10.4 0 0 1 12 5c7 0 10 7 10 7a13 13 0 0 1-1.7 2.7"/><path d="M6.6 6.6A13.5 13.5 0 0 0 2 12s3 7 10 7a9.7 9.7 0 0 0 5.4-1.6"/><path d="m2 2 20 20"/></svg></span><b>Gizli pencere</b><span>Kapatıldığında pencereye ait geçmiş, çerezler ve girişler silinir.</span></li>
-        <li class="reveal" style="--d:1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.8 9.8 0 0 0-6.7 2.7L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg></span><b>Sekmeleri geri yükleme</b><span>Beklenmedik kapanmalarda da sekmelerini hatırlar.</span></li>
-        <li class="reveal" style="--d:2"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.1-6C9.5 14.5 12 13 13 12"/></svg></span><b>Sekme uyutma</b><span>Kullanmadığın sekmelerin bellek kullanımını azaltır; döndüğünde sayfa yerinde kalır.</span></li>
+        <li class="reveal" style="--d:1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.8 9.8 0 0 0-6.7 2.7L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg></span><b>Sekme kurtarma</b><span>Beklenmedik bir kapanıştan sonra sekmelerin geri gelir.</span></li>
+        <li class="reveal" style="--d:2"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.1-6C9.5 14.5 12 13 13 12"/></svg></span><b>Sekme uyutma</b><span>Bakmadığın sekmeler durur, öndeki sayfa akıcı kalır; döndüğünde sayfa yerindedir.</span></li>
         <li class="reveal" style="--d:3"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1Z"/><path d="M12 7v6M9 10l3 3 3-3"/></svg></span><b>Yer imleri</b><span>Başka tarayıcılardaki yer imlerini aktar, sürükleyerek düzenle.</span></li>
-        <li class="reveal" style="--d:0"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.8 9.8 0 0 0-6.7 2.7L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.8 9.8 0 0 0 6.7-2.7L21 16"/><path d="M16 16h5v5"/></svg></span><b>Eşitleme</b><span>Windows'ta yer imlerini, kısayollarını, tema ve Kalkan ayarlarını Google hesabınla eşitle. <a href="/#gizlilik">Nasıl çalışır?</a></span></li>
-        <li class="reveal" style="--d:1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><b>Kalkan istatistikleri</b><span>Engellenen reklamları ve izleyicileri gün gün takip et.</span></li>
+        <li class="reveal" style="--d:0"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.8 9.8 0 0 0-6.7 2.7L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.8 9.8 0 0 0 6.7-2.7L21 16"/><path d="M16 16h5v5"/></svg></span><b>Eşitleme</b><span>İstersen yer imlerini, kısayollarını, temanı ve Kalkan ayarlarını Google hesabınla eşitle. <a href="/#gizlilik">Nasıl çalışır?</a></span></li>
+        <li class="reveal" style="--d:1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><b>Kalkan istatistikleri</b><span>Engellenen reklamları ve izleyicileri gün gün ve site site gör.</span></li>
         <li class="reveal" style="--d:2"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span><b>Bağlantı uyarıları</b><span>Şifresiz bir sayfada şifre yazdığında seni uyarır.</span></li>
         <li class="reveal" style="--d:3"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span><b>Geçmiş ve temizlik</b><span>Geçmişinde ara, tarama verilerini temizle. İstersen çerezleri her kapanışta sil.</span></li>
         <li class="reveal" style="--d:0"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17v5"/><path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/></svg></span><b>Sabit sekmeler</b><span>Sık kullandığın sekmeler her açılışta hazır olsun.</span></li>
         <li class="reveal" style="--d:1"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"/><circle cx="16.5" cy="7.5" r=".5" fill="currentColor"/></svg></span><b>Şifre yönetimi</b><span>Windows'ta şifrelerini ekle, düzenle ve Windows hesabına bağlı şifrelemeyle sakla. <a href="/guvenlik">Güvenlik ayrıntıları</a></span></li>
         <li class="reveal" style="--d:2"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 6H3"/><path d="M10 12H3"/><path d="M10 18H3"/><circle cx="17" cy="15" r="3"/><path d="m21 19-1.9-1.9"/></svg></span><b>Site içinde arama</b><span>Kısaltmalarla doğrudan istediğin sitede arama yap.</span></li>
         <li class="reveal" style="--d:3"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="12" r="3"/><rect width="20" height="14" x="2" y="5" rx="7"/></svg></span><b>Site izinleri</b><span>Kamera ve konum gibi izinleri adres çubuğundan yönet.</span></li>
-        <li class="reveal wide" style="--d:0"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M9 4v16"/></svg></span><b>Sol menü</b><span>Öğelerini sen seç, sık kullandığın siteyi ekle ya da adresini yaz; simge ya da yazılı yap, istersen sağa al; kenara gelince açılsın veya tamamen gizlensin.</span></li>
-        <li class="reveal wide" style="--d:0"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg></span><b>Sayfa çevirisi</b><span>İngilizce sayfaları cihazında Türkçeye çevir. Almanca, Fransızca ve Rusça dahil 20 dilin dosyalarını gerektiğinde indir. Sayfanın metni çeviri için gönderilmez. <a href="/ceviri">Nasıl çalışır?</a></span></li>
+        <li class="reveal wide" style="--d:0"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M9 4v16"/></svg></span><b>Yan menü</b><span>Öğelerini seç, sık kullandığın siteleri ekle. Simgeli ya da yazılı kullan, istersen pencerenin diğer kenarına al ya da gizle.</span></li>
+        <li class="reveal wide" style="--d:0"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg></span><b>Sayfa çevirisi</b><span>İngilizce, Almanca, Fransızca ve Rusça dahil 21 dildeki sayfaları bilgisayarında Türkçeye çevir. İngilizce hazır gelir, diğer dillerin dosyası ilk çeviride bir kez iner. Sayfanın metni çeviri için gönderilmez. <a href="/ceviri">Nasıl çalışır?</a></span></li>
       </ul>
     </div>
   </section>
@@ -1211,13 +1211,13 @@
           <p class="kicker">Gizlilik ve eşitleme</p>
           <h2>Eşitleme senin seçimin.</h2>
           <p>Geçmişin ve kayıtlı şifrelerin eşitlenmez. Verilerin satılmaz, reklam için kullanılmaz.</p>
-          <p>Windows'ta Google hesabınla yer imlerini, kısayollarını ve ayarlarını eşitleyebilir, diğer bilgisayarlarındaki açık sekmeleri görebilirsin.</p>
+          <p>İstersen Google hesabınla yer imlerini, kısayollarını ve ayarlarını eşitler, diğer bilgisayarlarındaki açık sekmeleri görürsün.</p>
           <p>Sorun bildirimleri, iletişim mesajları ve dış servislerle paylaşılan bilgiler <a href="/gizlilik">Gizlilik politikasında</a> açıklanır.</p>
         </div>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Kendi Google Drive alanın:</b> Eşitlenen veriler, DodoBrowser'a ayrılan gizli klasörde saklanır.</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Sınırlı erişim:</b> DodoBrowser, Drive'ındaki diğer dosyaları göremez veya değiştiremez.</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>İsteğe bağlı giriş:</b> Giriş yapmadan da tarayıcıyı kullanabilirsin.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>Sınırlı erişim:</b> DodoBrowser, Drive'ındaki diğer dosyaları göremez ya da değiştiremez.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>İsteğe bağlı giriş:</b> DodoBrowser'ı giriş yapmadan da kullanabilirsin.</span></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><b>İzleyicisiz site:</b> Bu site çerez ve istatistik aracı kullanmaz; dış kaynak yüklemez.</span></li>
         </ul>
       </div>
@@ -1250,16 +1250,16 @@
       <h2 class="reveal" style="--d:1">İndirmeden önce.</h2>
 
       <div class="faq">
-        <details class="reveal"><summary>Ücretsiz mi?</summary><p>Evet. DodoBrowser ücretsizdir, hesap gerektirmez ve kendi reklamlarını göstermez.</p></details>
-        <details class="reveal"><summary>Hangi Windows sürümlerinde çalışır?</summary><p>64 bit Windows 10 (1809 ve sonrası) ve Windows 11'de çalışır. Gerekli sayfa motoru eksikse kurulmasına yardımcı olur.</p></details>
-        <details class="reveal" id="store-suz"><summary>Microsoft Store uygulamasını açmadan kurabilir miyim?</summary><p>Evet. <a href="https://get.microsoft.com/installer/download/9P17GF8DSSL1?cid=site">Microsoft kurucusu</a> küçük bir dosyadır; çalıştırınca DodoBrowser'ı Store uygulamasını açmadan kurar. İstersen komut isteminde şu komutu da çalıştırabilirsin:</p><div class="mailrow cmdrow"><code class="mail">winget install 9P17GF8DSSL1 -s msstore</code><button class="copy" type="button" data-copy="winget install 9P17GF8DSSL1 -s msstore">Kopyala</button></div><p>İki yol da Microsoft'un imzaladığı aynı paketi kurar; güncellemeler yine kendiliğinden gelir. Başka sitelerde dolaşan .exe ya da .msix kopyaları bizim değildir.</p></details>
+        <details class="reveal"><summary>Ödeme ya da hesap gerekir mi?</summary><p>Hayır. DodoBrowser'ı kullanmak için ödeme yapman ya da hesap açman gerekmez. DodoBrowser kendi reklamlarını göstermez.</p></details>
+        <details class="reveal"><summary>Hangi Windows sürümlerinde çalışır?</summary><p>64 bit Windows 10 (1809 ve sonrası) ve Windows 11'de çalışır. Sayfaları açan Microsoft Edge motoru bilgisayarında yoksa DodoBrowser bunu söyler ve Microsoft'un indirme sayfasını gösterir.</p></details>
+        <details class="reveal" id="store-suz"><summary>Microsoft Store uygulamasını açmadan kurabilir miyim?</summary><p>Evet. <a href="https://get.microsoft.com/installer/download/9P17GF8DSSL1?cid=site">Microsoft kurucusu</a> küçük bir dosyadır; çalıştırınca DodoBrowser'ı Store uygulamasını açmadan kurar. İstersen komut isteminde şu komutu da çalıştırabilirsin:</p><div class="mailrow cmdrow"><code class="mail">winget install 9P17GF8DSSL1 -s msstore</code><button class="copy" type="button" data-copy="winget install 9P17GF8DSSL1 -s msstore">Kopyala</button></div><p>İki yol da Microsoft'un imzaladığı aynı paketi kurar; güncellemeler yine kendiliğinden gelir. DodoBrowser başka sitelerde .exe ya da .msix dosyası olarak dağıtılmaz; böyle bir dosyayı kurma.</p></details>
         <details class="reveal"><summary>Siteler düzgün açılır mı?</summary><p>DodoBrowser, Windows'ta Edge'in, Android'de telefonun sayfa motorunu kullanır. Her ikisi de Chrome ve Edge gibi Chromium tabanlıdır. Bir sitede sorun yaşarsan Kalkan'ı o site için kapatabilirsin.</p></details>
         <details class="reveal"><summary>Chrome'daki yer imlerimi taşıyabilir miyim?</summary><p>Evet. Windows'ta Chrome, Edge, Brave, Vivaldi ve Opera'dan klasörleriyle birlikte aktarabilirsin. Android'de Google ile giriş yaparsan bilgisayarındaki yer imlerin telefonuna da gelir.</p></details>
-        <details class="reveal"><summary>Eklenti yükleyebilir miyim?</summary><p>Şimdilik eklenti desteği yoktur. Reklam ve izleyici engelleme ile çerez uyarılarını reddetme özellikleri yerleşik olarak sunulur.</p></details>
-        <details class="reveal"><summary>Güncellemeler nasıl gelir?</summary><p>Windows sürümü Microsoft Store'dan kendiliğinden güncellenir. Sayfa motoru ayrıca güncellenir; yeniden başlatma gerektiğinde DodoBrowser haber verir. Android'de Dodo yeni sürümü menüde haber verir; “Güncelle”ye dokununca kendisi indirir, kurulumu Android'in penceresinde sen onaylarsın. Yer imlerin ve ayarların korunur.</p></details>
+        <details class="reveal"><summary>Eklenti yükleyebilir miyim?</summary><p>Şimdilik hayır. Reklam ve izleyici engelleme ile çerez uyarılarını reddetme DodoBrowser'da yerleşik gelir; bunlar için eklenti gerekmez.</p></details>
+        <details class="reveal"><summary>Güncellemeler nasıl gelir?</summary><p>Windows sürümü Microsoft Store'dan kendiliğinden güncellenir. Sayfa motoru ayrıca güncellenir; yeniden başlatma gerektiğinde DodoBrowser haber verir. Android'de DodoBrowser yeni sürümü menüde haber verir; “Güncelle”ye dokununca kendisi indirir, kurulumu Android'in penceresinde sen onaylarsın. Yer imlerin ve ayarların korunur.</p></details>
         <details class="reveal"><summary>Android'de var mı?</summary><p>Evet. Android 10 ve sonrası için <a href="/android">Android sayfasından</a> APK dosyası olarak indirebilirsin. Google Play'de bulunmaz; ücretsizdir ve hesap gerektirmez.</p></details>
         <details class="reveal"><summary>DodoBrowser, Mac'teki ya da başka bir Dodo Browser ile aynı mı?</summary><p>Hayır. “Dodo Browser” adını taşıyan başka ürünler de var: bir Mac uygulaması ve duyurulmuş bir yapay zekâ tarayıcısı. Bunlar başka geliştiricilerin ürünleri, DodoBrowser'la bağlantıları yok. DodoBrowser Windows ve Android için; adı bitişik yazılır, sitesi dodobrowser.com. Şimdilik Mac sürümü yok.</p></details>
-        <details class="reveal"><summary>Neden DodoBrowser?</summary><p>Türkçe arayüz, yerleşik Kalkan ve cihaz üzerinde çeviriyi bir araya getirir. Günlük kullanım için tasarlanmıştır.</p></details>
+        <details class="reveal"><summary>Neden DodoBrowser?</summary><p>DodoBrowser sade ve özenle yapılmış bir tarayıcı. Kalkan, çerez uyarılarını reddetme ve bilgisayarında çalışan sayfa çevirisi yerleşik gelir; arayüzü Türkçe ve İngilizce.</p></details>
       </div>
     </div>
   </section>
@@ -1286,7 +1286,7 @@
   <section class="block reach-sec" id="iletisim">
     <div class="wrap">
       <h2 class="reveal">Görüşlerini paylaş.</h2>
-      <p class="sub reveal" style="--d:1">Önerilerin, soruların ve destek taleplerin için bize yaz. Uygulamadaki “Dodo'ya bildir” seçeneğini de kullanabilirsin.</p>
+      <p class="sub reveal" style="--d:1">Öneri, soru ya da destek için bize yaz. Bir sorunu DodoBrowser'ın içinden “Dodo'ya bildir” ile de iletebilirsin.</p>
 
       <div class="reach reveal" style="--d:2">
         <!-- Direct: the public brand address (info@, a forward to the developer) and the social accounts. -->
@@ -1319,7 +1319,7 @@
         </div>
         <div class="row">
           <label><span>Adın <span class="opt">isteğe bağlı</span></span><input type="text" name="name" maxlength="80" autocomplete="name"></label>
-          <label><span>E-postan <span class="opt">isteğe bağlı</span></span><input type="email" name="email" maxlength="120" autocomplete="email" placeholder="Cevap istersen"></label>
+          <label><span>E-postan <span class="opt">isteğe bağlı</span></span><input type="email" name="email" maxlength="120" autocomplete="email" placeholder="Yanıt istersen"></label>
         </div>
         <label>Mesajın<textarea name="message" required rows="5" maxlength="4000" placeholder="Fikrin, sorunun ya da merak ettiğin…"></textarea></label>
         <div class="send">
@@ -1576,7 +1576,7 @@
       e.preventDefault();
       var data = new FormData(form);
       // Only the message is required; name and e-mail are optional (nameless messages are welcome).
-      if (!String(data.get("message")).trim()) { show("Lütfen mesajını yaz.", "bad"); return; }
+      if (!String(data.get("message")).trim()) { show("Göndermeden önce mesajını yaz.", "bad"); return; }
       var name = String(data.get("name")).trim(), email = String(data.get("email")).trim();
       if (email && !form.email.checkValidity()) { show("E-posta adresin doğru görünmüyor. İstersen boş bırakabilirsin.", "bad"); return; }
       if (data.get("botcheck")) return;
@@ -1605,9 +1605,9 @@
         .then(function (res) {
           if (res.success) {
             form.reset();
-            show(email ? "Teşekkürler! Mesajın ulaştı, en kısa zamanda cevap vereceğiz." : "Teşekkürler! Mesajın isimsiz olarak ulaştı.", "ok");
+            show(email ? "Teşekkürler, mesajın ulaştı. Yanıtı e-posta adresine yazacağız." : "Teşekkürler, mesajın isimsiz olarak ulaştı.", "ok");
           }
-          else show("Mesaj gönderilemedi. Biraz sonra yeniden dener misin?", "bad");
+          else show("Mesaj gönderilemedi. Biraz sonra yeniden dene ya da info@dodobrowser.com adresine yaz.", "bad");
         })
         .catch(function () { show("Bağlantı kurulamadı. İnternetini kontrol edip yeniden dene.", "bad"); })
         .then(function () { button.disabled = false; });

@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DodoBrowser – Security</title>
+<title>Security | DodoBrowser</title>
 <meta name="description" content="The protections DodoBrowser uses on Windows and Android, how passwords are stored, and the official ways to download and update the app.">
 <link rel="canonical" href="https://dodobrowser.com/en/security">
 <link rel="alternate" hreflang="tr" href="https://dodobrowser.com/guvenlik">
 <link rel="alternate" hreflang="en" href="https://dodobrowser.com/en/security">
 <link rel="alternate" hreflang="x-default" href="https://dodobrowser.com/guvenlik">
-<meta property="og:title" content="DodoBrowser – Security">
+<meta property="og:title" content="Security | DodoBrowser">
 <meta property="og:description" content="The protections DodoBrowser uses on Windows and Android, how passwords are stored, and the official ways to download and update the app.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dodobrowser.com/en/security">
@@ -21,7 +21,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="DodoBrowser logo and tagline: Light. Fast. Yours.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="DodoBrowser – Security">
+<meta name="twitter:title" content="Security | DodoBrowser">
 <meta name="twitter:description" content="The protections DodoBrowser uses on Windows and Android, how passwords are stored, and the official ways to download and update the app.">
 <meta name="twitter:image" content="https://dodobrowser.com/paylasim-en.png">
 <meta name="theme-color" content="#FAF8F4" media="(prefers-color-scheme: light)">
@@ -202,7 +202,7 @@
 <main>
   <p class="kicker">DodoBrowser</p>
   <h1>Security</h1>
-  <p class="tag">Last updated: November 11, 2026</p>
+  <p class="tag">Last updated: November 17, 2026</p>
 
   <section class="lead">
     <h2>Summary</h2>
@@ -218,13 +218,13 @@
 
   <section>
     <h2>Security protections</h2>
-    <ul><li><strong>Malicious sites and files:</strong> Microsoft Defender SmartScreen is used on Windows, and Google Safe Browsing protection on Android. These protections aren't turned off. On Windows, a file that was stopped because it is dangerous isn't downloaded again.</li><li><strong>Site isolation (Windows):</strong> Sites are kept separate from each other and from your computer in the engine's own compartments, which run with restricted privileges.</li><li><strong>Certificate checks:</strong> Pages with an invalid certificate are stopped with a warning. If you choose to continue, your permission applies only to that site, certificate and error; for a different certificate or error, you're asked again. The permission applies in all open tabs, isn't saved to disk, and is deleted when DodoBrowser closes.</li><li><strong>Encrypted connections:</strong> An address you type is tried over HTTPS first. If you type a password on an unencrypted page, the lock in the address bar turns red to warn you.</li><li><strong>Site permissions:</strong> Camera, microphone and location access need your approval. Background tabs can't ask for permissions; notifications are off by default.</li><li><strong>Misleading site names:</strong> Addresses built from look-alike characters are shown in their encoded form.</li><li><strong>The browser's own pages:</strong> Sites can't send commands to DodoBrowser's settings or its own pages.</li></ul>
+    <ul><li><strong>Malicious sites and files:</strong> Microsoft Defender SmartScreen is used on Windows, and Google Safe Browsing protection on Android. These protections aren't turned off. On Windows, a file that was stopped because it is dangerous isn't downloaded again.</li><li><strong>Site isolation (Windows):</strong> Sites are kept separate from each other and from your computer in the engine's own compartments, which run with restricted privileges.</li><li><strong>Certificate checks:</strong> Pages with an invalid certificate are stopped with a warning. If you choose to continue, your permission applies only to that site, certificate and error; for a different certificate or error, you're asked again. The permission applies in all open tabs, isn't saved to disk, and is deleted when DodoBrowser closes.</li><li><strong>Encrypted connections:</strong> An address you type is tried over HTTPS first. If you type a password on an unencrypted page, the lock in the address bar turns red to warn you.</li><li><strong>Site permissions:</strong> Camera, microphone and location access need your approval. Background tabs can't ask for permissions; site notifications are off by default.</li><li><strong>Misleading site names:</strong> Addresses built from look-alike characters are shown in their encoded form.</li><li><strong>Dodo pages:</strong> Sites can't send commands to DodoBrowser's settings or to Dodo pages.</li></ul>
   </section>
 
   <section>
     <h2>Passwords and account details</h2>
     <p>On Windows, your passwords and Google sign-in token are stored with encryption tied to your Windows account. Another Windows user can't read them. Your saved passwords aren't synced and aren't sent to us.</p>
-    <p>An exported password file isn't encrypted. DodoBrowser warns you before the export and asks you to confirm with your Windows account every time. You should delete the file when you're done.</p>
+    <p>An exported password file isn't encrypted. DodoBrowser warns you before the export and asks you to confirm with your Windows account every time. Delete the file when you're done.</p>
     <p>On Android, your phone's password manager handles your passwords; DodoBrowser doesn't store them. The Google sign-in token isn't kept on the phone permanently.</p>
     <p>Details of how data is handled are in the <a href="/en/privacy">Privacy policy</a>.</p>
   </section>
@@ -233,18 +233,18 @@
     <h2>Official distribution and updates</h2>
     <p><strong>Windows:</strong> The official distribution channel is <a href="https://apps.microsoft.com/detail/9P17GF8DSSL1?cid=site">Microsoft Store</a>. Microsoft reviews published versions, scans them for malware and signs them. If you would rather not open the Store app, the <a href="https://get.microsoft.com/installer/download/9P17GF8DSSL1?cid=site">Microsoft installer</a> or the command <code>winget install 9P17GF8DSSL1 -s msstore</code> installs the same package, signed by Microsoft. App updates arrive automatically from the Store.</p>
     <p><strong>Android:</strong> The official APK file is offered on the <a href="/en/android">Android page</a>; it isn't on Google Play. The file is signed with our own key and doesn't go through a store review. You can compare the file you downloaded with the SHA-256 value on that page. When you update from inside the app, Dodo downloads the file from a fixed GitHub address and, before installing, checks that its signature matches the installed Dodo's; if it doesn't, Dodo doesn't install it. Android also won't install a file with a different signature over Dodo. The SHA-256 check only catches a damaged or partly downloaded file; the signature is the real safeguard. You approve the install in Android's window.</p>
-    <p>Download links offered on other sites aren't our official distribution. Security fixes take priority and are released without delay as soon as they're ready. Updates don't delete your data or settings.</p>
+    <p>Download links on other sites aren't DodoBrowser's official distribution. Security fixes take priority and are sent to Microsoft Store as soon as they're ready. Updates don't delete your data or settings.</p>
   </section>
 
   <section id="bildir">
     <h2>Contacting us about security</h2>
-    <p>You can reach <a href="mailto:info@dodobrowser.com">info@dodobrowser.com</a> by writing “Security” in the subject line. It's enough to describe what you ran into, along with the version number from Settings → About.</p>
+    <p>You can reach <a href="mailto:info@dodobrowser.com">info@dodobrowser.com</a> by writing “Security” in the subject line. Describe what you ran into and include DodoBrowser's version number; you'll find it in the About window.</p>
     <p>Every report is answered within 7 days at the latest.</p>
   </section>
 
   <section>
     <h2>DodoBrowser's own code</h2>
-    <p>Opening pages, network connections and the engine's security protections are provided by Edge on Windows and the phone's page engine on Android. DodoBrowser's own code manages the window, tabs, address bar, Shield, Start page and settings; it is kept small and simple.</p>
+    <p>Opening pages, network connections and the engine's security protections are provided by Edge on Windows and the phone's page engine on Android. DodoBrowser's own code manages the window, tabs, address bar, Shield, start page and settings.</p>
   </section>
 </main>
 
